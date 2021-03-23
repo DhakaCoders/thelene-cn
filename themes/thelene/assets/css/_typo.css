@@ -5,6 +5,9 @@ h1,h2,h3,h4,h5,h6{
 	line-height: 1;	
 	margin-top: 0;
 	margin-bottom: 20px;
+	color: #202020;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
 }
 h1,.fl-h1{
 	font-size: 48px;
