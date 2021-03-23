@@ -1,0 +1,23 @@
+.welcome-to-the-website-sec-cntlr{
+	display:flex;
+}
+.wlc-to-the-wbsite-sec-lft{
+	max-width:49%;
+	width:100%;
+}
+.wlc-to-the-wbsite-sec-rgt{
+	max-width:51%;
+	width:100%;
+	min-height:816px;
+}
+.wlc-to-the-wbsite-sec-rgt-cntlr{
+	background:#31304F;
+
+}
+.wlc-to-the-wbsite-sec-rgt-des h1{
+	/*font-family: Open Sans;*/
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 56px;
+}
