@@ -2,8 +2,57 @@
 
 }
 .hm-bnr-bg-img{
-
+	
 }
 .hm-banner-cntlr{
-	
+	min-height: 856px;
+	padding-bottom: 100px;
+	display: flex;
+}
+.hm-banner-desc{
+	max-width: 680px;
+	width: 100%;
+	padding: 45px 65px 49px 65px;
+	position: relative;
+	margin-top: auto;
+}
+.hm-banner-desc:after{
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #31304F;
+	opacity: 0.5;
+	backdrop-filter: blur(4px);
+	z-index: 2;
+}
+.hm-banner-desc > div{
+	position: relative;
+	z-index: 5;
+}
+.hm-banner-title{
+	color: #fff;
+	line-height: 1.2;
+}
+.hm-banner-title span{
+	font-weight: 400;
+	display: block;
+}
+.hm-banner-desc p{
+	font-size: 18px;
+	color: #fff;
+}
+.hm-banner-desc p:last-of-type{
+	margin-bottom: 34px;
+}
+.hm-banner-btn{
+
+}
+.hm-banner-btn a{
+	display: inline-block;
+}
+.hm-banner-btn a:hover i svg{
+	fill: #EC5387;
 }

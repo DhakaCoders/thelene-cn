@@ -404,6 +404,7 @@ form .dropdown-menu li a{
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
+    display: inline-block;
 }
 .fl-trnsprnt-btn:hover{
 	background: #EC5387;
