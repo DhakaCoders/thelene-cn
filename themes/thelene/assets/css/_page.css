@@ -41,3 +41,71 @@
 .sitemap ol li a:focus{
 	text-decoration: underline;
 }
+
+
+/*
+-------------
+ 404 page
+-------------
+*/
+.page-404-sec-wrp{
+	padding-top: 30px;
+	padding-bottom: 85px;
+}
+.page-404-dsc-wrp{
+	max-width: 920px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.page-404-dsc-wrp strong{
+	display: inline-block;
+	vertical-align: baseline;
+	padding-bottom: 40px;
+	padding-left: 190px;
+}
+.page-404-dsc-wrp span{
+	display: block;
+	font-size: 22px;
+	line-height: 1;
+	letter-spacing: -0.02em;
+	color: #8aa4e4;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+.page-404-dsc-wrp p{
+	margin-bottom: 50px;
+}
+.page-404-dsc-wrp ul{
+	display: table;
+	margin: 0 auto;
+}
+.page-404-dsc-wrp ul li{
+	float: left;
+	font-size: 16px;
+	line-height: 1.1;
+	font-weight: 500;
+	padding: 0 35px;
+}
+.page-404-dsc-wrp ul li a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	color:#525A61; 
+	text-decoration: underline;
+}
+.page-404-dsc-wrp ul li a:hover{
+	color: #8dcc0c;
+}
+.page-404-btn{
+	display: table;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+.page-404-btn a{
+	float: left;
+	height: 50px;
+	width: 185px;
+	margin: 0 9px;
+}
