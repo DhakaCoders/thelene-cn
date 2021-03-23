@@ -83,6 +83,73 @@ nav.main-nav > ul > li.current-menu-item > a{
 	font-weight: 700;
 }
 
+nav.main-nav > ul > li.menu-item-has-children ul.sub-menu {
+	position: absolute;
+	margin-top: -10px;
+	top: 100%;
+	left: 0;
+	background: #fff;
+	z-index: 15;
+	width: 200px;
+	padding: 0 2px 0 0;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transform: scale3d(1,0,1);
+	-ms-transform: scale3d(1,0,1);
+	-webkit-transform: scale3d(1,0,1);
+	-o-transform: scale3d(1,0,1);
+	transform-origin: top;
+	opacity: 0;
+	box-shadow: 0 2px 12px 0 rgb(0 0 0 / 15%);
+	-ms-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15%);
+	-webkit-box-shadow: 0 2px 12px 0 rgb(0 0 0 / 15%);
+}
+nav.main-nav > ul > li.menu-item-has-children:hover ul.sub-menu {
+    transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -webkit-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    opacity: 1;
+}
+nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li {
+    padding: 10px 0 10px 10px;
+    line-height: 1;
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #EC5387;
+}
+nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li:hover:after {
+    height: 100%;
+    opacity: 1;
+}
+
+nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 0;
+    opacity: 0;
+    background: #EC5387;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a {
+    display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1;
+	color: #31304F;
+	text-transform: uppercase;
+}
+nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li:hover a{
+color: #EC5387;
+}
 nav.main-nav > ul > li.menu-item-has-children > a{
 
 }
