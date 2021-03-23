@@ -1,0 +1,40 @@
+.product-fea-list{
+	padding: 0 37px;
+}
+.prd-fea-list-cntrl ul{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -4px;
+}
+.prd-fea-list-cntrl ul li{
+	max-width: 33.3333%;
+	width: 100%;
+	padding: 0 4px 20px; 
+}
+.prd-fea-img{
+	position: relative;
+}
+.prd-fea-img a{
+	display: inline-block;
+	vertical-align: baseline;
+}
+.prd-fea-img a img{
+	width: 100%;
+}
+.prd-fea-img span{
+	position: absolute;
+	color: #fff;
+	background: rgba(49, 48, 79, .40);
+	width: 230px;
+	height: 70px;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 24px;
+	bottom: 24px;
+	font-family: Open Sans;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 1;
+	text-transform: capitalize;
+}
