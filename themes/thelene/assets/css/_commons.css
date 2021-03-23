@@ -14,21 +14,27 @@ a, a:hover, a:focus, button:hover, button:focus{
 	text-decoration: none;
 	outline: 0;
 }
-
+a{
+	color: #8CCC0C;
+}
+a:hover{
+	color: #EC5387;
+}
 body {
-    background: #f8f8f8;
-    color: #000000;
-    font-size: 18px;
+    background: #fff;
+    color: #525A61;
+    font-size: 16px;
     line-height: 24px;
-     font-family: 'Candara';
+    font-family: 'Bitter', serif;
+    /*font-family: 'Open Sans', sans-serif;*/
 }
 p{
-	line-height: 1.2;
+	line-height: 1.6;
 	margin-bottom: 15px;
 }
 ::selection {
   color: #fff;
-  background: #512C36;
+  background: #8CCC0C;
 }
 /*-- app gap use pattern --*/
 /*data-xxs = 575
@@ -318,4 +324,89 @@ form .dropdown-menu li a{
 }
 .dropdown-menu.show{
 	width: 100%;
+}
+
+/*common button*/
+.fl-btn {
+    width: 268px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #8CCC0C;
+    background: #8CCC0C;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    border-radius: 6px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding-top: 2px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.fl-blue-btn{
+	width: 268px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #31304F;
+	background: #31304F;
+	font-size: 16px;
+	letter-spacing: 0.04em;
+	color: #fff;
+	border-radius: 6px;
+	line-height: 1;
+	text-transform: uppercase;
+	padding-top: 2px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+.fl-pink-btn{
+	width: 268px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #EC5387;
+	background: #EC5387;
+	font-size: 16px;
+	letter-spacing: 0.04em;
+	color: #fff;
+	border-radius: 6px;
+	line-height: 1;
+	text-transform: uppercase;
+	padding-top: 2px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+.fl-pink-btn:hover{
+	background: #8CCC0C;
+	color: #fff;
+	border-color: #8CCC0C;
+}
+.fl-btn:hover,
+.fl-blue-btn:hover{
+	background: #EC5387;
+	color: #fff;
+	border-color: #EC5387;
+}
+.fl-trnsprnt-btn{
+    padding: 13px 40px;
+    border: 1px solid #31304F;
+    background: transparent;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: #31304F;
+    border-radius: 6px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.fl-trnsprnt-btn:hover{
+	background: #EC5387;
+	color: #fff;
+	border-color: #EC5387;
 }
