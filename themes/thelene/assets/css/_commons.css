@@ -110,7 +110,8 @@ Containers
 }
 
 .container-sm{
-
+	max-width: 980px;
+	width: 100%;
 }
 
 
