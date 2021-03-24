@@ -484,6 +484,16 @@ Gallery design
 	color: #fff;
 }
 
+.dfp-slider-module{
+	margin-top: 78px;
+}
+.dfp-slider-ctlr{
+	position: relative;
+}
+.dfp-slider-grd-img{
+	padding-bottom: 25px;
+}
+
 /*news details */
 
 
