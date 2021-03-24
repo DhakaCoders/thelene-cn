@@ -252,32 +252,6 @@ if( $('.hmProdctGrdsSlider').length ){
 Start Contact Google Map ->> 
 -----------------------
 */
-if( $('#googlemap').length ){
-    var latitude = $('#googlemap').data('latitude');
-    var longitude = $('#googlemap').data('longitude');
-
-    var myCenter= new google.maps.LatLng(latitude,  longitude);
-    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-    function initialize(){
-        var mapProp = {
-          center:myCenter,
-
-          mapTypeControl:false,
-          scrollwheel: false,
-
-          zoomControl: false,
-          disableDefaultUI: true,
-          zoom:17,
-          streetViewControl: false,
-          rotateControl: false,
-          mapTypeId:google.maps.MapTypeId.ROADMAP,
-          styles : CustomMapStyles
-      };
-      var map= new google.maps.Map(document.getElementById('googlemap'),mapProp);
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-}
 
 $('.wpforms-error').on('click', function(){
   $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
@@ -287,6 +261,17 @@ $('.wpforms-error').on('click', function(){
 
 /*Start of Shariful*/
 
+  if( $('.dfpSlider').length ){
+    $('.dfpSlider').slick({
+      dots: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+}
 
 
 /*Start of Niaz*/

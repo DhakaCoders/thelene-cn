@@ -1,0 +1,42 @@
+
+.product-page-col-cntlr{
+	display: flex;
+}
+.sidebar-title .fl-h4{
+	border-bottom: 1px solid rgba(166, 166, 166, 0.3);
+	padding-bottom: 15px;
+	margin-bottom: 28px;
+}
+.product-page-sidebar{
+	width: 25.70%;
+	padding-right: 55px;
+}
+.product-page-col-rgt{
+	width: 74.30%;
+}
+.fl-products-cntlr ul{
+	display: flex;
+	margin: 0 -10px;
+}
+.fl-products-cntlr ul li{
+	width: 25%;
+	padding: 0 10px 25px;
+}
+
+.fl-products-cntlr .fl-product-grd .fl-pro-grd-title{
+	font-size: 18px;
+	margin-bottom: 6px;
+}
+
+.fl-products-cntlr .fl-pro-grd-price{
+	margin-bottom: 20px;
+}
+
+.fl-products-cntlr .fl-product-grd{
+	padding: 15px 15px 28px;
+}
+
+.fl-products-cntlr .fl-trnsprnt-btn{
+	font-size: 14px;
+	padding: 8px 19px;
+}
