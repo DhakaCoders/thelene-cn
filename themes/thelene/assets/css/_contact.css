@@ -16,14 +16,9 @@
     float: right;
     position: relative;
 }
-.contact-form-dsc-wrp{
-	border-bottom: 1px solid#F1E8E1;
-	margin-bottom: 70px;
-}
-.page-entry-header{
-	max-width: 1030px;
-	width: 100%;
-	margin: 0 auto;
+.page-entry-header {
+    border-bottom: 1px solid#F1E8E1;
+    margin-bottom: 30px !important;
 }
 .page-entry-header .fl-h1{
 	color: #202020;
@@ -35,8 +30,14 @@
     letter-spacing: -0.02em;
 }
 .page-entry-header p{
-	margin-bottom: 65px;
+	margin-bottom: 30px;
 	line-height: 1.7;
+}
+.contact-form-sec-wrp .page-entry-header p{
+	margin-bottom: 65px;
+}
+.contact-form-block{
+	padding-top: 40px;
 }
 .contact-form-info-cntlr{
 	position: relative;
