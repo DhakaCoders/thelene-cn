@@ -50,6 +50,9 @@
 	h6,.fl-h6{
 		font-size: 20px;
 	}
+	.page-404-dsc-wrp span{
+		font-size: 20px;
+	}
 }
 
 @media(max-width: 1299px){
@@ -91,6 +94,10 @@
 	h6,.fl-h6{
 		font-size: 18px;
 	}
+	.page-404-dsc-wrp span{
+		font-size: 18px;
+	}
+	
 	
 }
 
@@ -163,6 +170,10 @@
 	h6,.fl-h6{
 		font-size: 17px;
 	}
+	.page-404-dsc-wrp span{
+		font-size: 17px;
+	}
+	
 
 }
 
@@ -183,6 +194,9 @@
 		font-size: 15px;
 	}
 	h6,.fl-h6{
+		font-size: 14px;
+	}
+	.page-404-dsc-wrp span{
 		font-size: 14px;
 	}
 

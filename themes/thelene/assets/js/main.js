@@ -287,6 +287,17 @@ $('.wpforms-error').on('click', function(){
 
 /*Start of Shariful*/
 
+  if( $('.dfpSlider').length ){
+    $('.dfpSlider').slick({
+      dots: true,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+}
 
 
 /*Start of Niaz*/
