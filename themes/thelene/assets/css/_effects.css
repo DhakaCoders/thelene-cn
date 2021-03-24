@@ -6,7 +6,8 @@ a,input,img,textarea,button,svg,i,.dft-transition{
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.scale{
+.scale, .cate-grids-img:hover img,
+.bgi-img:hover{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);

@@ -1,27 +1,24 @@
-.product-fea-list{
+.category-sec{
 	padding-bottom: 80px;
-	overflow: hidden;
 }
-.prd-fea-list-cntrl ul{
+.category-sec-cntrl ul{
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -4px;
 }
-.prd-fea-list-cntrl ul li{
+.category-sec-cntrl ul li{
 	max-width: 33.3333%;
 	width: 100%;
 	padding: 0 4px 20px; 
 }
-.prd-fea-img{
+.cate-grids-img{
 	position: relative;
+	overflow: hidden;
 }
-.prd-fea-img a{
-	display: block;
-}
-.prd-fea-img a img{
+.cate-grids-img img{
 	width: 100%;
 }
-.prd-fea-img span{
+.cate-grids-img span{
 	position: absolute;
 	color: #fff;
 	background: rgba(49, 48, 79, .40);
@@ -43,49 +40,52 @@
 /* ================ */
 /* == blog sec === */
 /* ============== */
-.blog-hdr-cntrl{
-	padding-bottom: 16px;
-}
-.blog-hdr{
-	padding-bottom: 16px;
-}
-.blog-hdr p{
-	text-align: center;
-}
 .blog-sec-cntrl{
 	padding-bottom: 82px;
 }
-.blog-grid-cntrl .blg-grd-items .blg-grd-item{
+.blog-sec-hdr{
+	padding-bottom: 16px;
+}
+.blog-sec-hdr p{
+	text-align: center;
+}
+
+.blog-grids-cntrl .blg-grds-item .blg-grd-items{
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -12px;
 }
-.blgitm{
+.BlogGridsSlider{
 	max-width: 33.3333%;
 	width: 100%;
 	padding: 0 12px 40px;
 	
 }
-.blg-fea-item{
+.BlogGridsItm{
 	background: #fff;
 	padding-bottom: 40px;
 }
-.blg-fea-img{
-	min-height: 309px;
-	margin-bottom: 45px;
+.BlogGridsItm-img{
+	width: 100%;
+	height: 309px;
+	overflow: hidden;
 }
-.blg-fea-itm-des{
+.bgi-img{
+	width: 100%;
+	height: 100%;
+}
+.BlogGridsItm-des{
 	padding-left: 33px;
 	padding-right: 72px;	
 }
-.blg-itm-title{
+.BlogGridsItm-des .bgi-title{
 	font-weight: 500;
 	color: #31304F;
 	font-family: 'Bitter', serif;
 	line-height: 1.1;
 	margin-bottom: 15px;
 }
-.blg-date{
+.post-date{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
 	color: #fff;
@@ -99,10 +99,10 @@
 	text-transform: capitalize;
 	margin-bottom: 24px;
 }
-.blg-fea-itm-des p{
+.bgi-des p{
 	line-height: 1.4;
 }
-.blg-fea-itm-des a{
+.BlogGridsItm-des a{
 	display: inline-block;
 	vertical-align: baseline;
 	margin-top: 10px;
