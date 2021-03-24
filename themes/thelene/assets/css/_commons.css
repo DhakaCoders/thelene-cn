@@ -181,6 +181,7 @@ ul.reset-list,
 ol.reset-list,
 ul.sub-menu,
 .fl-pagi-ctlr ul,
+.fl-pagi-cntlr ul,
 .reset-slect ul,
 ul.ab-top-menu{
 	margin: 0;
@@ -190,6 +191,7 @@ ul.ab-top-menu{
 .reset-list li,
 ul.sub-menu li,
 .fl-pagi-ctlr ul li,
+.fl-pagi-cntlr ul li,
 .reset-slect ul li,
 ul.ab-top-menu li{
 	padding: 0;
@@ -200,6 +202,7 @@ ul.ab-top-menu li{
 .reset-list li:before,
 ul.sub-menu li:before,
 .fl-pagi-ctlr ul li:before,
+.fl-pagi-cntlr ul li:before,
 .reset-slect ul li:before,
 ul.ab-top-menu li:before{
 	content: none!important;
