@@ -1,5 +1,6 @@
 .product-fea-list{
-	padding: 0 37px 80px;
+	padding: 0 0 80px;
+	overflow: hidden;
 }
 .prd-fea-list-cntrl ul{
 	display: flex;
@@ -15,8 +16,7 @@
 	position: relative;
 }
 .prd-fea-img a{
-	display: inline-block;
-	vertical-align: baseline;
+	display: block;
 }
 .prd-fea-img a img{
 	width: 100%;
