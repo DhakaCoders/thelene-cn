@@ -103,8 +103,21 @@
 	padding-top: 60px;
 }
 .page-404-btn a{
-	float: left;
-	height: 50px;
-	width: 185px;
-	margin: 0 9px;
+
+    float: left;
+    height: 50px;
+    width: 185px;
+    margin: 0 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-404-btn a:hover:first-of-type{
+	background:transparent;
+	color: #31304F;
+	border-color: #31304F;
+}
+.page-404-btn a:hover:last-of-type{
+	background:#31304F;
+	border-color: #31304F;
 }
