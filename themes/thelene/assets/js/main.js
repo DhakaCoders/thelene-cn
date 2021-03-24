@@ -279,6 +279,10 @@ if( $('#googlemap').length ){
     google.maps.event.addDomListener(window, 'load', initialize);
 }
 
+$('.wpforms-error').on('click', function(){
+  $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
+});
+
 
 
 /*Start of Shariful*/
