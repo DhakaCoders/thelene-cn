@@ -50,6 +50,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    opacity: .8;
 }
 .wlc-to-the-wbsite-img-module-left{
 	width:62.9%;
