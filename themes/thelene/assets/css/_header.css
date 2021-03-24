@@ -173,6 +173,14 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 .hdr-user a:hover i svg{
 	fill: #EC5387;
 }
+.hdr-user-title{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 1;
+	color: #31304F;
+	margin-top: 5px;
+}
 .user-cart-cntlr:after{
 	position: absolute;
 	content: "";

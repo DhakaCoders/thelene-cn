@@ -103,14 +103,10 @@
 	padding-top: 60px;
 }
 .page-404-btn a{
-
-    float: left;
-    height: 50px;
-    width: 185px;
-    margin: 0 9px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	float: left;
+	height: 50px;
+	width: 185px;
+	margin: 0 9px;
 }
 .page-404-btn a:hover:first-of-type{
 	background:transparent;
@@ -120,4 +116,47 @@
 .page-404-btn a:hover:last-of-type{
 	background:#31304F;
 	border-color: #31304F;
+}
+/* 
+pagination
+*/
+.blog-page-sec{
+	padding-bottom: 56px;
+}
+.fl-pagi-cntlr ul{
+	display: flex;
+	margin: 0 -31px;
+	justify-content: flex-end;
+	align-items: center;
+}
+.fl-pagi-cntlr ul li{
+	padding: 0 31px;
+}
+.fl-pagi-cntlr ul li a, .fl-pagi-cntlr ul li span{
+	width: 30px;
+	height: 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 0.04em;
+	color: #31304F;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+.fl-pagi-cntlr ul li a:hover{
+	border: 1px solid #31304F;
+}
+.fl-pagi-cntlr ul li span.current{
+	border: 1px solid #31304F;
+/*     float: left;
+    height: 50px;
+    width: 185px;
+    margin: 0 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
 }
