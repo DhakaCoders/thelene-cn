@@ -107,3 +107,25 @@
     width: 100%;
     height: 100%;
 }
+
+
+@media(max-width:1499px){
+	.over-ons-intro-sec-des {
+	    padding-right: 80px;
+	    padding-left: 55px;
+	}
+	.over-ons-intro-sqr {
+	    width: 270px;
+	    left: -91px;
+	}
+	.over-ons-intro2-sec-des{
+		padding-right:50px;
+	}
+}
+
+@media(max-width:1399px){
+	.over-ons-intro-sec-des {
+	    padding-right: 54px;
+	    padding-left: 22px;
+	}
+}
