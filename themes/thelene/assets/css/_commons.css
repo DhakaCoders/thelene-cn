@@ -415,3 +415,13 @@ form .dropdown-menu li a{
 	padding-left: 37px!important;
 	padding-right: 37px!important;
 }
+.sec-entry-hdr{
+	text-align: center;
+	padding-bottom: 16px;
+}
+.sec-entry-hdr .entry-sec-title {
+	color: #202020;
+	text-transform: capitalize;
+	margin-bottom: 9px;
+	line-height: 1.3;
+}
