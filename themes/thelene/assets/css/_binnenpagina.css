@@ -4,7 +4,7 @@
 }
 .default-page-con {
 	padding-bottom: 100px;
-	padding-top: 80px;
+	padding-top: 0px;
 }
 
 .fl-dft-overflow-controller {
@@ -482,6 +482,16 @@ Gallery design
 	border-color: #fff;
 	padding: 16px 61px;
 	color: #fff;
+}
+
+.dfp-slider-module{
+	margin-top: 78px;
+}
+.dfp-slider-ctlr{
+	position: relative;
+}
+.dfp-slider-grd-img{
+	padding-bottom: 25px;
 }
 
 /*news details */
