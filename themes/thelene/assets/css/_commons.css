@@ -411,3 +411,7 @@ form .dropdown-menu li a{
 	color: #fff;
 	border-color: #EC5387;
 }
+.plr{
+	padding-left: 37px!important;
+	padding-right: 37px!important;
+}
