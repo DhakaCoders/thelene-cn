@@ -1,13 +1,32 @@
 .hm-banner{
-
+	padding: 0 38px;
+	padding-bottom: 80px;
+	position: relative;
+	overflow: hidden;
+}
+.hm-banner:after{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: -140px;
+	z-index: 10;
+	width: 253px;
+	height: 334px;
+	background: transparent;
+	border: 10px solid #f7c9c9;
 }
 .hm-bnr-bg-img{
-	
+	height: 856px;
 }
 .hm-banner-cntlr{
-	min-height: 856px;
+	height: 100%;
 	padding-bottom: 100px;
 	display: flex;
+}
+.hm-banner .container,
+.hm-banner .container .row,
+.hm-banner .container .row .col{
+	height: 100%;
 }
 .hm-banner-desc{
 	max-width: 680px;

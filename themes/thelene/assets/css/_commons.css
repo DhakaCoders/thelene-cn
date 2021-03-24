@@ -21,7 +21,7 @@ a:hover{
 	color: #EC5387;
 }
 body {
-    background: #fcf8f7;
+    background: #FCF8F8;
     color: #525A61;
     font-size: 16px;
     line-height: 24px;
@@ -110,7 +110,8 @@ Containers
 }
 
 .container-sm{
-
+	max-width: 980px;
+	width: 100%;
 }
 
 
@@ -414,4 +415,14 @@ form .dropdown-menu li a{
 .plr{
 	padding-left: 37px!important;
 	padding-right: 37px!important;
+}
+.sec-entry-hdr{
+	text-align: center;
+	padding-bottom: 16px;
+}
+.sec-entry-hdr .entry-sec-title {
+	color: #202020;
+	text-transform: capitalize;
+	margin-bottom: 9px;
+	line-height: 1.3;
 }
