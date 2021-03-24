@@ -1,0 +1,22 @@
+.fl-product-grd{
+	background: #fff;
+	padding: 20px 20px 38px;
+}
+.fl-product-grd-inr{
+	position: relative;
+	text-align: center;
+}
+.fl-pro-grd-img-cntlr{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.fl-pro-grd-price{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #525A61;
+	margin-bottom: 35px;
+}
