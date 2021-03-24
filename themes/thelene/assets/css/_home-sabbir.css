@@ -98,7 +98,10 @@
 	height: 20px;
 	background-color: #EC5387;
 	text-transform: capitalize;
-	margin-bottom: 24px;
+	margin-bottom: 23px;
+}
+.bgi-des{
+    padding-bottom: 10px;
 }
 .bgi-des p{
 	line-height: 1.4;
