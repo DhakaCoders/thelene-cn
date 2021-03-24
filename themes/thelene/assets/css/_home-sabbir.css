@@ -46,6 +46,9 @@
 .blog-hdr-cntrl{
 	padding-bottom: 16px;
 }
+.blog-hdr{
+	padding-bottom: 16px;
+}
 .blog-hdr p{
 	text-align: center;
 }
@@ -82,7 +85,7 @@
 	line-height: 1.1;
 	margin-bottom: 15px;
 }
-.blg-fea-itm-des span{
+.blg-date{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
 	color: #fff;
