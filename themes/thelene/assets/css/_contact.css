@@ -380,14 +380,17 @@ placeholder
 .contact-form-info-socail ul li {
     float: left;
     padding: 0 15px;
+    font-size: 18px;
+    line-height: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .contact-form-info-socail ul li a{
-	font-size: 18px;
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
 	color: #fff;
-	font-weight: 300;
 }
 .contact-form-info-socail ul li a:hover{
 		opacity: 0.7;
