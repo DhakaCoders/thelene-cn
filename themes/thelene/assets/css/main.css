@@ -5,6 +5,7 @@
 @import url('_header.css');
 @import url('_page.css');
 @import url('_home.css');
+@import url('_over-ons.css');
 @import url('_contact.css');
 @import url('_footer.css');
 
@@ -17,6 +18,7 @@
 
 /*Start of Ranojit*/
 @import url('_home-ranojit.css');
+@import url('_producten-overzicht.css');
 
 
 
