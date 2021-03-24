@@ -102,11 +102,15 @@
 	margin: 0 auto;
 	padding-top: 60px;
 }
-.page-404-btn a{
-	float: left;
-	height: 50px;
-	width: 185px;
-	margin: 0 9px;
+.page-404-btn a {
+    float: left;
+    height: 50px;
+    width: 185px;
+    margin: 0 9px;
+    border: 1px solid #31304F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .page-404-btn a:hover:first-of-type{
 	background:transparent;
