@@ -405,7 +405,10 @@ placeholder
 .contact-google-dsc-wrp p{
 	margin-bottom: 0;
 }
-#googlemap{
+.contact-google-map{
+	height: 740px;
+}
+.contact-google-map iframe{
 	height: 740px;
 }
 
