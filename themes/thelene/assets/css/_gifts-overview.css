@@ -4,7 +4,7 @@
 }
 .breadcrumb-cntlr{
 	padding: 25px 0;
-		padding-left: 32px;
+	padding-left: 32px;
 	border-bottom: 1px solid #f1e8e1;
 }
 .breadcrumb-cntlr ul{
@@ -79,6 +79,7 @@
 .secrh-select-cntlr{
 	display: flex;
 	align-items: center;
+	margin-bottom: 40px;
 }
 .fl-secrh{
 	max-width: 342px;
@@ -143,4 +144,15 @@
 }
 .fl-select{
 	width: 120px;
+}
+.two-grid-module-cntlr{
+	display: flex;
+	padding-top: 60px;
+	padding-bottom: 55px;
+	border-top: 2px solid #f7efec;
+	margin: 0 -15px;
+}
+.two-grid-module-desc{
+	padding: 0 20px;
+	width: 50%;
 }
