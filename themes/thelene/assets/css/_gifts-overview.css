@@ -4,7 +4,7 @@
 }
 .breadcrumb-cntlr{
 	padding: 25px 0;
-		padding-left: 32px;
+	padding-left: 32px;
 	border-bottom: 1px solid #f1e8e1;
 }
 .breadcrumb-cntlr ul{
@@ -79,6 +79,7 @@
 .secrh-select-cntlr{
 	display: flex;
 	align-items: center;
+	margin-bottom: 40px;
 }
 .fl-secrh{
 	max-width: 342px;
