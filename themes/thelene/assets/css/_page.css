@@ -108,7 +108,15 @@
 	width: 185px;
 	margin: 0 9px;
 }
-
+.page-404-btn a:hover:first-of-type{
+	background:transparent;
+	color: #31304F;
+	border-color: #31304F;
+}
+.page-404-btn a:hover:last-of-type{
+	background:#31304F;
+	border-color: #31304F;
+}
 /* 
 pagination
 */
@@ -144,20 +152,11 @@ pagination
 }
 .fl-pagi-cntlr ul li span.current{
 	border: 1px solid #31304F;
-    float: left;
+/*     float: left;
     height: 50px;
     width: 185px;
     margin: 0 9px;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.page-404-btn a:hover:first-of-type{
-	background:transparent;
-	color: #31304F;
-	border-color: #31304F;
-}
-.page-404-btn a:hover:last-of-type{
-	background:#31304F;
-	border-color: #31304F;
+    align-items: center; */
 }
