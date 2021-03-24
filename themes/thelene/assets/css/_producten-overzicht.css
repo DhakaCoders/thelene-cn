@@ -23,4 +23,20 @@
 	padding: 0 10px 25px;
 }
 
-.fl-product-grd .fl-pro-grd-title
+.fl-products-cntlr .fl-product-grd .fl-pro-grd-title{
+	font-size: 18px;
+	margin-bottom: 6px;
+}
+
+.fl-products-cntlr .fl-pro-grd-price{
+	margin-bottom: 20px;
+}
+
+.fl-products-cntlr .fl-product-grd{
+	padding: 15px 15px 28px;
+}
+
+.fl-products-cntlr .fl-trnsprnt-btn{
+	font-size: 14px;
+	padding: 8px 19px;
+}
