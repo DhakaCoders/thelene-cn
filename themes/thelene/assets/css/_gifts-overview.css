@@ -135,6 +135,12 @@
 	display: flex;
 	align-items: center;
 }
+.fl-select-cntlr > span{
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1;
+	color: #525A61;
+}
 .fl-select{
 	width: 120px;
 }
