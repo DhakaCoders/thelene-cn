@@ -21,7 +21,7 @@ a:hover{
 	color: #EC5387;
 }
 body {
-    background: #fcf8f7;
+    background: #FCF8F8;
     color: #525A61;
     font-size: 16px;
     line-height: 24px;
@@ -110,7 +110,8 @@ Containers
 }
 
 .container-sm{
-
+	max-width: 980px;
+	width: 100%;
 }
 
 
