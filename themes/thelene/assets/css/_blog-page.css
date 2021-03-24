@@ -1,0 +1,13 @@
+.blg-grds-item ul{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -12px;
+}
+.blg-grds-item ul li{
+	padding: 0 12px 39px;
+	max-width: 33.3333%;
+	width: 100%;
+}
+.blog-page-sec .blog-grids-cntrl{
+	margin-bottom: 21px;
+}

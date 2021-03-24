@@ -98,6 +98,13 @@
 	.fl-product-grd .fl-pro-grd-title{
 		font-size: 21px;
 	}
+	.hm-pro-section-flower{
+		max-width: 900px;
+	}
+	.hm-products-section{
+		padding-top: 90px;
+		margin-top: -90px;
+	}
 }
 
 @media(max-width: 1399px){
