@@ -212,22 +212,25 @@ ul.ab-top-menu li:before{
 /**
 Selects
 */
-form .bootstrap-select{
+.fl-select .bootstrap-select{
     text-transform: uppercase;
-	color: #710023;
+	color: #31304F;
 	font-size: 16px;
-	font-weight: 400;
-	line-height: 19px;
+	font-weight: 700;
+	line-height: 1;
 	width: 100%!important;
+	font-family: 'Open Sans', sans-serif;
 }
-form .bootstrap-select button{
+.fl-select .bootstrap-select button{
 	background: transparent;
 	border: 0;
-	color: #710023;
+	color: #31304F;
 	text-transform: uppercase;
 	font-size: 16px;
+	padding-right: 0!important;
 }
-form .bootstrap-select .caret{
+.fl-select .bootstrap-select .dropdown-toggle
+.fl-select .bootstrap-select .caret{
 	border: 0;
 }
 
@@ -242,7 +245,7 @@ form .bootstrap-select .caret{
 .dropdown-toggle{
 	position: relative;
 	background: transparent!important;
-	min-height: 40px;
+	min-height: 50px;
 }
 .dropdown-toggle::after{
 	content: none;
@@ -260,26 +263,37 @@ form .bootstrap-select .caret{
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    right: 15px;
+    right: 0;
     line-height: 15px;
 }
 .bootstrap-select.show .dropdown-toggle::before{
 	content: "\f106"!important;
 }
-
+.fl-select .bootstrap-select .dropdown-menu{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
 .btn-light.focus, 
 .btn-light:focus{
 	box-shadow: none!important;
 }
-form .show > .dropdown-toggle.btn-default:hover,
-form .btn-default.active, form .btn-default:active, 
-form .show > .dropdown-toggle.btn-default{
+.bootstrap-select .dropdown-toggle .filter-option-inner{
+	line-height: 2.4!important;
+	font-family: 'Open Sans', sans-serif;
+	color: #31304F;
+	font-size: 16px;
+	font-weight: 700;
+}
+.fl-select .show > .dropdown-toggle.btn-default:hover,
+.fl-select .btn-default.active, .fl-select .btn-default:active, 
+.fl-select .show > .dropdown-toggle.btn-default{
     color: #710023;
     background-color: transparent;
     border: 0;
 }
-form .btn-default:hover,
-form .btn-default:focus,
+.fl-select .btn-default:hover,
+.fl-select .btn-default:focus,
 .btn-default.active.focus, .btn-default.active:focus, 
 .btn-default.active:hover, .btn-default:active.focus, 
 .btn-default:active:focus, .btn-default:active:hover, 
@@ -291,24 +305,39 @@ form .btn-default:focus,
     border: 0;
     outline: 0!important;
 }
-form .bootstrap-select .dropdown-toggle:focus{
+.fl-select .bootstrap-select .dropdown-toggle:focus{
 	outline: 0!important;
 }
-form .dropdown-menu{
+.fl-select .dropdown-menu{
     margin: 0;
-    background-color: #cabb9f;
+    background-color: #31304f;
     border: none;
     border-radius: 0;
     box-shadow: none;
     padding: 12px 0 10px;
 }
-form .dropdown-menu li{
+.fl-select .dropdown-menu li{
     position: relative;
-    margin-bottom: 6px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
 }
-form .dropdown-menu li a{
-	padding-top: 6px;
-	color: #fff;
+.fl-select .dropdown-menu li:after,
+.fl-select .dropdown-menu li:before{
+	content: none!important;
+}
+.fl-select .dropdown-menu li a{
+	display: inline-block;
+    text-align: center;
+    background: #31304f;
+    color: #fff!important;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-size: 12px;
+}
+.fl-select .dropdown-menu li a:hover {
+    background-color: #172248;
+    color: #fff!important;
 }
 .dropdown-menu>.active>a, 
 .dropdown-menu>.active>a:focus, 
