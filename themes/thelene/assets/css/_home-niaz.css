@@ -98,7 +98,7 @@
 	}
 	.welcome-sec-rgt-cntlr{
 		padding-left: 125px;
-    	padding-right: 30px;
+    	padding-right: 24px;
 	}
 	.welcome-sec-rgt-des .welcome-sec-des-title{
 		font-size:40px;
@@ -107,6 +107,48 @@
 		font-size:15px;
 	}
 	.welcome-sec-rgt-des i svg{
-		
+		max-width: 84%;
+		width:100%;
+		height: auto;
+
 	}
+	.welcome-sec-rgt-des a{
+		padding:13px 33px;
+		font-size:13px;
+	}
+}
+
+@media(max-width:1399px){
+	.welcome-sec-rgt-cntlr{
+		min-height:760px;
+	}
+	.welcome-sec-img-module-left{
+		height:451px;
+	}
+	.welcome-sec-img-module-rgt{
+		height:595px;
+	}
+	.welcome-sec-img-module-rgt span{
+	    width: 115px;
+	    height: 135px;
+	    top: 84px;
+	}
+	.welcome-sec-img-module{
+	    margin-right: -70px;
+	}
+	.welcome-sec-rgt-cntlr{
+		padding-left:110px;
+	}
+	.welcome-sec-rgt-des .welcome-sec-des-title{
+	    font-size: 38px;
+	}
+	.welcome-sec-rgt-des p br{
+		display: none;
+	}
+	.welcome-sec-rgt-cntlr > span img{
+	    max-width: 270px;
+	    width: 100%;
+	    height: auto;
+	}
+
 }
