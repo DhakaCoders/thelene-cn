@@ -269,3 +269,7 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 .catagory-menu ul li a:hover{
 	color: #EC5387;
 }
+/*huamberger*/
+
+/*responsive*/
+@media(max-width: 1199px)
