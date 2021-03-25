@@ -1,3 +1,15 @@
+.block-955{
+	max-width: 955px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.block-1440{
+	max-width: 1440px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
 .innerpage-con-wrap{
 	overflow: hidden;
 	position: relative;
@@ -441,6 +453,10 @@ Gallery design
 	border-color: #31304F;
 	color: #31304F;
 }
+.dfp-btn-int .fl-trnsprnt-btn:hover{
+	border-color: #EC5387;
+	color: #fff;
+}
 
 
 .dfp-single-img-module{
@@ -483,6 +499,9 @@ Gallery design
 	padding: 16px 61px;
 	color: #fff;
 }
+.cta-btn .fl-trnsprnt-btn:hover{
+	border-color: #EC5387;
+}
 
 .dfp-slider-module{
 	margin-top: 78px;
@@ -492,6 +511,14 @@ Gallery design
 }
 .dfp-slider-grd-img{
 	padding-bottom: 25px;
+}
+
+.hm-product-module{
+	margin-bottom: 40px;
+}
+.hm-product-module .hmProdctGrdsSlideItme{
+	float: left;
+	width: 25%;
 }
 
 /*news details */
