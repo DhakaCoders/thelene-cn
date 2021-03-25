@@ -206,23 +206,15 @@ if( $('.hmProdctGrdsSlider').length ){
       autoplay: true,
       autoplaySpeed: 4000,
       speed: 700,
+      arrows: false,
       slidesToShow: 4,
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 992,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
+            dots: true,
           }
         },
         {
