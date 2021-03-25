@@ -372,13 +372,13 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	.hdr-user a i svg{
 		max-width: 17px;
 	}
-	.hdr-cart a{
+/*	.hdr-cart a{
 		width: 40px;
 		height: 40px;
 	}
 	.hdr-cart a i svg{
 		max-width: 25px;
-	}
+	}*/
 	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 		margin-top: -28px;
 	}
