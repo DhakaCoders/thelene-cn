@@ -124,17 +124,17 @@
 /* 
 pagination
 */
-.blog-page-sec{
+.fl-pagi-cntlr{
 	padding-bottom: 56px;
 }
 .fl-pagi-cntlr ul{
 	display: flex;
-	margin: 0 -31px;
+	margin: 0 -28px;
 	justify-content: flex-end;
 	align-items: center;
 }
 .fl-pagi-cntlr ul li{
-	padding: 0 31px;
+	padding: 0 17px;
 }
 .fl-pagi-cntlr ul li a, .fl-pagi-cntlr ul li span{
 	width: 30px;
