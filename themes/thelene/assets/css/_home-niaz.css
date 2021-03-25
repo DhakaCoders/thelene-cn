@@ -223,9 +223,9 @@
 }
 
 @media(max-width:767px){
-	header,footer,section{
+	/*header,footer,section{
 		overflow:hidden;
-	}
+	}*/
 	.welcome-sec {
 	    padding-bottom: 50px;
 	}
@@ -237,7 +237,7 @@
 	    order: 1;
 	    max-width: initial;
 	    width: auto;
-	    margin:0 -20px;
+	    margin:0 -15px;
 	}
 	.welcome-sec-lft{
 		order:2;
@@ -295,7 +295,7 @@
 	    height: 235px;
 	    border: 7px solid #F7C9C8;
 	    position: absolute;
-	    right: -20px;
+	    right: -15px;
 	    top: -105px;
 	    border-right: none;
 	}
