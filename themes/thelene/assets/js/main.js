@@ -206,23 +206,15 @@ if( $('.hmProdctGrdsSlider').length ){
       autoplay: true,
       autoplaySpeed: 4000,
       speed: 700,
+      arrows: false,
       slidesToShow: 4,
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 992,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
+            dots: true,
           }
         },
         {
@@ -271,7 +263,17 @@ $('.wpforms-error').on('click', function(){
       slidesToShow: 1,
       slidesToScroll: 1,
     });
-}
+  }
+
+  if (windowWidth <= 767) {
+    $('.ftr-menu h6').on('click', function(){
+      $(this).toggleClass('active');
+      $(this).parent().siblings().find('h6').removeClass('active');
+      $(this).parent().find('.ftr-menu-des').slideToggle(300);
+      $(this).parent().siblings().find('.ftr-menu-des').slideUp(300);
+    });
+
+  }
 
 
 /*Start of Niaz*/
@@ -292,7 +294,7 @@ if (windowWidth <= 767) {
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 575,
+          breakpoint: 576,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
