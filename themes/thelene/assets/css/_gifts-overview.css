@@ -146,11 +146,13 @@
 	width: 120px;
 }
 .two-grid-module-cntlr{
-	display: flex;
 	padding-top: 60px;
 	padding-bottom: 55px;
 	border-top: 2px solid #f7efec;
-	margin: 0 -15px;
+}
+.two-grid-module-cntlr > div.two-grid-module-wrap{
+	display: flex;
+	margin: 0 -20px;
 }
 .two-grid-module-desc{
 	padding: 0 20px;
