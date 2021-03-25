@@ -223,9 +223,9 @@
 }
 
 @media(max-width:767px){
-	/*header,footer,section{
+	header,footer,section{
 		overflow:hidden;
-	}*/
+	}
 	.welcome-sec {
 	    padding-bottom: 50px;
 	}
