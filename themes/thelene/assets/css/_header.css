@@ -308,13 +308,137 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 .hambergar-icon span:nth-child(3){
 	top: 18px;
 }
+.allWork .hambergar-icon span:nth-child(1){
+	top: 10px;
+	transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	left: 0;
+	right: 0;
+}
+.allWork .hambergar-icon span:nth-child(2){
+	top: 10px;
+	transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	left: 0;
+	right: 0;
+}
+.allWork .hambergar-icon span:nth-child(3){
+	content: none;
+	display: none;
+}
 .cross-title{
 	display: none;
 }
+.allWork .cross-title{
+	display: block;
+}
+.allWork .hambergar-title{
+	display: none;
+}
+
+.allWork .bdoverlay {
+    z-index: 9999;
+    opacity: 1;
+}
+.bdoverlay {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    -ms-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: -1;
+}
+body.allWork {
+    overflow: hidden!important;
+}
 
 /*xs mobile menu*/
+.allWork .xs-mobile-menu{
+    right: 0;
+    opacity: 1;
+    z-index: 99999;
+    width: 100%;
+}
+
 .xs-mobile-menu{
-	display: none;
+	position: fixed;
+	top: 0;
+	right: -375px;
+	bottom: 0;
+	background: #fcf8f8;
+	max-width: 375px;
+	width: 0;
+	z-index: 99999;
+	opacity: 0;
+	-ms-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	padding-top: 131px;
+	height: 100%;
+	width: 100%;
+	padding-bottom: 50px;
+	margin-bottom: 35px;
+}
+.xs-menu-hdr{
+	padding: 0 20px 0 30px;
+	height: 131px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	z-index: 20;
+}
+.xs-menu-hdr:after{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+	height: 1px;
+	background: #F1E8E1;
+}
+.xs-menu-cntlr{
+	height: 100%;
+	width: 100%;
+
+}
+.xs-menu{
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	padding: 32px 0 25px 0;
+}
+.xs-menu-ftr{
+	display: flex;
+	align-items: center;
+	padding: 0 15px 0 44px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.hdr-cart{
+	margin-left: auto;
+}
+.xs-menu-ftr .ftr-social-media ul li a{
+	font-size: 24px;
+}
+.xs-menu-ftr .ftr-social-media ul li{
+	padding: 0 15px;
+}
+.xs-menu-ftr .ftr-social-media ul{
+	margin: 0 -15px;
 }
 /*responsive*/
 @media(max-width: 1299px){
@@ -442,6 +566,76 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 		align-items: center;
 		flex-direction: column;
 		
+	}
+	/*xs mobile*/
+	nav.main-nav{
+		padding: 0;
+	}
+	nav.main-nav > ul{
+		padding: 0;
+		display: block;
+		margin: 0;
+	}
+	nav.main-nav > ul > li{
+		padding: 9px 0;
+
+	}
+	nav.main-nav > ul > li.current-menu-item > a:after{
+		display: none;
+		content: none;
+	}
+	nav.main-nav > ul > li > a{
+		padding-bottom: 0;
+		position: relative;
+		width: 100%;
+		display: block;
+		font-size: 20px;
+		text-transform: uppercase;
+		padding: 14px 0;
+		padding-left: 44px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children > a:after{
+		position: absolute;
+		content: "";
+		top: 50%;
+		transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		right: 44px;
+		background: url('../images/right-arrow.svg');
+		background-repeat: no-repeat;
+		width: 12px;
+		height: 16px;
+		background-size: contain;
+	}
+
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu {
+		position: initial;
+		background: transparent;
+		width: 100%;
+		margin-top: 25px;
+		padding: 0 44px 0 44px;
+		transition: initial;
+		-ms-transition: initial;
+		-webkit-transition: initial;
+		transform: initial;
+		-ms-transform: initial;
+		-webkit-transform: initial;
+		-o-transform: initial;
+		transform-origin: initial;
+		opacity: 1;
+		display: none;
+		box-shadow: initial;
+		-ms-box-shadow: initial;
+		-webkit-box-shadow: initial;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li{
+		border-bottom: none;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
+		font-size: 17px;
+		text-transform: uppercase;
 	}
 }
 @media(max-width: 575px){
