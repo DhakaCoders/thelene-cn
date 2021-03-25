@@ -115,7 +115,9 @@
 }
 
 @media(max-width: 1399px){
-
+	.hm-pro-section-flower {
+	    max-width: 821px;
+	}
 }
 
 @media(max-width: 1299px){
@@ -123,17 +125,34 @@
 }
 
 @media(max-width: 1199px){
-
-
+	.fl-product-grd .fl-pro-grd-title {
+	    font-size: 20px;
+	}
+	.fl-pro-grd-price{
+		margin-bottom: 30px;
+	}
+	.fl-product-grd-inr{
+		padding-top: 30px;
+	}
+	.hm-pro-section-flower {
+	    max-width: 795px;
+	    right: -160px;
+	}
 }
 
 @media(max-width: 991px){
-
+	.hm-pro-section-flower {
+	    max-width: 816px;
+	    right: -295px;
+	}
+	.hmProdctGrdsSlider .slick-dots{
+		margin-top: 25px;
+	}
 	
 }
 
 @media(max-width: 767px){
-
+	
 }
 
 @media(max-width: 575px){
