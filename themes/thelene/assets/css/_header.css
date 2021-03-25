@@ -186,6 +186,11 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	color: #31304F;
 	margin-top: 5px;
 }
+.hambergar-title,
+.cross-title{
+	display: inline-block;
+	margin-top: 10px;
+}
 .user-cart-cntlr:after{
 	position: absolute;
 	content: "";
@@ -385,7 +390,7 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 		max-width: 25px;
 	}*/
 	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
-		margin-top: -28px;
+		margin-top: -29px;
 	}
 	.catagory-menu{
 		padding-top: 18px;
