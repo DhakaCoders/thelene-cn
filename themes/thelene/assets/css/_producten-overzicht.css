@@ -10,6 +10,7 @@
 .product-page-sidebar{
 	width: 25.70%;
 	padding-right: 55px;
+	padding-top: 10px;
 }
 .product-page-col-rgt{
 	width: 74.30%;
@@ -38,7 +39,7 @@
 	padding: 15px 15px 28px;
 }
 
-.fl-products-cntlr .fl-trnsprnt-btn{
+.fl-product-grd-2 .fl-trnsprnt-btn{
 	font-size: 14px;
 	padding: 8px 19px;
 	color: #fff;
@@ -59,4 +60,58 @@
 
 .fl-product-grd-2 .fl-h4{
 	color: #fff;
+}
+
+
+
+@media (max-width: 1699px){
+	
+}
+
+
+@media (max-width: 1499px) {
+	.product-page-sidebar{
+		padding-right: 40px;
+	}
+	.fl-products-cntlr ul li{
+		width: 33.3333%;
+	}
+}
+
+@media(max-width: 1399px){
+
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+
+
+}
+
+@media(max-width: 991px){
+
+	
+	
+}
+
+@media(max-width: 767px){
+
+}
+
+@media(max-width: 575px){
+
+	
+
+}
+
+@media(max-width: 479px){
+	
+
+}
+
+@media(max-width: 359px){
+
 }

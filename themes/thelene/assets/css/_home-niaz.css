@@ -223,9 +223,9 @@
 }
 
 @media(max-width:767px){
-	/*header,footer,section{
+	header,footer,section{
 		overflow:hidden;
-	}*/
+	}
 	.welcome-sec {
 	    padding-bottom: 50px;
 	}
@@ -279,9 +279,10 @@
 	}
 	.welcome-sec-rgt-des p{
 	    margin-bottom: 20px;
+	    line-height:1.4;
 	}
 	.welcome-sec-rgt-des i svg{
-	    max-width: 90%;
+	    max-width: 100%;
 	}
 	.welcome-sec-img-module-left{
 	    margin-top: 70px;
@@ -308,7 +309,7 @@
 		top:-120px;
 	}
 	.welcome-sec-rgt-cntlr > span img{
-	    max-width: 320px;
+	    max-width: 275px;
 	}
 }
 @media(max-width:479px){
@@ -348,5 +349,8 @@
 	}
 	.welcome-sec-rgt-des .welcome-sec-des-title{
 		font-size:26px;
+	}
+	.welcome-sec-rgt-cntlr > span img {
+	    max-width: 260px;
 	}
 }

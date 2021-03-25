@@ -19,6 +19,7 @@
 .page-entry-header {
     border-bottom: 1px solid#F1E8E1;
     margin-bottom: 30px !important;
+    padding-right: 15px;
 }
 .page-entry-header .fl-h1{
 	color: #202020;
