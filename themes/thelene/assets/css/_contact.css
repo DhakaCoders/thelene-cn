@@ -599,6 +599,12 @@ placeholder
 	.page-404-sec-wrp {
 	    padding-bottom: 50px;
 	}
+	.contact-google-dsc-wrp {
+	    padding: 30px 20px;
+	}
+	.page-404-dsc-wrp ul li {
+	    padding: 0 25px;
+	}
 }
 
 @media(max-width: 575px){
@@ -675,6 +681,9 @@ placeholder
 	}
 	.page-404-dsc-wrp ul li{
 		font-size: 14px;
+	}
+	.contact-google-dsc-wrp {
+	    padding: 30px 10px;
 	}
 
 }
