@@ -123,9 +123,9 @@
 	.over-ons-intro2-sec-des{
 		padding-right:50px;
 	}
-	header{
+	/*header{
 		overflow: hidden;
-	}
+	}*/
 }
 
 @media(max-width:1399px){
