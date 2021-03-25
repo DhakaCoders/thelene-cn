@@ -198,7 +198,9 @@
 }
 @media(max-width:767px){
 	/* --------------------------- over-ons-intro-section -------------------------- */
-
+	.over-ons-breadcrumb-sec{
+		display: none;
+	}
 	.over-ons-intro-sec-cntlr, 
 	.over-ons-intro2-sec-cntlr{
 		flex-direction:column;
