@@ -326,29 +326,13 @@
 	.xs-social-media{
 		text-align: center;
 	}
-	/*.ftr-top{
-		position: relative;
+	.xs-social-media .ftr-social-media ul li {
+	    padding-left: 8px;
+	    padding-right: 8px;
 	}
-	.ftr-top:after{
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		width: 200px;
-		height: 3px;
-		background: red;
-	}*/
 	.ftr-middle-inr ul li {
 	    padding-left: 12px;
 	    padding-right: 12px;
-	}
-	.ftr-middle-inr ul li:first-child{
-		padding-left: 0;
-	}
-	.ftr-middle-inr ul li:last-child{
-		padding-right: 0;
 	}
 	.ftr-middle-inr{
 		position: relative;
