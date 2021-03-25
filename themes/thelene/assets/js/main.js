@@ -280,6 +280,32 @@ $('.wpforms-error').on('click', function(){
 
 /*Start of Sabbir*/
 
+if (windowWidth <= 767) {
+  if( $('.BlogGridSlider').length ){
+    $('.BlogGridSlider').slick({
+      dots: true,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+  }
+}
+
     new WOW().init();
 
 })(jQuery);
