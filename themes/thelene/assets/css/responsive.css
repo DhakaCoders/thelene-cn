@@ -112,6 +112,9 @@
 		font-size: 14px;
 		line-height: 19.6px;
 	}
+	p{
+		line-height: 19.6px;
+	}
 	.plr-37{
 		padding-left: 15px!important;
 		padding-right: 15px!important;
