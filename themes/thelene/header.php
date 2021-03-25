@@ -63,6 +63,14 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php 
+$logoObj = get_field('hdlogo', 'options');
+if( is_array($logoObj) ){
+  $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+}else{
+  $logo_tag = '';
+}
+?>
 <header class="header">
   <div class="container">
       <div class="row">
@@ -70,26 +78,25 @@
           <div class="header-cntlr clearfix">
             <div class="header-inr">
               <div class="hdr-lft">
+                <?php if( !empty($logo_tag) ): ?>
                 <div class="logo">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
+                  <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <?php echo $logo_tag; ?>
+                  </a>
                 </div>
+                <?php endif; ?>
               </div>
               <div class="hdr-rgt">
                 <nav class="main-nav hide-sm">
-                  <ul class="clearfix reset-list">
-                    <li class="current-menu-item"><a href="#">HOME</a></li>
-                    <li><a href="#">OVER ONS</a></li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Partner worden?</a>
-                      <ul class="sub-menu" style="">
-                        <li><a href="#">Toonbanken 1</a></li>
-                        <li><a href="#">Toonbanken 2</a></li>
-                        <li><a href="#">Toonbanken 3</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                  </ul>
+                <?php 
+                  $menuOptions = array( 
+                      'theme_location' => 'cbv_main_menu', 
+                      'menu_class' => 'clearfix reset-list',
+                      'container' => '',
+                      'container_class' => ''
+                    );
+                  wp_nav_menu( $menuOptions ); 
+                ?>
                 </nav>
 
                 <div class="user-cart-cntlr">
