@@ -271,7 +271,17 @@ $('.wpforms-error').on('click', function(){
       slidesToShow: 1,
       slidesToScroll: 1,
     });
-}
+  }
+
+  if (windowWidth <= 767) {
+    $('.ftr-menu h6').on('click', function(){
+      $(this).toggleClass('active');
+      $(this).parent().siblings().find('h6').removeClass('active');
+      $(this).parent().find('.ftr-menu-des').slideToggle(300);
+      $(this).parent().siblings().find('.ftr-menu-des').slideUp(300);
+    });
+
+  }
 
 
 /*Start of Niaz*/
@@ -292,7 +302,7 @@ if (windowWidth <= 767) {
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 575,
+          breakpoint: 576,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
