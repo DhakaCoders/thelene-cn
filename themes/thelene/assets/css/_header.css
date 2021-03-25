@@ -306,6 +306,11 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 .cross-title{
 	display: none;
 }
+
+/*xs mobile menu*/
+.xs-mobile-menu{
+	display: none;
+}
 /*responsive*/
 @media(max-width: 1299px){
 	
