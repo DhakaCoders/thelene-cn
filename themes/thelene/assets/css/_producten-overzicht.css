@@ -16,6 +16,7 @@
 }
 .fl-products-cntlr ul{
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0 -10px;
 }
 .fl-products-cntlr ul li{
@@ -39,4 +40,22 @@
 .fl-products-cntlr .fl-trnsprnt-btn{
 	font-size: 14px;
 	padding: 8px 19px;
+	color: #fff;
+	border-color: #fff;
+}
+
+.fl-product-grd-2 .fl-product-grd{
+	background: #31304F;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+.fl-product-grd-2 .fl-product-grd-inr{
+	padding: 0;
+}
+
+.fl-product-grd-2 .fl-h4{
+	color: #fff;
 }
