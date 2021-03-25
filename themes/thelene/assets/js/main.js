@@ -285,7 +285,7 @@ if (windowWidth <= 767) {
     $('.BlogGridSlider').slick({
       dots: true,
       infinite: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 4000,
       speed: 700,
       slidesToShow: 2,
