@@ -227,11 +227,11 @@
 		overflow:hidden;
 	}*/
 	.welcome-sec {
-	    padding-bottom: 50px;
+	    padding-bottom: 55px;
 	}
 	.welcome-sec-cntlr{
 		flex-direction:column;
-		padding-bottom:110px;
+		padding-bottom:95px;
 	}
 	.welcome-sec-rgt{
 	    order: 1;
