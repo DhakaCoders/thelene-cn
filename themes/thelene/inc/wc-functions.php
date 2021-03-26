@@ -65,7 +65,6 @@ if (!function_exists('loop_columns')) {
     return 3; // 3 products per row
   }
 }
-
 /*Loop Hooks*/
 
 
@@ -87,65 +86,19 @@ add_action('woocommerce_shop_loop_item_title', 'add_shorttext_below_title_loop',
 if (!function_exists('add_shorttext_below_title_loop')) {
     function add_shorttext_below_title_loop() {
         global $product, $woocommerce, $post;
-        $person = ' ';
-        $itemCls = 'notSimple';
-          switch ( $product->get_type() ) {
-          case "variable" :
-              $link   = get_permalink($product->get_id());
-              $label  = apply_filters('variable_add_to_cart_text', __('Selecteer optie', 'woocommerce'));
-          break;
-          case "grouped" :
-              $link   = get_permalink($product->get_id());
-              $label  = apply_filters('grouped_add_to_cart_text', __('Selecteer optie', 'woocommerce'));
-          break;
-          case "external" :
-              $link   = get_permalink($product->get_id());
-              $label  = apply_filters('external_add_to_cart_text', __('Less Meer', 'woocommerce'));
-          break;
-          default :
-              $link   = esc_url( $product->add_to_cart_url() );
-              $label  = apply_filters('add_to_cart_text', __('Bestel nu', 'woocommerce'));
-              $person = 'Aantal personen';
-              $itemCls = 'prsimple';
-          break;
-          }
-        $isShowWeekProdict = get_field('weekend_product', $product->get_id());
         $gridurl = cbv_get_image_src( get_post_thumbnail_id($product->get_id()), 'pgrid' );
-        echo "<div class='pro-item {$itemCls}'>";
+        echo '<div class="product-loop-crtl">';
         echo '<div class="pro-item-img-cntlr pw-item-img-cntlr">';
         echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
         echo '<div class="pro-item-img dft-transition inline-bg" style="background-image: url('.$gridurl.');"></div>';
-        if( $isShowWeekProdict ):
-            echo '<div class="pro-item-highlight-text">';
-            echo '<span>Product van de week</span>';
-            echo '</div>';
-        endif;
-        echo '</div>';
+        echo '</div>';/*end loop image*/
         echo '<div class="pro-item-desc pw-item-desc">';
         echo '<h3 class="pro-item-desc-title"><a href="'.get_permalink( $product->get_id() ).'">'.get_the_title().'</a></h3>';
-        echo '<h6 class="pro-item-desc-sub-title">'.get_the_excerpt().'</h6>';
+        echo '</div>';/*end loop description*/
         echo '<div class="product-price">';
         echo $product->get_price_html();
-        echo '<span class="pro-prize-shrt-title show-sm">pp</span>';
-        echo '</div>';
-        echo "<strong>{$person}</strong>";
-        echo '<div class="product-quantity product-quantity-cntlr">';
-        if ( ! $product->is_in_stock() ) :
-            
-        else:
-            if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && ! $product->is_sold_individually() ) {
-            echo '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
-            echo '<div class="quantity qty"><span class="minus">-</span>';
-            echo loop_qty_input();
-            echo '<span class="plus">+</span></div>';
-            echo '<div class="product-order-btn"><button type="submit" class="fl-btn">Bestel nu</button></div>';
-            echo '</form>';
-            }else{
-                printf('<div class="product-order-btn"><a class="fl-btn" href="%s" rel="nofollow" data-product_id="%s" class="button add_to_cart_button product_type_%s">%s</a></div>', $link, $product->get_id(), $product->get_type(), $label);
-            }
-        endif;
-        echo '</div>';
-        echo '</div>';
+        echo '</div>';/*end loop price*/
+        echo '<div class="loop-btn-crtl"><a href="'.get_permalink( $product->get_id() ).'">MEER INFO</a></div>';
         echo '</div>';
         
     }
@@ -184,14 +137,14 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
   // Return the number of products you wanna show per page.
-  $cols = 3;
+  $cols = 4;
   return $cols;
 }
 
 
-//add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
 function jk_related_products_args( $args ) {
-$args['posts_per_page'] = 8; // 4 related products
+$args['posts_per_page'] = 4; // 4 related products
 return $args;
 }
 
@@ -221,48 +174,52 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 
 add_action('woocommerce_single_product_summary', 'add_custom_box_product_summary', 5);
 if (!function_exists('add_custom_box_product_summary')) {
     function add_custom_box_product_summary() {
         global $product, $woocommerce, $post;
-        $sh_desc = $product->get_description();
-        $get_inhoud = get_field('inhoud', $product->get_id() );
+        $sh_desc = $product->get_short_description();
+        $long_desc = $product->get_description();
         $product_usps = get_field('product_usps', 'options' );
         $sh_desc = !empty($sh_desc)?$sh_desc:'';
 
-           echo '<div class="summary-hdr hide-md">';
+            echo '<div class="summary-ctrl">';
+            echo '<div class="summary-hdr">';
             echo '<h1 class="product_title entry-title">'.$product->get_title().'</h1>';
-            echo wpautop( $sh_desc, true );
-            if( $product_usps ){
-            echo '<ul>';
-                foreach( $product_usps as $product_usp ){
-                    if( !empty($product_usp['titel']) ) printf('<li>%s</li>', $product_usp['titel']);
-                }
-            echo '</ul>';
-            }
-            echo '</div>';
-            echo '<div class="price-quentity">';
-              woocommerce_template_single_add_to_cart();
-            echo '</div>';
-            if( $product_usps ){
-            echo '<div class="summary-hdr show-md">';
-                echo '<ul>';
-                    foreach( $product_usps as $product_usp ){
-                        if( !empty($product_usp['titel']) ) printf('<li>%s</li>', $product_usp['titel']);
-                    }
-                echo '</ul>';
-            echo '</div>';
-            }
-            if( !empty($get_inhoud) ){
-                echo '<div class="pro-summary-content">';
-                echo wpautop( $get_inhoud );
+            if( !empty($sh_desc) ){
+                echo '<div class="short-desc">';
+                echo wpautop( $sh_desc, true );
                 echo '</div>';
             }
-            echo '<div class="woocommerce-tabs">';
-             wc_get_template(  'single-product/tabs/tabs.php' ); 
+            if( !empty($long_desc) ){
+                echo '<div class="long-desc">';
+                echo '<h2>Beschrijving</h2>';
+                echo wpautop( $long_desc, true );
+                echo '</div>';
+            }
+            echo '</div>';
+            echo '<div class="meta-crtl">';
+            echo '<ul>';
+                echo '<li>';
+                    echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in"><strong>' .esc_html__( 'Categorie', 'woocommerce' ). '</strong> ', '</span>' );
+                echo '</li>';
+                if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) :
+                cbv_display_some_product_attributes();
+                echo '<li>';
+                    echo '<strong>';
+                    esc_html_e( 'SKU:', 'woocommerce' );
+                    echo '</strong>';
+                    echo '<span class="sku">'.( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ).'</span>';
+                echo '</li>';
+                endif;
+            echo '</ul>';
+            echo '</div>';
+            echo '<div class="price-quentity-ctrl">';
+              woocommerce_template_single_add_to_cart();
+            echo '</div>';
             echo '</div>';
 
     }
@@ -270,67 +227,24 @@ if (!function_exists('add_custom_box_product_summary')) {
 
 add_action('woocommerce_before_add_to_cart_quantity', 'cbv_start_div_single_price');
 function cbv_start_div_single_price(){
-    echo '<div class="cartbtn-wrap"><strong>Aantal personen</strong><div class="cart-btn-qty">';
+    echo '<div class="cartbtn-wrap clearfix"><strong>Aantal</strong><div class="cart-btn-qty">';
+    echo '<div class="quantity qty"><span class="minus">-</span>';
 }
-add_action('woocommerce_after_add_to_cart_button', 'cbv_get_single_price');
+add_action('woocommerce_after_add_to_cart_quantity', 'cbv_get_single_price');
 function cbv_get_single_price(){
     global $product;
+    echo '<span class="plus">+</span></div>';
     echo '</div></div>';
     echo '<div class="qty-price-wrap">';
     echo $product->get_price_html();
     echo '</div>';
 }
 
-add_filter( 'woocommerce_product_tabs', 'woo_custom_product_tabs' );
-function woo_custom_product_tabs( $tabs ) {
 
-    // 1) Removing tabs
-    unset( $tabs['description'] );              // Remove the description tab
-    // unset( $tabs['reviews'] );               // Remove the reviews tab
-    unset( $tabs['additional_information'] );   // Remove the additional information tab
-
-    //ACF Description tab
-    $tabs['attrib_desc_tab'] = array(
-        'title'     => __( 'Extra info', 'woocommerce' ),
-        'priority'  => 1,
-        'callback'  => 'woo_extrainfo_tab_content'
-    );
-
-    $tabs['qty_pricing_tab'] = array(
-        'title'     => __( 'Allergenen', 'woocommerce' ),
-        'priority'  => 2,
-        'callback'  => 'woo_allergenen_tab_content'
-    );
-
-    return $tabs;
-
-}
-
-// New Tab contents
-
-function woo_extrainfo_tab_content() {
-    global $product;
-    $extra_info = get_field('extra_info', $product->get_id() );
-    if( !empty($extra_info) ){
-        echo '<div class="extra-info-content">';
-        echo wpautop( $extra_info );
-        echo '</div>';
-    }
-}
-function woo_allergenen_tab_content() {
-    global $product;
-    $allergenen = get_field('allergenen', $product->get_id() );
-    if( !empty($allergenen) ){
-        echo '<div class="allergenen-content">';
-        echo wpautop( $allergenen );
-        echo '</div>';
-    }
-}
-
-add_filter( 'woocommerce_product_tabs', 'woo_rename_tab', 98);
-function woo_rename_tab($tabs) {
-$tabs['reviews']['title'] = 'Klanten reviews';
-return $tabs;
+// Change 'add to cart' text on single product page (only for product ID 386)
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'bryce_id_add_to_cart_text' );
+function bryce_id_add_to_cart_text( $default ) {
+        return __( 'In Winkelmand', THEME_NAME );
 }
 
 /**
@@ -490,47 +404,50 @@ function cbv_catalog_ordering() {
 
     wc_get_template( 'loop/orderby.php', array( 'catalog_orderby_options' => $catalog_orderby_options, 'orderby' => $orderby, 'show_default_orderby' => $show_default_orderby ) );
 }
+function projectnamespace_woocommerce_text( $translated, $text, $domain ) {
+    if ( $domain === 'woocommerce' ) {
+        $translated = str_replace(
+            array( 'Related Products' ),
+            array( 'Gerelateerde Producten'),
+            $translated
+        );
+    }
 
-/* Custom Product data tab  */
-
-/*add_filter( 'woocommerce_product_data_tabs', 'wc_add_my_custom_product_data_tab' );
-function wc_add_my_custom_product_data_tab( $product_data_tabs ) {
-    $product_data_tabs['min_max_qty-tab'] = array(
-        'label' => __( 'Min/Max Quantity', 'woocommerce' ),
-        'target' => 'wc_min_max_qty_product_data',
-    );
-    return $product_data_tabs;
+    return $translated;
 }
-add_action( 'woocommerce_product_data_panels', 'wc_add_my_custom_product_data_fields' );
-function wc_add_my_custom_product_data_fields() {
-    global $woocommerce, $post;
-    ?>
-    <!-- id below must match target registered in above add_my_custom_product_data_tab function -->
-    <div id="wc_min_max_qty_product_data" class="panel woocommerce_options_panel">
-        <?php
-            woocommerce_wp_text_input( array(
-                'id'      => 'product_min_qty',
-                'value'   => get_post_meta( get_the_ID(), 'product_min_qty', true ),
-                'label'   => __('Product Min Quantity', 'woocommerce'),
-                'type' => 'number',
-                'custom_attributes' => array(
-                'step' => 'any',
-                'min' => '0'
-                )
-            ));
-             woocommerce_wp_text_input( array(
-                'id'      => 'product_max_qty',
-                'value'   => get_post_meta( get_the_ID(), 'product_max_qty', true ),
-                'label'   => __('Product Max Quantity', 'woocommerce'),
-                'type' => 'number',
-                'custom_attributes' => array(
-                'step' => 'any',
-                )
-            ));
-        ?>
-    </div>
-    <?php
 
-}*/
+add_filter( 'gettext', 'projectnamespace_woocommerce_text', 30, 3 );
+
 
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
+
+function cbv_display_some_product_attributes(){
+    global $product;
+    $formatted_attributes = array();
+    $attributes = $product->get_attributes();
+    if($attributes):
+        foreach($attributes as $attr => $attr_deets){
+
+            $attribute_label = wc_attribute_label($attr);
+
+            if ( isset( $attributes[ $attr ] ) || isset( $attributes[ 'pa_' . $attr ] ) ) {
+
+                $attribute = isset( $attributes[ $attr ] ) ? $attributes[ $attr ] : $attributes[ 'pa_' . $attr ];
+
+                if ( $attribute['is_taxonomy'] ) {
+                    echo '<li><span class="pro-attribute">';
+                        echo '<strong>'.$attribute_label.': </strong>';
+                        echo implode( ', ', wc_get_product_terms( $product->get_id(), $attribute['name'], array( 'fields' => 'names' ) ) );
+                    echo '</span></li>';
+
+                } else {
+                    echo '<li><span class="pro-attribute">';
+                        echo '<strong>'.$attribute_label.': </strong>';
+                    echo $attribute['value'];
+                    echo '</span></li>';
+                }
+
+            }
+        }
+    endif;
+}

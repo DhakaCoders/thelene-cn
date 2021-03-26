@@ -218,10 +218,17 @@ if( $('.hmProdctGrdsSlider').length ){
           }
         },
         {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            dots: true,
+          }
+        },
+        {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            dots: true,
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -233,6 +240,58 @@ if( $('.hmProdctGrdsSlider').length ){
 
 
 
+$('.main-img-crtl').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   fade: true,
+   asNavFor: '.thumbnails'
+ });
+ $('.thumbnails').slick({
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   asNavFor: '.main-img-crtl',
+   dots: true,
+   focusOnSelect: true
+ });
+
+$('.fl-product .price-quentity-ctrl form .variations tbody tr td select').addClass('selectpicker');
+
+//products counter
+if( $('.qty').length ){
+  $('.qty').each(function() {
+    var spinner = $(this),
+      input = spinner.find('input[type="number"]'),
+      btnUp = spinner.find('.plus'),
+      btnDown = spinner.find('.minus'),
+      min = 1,
+      max = input.attr('max');
+
+    btnUp.click(function() {
+      var oldValue = parseFloat(input.val());
+      if (oldValue <= max) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue + 1;
+      }
+      spinner.find("input").val(newVal);
+      spinner.find("input").trigger("change");
+    });
+
+    btnDown.click(function() {
+      var oldValue = parseFloat(input.val());
+      if (oldValue <= min) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue - 1;
+      }
+      spinner.find("input").val(newVal);
+      spinner.find("input").trigger("change");
+    });
+
+  });
+
+}
 /*Start of Noyon*/
 
 if( $('.hambergar-icon').length ){
