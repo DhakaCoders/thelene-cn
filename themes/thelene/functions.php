@@ -57,6 +57,7 @@ function cbv_theme_scripts(){
     include_once( THEME_DIR . '/enq-scripts/fonts.php' );
     include_once( THEME_DIR . '/enq-scripts/fancybox.php' );
     include_once( THEME_DIR . '/enq-scripts/slick.php' );
+    include_once( THEME_DIR . '/enq-scripts/swiper.php' );
     include_once( THEME_DIR . '/enq-scripts/google.maps.php' );
     include_once( THEME_DIR . '/enq-scripts/matchheight.php' );
     include_once( THEME_DIR . '/enq-scripts/app.php' );

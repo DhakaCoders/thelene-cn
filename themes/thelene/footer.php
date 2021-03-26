@@ -47,7 +47,7 @@
               <div class="ftr-menu-des">
               <?php 
                 $fmenuOptions1 = array( 
-                    'theme_location' => 'cbv_ftb_menu', 
+                    'theme_location' => 'cbv_fta_menu', 
                     'menu_class' => 'reset-list',
                     'container' => '',
                     'container_class' => ''

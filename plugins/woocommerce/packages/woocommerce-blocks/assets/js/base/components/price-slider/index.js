@@ -3,7 +3,6 @@
  */
 import { __ } from '@wordpress/i18n';
 import {
-	Fragment,
 	useState,
 	useEffect,
 	useCallback,
@@ -112,7 +111,6 @@ const PriceSlider = ( {
 		minConstraint,
 		maxConstraint,
 		hasValidConstraints,
-		stepValue,
 	] );
 
 	/**
@@ -186,7 +184,14 @@ const PriceSlider = ( {
 				parseInt( values[ 1 ], 10 ),
 			] );
 		},
-		[ minPrice, maxPrice, minConstraint, maxConstraint, stepValue ]
+		[
+			onChange,
+			minPrice,
+			maxPrice,
+			minConstraint,
+			maxConstraint,
+			stepValue,
+		]
 	);
 
 	/**
@@ -221,14 +226,7 @@ const PriceSlider = ( {
 				parseInt( values[ 1 ], 10 ),
 			] );
 		},
-		[
-			minConstraint,
-			maxConstraint,
-			stepValue,
-			minPriceInput,
-			maxPriceInput,
-			currency,
-		]
+		[ onChange, stepValue, minPriceInput, maxPriceInput ]
 	);
 
 	const classes = classnames(
@@ -306,7 +304,7 @@ const PriceSlider = ( {
 			</div>
 			<div className="wc-block-price-filter__controls wc-block-components-price-slider__controls">
 				{ showInputFields && (
-					<Fragment>
+					<>
 						<FormattedMonetaryAmount
 							currency={ currency }
 							displayType="input"
@@ -343,7 +341,7 @@ const PriceSlider = ( {
 							disabled={ isLoading || ! hasValidConstraints }
 							value={ maxPriceInput }
 						/>
-					</Fragment>
+					</>
 				) }
 				{ ! showInputFields &&
 					! isLoading &&
