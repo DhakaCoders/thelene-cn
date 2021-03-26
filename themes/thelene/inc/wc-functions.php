@@ -204,7 +204,7 @@ if (!function_exists('add_custom_box_product_summary')) {
             echo '<div class="meta-crtl">';
             echo '<ul>';
                 echo '<li>';
-                    echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in"><strong>' .esc_html__( 'Categorie', 'woocommerce' ). '</strong> ', '</span>' );
+                    echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in"><strong>' .esc_html__( 'Categorie: ', 'woocommerce' ). '</strong> ', '</span>' );
                 echo '</li>';
                 if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) :
                 cbv_display_some_product_attributes();
@@ -427,7 +427,10 @@ function cbv_display_some_product_attributes(){
     $attributes = $product->get_attributes();
     if($attributes):
         foreach($attributes as $attr => $attr_deets){
-
+            // skip variations
+            if ( $attr_deets->get_variation() ) {
+                continue;
+            }
             $attribute_label = wc_attribute_label($attr);
 
             if ( isset( $attributes[ $attr ] ) || isset( $attributes[ 'pa_' . $attr ] ) ) {
