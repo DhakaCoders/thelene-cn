@@ -40,6 +40,7 @@ $isShowWeekProdict = get_field('weekend_product', $product->get_id());
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 	<figure class="woocommerce-product-gallery__wrapper">
+		<div class="main-img-crtl">
 		<?php
 		if ( $product->get_image_id() ) {
 			$imgurl = wp_get_attachment_image_url( $product->get_image_id(), 'full' );
@@ -64,7 +65,9 @@ $isShowWeekProdict = get_field('weekend_product', $product->get_id());
 	            echo '</div>';
 			}
 		}
-
+		?>
+		</div>
+		<?php
 		//echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
 
 		do_action( 'woocommerce_product_thumbnails' );
