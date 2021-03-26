@@ -1,0 +1,17 @@
+
+.fl-product .product.type-product:after,
+.fl-product .product.type-produc:before{
+	content: "";
+	clear: both;
+	display: table;
+}
+.woocommerce div.product div.summary{
+	width: 51%!important;
+	padding-left: 120px;
+}
+.woocommerce .fl-product div.product div.images{
+	width: 49%;
+}
+.woocommerce div.product .product_title{
+
+}
