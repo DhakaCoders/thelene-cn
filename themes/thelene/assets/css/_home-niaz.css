@@ -213,10 +213,7 @@
 	.welcome-sec-rgt-cntlr > span img{
 	    max-width: 175px;
 	}
-	.welcome-sec-rgt-des a{
-	    padding: 11px 27px;
-	    font-size: 11px;
-	}
+
 	.welcome-sec-rgt-des i svg{
 	    max-width: 60%;
 	}
