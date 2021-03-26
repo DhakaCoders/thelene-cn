@@ -183,3 +183,17 @@
   -webkit-appearance: none; 
   margin: 0; 
 }
+
+.related.products ul{
+	display: flex;
+	margin: 0 -12px;
+}
+
+.related.products ul li{
+	width: 25%!important;
+	padding: 0 12px 0!important;
+	margin: 0!important;
+}
+.woocommerce .related.products li.first, .woocommerce-page ul.products li.first{
+	clear: initial!important;
+}
