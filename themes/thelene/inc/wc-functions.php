@@ -86,19 +86,19 @@ add_action('woocommerce_shop_loop_item_title', 'add_shorttext_below_title_loop',
 if (!function_exists('add_shorttext_below_title_loop')) {
     function add_shorttext_below_title_loop() {
         global $product, $woocommerce, $post;
-        $gridurl = cbv_get_image_src( get_post_thumbnail_id($product->get_id()), 'pgrid' );
-        echo '<div class="product-loop-crtl">';
-        echo '<div class="pro-item-img-cntlr pw-item-img-cntlr">';
+        $gridtag = cbv_get_image_tag( get_post_thumbnail_id($product->get_id()), 'pgrid' );
+        echo '<div class="fl-product-grd mHc">';
+        echo '<div class="fl-product-grd-inr">';
+        echo '<div class="fl-pro-grd-img-cntlr mHc1">';
         echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
-        echo '<div class="pro-item-img dft-transition inline-bg" style="background-image: url('.$gridurl.');"></div>';
+        echo $gridtag;
         echo '</div>';/*end loop image*/
-        echo '<div class="pro-item-desc pw-item-desc">';
-        echo '<h3 class="pro-item-desc-title"><a href="'.get_permalink( $product->get_id() ).'">'.get_the_title().'</a></h3>';
-        echo '</div>';/*end loop description*/
-        echo '<div class="product-price">';
+        echo '<h3 class="fl-h5 mHc2 fl-pro-grd-title"><a href="'.get_permalink( $product->get_id() ).'">'.get_the_title().'</a></h3>';
+        echo '<div class="fl-pro-grd-price">';
         echo $product->get_price_html();
         echo '</div>';/*end loop price*/
-        echo '<div class="loop-btn-crtl"><a href="'.get_permalink( $product->get_id() ).'">MEER INFO</a></div>';
+        echo '<div><a class="fl-trnsprnt-btn" href="'.get_permalink( $product->get_id() ).'">MEER INFO</a></div>';
+        echo '</div>';
         echo '</div>';
         
     }
@@ -418,9 +418,7 @@ function projectnamespace_woocommerce_text( $translated, $text, $domain ) {
 
 add_filter( 'gettext', 'projectnamespace_woocommerce_text', 30, 3 );
 
-
-include_once(THEME_DIR .'/inc/wc-manage-fields.php');
-
+// display general product attributes
 function cbv_display_some_product_attributes(){
     global $product;
     $formatted_attributes = array();
@@ -454,3 +452,6 @@ function cbv_display_some_product_attributes(){
         }
     endif;
 }
+
+include_once(THEME_DIR .'/inc/wc-manage-fields.php');
+
