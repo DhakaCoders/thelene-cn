@@ -21,10 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products">
+	<div class="related products related-pro-crtl">
 
 		<?php
-		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
+		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Gerelateerde Producten', 'woocommerce' ) );
 
 		if ( $heading ) :
 			?>
@@ -47,7 +47,7 @@ if ( $related_products ) : ?>
 
 		<?php woocommerce_product_loop_end(); ?>
 
-	</section>
+	</div>
 	<?php
 endif;
 
