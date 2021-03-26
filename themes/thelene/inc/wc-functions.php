@@ -207,9 +207,7 @@ if (!function_exists('add_custom_box_product_summary')) {
                     echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in"><strong>' .esc_html__( 'Categorie', 'woocommerce' ). '</strong> ', '</span>' );
                 echo '</li>';
                 if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) :
-                echo '<li><span><strong>Gelegenheid: </strong>Lunch</span></li>';
-                echo '<li><span><strong>Smaak: </strong>Fruitig</span></li>';
-                echo '<li><span><strong>Cafeïne: </strong>Ja</span></li>';
+                cbv_display_some_product_attributes();
                 echo '<li>';
                     echo '<strong>';
                     esc_html_e( 'SKU:', 'woocommerce' );
@@ -218,7 +216,6 @@ if (!function_exists('add_custom_box_product_summary')) {
                 echo '</li>';
                 endif;
             echo '</ul>';
-            display_some_product_attributes();
             echo '</div>';
             echo '<div class="price-quentity-ctrl">';
               woocommerce_template_single_add_to_cart();
@@ -424,29 +421,33 @@ add_filter( 'gettext', 'projectnamespace_woocommerce_text', 30, 3 );
 
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
-function display_some_product_attributes(){
+function cbv_display_some_product_attributes(){
     global $product;
     $formatted_attributes = array();
-
     $attributes = $product->get_attributes();
+    if($attributes):
+        foreach($attributes as $attr => $attr_deets){
 
-    foreach($attributes as $attr => $attr_deets){
+            $attribute_label = wc_attribute_label($attr);
 
-        $attribute_label = wc_attribute_label($attr);
+            if ( isset( $attributes[ $attr ] ) || isset( $attributes[ 'pa_' . $attr ] ) ) {
 
-        if ( isset( $attributes[ $attr ] ) || isset( $attributes[ 'pa_' . $attr ] ) ) {
+                $attribute = isset( $attributes[ $attr ] ) ? $attributes[ $attr ] : $attributes[ 'pa_' . $attr ];
 
-            $attribute = isset( $attributes[ $attr ] ) ? $attributes[ $attr ] : $attributes[ 'pa_' . $attr ];
+                if ( $attribute['is_taxonomy'] ) {
+                    echo '<li><span class="pro-attribute">';
+                        echo '<strong>'.$attribute_label.': </strong>';
+                        echo implode( ', ', wc_get_product_terms( $product->get_id(), $attribute['name'], array( 'fields' => 'names' ) ) );
+                    echo '</span></li>';
 
-            if ( $attribute['is_taxonomy'] ) {
+                } else {
+                    echo '<li><span class="pro-attribute">';
+                        echo '<strong>'.$attribute_label.': </strong>';
+                    echo $attribute['value'];
+                    echo '</span></li>';
+                }
 
-                $formatted_attributes[$attribute_label] = implode( ', ', wc_get_product_terms( $product->get_id(), $attribute['name'], array( 'fields' => 'names' ) ) );
-
-            } else {
-
-                $formatted_attributes[$attribute_label] = $attribute['value'];
             }
-
         }
-    }
+    endif;
 }
