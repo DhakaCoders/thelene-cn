@@ -53,11 +53,31 @@
 	.blg-grds-item ul li{
 		max-width: 50%;		
 	}
+	.fl-pagi-cntlr{
+		padding-bottom: 40px;
+	}
+	.blog-page-sec .blg-grds-item{
+		margin-bottom: 0;
+	}
+	.fl-pagi-cntlr ul{
+		justify-content: center;
+		margin: 0;
+	}
+	.fl-pagi-cntlr ul li{
+		padding: o;
+	}
+	.blg-grds-item ul {
+		justify-content: center;
+	}
 }
 
 @media(max-width: 575px){
+	.blg-grds-item ul{
+		margin: 0;
+	}
 	.blg-grds-item ul li{
-		max-width: 100%;		
+		max-width: 100%;
+		padding: 0 0 30px;		
 	}
 
 }
