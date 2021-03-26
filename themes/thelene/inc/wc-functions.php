@@ -429,74 +429,28 @@ function display_some_product_attributes(){
     $defined_attributes = array('fyllighet', 'carrier', 'billing-e-number');
 
     global $product;
-    $attributes = $product->get_attributes();
-    var_dump($attributes);
+$formatted_attributes = array();
 
-    if ( ! $attributes ) {
-        return;
-    }
+$attributes = $product->get_attributes();
 
-    $out = '<ul class="taste-attributes">';
+foreach($attributes as $attr=>$attr_deets){
 
-    foreach ( $attributes as $attribute ) {
+    $attribute_label = wc_attribute_label($attr);
 
-        // Get the product attribute slug from the taxonomy
-        $attribute_slug = str_replace( 'pa_', '', $attribute->get_name() );
+    if ( isset( $attributes[ $attr ] ) || isset( $attributes[ 'pa_' . $attr ] ) ) {
 
-        // skip all non desired product attributes
-        if ( ! in_array($attribute_slug, $defined_attributes) ) {
-            continue;
-        }
+        $attribute = isset( $attributes[ $attr ] ) ? $attributes[ $attr ] : $attributes[ 'pa_' . $attr ];
 
-        // skip variations
-        if ( $attribute->get_variation() ) {
-            continue;
-        }
+        if ( $attribute['is_taxonomy'] ) {
 
-        $name = $attribute->get_name();
-
-        if ( $attribute->is_taxonomy() ) {
-
-            $terms = wp_get_post_terms( $product->get_id(), $name, 'all' );
-            // get the taxonomy
-            $tax = $terms[0]->taxonomy;
-            // get the tax object
-            $tax_object = get_taxonomy($tax);
-            // get tax label
-            if ( isset ( $tax_object->labels->singular_name ) ) {
-                $tax_label = $tax_object->labels->singular_name;
-            } elseif ( isset( $tax_object->label ) ) {
-                $tax_label = $tax_object->label;
-                // Trim label prefix since WC 3.0
-                if ( 0 === strpos( $tax_label, 'Product ' ) ) {
-                   $tax_label = substr( $tax_label, 8 );
-                }                
-            }
-
-            $out .= '<li class="' . esc_attr( $name ) . '">';
-            $out .= '<p class="attribute-label">' . esc_html( $tax_label ) . ': </p> ';
-            $tax_terms = array();
-
-            foreach ( $terms as $term ) {
-                $single_term = esc_html( $term->name );
-                // Insert extra code here if you want to show terms as links.
-                array_push( $tax_terms, $single_term );
-            }
-
-            $out .= '<span class="attribute-value">' . implode(', ', $tax_terms) . '</span><progress value="' . implode(', ', $tax_terms) .
-            '" max="10"><div class="progress-bar"><span style="width:'
-            . implode(', ', $tax_terms) . '0%">'
-            . implode(', ', $tax_terms) . '</span></div></progress></li>';
+            $formatted_attributes[$attribute_label] = implode( ', ', wc_get_product_terms( $product->get_id(), $attribute['name'], array( 'fields' => 'names' ) ) );
 
         } else {
-            $value_string = implode( ', ', $attribute->get_options() );
-            $out .= '<li class="' . sanitize_title($name) . ' ' . sanitize_title( $value_string ) . '">';
-            $out .= '<p class="attribute-label">' . $name . ': </p> ';
-            $out .= '<progress value="' . esc_html( $value_string ) . '" max="10"></progress></li>';
+
+            $formatted_attributes[$attribute_label] = $attribute['value'];
         }
+
     }
-
-    $out .= '</ul>';
-
-    echo $out;
+}
+print_r($formatted_attributes);
 }
