@@ -65,7 +65,6 @@ if (!function_exists('loop_columns')) {
     return 3; // 3 products per row
   }
 }
-
 /*Loop Hooks*/
 
 
@@ -138,14 +137,14 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
   // Return the number of products you wanna show per page.
-  $cols = 3;
+  $cols = 4;
   return $cols;
 }
 
 
-//add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
 function jk_related_products_args( $args ) {
-$args['posts_per_page'] = 8; // 4 related products
+$args['posts_per_page'] = 4; // 4 related products
 return $args;
 }
 
