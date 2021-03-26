@@ -188,6 +188,15 @@
 	.over-ons-intro2-sec-title br{
 	    display: none;
 	}
+	.over-ons-intro2-sec-img-mdul-cntlr{
+		min-height: 600px;
+	}
+	.over-ons-intro2-lft-mdul-img-cntlr{
+		height: 390px;
+	}
+	.over-ons-intro2-rgt-mdul-img-cntlr{
+		height: 400px;
+	}
 }
 @media(max-width:870px){
 	/* --------------------------- over-ons-intro-section -------------------------- */
@@ -251,9 +260,10 @@
 	    height: 100%;
 	    right: 0;
 	    padding-left:8px;
+	    background: #fcf8f8;
 	}
 	.over-ons-intro2-sec-img-mdul-cntlr{
-	    min-height: 300px;
+	    min-height: 250px;
 	}
 	.over-ons-intro2-section{
 	    padding-bottom: 30px;
@@ -267,6 +277,9 @@
 	}
 	.over-ons-intro2-sec-title{
 	    margin-bottom: 20px;
+	}
+	.over-ons-cta-module-sec .dfp-cta-module{
+		margin-bottom:0px;
 	}
 }
 @media(max-width:575px){
