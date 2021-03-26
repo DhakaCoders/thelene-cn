@@ -240,6 +240,23 @@ if( $('.hmProdctGrdsSlider').length ){
 
 
 
+$('.main-img-crtl').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   fade: true,
+   asNavFor: '.thumbnails'
+ });
+ $('.thumbnails').slick({
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   asNavFor: '.main-img-crtl',
+   dots: true,
+   focusOnSelect: true
+ });
+
+
+
 /*Start of Noyon*/
 
 if( $('.hambergar-icon').length ){
