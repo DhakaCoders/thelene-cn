@@ -11,14 +11,15 @@ add_filter( 'woocommerce_show_page_title', '__return_false' );
 function get_custom_wc_output_content_wrapper(){
 
     if(is_shop() OR is_product_category()){ 
-        echo '<section class="product-overview-sec"><div class="container"><div class="row"><div class="col-md-12"><div class="product-overview-inr">';
         get_template_part('templates/breadcrumbs');
-        get_template_part('templates/shop', 'search');
-        echo '<div class="pro-overview-cntnt-cntlr clearfix">';
-        echo '<div class="pro-overview-cntnt-lft">';
+        echo '<section class="product-page-cntlr"><div class="container"><div class="row"><div class="col-md-12"><div class="product-page-col-cntlr clearfix">';
+        //get_template_part('templates/shop', 'search');
+        echo '<div class="product-page-sidebar">';
             get_sidebar('shop');
         echo '</div>';
-        echo '<div class="pro-overview-grid-cntlr">';
+        echo '<div class="product-page-col-rgt">';
+        get_template_part('templates/shop', 'top');
+        echo '<div class="fl-products-cntlr">';
     }
 
 
@@ -26,7 +27,7 @@ function get_custom_wc_output_content_wrapper(){
 
 function get_custom_wc_output_content_wrapper_end(){
   if(is_shop() OR is_product_category()){
-    echo '</div>';
+    echo '</div>'; 
     echo '</div>'; 
     echo '</div></div></div></div></section>';
   }
@@ -40,29 +41,13 @@ function get_array( $string ){
     }
     return false;
 }
-
-add_filter('woocommerce_catalog_orderby', 'wc_customize_product_sorting');
-
-function wc_customize_product_sorting($sorting_options){
-    $sorting_options = array(
-        'menu_order' => __( 'sort by', 'woocommerce' ),
-        'popularity' => __( 'popularity', 'woocommerce' ),
-        'rating'     => __( 'average rating', 'woocommerce' ),
-        'date'       => __( 'newness', 'woocommerce' ),
-        'price'      => __( 'low price', 'woocommerce' ),
-        'price-desc' => __( 'high price', 'woocommerce' ),
-    );
-
-    return $sorting_options;
-}
-
 /**
  * Change number or products per row to 3
  */
 add_filter('loop_shop_columns', 'loop_columns', 999);
 if (!function_exists('loop_columns')) {
   function loop_columns() {
-    return 3; // 3 products per row
+    return 4; // 3 products per row
   }
 }
 /*Loop Hooks*/
@@ -174,7 +159,6 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
-//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 
 add_action('woocommerce_single_product_summary', 'add_custom_box_product_summary', 5);
@@ -250,7 +234,19 @@ function bryce_id_add_to_cart_text( $default ) {
 add_action('woocommerce_product_thumbnails', 'cbv_add_custom_info', 20);
 
 function cbv_add_custom_info(){
-    echo 'asdfasd';
+    global $product;
+    $quantity = get_field('quantity', $product->get_id());
+    $water_temp = get_field('water_temp', $product->get_id());
+    $brewing_time = get_field('brewing_time', $product->get_id());
+    if( !empty($quantity) ||  !empty($water_temp) ||  !empty($brewing_time)):
+        echo '<div class="custom-info-crtl">';
+        echo '<ul>';
+        if( !empty($quantity) ) printf('<li class="qnty"><span>Hoeveelheid:</span>%s gr/Liter</li>', $quantity);
+        if( !empty($water_temp) ) printf('<li class="water-temp"><span>Water temperatuur::</span>%s c°</li>', $water_temp);
+        if( !empty($brewing_time) ) printf('<li class="into-time"><span>Trektijd:</span>%s</li>', $brewing_time);
+        echo '</ul>';
+        echo '</div>';
+    endif;
 }
 
 function sm_pre_get_posts( $query ) {
@@ -366,7 +362,20 @@ function product_max_qty($product_id = '', $_product = array()){
     }
     return $get_max_purchase_qty;
 }
+//add_filter('woocommerce_catalog_orderby', 'wc_customize_product_sorting');
 
+function wc_customize_product_sorting($sorting_options){
+    $sorting_options = array(
+        'menu_order' => __( 'sort by', 'woocommerce' ),
+        'popularity' => __( 'popularity', 'woocommerce' ),
+        'rating'     => __( 'average rating', 'woocommerce' ),
+        'date'       => __( 'newness', 'woocommerce' ),
+        'price'      => __( 'low price', 'woocommerce' ),
+        'price-desc' => __( 'high price', 'woocommerce' ),
+    );
+
+    return $sorting_options;
+}
 // custom cbv_catalog hook
 add_action('cbv_catalog', 'cbv_catalog_ordering');
 
