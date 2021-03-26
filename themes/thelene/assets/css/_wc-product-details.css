@@ -15,3 +15,16 @@
 .woocommerce div.product .product_title{
 
 }
+
+.long-desc{
+	background: #31304F;
+	padding: 50px 25px 30px 50px;
+	color: #fff;
+}
+.long-desc h2{
+	font-size: 26px;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: #fff;
+	margin-bottom: 15px;
+}
