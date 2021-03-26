@@ -247,14 +247,12 @@ function bryce_id_add_to_cart_text( $default ) {
         return __( 'In Winkelmand', THEME_NAME );
 }
 
-/**
- * Build a custom query based on several conditions
- * The pre_get_posts action gives developers access to the $query object by reference
- * any changes you make to $query are made directly to the original object - no return value is requested
- *
- * @link https://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
- *
- */
+add_action('woocommerce_product_thumbnails', 'cbv_add_custom_info', 20);
+
+function cbv_add_custom_info(){
+    echo 'asdfasd';
+}
+
 function sm_pre_get_posts( $query ) {
     // check if the user is requesting an admin page 
     // or current query is not the main query
