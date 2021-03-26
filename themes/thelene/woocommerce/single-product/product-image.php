@@ -36,7 +36,6 @@ $wrapper_classes   = apply_filters(
 	)
 );
 $attachment_ids = $product->get_gallery_image_ids();
-$isShowWeekProdict = get_field('weekend_product', $product->get_id());
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 	<figure class="woocommerce-product-gallery__wrapper">
@@ -44,11 +43,10 @@ $isShowWeekProdict = get_field('weekend_product', $product->get_id());
 		<?php
 		if ( $product->get_image_id() ) {
 			$imgurl = wp_get_attachment_image_url( $product->get_image_id(), 'full' );
+			$thumimgtag = wp_get_attachment_image( $product->get_image_id(), 'full' );
 			echo '<div class="woocommerce-product-gallery__image">';
-			if( $isShowWeekProdict ):
-            	echo '<span class="highlight-text">Product van de week</span>';
-        	endif;
-            echo '<a class="woocommerce-main-image fancybox" style="background: url('.$imgurl.');" data-fancybox="gallery" href="'.$imgurl.'">';
+            echo '<a class="woocommerce-main-image fancybox" data-fancybox="gallery" href="'.$imgurl.'">';
+            echo $thumimgtag;
             echo '</a>';
             echo '</div>';
 		} else {
@@ -59,8 +57,10 @@ $isShowWeekProdict = get_field('weekend_product', $product->get_id());
 		if ( $attachment_ids && $product->get_image_id() ) {
 			foreach ( $attachment_ids as $attachment_id ) {
 				$thumimgurl = wp_get_attachment_image_url( $attachment_id, 'full' );
+				$thumimgtag = wp_get_attachment_image( $attachment_id, 'full' );
 				echo '<div class="woocommerce-product-gallery__image">';
-	            echo '<a class="woocommerce-main-image fancybox" style="background: url('.$thumimgurl.');" data-fancybox="gallery" href="'.$thumimgurl.'">';
+	            echo '<a class="woocommerce-main-image fancybox" data-fancybox="gallery" href="'.$thumimgurl.'">';
+	            echo $thumimgtag;
 	            echo '</a>';
 	            echo '</div>';
 			}
