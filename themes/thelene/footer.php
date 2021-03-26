@@ -106,10 +106,10 @@
         <div class="col-md-12">
           <div class="ftr-middle-inr">
             <ul class="reset-list">
-              <li><a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-01.jpg"></a></li>
-              <li><a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-02.jpg"></a></li>
-              <li><a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-03.jpg"></a></li>
-              <li><a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-04.jpg"></a></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-01.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-02.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-03.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-04.jpg"></li>
             </ul>
           </div>
         </div>
@@ -136,7 +136,7 @@
               ?>
             </div>
             <div class="ftr-designby">
-              <a href="#">Website laten maken door<strong>Conversal</strong></a>
+              <a href="#">Website laten maken door<strong> Conversal</strong></a>
             </div>
           </div>
         </div>
