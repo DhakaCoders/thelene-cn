@@ -28,9 +28,11 @@ $attachment_ids = $product->get_gallery_image_ids();
 
 echo '<div class="thumbnails-cntlr"><div class="thumbnails">';
 if ( $product->get_image_id() ) {
-	$imgurl = wp_get_attachment_image_url( $product->get_image_id(), 'thumbnail' );
+	$imgtag = wp_get_attachment_image( $product->get_image_id(), 'thumbnail' );
 	echo '<div class="woocommerce-product-gallery__image">';
-      echo '<div class="inline-bg" style="background: url('.$imgurl.');"></div>';
+      echo '<div class="thumb-bg">';
+      echo $imgtag;
+      echo '</div>';
     echo '</div>';
 } else {
 	echo '<div class="woocommerce-product-gallery__image--placeholder">';
@@ -39,10 +41,10 @@ if ( $product->get_image_id() ) {
 }
 if ( $attachment_ids && $product->get_image_id() ) {
 	foreach ( $attachment_ids as $attachment_id ) {
-		$thumimgurl = wp_get_attachment_image_url( $attachment_id, 'thumbnail' );
-		echo '<div class="woocommerce-product-gallery__image">';
-          echo '<div class="inline-bg" style="background: url('.$thumimgurl.');"></div>';
-        echo '</div>';
+		$imgtag = wp_get_attachment_image( $attachment_id, 'thumbnail' );
+		echo '<div class="thumb-bg">';
+      		echo $imgtag;
+      	echo '</div>';
 	}
 }
 echo '</div></div>';
