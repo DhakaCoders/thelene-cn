@@ -425,32 +425,28 @@ add_filter( 'gettext', 'projectnamespace_woocommerce_text', 30, 3 );
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
 function display_some_product_attributes(){
-    // HERE define the desired product attributes to be displayed
-    $defined_attributes = array('fyllighet', 'carrier', 'billing-e-number');
-
     global $product;
-$formatted_attributes = array();
+    $formatted_attributes = array();
 
-$attributes = $product->get_attributes();
+    $attributes = $product->get_attributes();
 
-foreach($attributes as $attr=>$attr_deets){
+    foreach($attributes as $attr => $attr_deets){
 
-    $attribute_label = wc_attribute_label($attr);
+        $attribute_label = wc_attribute_label($attr);
 
-    if ( isset( $attributes[ $attr ] ) || isset( $attributes[ 'pa_' . $attr ] ) ) {
+        if ( isset( $attributes[ $attr ] ) || isset( $attributes[ 'pa_' . $attr ] ) ) {
 
-        $attribute = isset( $attributes[ $attr ] ) ? $attributes[ $attr ] : $attributes[ 'pa_' . $attr ];
+            $attribute = isset( $attributes[ $attr ] ) ? $attributes[ $attr ] : $attributes[ 'pa_' . $attr ];
 
-        if ( $attribute['is_taxonomy'] ) {
+            if ( $attribute['is_taxonomy'] ) {
 
-            $formatted_attributes[$attribute_label] = implode( ', ', wc_get_product_terms( $product->get_id(), $attribute['name'], array( 'fields' => 'names' ) ) );
+                $formatted_attributes[$attribute_label] = implode( ', ', wc_get_product_terms( $product->get_id(), $attribute['name'], array( 'fields' => 'names' ) ) );
 
-        } else {
+            } else {
 
-            $formatted_attributes[$attribute_label] = $attribute['value'];
+                $formatted_attributes[$attribute_label] = $attribute['value'];
+            }
+
         }
-
     }
-}
-print_r($formatted_attributes);
 }
