@@ -213,10 +213,7 @@
 	.welcome-sec-rgt-cntlr > span img{
 	    max-width: 175px;
 	}
-	.welcome-sec-rgt-des a{
-	    padding: 11px 27px;
-	    font-size: 11px;
-	}
+
 	.welcome-sec-rgt-des i svg{
 	    max-width: 60%;
 	}
@@ -263,7 +260,7 @@
 	.welcome-sec-rgt-cntlr{
 	    min-height: 560px;
 	    padding-top: 100px;
-    	padding-bottom: 120px;
+    	padding-bottom: 135px;
 	}
 	.welcome-sec-rgt-cntlr > span img{
 	    max-width: 280px;

@@ -499,7 +499,10 @@ Selects
 }
 
 @media(max-width: 575px){
-
+	.fl-trnsprnt-btn {
+	    padding: 10px 18px;
+	    font-size: 12px;
+	}
 	
 
 }
