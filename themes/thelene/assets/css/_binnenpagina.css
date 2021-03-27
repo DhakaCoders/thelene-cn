@@ -530,6 +530,10 @@ Gallery design
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.hm-product-module .hm-product-grds{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
 }
 
 @media(max-width: 1199px){
@@ -657,8 +661,14 @@ Gallery design
 	.cta-ctlr p br{
 		display: none;
 	}
+	.hm-product-module .hm-product-grds {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
 	.hm-product-module .hmProdctGrdsSlideItme{
 		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.hm-product-module .hmProdctGrdsSlideItme .fl-product-grd{
 		max-width: 350px;
