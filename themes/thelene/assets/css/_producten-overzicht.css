@@ -21,7 +21,7 @@
 	margin: 0 -10px;
 	padding-bottom: 45px;
 }
-.fl-products-cntlr ul li{
+.fl-products-cntlr > ul > li{
 	width: 25%;
 	padding: 0 10px 25px;
 }
