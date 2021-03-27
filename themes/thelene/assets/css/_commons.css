@@ -228,6 +228,9 @@ ul.products li:before,
 /**
 Selects
 */
+.fl-select{
+	width: 210px!important;
+}
 .fl-select .bootstrap-select,
 .fl-select .woocommerce-ordering .bootstrap-select{
     text-transform: uppercase;
