@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php /* translators: Filter: verb "to filter" */ ?>
 
 			<div class="price_label" style="display:none;">
-				<?php echo esc_html__( 'Price:', 'woocommerce' ); ?> <span class="from"></span> &mdash; <span class="to"></span>
+				<span class="from"></span> &mdash; <span class="to"></span>
 			</div>
 			<button type="submit" class="button"><?php echo esc_html__( 'Filter', 'woocommerce' ); ?></button>
 			<?php echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>

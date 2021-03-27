@@ -55,10 +55,12 @@
 .breadcrumb-cntlr ul li a{
 	position: relative;
 }
-.breadcrumb-cntlr ul li a.fl-home-icon{
+.breadcrumb-cntlr ul li a.fl-home-icon,
+.breadcrumb-cntlr ul li:first-child a{
 	padding-left: 23px;
 }
-.breadcrumb-cntlr ul li a.fl-home-icon:after{
+.breadcrumb-cntlr ul li a.fl-home-icon:after,
+.breadcrumb-cntlr ul li:first-child a:after{
 	content: "";
 	position: absolute;
 	top: 50%;

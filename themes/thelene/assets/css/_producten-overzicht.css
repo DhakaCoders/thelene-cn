@@ -137,6 +137,26 @@
 	background: #31304F!important;
 	border-color: #31304F!important;
 	border-radius: 6px!important;
+	margin-top: 25px!important;
+}
+.sidebar-widget .ui-slider .ui-slider-handle{
+	background: #FFFFFF!important;
+	border: 1px solid rgba(0, 0, 0, 0.1)!important;
+	box-shadow: 0px 5.5px 5px -3px rgba(14, 14, 44, 0.2), inset 0px -1px 0px rgba(14, 14, 44, 0.4)!important;
+	border-radius: 44px!important;
+	width: 24px!important;
+	height: 24px!important;
+	top: 50%!important;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+.sidebar-widget .ui-widget.ui-widget-content{
+	background: #F1E8E1!important;
+	box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1)!important;
+	border-radius: 8px!important;
+	height: 8px!important;
 }
 
 @media (max-width: 1699px){
