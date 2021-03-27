@@ -188,7 +188,8 @@ ul.ab-top-menu,
 .meta-crtl ul,
 .fl-products-cntlr ul.products,
 ul.products,
-.product-page-sidebar .sidebar-widget ul{
+.product-page-sidebar .sidebar-widget ul,
+.custom-info-crtl ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -202,7 +203,8 @@ ul.sub-menu li,
 ul.ab-top-menu li,
 .meta-crtl ul li,
 .fl-products-cntlr ul.products li,
-.product-page-sidebar .sidebar-widget ul li{
+.product-page-sidebar .sidebar-widget ul li,
+.custom-info-crtl ul li{
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -217,7 +219,8 @@ ul.ab-top-menu li:before,
 .meta-crtl ul li:before,
 .fl-products-cntlr ul.products li:before,
 ul.products li:before,
-.product-page-sidebar .sidebar-widget ul li:before{
+.product-page-sidebar .sidebar-widget ul li:before,
+.custom-info-crtl ul li:before{
 	content: none!important;
 }
 
