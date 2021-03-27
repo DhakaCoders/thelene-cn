@@ -77,6 +77,7 @@
 
 </head>
 <body>
+<div class="bdoverlay"></div>
 <header class="header">
   <div class="container">
       <div class="row">
@@ -89,7 +90,7 @@
                 </div>
               </div>
               <div class="hdr-rgt">
-                <nav class="main-nav">
+                <nav class="main-nav hide-sm">
                   <ul class="clearfix reset-list">
                     <li class="current-menu-item"><a href="#">HOME</a></li>
                     <li><a href="#">OVER ONS</a></li>
@@ -105,20 +106,35 @@
                     <li><a href="#">CONTACT</a></li>
                   </ul>
                 </nav>
-                <div class="hdr-user">
-                  <a href="#"><i><svg class="user-icon" width="20" height="24" viewBox="0 0 20 24" fill="#31304F">
-                    <use xlink:href="#user-icon"></use> </svg></i></a>
+
+                <div class="user-cart-cntlr">
+                  <div class="hambergar-cross-cntlr show-sm">
+                    <div class="hambergar-icon">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <strong class="hambergar-title">MENU</strong>
+                    <strong class="cross-title">SLUIT</strong>
                   </div>
-                  <div class="hdr-cart">
+                  <div class="hdr-user">
+                    <a href="#"><i><svg class="user-icon" width="20" height="24" viewBox="0 0 20 24" fill="#31304F">
+                      <use xlink:href="#user-icon"></use> </svg></i>
+                    </a>
+                    <strong class="hdr-user-title show-sm">ACCOUNT</strong>
+                  </div>
+                  <div class="hdr-cart hide-sm">
                     <a href="#">
                       <span>4</span>
                       <i><svg class="cart-icon" width="30" height="30" viewBox="0 0 30 30" fill="#fff">
-                        <use xlink:href="#cart-icon"></use> </svg></i>
-                      </a>
-                    </div>
+                        <use xlink:href="#cart-icon"></use> </svg>
+                      </i>
+                    </a>
                   </div>
+                </div>
+              </div>
             </div>
-            <div class="catagory-menu">
+            <div class="catagory-menu hide-sm">
               <ul class="clearfix reset-list">
                 <li><a href="#">Thee & Infusies </a></li>
                 <li><a href="#">Accessoires</a></li>
@@ -132,6 +148,77 @@
       </div>
   </div>
 </header>
+<!-- xs mobile menu -->
+<div class="xs-mobile-menu">
+
+  <div class="xs-menu-hdr">
+    <div class="user-cart-cntlr">
+      <div class="hambergar-cross-cntlr show-sm">
+        <div class="hambergar-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <strong class="hambergar-title">MENU</strong>
+        <strong class="cross-title">SLUIT</strong>
+      </div>
+      <div class="hdr-user">
+        <a href="#"><i><svg class="user-icon" width="20" height="24" viewBox="0 0 20 24" fill="#31304F">
+          <use xlink:href="#user-icon"></use> </svg></i>
+        </a>
+        <strong class="hdr-user-title show-sm">ACCOUNT</strong>
+      </div>
+    </div>
+    <div class="hdr-lft">
+      <div class="logo">
+        <a href="#"><img src="assets/images/logo.png"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="xs-menu-cntlr">
+    <div class="xs-menu">
+      <nav class="main-nav">
+        <ul class="clearfix reset-list">
+          <li class="current-menu-item"><a href="#">HOME</a></li>
+          <li class="menu-item-has-children">
+            <a href="#">Thee & Infusies</a>
+            <ul class="sub-menu" style="">
+              <li><a href="#">Toonbanken 1</a></li>
+              <li><a href="#">Toonbanken 2</a></li>
+              <li><a href="#">Toonbanken 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Accessoires</a></li>
+          <li><a href="#">Geschenken</a></li>
+          <li><a href="#">Chocolade</a></li>
+          <li><a href="#">Waar thee drinken?</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">Partner worden?</a></li>
+          <li><a href="#">Over Ons</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="xs-menu-ftr">
+    <div class="ftr-social-media">
+      <ul class="reset-list">
+        <li><a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+    <div class="hdr-cart">
+      <a href="#">
+        <span>4</span>
+        <i><svg class="cart-icon" width="30" height="30" viewBox="0 0 30 30" fill="#fff">
+          <use xlink:href="#cart-icon"></use> </svg>
+        </i>
+      </a>
+    </div>
+ </div> 
+</div>
 
 
 <section class="breadcrumb-sec">
@@ -247,7 +334,7 @@
       </div>
     </div>
     <div class="block-1440">
-      <div class="hm-product-module">
+      <div class="hm-product-module hide-sm">
         <div class="hm-product-grds clearfix">
           <div class="hmProdctGrdsSlideItme">
             <div class="fl-product-grd mHc">

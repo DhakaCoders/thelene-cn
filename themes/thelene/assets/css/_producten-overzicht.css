@@ -15,15 +15,16 @@
 .product-page-col-rgt{
 	width: 74.30%;
 }
-.fl-products-cntlr ul{
+.fl-products-cntlr > ul{
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 -10px;
-	padding-bottom: 45px;
+	margin: 0 -10px!important;
+	padding-bottom: 45px!important;
 }
-.fl-products-cntlr ul li{
-	width: 25%;
-	padding: 0 10px 25px;
+.fl-products-cntlr > ul > li{
+	width: 25%!important;
+	padding: 0 10px 25px!important;
+	margin: 0!important;
 }
 
 .fl-products-cntlr .fl-product-grd .fl-pro-grd-title{
@@ -147,8 +148,8 @@
 	.product-page-sidebar{
 		padding-right: 40px;
 	}
-	.fl-products-cntlr ul li{
-		width: 33.3333%;
+	.fl-products-cntlr > ul > li{
+		width: 33.3333%!important;
 	}
 }
 
