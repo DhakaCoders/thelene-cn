@@ -166,7 +166,7 @@ pagination
     align-items: center; */
 }
 body.woocommerce-cart .page-title{
-	display: none;
+	
 }
 div.coupon:not(.under-proceed){ 
 	display: none !important; 
