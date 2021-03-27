@@ -15,7 +15,7 @@
 .product-page-col-rgt{
 	width: 74.30%;
 }
-.fl-products-cntlr ul{
+.fl-products-cntlr > ul{
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -10px;
@@ -147,7 +147,7 @@
 	.product-page-sidebar{
 		padding-right: 40px;
 	}
-	.fl-products-cntlr ul li{
+	.fl-products-cntlr > ul > li{
 		width: 33.3333%;
 	}
 }
