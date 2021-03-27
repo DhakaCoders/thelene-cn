@@ -12,10 +12,8 @@
   <?php 
   elseif(is_product_category()): 
     $term = get_queried_object();
-    $titel = get_field('custom_titel', $term);
-    $beschrijving = get_field('beschrijving', $term); 
-    if( !empty($titel) ) printf('<h1 class="fl-h1">%s</h1>', $titel);
-    if( !empty($beschrijving) ) echo wpautop( $beschrijving );
+    if( !empty($term->name) ) printf('<h1 class="fl-h1">%s</h1>', $term->name);
+    if( !empty($term->description) ) echo wpautop( $term->description );
   endif;
   ?>
 </div>

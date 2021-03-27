@@ -110,14 +110,20 @@ if( is_array($logoObj) ){
                     <strong class="cross-title">SLUIT</strong>
                   </div>
                   <div class="hdr-user">
-                    <a href="#"><i><svg class="user-icon" width="20" height="24" viewBox="0 0 20 24" fill="#31304F">
+                    <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><i><svg class="user-icon" width="20" height="24" viewBox="0 0 20 24" fill="#31304F">
                       <use xlink:href="#user-icon"></use> </svg></i>
                     </a>
                     <strong class="hdr-user-title show-sm">ACCOUNT</strong>
                   </div>
                   <div class="hdr-cart hide-sm">
-                    <a href="#">
-                      <span>4</span>
+                    <a href="<?php echo wc_get_cart_url(); ?>">
+                    <?php 
+                    if( WC()->cart->get_cart_contents_count() > 0 ){
+                      echo sprintf ( '<span>%d</span>', WC()->cart->get_cart_contents_count() );
+                    }else{
+                      echo sprintf ( '<span>%d</span>', 0 );
+                    }  
+                    ?>
                       <i><svg class="cart-icon" width="30" height="30" viewBox="0 0 30 30" fill="#fff">
                         <use xlink:href="#cart-icon"></use> </svg>
                       </i>
@@ -127,13 +133,15 @@ if( is_array($logoObj) ){
               </div>
             </div>
             <div class="catagory-menu hide-sm">
-              <ul class="clearfix reset-list">
-                <li><a href="#">Thee & Infusies </a></li>
-                <li><a href="#">Accessoires</a></li>
-                <li><a href="#">Geschenken</a></li>
-                <li><a href="#">Chocolade</a></li>
-                <li><a href="#">Waar thee drinken? </a></li>
-              </ul>
+                <?php 
+                  $catmenuOptions = array( 
+                      'theme_location' => 'cbv_cat_menu', 
+                      'menu_class' => 'clearfix reset-list',
+                      'container' => '',
+                      'container_class' => ''
+                    );
+                  wp_nav_menu( $catmenuOptions ); 
+                ?>
             </div>
           </div>
         </div>

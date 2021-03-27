@@ -27,6 +27,7 @@
                   <?php echo $logo_tag; ?>
                 </a>
               </div>
+              <?php endif; ?>
               <?php if(!empty($smedias)):  ?>
               <div class="ftr-social-media hide-sm">
                 <ul class="reset-list">
@@ -36,6 +37,7 @@
                         <?php echo $smedia['icon']; ?>
                     </a>
                   </li>
+                <?php endforeach; ?>
                 </ul>
               </div>
               <?php endif; ?>
@@ -103,6 +105,7 @@
                         <?php echo $smedia['icon']; ?>
                     </a>
                   </li>
+                  <?php endforeach; ?>
                 </ul>
               </div>
             </div>
@@ -118,10 +121,10 @@
         <div class="col-md-12">
           <div class="ftr-middle-inr">
             <ul class="reset-list">
-              <li><img src="assets/images/ftr-mdl-01.jpg"></li>
-              <li><img src="assets/images/ftr-mdl-02.jpg"></li>
-              <li><img src="assets/images/ftr-mdl-03.jpg"></li>
-              <li><img src="assets/images/ftr-mdl-04.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-01.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-02.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-03.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-04.jpg"></li>
             </ul>
           </div>
         </div>

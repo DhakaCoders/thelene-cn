@@ -414,8 +414,8 @@ function cbv_catalog_ordering() {
 function projectnamespace_woocommerce_text( $translated, $text, $domain ) {
     if ( $domain === 'woocommerce' ) {
         $translated = str_replace(
-            array( 'Related Products' ),
-            array( 'Gerelateerde Producten'),
+            array( 'Proceed to checkout' ),
+            array( 'ik ga bestellen'),
             $translated
         );
     }

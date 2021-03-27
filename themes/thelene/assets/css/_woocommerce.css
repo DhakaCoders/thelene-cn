@@ -286,6 +286,10 @@ input.select2-search__field{
 	justify-content: flex-end;
 	display: flex;
 }*/
+/* cart page */
+.page-title {
+    margin-top: 80px;
+}
 @media(max-width: 991px){
 	.woocommerce #customer_details .col-1,
 	.woocommerce #customer_details .col-2 {

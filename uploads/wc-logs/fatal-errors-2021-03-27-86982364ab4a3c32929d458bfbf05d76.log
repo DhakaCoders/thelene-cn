@@ -13,3 +13,31 @@ Stack trace:
 
 2021-03-27T01:24:34+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\class-cb-wc-widget-price-filter.php on line 13
 
+2021-03-27T04:31:45+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:31:58+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:32:19+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:33:43+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:34:21+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:34:46+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:35:08+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:35:27+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:35:39+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:35:56+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:36:03+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:36:27+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:36:46+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 41
+
+2021-03-27T04:38:09+00:00 CRITICAL syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\footer.php on line 164
+
