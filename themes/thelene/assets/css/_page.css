@@ -165,3 +165,6 @@ pagination
     justify-content: center;
     align-items: center; */
 }
+body.woocommerce-cart .page-title{
+	display: none;
+}

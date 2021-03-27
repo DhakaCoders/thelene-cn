@@ -28,7 +28,7 @@ if ( $total <= 1 ) {
 	return;
 }
 ?>
-<nav class="woocommerce-pagination fl-pagi-cntlr">
+<nav class="fl-pagi-cntlr">
 	<?php
 	echo paginate_links(
 		apply_filters(
