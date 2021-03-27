@@ -36,7 +36,7 @@ function cbv_breadcrumbs() {
   $blog_id        = get_option('page_for_posts');
   $parent_id      = ($post) ? $post->post_parent : '';
   $sep            = ' ' . $sep_before . $sep . $sep_after . ' ';
-  $home_link      = $link_before . '<a href="' . $home_url . '"' . $link_attr . ' class="fl-home-icon">' . $link_in_before . $text['home'] . $link_in_after . '</a>' . $link_after;
+  $home_link      = $link_before . '<a href="' . $home_url . '"' . $link_attr . '>' . $link_in_before . $text['home'] . $link_in_after . '</a>' . $link_after;
   $blog_link      = $link_before . '<a href="' . get_permalink($blog_id) . '"' . $link_attr . ' class="blog-icon">' . $link_in_before . $text['blog'] . $link_in_after . '</a>' . $link_after;
 
   if ( is_front_page()) {
