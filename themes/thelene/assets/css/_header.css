@@ -258,7 +258,7 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	left: 0;
 	right: 0;
 	background: #31304f;
-	padding: 24px 20px 22px 20px;
+	padding: 24px 20px 12px 20px;
 	z-index: 10;
 }
 .catagory-menu ul{
@@ -267,9 +267,11 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	justify-content: center;
 	margin: 0 -28px;
 	flex-wrap: wrap;
+	padding-bottom: 0;
 }
 .catagory-menu ul li{
 	padding: 0 28px;
+	margin-bottom: 10px;
 }
 .catagory-menu ul li a{
 	color: #fff;
@@ -519,7 +521,7 @@ body.allWork {
 	}
 	.catagory-menu{
 		padding-top: 18px;
-		padding-bottom: 16px;
+		padding-bottom: 6px;
 	}
 	.catagory-menu ul{
 		margin: 0 -8px;
