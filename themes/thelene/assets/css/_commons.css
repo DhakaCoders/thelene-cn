@@ -187,12 +187,14 @@ ul.sub-menu,
 ul.ab-top-menu,
 .meta-crtl ul,
 .fl-products-cntlr ul.products,
+ul.products,
 .product-page-sidebar .sidebar-widget ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 .reset-list li,
+ul.products li,
 ul.sub-menu li,
 .fl-pagi-ctlr ul li,
 .fl-pagi-cntlr ul li,
@@ -214,6 +216,7 @@ ul.sub-menu li:before,
 ul.ab-top-menu li:before,
 .meta-crtl ul li:before,
 .fl-products-cntlr ul.products li:before,
+ul.products li:before,
 .product-page-sidebar .sidebar-widget ul li:before{
 	content: none!important;
 }
@@ -225,7 +228,8 @@ ul.ab-top-menu li:before,
 /**
 Selects
 */
-.fl-select .bootstrap-select{
+.fl-select .bootstrap-select,
+.fl-select .woocommerce-ordering .bootstrap-select{
     text-transform: uppercase;
 	color: #31304F;
 	font-size: 16px;
@@ -234,7 +238,8 @@ Selects
 	width: 100%!important;
 	font-family: 'Open Sans', sans-serif;
 }
-.fl-select .bootstrap-select button{
+.fl-select .bootstrap-select button,
+.fl-select .woocommerce-ordering .bootstrap-select button{
 	background: transparent;
 	border: 0;
 	color: #31304F;
@@ -242,8 +247,9 @@ Selects
 	font-size: 16px;
 	padding-right: 0!important;
 }
-.fl-select .bootstrap-select .dropdown-toggle
-.fl-select .bootstrap-select .caret{
+.fl-select .bootstrap-select .dropdown-toggle,
+.fl-select .bootstrap-select .caret,
+.fl-select .woocommerce-ordering .bootstrap-select .caret{
 	border: 0;
 }
 
@@ -255,15 +261,18 @@ Selects
 
 
 
-.dropdown-toggle{
+.dropdown-toggle,
+.fl-select .woocommerce-ordering .dropdown-toggle{
 	position: relative;
 	background: transparent!important;
 	min-height: 50px;
 }
-.dropdown-toggle::after{
+.dropdown-toggle::after,
+.fl-select .woocommerce-ordering .dropdown-toggle::after{
 	content: none;
 }
-.dropdown-toggle::before{
+.dropdown-toggle::before,
+.fl-select .woocommerce-ordering .dropdown-toggle::before{
 	content: "\f107"!important;
     font-family: 'Font Awesome 5 Free';
     font-weight: 600;
@@ -291,7 +300,8 @@ Selects
 .btn-light:focus{
 	box-shadow: none!important;
 }
-.bootstrap-select .dropdown-toggle .filter-option-inner{
+.bootstrap-select .dropdown-toggle .filter-option-inner,
+.fl-select .woocommerce-ordering .dropdown-toggle .filter-option-inner{
 	line-height: 2.4!important;
 	font-family: 'Open Sans', sans-serif;
 	color: #31304F;
@@ -300,13 +310,19 @@ Selects
 }
 .fl-select .show > .dropdown-toggle.btn-default:hover,
 .fl-select .btn-default.active, .fl-select .btn-default:active, 
-.fl-select .show > .dropdown-toggle.btn-default{
+.fl-select .show > .dropdown-toggle.btn-default,
+.fl-select .woocommerce-ordering .show > .dropdown-toggle.btn-default:hover,
+.fl-select .woocommerce-ordering .btn-default:active,
+.fl-select .woocommerce-ordering .btn-default.active,
+.fl-select .woocommerce-ordering .show > .dropdown-toggle.btn-default,{
     color: #710023;
     background-color: transparent;
     border: 0;
 }
 .fl-select .btn-default:hover,
+.fl-select .woocommerce-ordering .btn-default:hover,
 .fl-select .btn-default:focus,
+.fl-select .woocommerce-ordering .btn-default:focus,
 .btn-default.active.focus, .btn-default.active:focus, 
 .btn-default.active:hover, .btn-default:active.focus, 
 .btn-default:active:focus, .btn-default:active:hover, 
@@ -318,10 +334,12 @@ Selects
     border: 0;
     outline: 0!important;
 }
-.fl-select .bootstrap-select .dropdown-toggle:focus{
+.fl-select .bootstrap-select .dropdown-toggle:focus,
+.fl-select .woocommerce-ordering .bootstrap-select .dropdown-toggle:focus{
 	outline: 0!important;
 }
-.fl-select .dropdown-menu{
+.fl-select .dropdown-menu,
+.fl-select .woocommerce-ordering .dropdown-menu{
     margin: 0;
     background-color: #31304f;
     border: none;
@@ -329,17 +347,27 @@ Selects
     box-shadow: none;
     padding: 12px 0 10px;
 }
-.fl-select .dropdown-menu li{
+.fl-select .woocommerce-ordering{
+	margin-bottom: 0!important;
+}
+.fl-select .woocommerce-ordering{
+	float: initial!important;
+}
+.fl-select .dropdown-menu li,
+.fl-select .woocommerce-ordering .dropdown-menu li{
     position: relative;
     padding: 0;
     margin: 0;
     line-height: 1;
 }
 .fl-select .dropdown-menu li:after,
-.fl-select .dropdown-menu li:before{
+.fl-select .dropdown-menu li:before,
+.fl-select .woocommerce-ordering .dropdown-menu li:after,
+.fl-select .woocommerce-ordering .dropdown-menu li:before{
 	content: none!important;
 }
-.fl-select .dropdown-menu li a{
+.fl-select .dropdown-menu li a,
+.fl-select .woocommerce-ordering .dropdown-menu li a{
 	display: inline-block;
     text-align: center;
     background: #31304f;
@@ -348,7 +376,8 @@ Selects
     padding: 10px 0;
     font-size: 12px;
 }
-.fl-select .dropdown-menu li a:hover {
+.fl-select .dropdown-menu li a:hover,
+.fl-select .woocommerce-ordering .dropdown-menu li a:hover{
     background-color: #172248;
     color: #fff!important;
 }
