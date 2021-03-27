@@ -27,17 +27,15 @@
                   <?php echo $logo_tag; ?>
                 </a>
               </div>
-              <?php endif; ?>
               <?php if(!empty($smedias)):  ?>
-              <div class="ftr-social-media">
+              <div class="ftr-social-media hide-sm">
                 <ul class="reset-list">
                   <?php foreach($smedias as $smedia): ?>
                   <li>
                     <a target="_blank" href="<?php echo $smedia['url']; ?>">
                         <?php echo $smedia['icon']; ?>
                     </a>
-                 </li>
-                 <?php endforeach; ?>
+                  </li>
                 </ul>
               </div>
               <?php endif; ?>
@@ -56,7 +54,7 @@
               ?> 
               </div>
             </div>
-            <div class="ftr-menu ftr-col-2">
+            <div class="ftr-menu ftr-col-2 hide-sm">
               <h6 class="ftr-menu-title"><?php _e( 'SHOP', THEME_NAME ); ?></h6>
               <div class="ftr-menu-des">
               <?php 
@@ -70,18 +68,18 @@
               ?> 
               </div>
             </div>
-            <div class="ftr-menu ftr-col-3">
+            <div class="ftr-menu ftr-col-3 hide-sm">
               <h6 class="ftr-menu-title"><?php _e( 'ACCOUNT', THEME_NAME ); ?></h6>
               <div class="ftr-menu-des">
-              <?php 
-                $fmenuOptions3 = array( 
-                    'theme_location' => 'cbv_ftc_menu', 
-                    'menu_class' => 'reset-list',
-                    'container' => '',
-                    'container_class' => ''
-                  );
-                wp_nav_menu( $fmenuOptions3 );
-              ?> 
+                <?php 
+                  $fmenuOptions3 = array( 
+                      'theme_location' => 'cbv_ftc_menu', 
+                      'menu_class' => 'reset-list',
+                      'container' => '',
+                      'container_class' => ''
+                    );
+                  wp_nav_menu( $fmenuOptions3 );
+                ?> 
               </div>
             </div>
             <div class="ftr-menu ftr-col-4">
@@ -95,6 +93,20 @@
               ?>
               </div>
             </div>
+            <?php if(!empty($smedias)):  ?>
+            <div class="xs-social-media">
+              <div class="ftr-social-media show-sm">
+                <ul class="reset-list">
+                  <?php foreach($smedias as $smedia): ?>
+                  <li>
+                    <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                        <?php echo $smedia['icon']; ?>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <?php endif; ?>
           </div>
         </div>
       </div>
@@ -106,10 +118,10 @@
         <div class="col-md-12">
           <div class="ftr-middle-inr">
             <ul class="reset-list">
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-01.jpg"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-02.jpg"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-03.jpg"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/ftr-mdl-04.jpg"></li>
+              <li><img src="assets/images/ftr-mdl-01.jpg"></li>
+              <li><img src="assets/images/ftr-mdl-02.jpg"></li>
+              <li><img src="assets/images/ftr-mdl-03.jpg"></li>
+              <li><img src="assets/images/ftr-mdl-04.jpg"></li>
             </ul>
           </div>
         </div>
@@ -122,8 +134,9 @@
         <div class="col-md-12">
           <div class="ftr-btm-inr">
             <div class="ftr-copywrite">
-              <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?> 
+            <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?> 
             </div>
+            <div class="ftr-btm-menu">
             <div class="ftr-btm-menu">
               <?php 
                 $copyrightmenu = array( 

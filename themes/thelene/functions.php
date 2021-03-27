@@ -37,6 +37,7 @@ if( !function_exists('cbv_theme_setup') ){
 
         register_nav_menus( array(
             'cbv_main_menu' => __( 'Hoofdmenu', THEME_NAME ),
+            'cbv_cat_menu' => __( 'Category Menu', THEME_NAME ),
             'cbv_fta_menu' => __( 'Footer Menu 1', THEME_NAME ),
             'cbv_ftb_menu' => __( 'Footer Menu 2', THEME_NAME ),
             'cbv_ftc_menu' => __( 'Footer Menu 3', THEME_NAME ),
@@ -69,6 +70,8 @@ add_action( 'wp_enqueue_scripts', 'cbv_theme_scripts');
 /**
 Includes->>
 */
+include_once(THEME_DIR .'/inc/class-cbv_attributes-widgets.php');
+//include_once(THEME_DIR .'/inc/class-cb-wc-widget-price-filter.php');
 include_once(THEME_DIR .'/inc/widgets-area.php');
 include_once(THEME_DIR .'/inc/breadcrumbs.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');

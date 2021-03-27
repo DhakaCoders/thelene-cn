@@ -1,0 +1,15 @@
+2021-03-27T01:13:03+00:00 CRITICAL Uncaught Error: Class 'Constants' not found in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\class-cb-wc-widget-price-filter.php:24
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-widget-factory.php(61): WC_Widget_CBV_Price_Filter->__construct()
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\widgets.php(115): WP_Widget_Factory->register('WC_Widget_CBV_P...')
+#2 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\class-cb-wc-widget-price-filter.php(177): register_widget('WC_Widget_CBV_P...')
+#3 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): cbv_wc_price_slider_load_widget('')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\widgets.php(1773): do_action('widgets_init')
+#7 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wp_widgets_ini in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\class-cb-wc-widget-price-filter.php on line 24
+
+2021-03-27T01:24:25+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\class-cb-wc-widget-price-filter.php on line 13
+
+2021-03-27T01:24:34+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC) in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\class-cb-wc-widget-price-filter.php on line 13
+
