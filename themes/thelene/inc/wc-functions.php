@@ -470,5 +470,36 @@ function woo_if_cart_empty(){
     echo '</div>';
 }
 
+/**
+ * @snippet       Display Coupon under Proceed to Checkout Button @ WooCommerce Cart
+ * @how-to        Get CustomizeWoo.com FREE
+ * @sourcecode    https://businessbloomer.com/?p=81542
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 3.5.1
+ */
+ 
+add_action( 'woocommerce_proceed_to_checkout', 'bbloomer_display_coupon_form_below_proceed_checkout', 10 );
+ 
+function bbloomer_display_coupon_form_below_proceed_checkout() {
+   ?> 
+      <form class="woocommerce-coupon-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+         <?php if ( wc_coupons_enabled() ) { ?>
+            <div class="coupon under-proceed">
+               <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" style="width: 100%" /> 
+               <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" style="width: 100%"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+            </div>
+         <?php } ?>
+      </form>
+   <?php
+}
+
+// Remove the payment options form from default location
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+
+// Add the payment options form under the "order notes" section
+// Important you will have to also add the following custom CSS to your site:
+// body .woocommerce-checkout-payment { float: none; width: 100%; }
+add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 20 );
+
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
