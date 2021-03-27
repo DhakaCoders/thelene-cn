@@ -470,5 +470,28 @@ function woo_if_cart_empty(){
     echo '</div>';
 }
 
+/**
+ * @snippet       Display Coupon under Proceed to Checkout Button @ WooCommerce Cart
+ * @how-to        Get CustomizeWoo.com FREE
+ * @sourcecode    https://businessbloomer.com/?p=81542
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 3.5.1
+ */
+ 
+add_action( 'woocommerce_proceed_to_checkout', 'bbloomer_display_coupon_form_below_proceed_checkout', 10 );
+ 
+function bbloomer_display_coupon_form_below_proceed_checkout() {
+   ?> 
+      <form class="woocommerce-coupon-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+         <?php if ( wc_coupons_enabled() ) { ?>
+            <div class="coupon under-proceed">
+               <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" style="width: 100%" /> 
+               <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" style="width: 100%"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+            </div>
+         <?php } ?>
+      </form>
+   <?php
+}
+
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
