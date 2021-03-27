@@ -164,6 +164,13 @@
 .price_label span{
 	margin-top: 19px;
 	display: flex;
+	font-size: 12px;
+	font-family: 'Work Sans', sans-serif;
+	color: #78797B;
+	font-weight: 400;
+}
+.price_label span.to{
+	margin-left: auto;
 }
 @media (max-width: 1699px){
 	
