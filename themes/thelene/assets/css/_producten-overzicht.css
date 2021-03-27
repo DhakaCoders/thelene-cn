@@ -126,6 +126,18 @@
 .sidebar-widget{
 	padding-bottom: 10px;
 }
+.price_slider_wrapper .price_slider_amount button.button{
+	width: 100%!important;
+	margin: 0!important;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	background: #31304F!important;
+	border-color: #31304F!important;
+	border-radius: 6px!important;
+}
+
 @media (max-width: 1699px){
 	
 }
