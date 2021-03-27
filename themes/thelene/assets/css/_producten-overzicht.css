@@ -158,7 +158,13 @@
 	border-radius: 8px!important;
 	height: 8px!important;
 }
-
+.price_label{
+	display: flex;
+}
+.price_label span{
+	margin-top: 19px;
+	display: flex;
+}
 @media (max-width: 1699px){
 	
 }
