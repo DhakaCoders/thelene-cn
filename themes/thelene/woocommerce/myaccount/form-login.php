@@ -156,7 +156,19 @@ global $woocommerce;
 				<p class="form-row form-row-wide" id="billing_email_field">
 					<label for="billing_email" class="">E-mailadres</label>
 					<span class="woocommerce-input-wrapper">
-						<input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="" value="admin@gmail.com" autocomplete="email username">
+						<input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="" autocomplete="email username">
+					</span>
+				</p>
+				<p class="form-row form-row-first billing_gsm_number" id="billing_address_1_field">
+					<label for="billing_gsm_number" class="">GSM nummer</label>
+					<span class="woocommerce-input-wrapper">
+						<input type="text" class="input-text " name="billing_gsm_number" id="billing_gsm_number" placeholder="Bijv. 0493 20 36 20" autocomplete="gsm-number">
+					</span>
+				</p>
+				<p class="form-row form-row-last billing_house" id="billing_house_field">
+					<label for="billing_house" class="">Huisnummer en bus</label>
+					<span class="woocommerce-input-wrapper">
+						<input type="text" class="input-text " name="billing_house" id="billing_house" placeholder="Bijv. 113-C" autocomplete="house-number">
 					</span>
 				</p>
 			</div>
