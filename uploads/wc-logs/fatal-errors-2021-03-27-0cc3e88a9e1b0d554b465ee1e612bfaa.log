@@ -1,0 +1,10 @@
+2021-03-27T09:42:53+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in E:\Development\server\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-functions.php on line 463 and at least 2 expected in E:\Development\server\htdocs\2021\03\thelene\wp-includes\plugin.php:583
+Stack trace:
+#0 E:\Development\server\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-functions.php(463): remove_action('woocommerce_car...')
+#1 E:\Development\server\htdocs\2021\03\thelene\thelene-cn\themes\thelene\functions.php(78): include_once('E:\\Development\\...')
+#2 E:\Development\server\htdocs\2021\03\thelene\wp-settings.php(514): include('E:\\Development\\...')
+#3 E:\Development\server\htdocs\2021\03\thelene\wp-config.php(98): require_once('E:\\Development\\...')
+#4 E:\Development\server\htdocs\2021\03\thelene\wp-load.php(37): require_once('E:\\Development\\...')
+#5 E:\Development\server\htdocs\2021\03\thelene\wp-blog-header.php(13): require_once('E:\\Development\\...')
+#6 E:\Development\server\htdocs\2021 in E:\Development\server\htdocs\2021\03\thelene\wp-includes\plugin.php on line 583
+
