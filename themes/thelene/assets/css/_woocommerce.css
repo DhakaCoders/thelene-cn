@@ -38,7 +38,6 @@ ul.select2-results__options li{
     border: 2px solid #31304F!important;
     color: #fff!important;
     border-radius: 6px!important;
-    padding: 18px 80px!important;
     font-size: 16px!important;
     letter-spacing: 0.04em;
     font-family: Open Sans;
@@ -157,7 +156,7 @@ body.woocommerce-account #customer_login .u-column2.col-2 > h2{
 	max-width: 100%;
 	height: 48px;
 	background: #FFFFFF;
-	border: 2px solid #F3F3F3;
+	border: 2px solid #F2EDE9;
 	box-sizing: border-box;
 	padding: 5px 18px 5px;
 	color: #ACABAB;

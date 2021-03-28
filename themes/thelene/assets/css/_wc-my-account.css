@@ -6,6 +6,11 @@ body.woocommerce-account .woocommerce-form{
 	border:none;
 	border-top:1px solid #ECE9E9;
 	padding-left:0px;
+	margin-right: 24px;
+    padding-right: 0;
+}
+body.woocommerce-account .woocommerce form .form-row{
+	margin-bottom:15px
 }
 body.woocommerce-account .woocommerce input[type="text"],
 body.woocommerce-account .woocommerce input[type="email"], 
@@ -40,13 +45,7 @@ body.woocommerce-account .woocommerce input[type="password"]:-ms-input-placehold
 body.woocommerce-account .woocommerce textarea:-ms-input-placeholderr{
 	color:#9EA5AB;
 }
-body.woocommerce-account .woocommerce input[type="text"]::placeholder, 
-body.woocommerce-account .woocommerce input[type="email"]::placeholder,
-body.woocommerce-account .woocommerce input[type="tel"]::placeholder, 
-body.woocommerce-account .woocommerce input[type="password"]::placeholder, 
-body.woocommerce-account .woocommerce textarea::placeholder{
-	color:#9EA5AB;
-}
+
 body.woocommerce-account .woocommerce input[type="text"]::-moz-placeholder, 
 body.woocommerce-account .woocommerce input[type="email"]::-moz-placeholder,
 body.woocommerce-account .woocommerce input[type="tel"]::-moz-placeholder, 
@@ -69,12 +68,62 @@ body.woocommerce-account .login-register-wrap a{
 body.woocommerce-account .woocommerce form .form-row label{
 	color:#000;
 }
-body.woocommerce-account .woocommerce button[type=submit]{
+body.woocommerce-account .woocommerce button[type=submit],
+body.woocommerce-account .woocommerce button[type=button]{
 	margin-left:0px!important;
+	padding: 18px 80px!important;
 }
 body.woocommerce-account .woocommerce form .form-row label{
 	padding-bottom: 12px;
 }
-body.woocommerce-account .woocommerce-notices-wrapper {
+body.woocommerce-account .woocommerce-notices-wrapper{
     margin-bottom: 43px;
+}
+
+body.woocommerce-account  .woocommerce-form__label{
+    margin-top: 21px;
+}
+body.woocommerce-account .login-btm-wrap{
+	border-top:1px solid #F1E8E1;
+	padding-top:73px;
+}
+body.woocommerce-account .default-page-con h2{
+	letter-spacing: -0.02em;
+}
+body.woocommerce-account .login-btm-wrap h2{
+    text-align: center; 
+    font-size: 30px;
+    margin-bottom: 44px;
+}
+body.woocommerce-account .login-info-crtl ul{
+	display: flex;
+	justify-content: center;
+}
+body.woocommerce-account .login-info-crtl ul li{
+    max-width: 33.3333%;
+    width: 100%;
+    text-align: center;
+}
+body.woocommerce-account .default-page-con{
+	padding-bottom:0;
+}
+body.woocommerce-account .login-info-crtl{
+    padding-bottom: 23px;
+}
+body.woocommerce-account .login-info-crtl ul li i{
+	display: inline-block;
+    width: 20px;
+    height: 17px;
+    background-image: url(../images/check-mark-icon.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body.woocommerce-account .default-page-con p{
+	margin-bottom:15px;
+}
+body.woocommerce-account .woocommerce .u-column1.col-1, 
+body.woocommerce-account .woocommerce .u-column2.col-2{
+	padding-right: 0;
+	padding-left:0;
 }
