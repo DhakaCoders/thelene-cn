@@ -221,6 +221,7 @@ function cbv_get_single_price(){
     echo '<span class="plus">+</span></div>';
     echo '</div></div>';
     echo '<div class="qty-price-wrap">';
+    echo '<span class="price-pre-title">Totaal: </span>';
     echo $product->get_price_html();
     echo '</div>';
 }
@@ -502,5 +503,21 @@ remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_paymen
 // body .woocommerce-checkout-payment { float: none; width: 100%; }
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 20 );
 
+
+//add_action( 'woocommerce_after_cart', 'custom_after_cart' );
+function custom_after_cart() {
+    echo '<script>
+    jQuery(document).ready(function($) {
+
+        var upd_cart_btn = $(".update-cart-button");
+        upd_cart_btn.hide();
+
+        $(".woocommerce-cart-form .quantity.qty").find(".plus").on("click", function(){
+            upd_cart_btn.trigger("click");
+        });
+
+    });
+    </script>';
+}
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 

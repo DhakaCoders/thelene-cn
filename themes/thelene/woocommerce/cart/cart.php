@@ -58,10 +58,17 @@ do_action( 'woocommerce_before_cart' ); ?>
 								?>
 									<div class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
 									<?php
+									$exp_title = explode('-', $_product->get_name());
+									if(!empty($exp_title)){
+										$cart_title = $exp_title[0];
+									}else{
+										$cart_title = $_product->get_name();
+									}
 									if ( ! $product_permalink ) {
-										echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
+										echo $cart_title;
 									} else {
-										echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+										
+										echo sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $cart_title );
 									}
 
 									do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
@@ -83,11 +90,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 									?>
 								</td>
 								<td class="product-weight">
-									<div>100g losse tea</div>
+									<div>
+									100g-losse-tea
+									</div>
 								</td>
 
 								<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
-									<div class="quantity qty"><span class="minus">-</span>
 								<?php
 								if ( $_product->is_sold_individually() ) {
 									$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -107,7 +115,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
 								?>
-								<span class="plus">+</span></div>
 								</td>
 								<td class="product-remove">
 									<?php
