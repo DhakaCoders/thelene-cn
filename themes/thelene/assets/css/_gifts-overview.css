@@ -174,7 +174,7 @@
 	width: 25%;
 	padding-left: 12px;
 	padding-right: 12px;
-	padding-bottom: 75px;
+	padding-bottom: 70px;
 }
 .geschenken-overzitch-grd-ctlr ul li:nth-child(4n+1){
 	clear: left;
@@ -246,6 +246,18 @@
 
 
 /*responsive*/
+@media(max-width: 1199px){
+	.geschenken-overzitch-grd-ctlr ul li{
+		width: 33.3333%;
+	}
+	.geschenken-overzitch-grd-ctlr ul li:nth-child(4n+1) {
+	    clear: none;
+	}
+	.geschenken-overzitch-grd-ctlr ul li:nth-child(3n+1) {
+	    clear: left;
+	}
+}
+
 @media(max-width: 991px){
 	.breadcrumb-cntlr{
 		padding: 20px 0;
