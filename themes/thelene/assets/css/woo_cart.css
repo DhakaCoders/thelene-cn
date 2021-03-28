@@ -134,7 +134,7 @@ body.woocommerce-cart .empty-cart-btn a:hover{
 body.woocommerce-cart table.shop_table tbody tr td.actions{
 	display: none;
 }
-body.woocommerce-cart table.shop_table{
+body.woocommerce-cart .cart-table-crtl table.shop_table{
 	margin-bottom: 42px;
 	border-bottom: 1px solid #F1E8E1!important;
 	padding-bottom: 25px;
@@ -157,7 +157,7 @@ body.woocommerce-cart .cart_totals .woocommerce-Price-amount bdi{
 	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
 }
-body.woocommerce-cart .cart_totals td.Totaal .woocommerce-Price-amount bdi{
+body.woocommerce-cart .cart_totals table tr.order-total .woocommerce-Price-amount bdi{
 	font-weight: 700!important;
 	color: #31304F;
 }
