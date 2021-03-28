@@ -29,34 +29,33 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	<?php endif; ?>
 
-			<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
-
+			<h2><?php esc_html_e( 'Inloggen', 'woocommerce' ); ?></h2>
+			<div><p>Welkom terug!</p></div>
 			<form class="woocommerce-form woocommerce-form-login login" method="post">
 
 				<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-					<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+					<label for="username"><?php esc_html_e( 'E-mailadres', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 					<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
 				</p>
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-					<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+					<label for="password"><?php esc_html_e( 'Wachtwoord', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 					<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
 				</p>
 
 				<?php do_action( 'woocommerce_login_form' ); ?>
-
+				<p class="woocommerce-LostPassword lost_password">
+					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Wachtwoord vergeten?', 'woocommerce' ); ?></a>
+				</p>
 				<p class="form-row">
 					<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
 						<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
 					</label>
 					<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-					<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
+					<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?></button>
 				</p>
-				<p class="woocommerce-LostPassword lost_password">
-					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
-				</p>
-
+			
 				<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 			</form>
@@ -94,7 +93,7 @@ global $woocommerce;
 	<div class="register-title">
 		<h3>Persoonlijke gegevens</h3>
 	</div>
-	<form action="" method="post" id="regiter_action_form">
+	<form id="regiter_action_form">
 		<input type="hidden" name="action" value="ajax_register_save">
 		<div class="type-order-format">
 			<p class="form-row form-row-wide" id="billing_order_type_field">
@@ -173,10 +172,10 @@ global $woocommerce;
 				<p class="same-as-shipping-address">
 					<input type="checkbox" name="is_shipping_address" value="0">&nbsp;Hetzelfde als bezorgadres
 				</p>
-				<p class="form-row form-row-wide" id="billing_email_field">
-					<label for="billing_email" class="">E-mailadres</label>
+				<p class="form-row form-row-wide" id="billing_email_2_field">
+					<label for="billing_email_2" class="">E-mailadres</label>
 					<span class="woocommerce-input-wrapper">
-						<input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="" autocomplete="email username">
+						<input type="email" class="input-text " name="billing_email_2" id="billing_email_2" placeholder="">
 					</span>
 				</p>
 				<p class="form-row form-row-first billing_gsm_number" id="billing_address_1_field">
@@ -204,9 +203,9 @@ global $woocommerce;
 					</span>
 				</p>
 				<p class="form-row form-row-first password" id="password_field">
-					<label for="password" class="">Wachtwoord</label>
+					<label for="re_password" class="">Wachtwoord</label>
 					<span class="woocommerce-input-wrapper">
-						<input type="password" class="input-text " name="password" id="password" placeholder="Minimaal 8 karakters"  autocomplete="password">
+						<input type="password" class="input-text " name="password" id="re_password" placeholder="Minimaal 8 karakters"  autocomplete="password">
 					</span>
 				</p>
 				<p class="form-row form-row-last confirm_password" id="confirm_password_field">
@@ -219,6 +218,7 @@ global $woocommerce;
 			<div class="register-btn">
 				<p>
 					<button type="submit" name="user-register" id="register_action_btn" value="<?php esc_attr_e( 'doorgaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Doorgaan', 'woocommerce' ); ?></button>
+					<input type="hidden" name="user_register_nonce" value="<?php echo wp_create_nonce('user-register-nonce'); ?>"/>
 				</p>
 				<p class="form-row html-text">
 					<span>Koop veilig & vertrouwd</span>

@@ -1,0 +1,150 @@
+2021-03-28T06:03:39+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(233): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T06:09:24+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(232): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T06:17:52+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(228): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T08:48:46+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(215): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T08:50:37+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(215): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T08:52:51+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php on line 172
+
+2021-03-28T08:52:58+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php on line 172
+
+2021-03-28T08:56:45+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(156): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T08:58:02+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php on line 232
+
+2021-03-28T08:59:03+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php on line 232
+
+2021-03-28T08:59:03+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php on line 232
+
+2021-03-28T09:00:17+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(216): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T09:02:06+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(216): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T09:04:04+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(216): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T09:06:41+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(216): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T09:13:29+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(144): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T09:15:26+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(144): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T09:22:04+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(141): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+
+2021-03-28T09:26:18+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 287 and exactly 2 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php:856
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): wc_maybe_store_user_agent('customer')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-manage-fields.php(141): do_action('wp_login', 'customer')
+#4 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(287): ajax_register_save('')
+#5 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(478): WP_Hook->do_action(A in C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-user-functions.php on line 856
+

@@ -389,24 +389,26 @@ $("#reg_email").bind('blur keyup change click', function(){
 })
 $("#register_next").on('click', function(){
   if( $.trim($('form#mail_checker #reg_email').val()) != ''){
+    var email = $('form#mail_checker #reg_email').val();
     $("#form_next").addClass('show-next-form');
     $("#login_register").addClass('hide-login-form');
+    $("#billing_email_2").val(email);
   }
 });
 
 
 $("#for_business").on('change', function(){
 
-var html = '<p class="form-row form-row-first" id="billing_company_name_field">' +
-        '<label for="billing_company_name" class="">Bedrijfsnaam</label>' +
+var html = '<p class="form-row form-row-first" id="billing_company_field">' +
+        '<label for="billing_company" class="">Bedrijfsnaam</label>' +
         '<span class="woocommerce-input-wrapper">' +
-          '<input type="text" class="input-text " name="billing_company_name" id="billing_company_name" placeholder=""autocomplete="company-name">' +
+          '<input type="text" class="input-text " name="billing_company" id="billing_company" placeholder="">' +
         '</span>' +
       '</p>' +
       '<p class="form-row form-row-last" id="billing_btw_nummer_field">' +
         '<label for="billing_btw_nummer" class="">BTW-nummer</label>' +
         '<span class="woocommerce-input-wrapper">' +
-          '<input type="text" class="input-text " name="billing_btw_nummer" id="billing_btw_nummer" placeholder="Naam" autocomplete="family-name">' +
+          '<input type="text" class="input-text " name="billing_btw_nummer" id="billing_btw_nummer" placeholder="">' +
         '</span>' +
       '</p>'+
       '<p class="form-row form-row-wide" id="billing_btw_nummer_field">' +
