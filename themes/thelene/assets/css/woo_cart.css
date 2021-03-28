@@ -131,3 +131,37 @@ body.woocommerce-cart .empty-cart-btn a{
 body.woocommerce-cart .empty-cart-btn a:hover{
 	color: #EC5387;
 }
+body.woocommerce-cart table.shop_table tbody tr td.actions{
+	display: none;
+}
+body.woocommerce-cart table.shop_table{
+	margin-bottom: 42px;
+	border-bottom: 1px solid #F1E8E1!important;
+	padding-bottom: 25px;
+}
+
+body.woocommerce-cart .cart_totals h2{
+	margin-bottom: 30px;
+}
+body.woocommerce-cart .cart_totals tbody tr th:first-child{
+	padding-left: 0;
+	border-bottom: 0!important;
+	border-top: 0!important;
+}
+body.woocommerce-cart .cart_totals tbody tr th{
+	padding-top: 15px!important;
+	padding-bottom: 15px!important;
+	font-weight: 400!important;
+}
+body.woocommerce-cart .cart_totals .woocommerce-Price-amount bdi{
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+body.woocommerce-cart .cart_totals td.Totaal .woocommerce-Price-amount bdi{
+	font-weight: 700!important;
+	color: #31304F;
+}
+body.woocommerce-cart .cart_totals tbody tr td:last-child{
+	padding-right: 0;
+	text-align: right;
+}
