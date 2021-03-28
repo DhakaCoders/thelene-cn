@@ -5,7 +5,6 @@
 @import url('_header.css');
 @import url('_page.css');
 @import url('_home.css');
-@import url('_over-ons.css');
 @import url('_contact.css');
 @import url('_footer.css');
 
@@ -34,9 +33,8 @@
 
 /*Start of Niaz*/
 @import url('_home-niaz.css');
-
-
-
+@import url('_wc-my-account.css');
+@import url('_over-ons.css');
 /*Start of Milon*/
 
 
