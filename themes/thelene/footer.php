@@ -90,7 +90,7 @@
               <?php 
                 if( !empty($address) ) printf('<div class="ftr-location"><a href="%s" target="_blank">%s</a></div>', $gmaplink, $address);
                 if( !empty($email) ) printf('<div class="ftr-email"><a href="mailto:%s">%s</a></div>', $email, $email); 
-                if( !empty($telefoon) ) printf('<div class="ftr-phone"><span>Tel:</span><a href="tel:%s">%s</a></div>', phone_preg($telefoon),  $telefoon); 
+                if( !empty($telefoon) ) printf('<div class="ftr-phone"><span>Tel: </span><a href="tel:%s">%s</a></div>', phone_preg($telefoon),  $telefoon); 
                 if( !empty($bwt) ) printf('<div class="ftr-vat"><span>BTW: %s</span></div>', $bwt); 
               ?>
               </div>
