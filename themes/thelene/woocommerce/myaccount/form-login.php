@@ -109,6 +109,9 @@ global $woocommerce;
     $countries   = $countries_obj->__get('countries');
 ?>
 <div class="register-nextstep woocommerce-billing-fields register-form-hide" id="form_next">
+	<div class="register-top-title">
+		<h1>Nieuw bij Thelene</h1>
+	</div>
 	<div class="register-title">
 		<h3>Persoonlijke gegevens</h3>
 	</div>
