@@ -140,7 +140,6 @@
             <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?> 
             </div>
             <div class="ftr-btm-menu">
-            <div class="ftr-btm-menu">
               <?php 
                 $copyrightmenu = array( 
                     'theme_location' => 'cbv_copyright_menu', 
@@ -154,7 +153,6 @@
             <div class="ftr-designby">
               <a href="#">Website laten maken door<strong> Conversal</strong></a>
             </div>
-          </div>
         </div>
       </div>
     </div>
