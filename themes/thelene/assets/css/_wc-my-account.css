@@ -1,0 +1,62 @@
+body.woocommerce-account .default-page-con h1{
+    border-bottom: 1px solid #F1E8E1;
+    padding-bottom: 28px;
+}
+body.woocommerce-account .woocommerce-form{
+	border:none;
+	border-top:1px solid #ECE9E9;
+}
+body.woocommerce-account .woocommerce input[type="text"],
+body.woocommerce-account .woocommerce input[type="email"], 
+body.woocommerce-account .woocommerce input[type="tel"], 
+body.woocommerce-account .woocommerce input[type="password"], 
+body.woocommerce-account .woocommerce textarea{
+	border-radius:6px;
+}
+
+
+
+
+
+body.woocommerce-account .woocommerce input[type="text"]::placeholder, 
+body.woocommerce-account .woocommerce input[type="email"]::placeholder,
+body.woocommerce-account .woocommerce input[type="tel"]::placeholder, 
+body.woocommerce-account .woocommerce input[type="password"]::placeholder, 
+body.woocommerce-account .woocommerce textarea::placeholder{
+	color:#9EA5AB;
+}
+body.woocommerce-account .woocommerce input[type="text"]:-moz-placeholder, 
+body.woocommerce-account .woocommerce input[type="email"]:-moz-placeholder,
+body.woocommerce-account .woocommerce input[type="tel"]:-moz-placeholder, 
+body.woocommerce-account .woocommerce input[type="password"]:-moz-placeholder, 
+body.woocommerce-account .woocommerce textarea:-moz-placeholder{
+	color:#9EA5AB;
+}
+body.woocommerce-account .woocommerce input[type="text"]:-ms-input-placeholder, 
+	body.woocommerce-account .woocommerce input[type="email"]:-ms-input-placeholderr,
+body.woocommerce-account .woocommerce input[type="tel"]:-ms-input-placeholder, 
+body.woocommerce-account .woocommerce input[type="password"]:-ms-input-placeholder, 
+body.woocommerce-account .woocommerce textarea:-ms-input-placeholderr{
+	color:#9EA5AB;
+}
+body.woocommerce-account .woocommerce input[type="text"]::placeholder, 
+body.woocommerce-account .woocommerce input[type="email"]::placeholder,
+body.woocommerce-account .woocommerce input[type="tel"]::placeholder, 
+body.woocommerce-account .woocommerce input[type="password"]::placeholder, 
+body.woocommerce-account .woocommerce textarea::placeholder{
+	color:#9EA5AB;
+}
+body.woocommerce-account .woocommerce input[type="text"]::-moz-placeholder, 
+body.woocommerce-account .woocommerce input[type="email"]::-moz-placeholder,
+body.woocommerce-account .woocommerce input[type="tel"]::-moz-placeholder, 
+body.woocommerce-account .woocommerce input[type="password"]::-moz-placeholder, 
+body.woocommerce-account .woocommerce textarea::-moz-placeholder{
+	color:#9EA5AB;
+}
+body.woocommerce-account .woocommerce input[type="text"]::-webkit-input-placeholder 
+body.woocommerce-account .woocommerce input[type="email"]::-webkit-input-placeholder,
+body.woocommerce-account .woocommerce input[type="tel"]::-webkit-input-placeholder,
+body.woocommerce-account .woocommerce input[type="password"]::-webkit-input-placeholder,
+body.woocommerce-account .woocommerce textarea::-webkit-input-placeholder{
+	color:#9EA5AB;
+}
