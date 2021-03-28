@@ -83,6 +83,25 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 		</div>
 
 	</div>
+	<div class="login-btm-wrap">
+		<h2 class="login-btm-title">DOLOR SIT AMET</h2>
+		<div class="login-info-crtl">
+			<ul class="reset-list">
+				<li>
+					<i></i>
+					<p>Lorem ipsum dolor sit amet</p>
+				</li>
+				<li>
+					<i></i>
+					<p>Lorem ipsum dolor sit amet</p>
+				</li>
+				<li>
+					<i></i>
+					<p>Lorem ipsum dolor sit amet</p>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>
 <?php 
 global $woocommerce;
@@ -226,6 +245,19 @@ global $woocommerce;
 			</div>
 		</div>
 	</form>
+	<div class="register-pay-logo-wrap">
+		<h3 class="payment-title">Veilig betalen kan bij ons met</h3>
+		<div class="payment-logo-crtl">
+			<ul class="reset-list">
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-03.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-04.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-05.jpg"></li>
+            </ul>
+		</div>
+	</div>
+</div>
 </div>
 <?php endif; ?>
 
