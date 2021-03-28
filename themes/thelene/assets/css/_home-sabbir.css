@@ -57,7 +57,7 @@
 	background: #fff;
 }
 .blg-grds-item .slick-track .blog-grd-des.mHc{
-	height: auto;
+	height: auto!important;
 }
 .blog-grd-img{
 	width: 100%;
@@ -121,6 +121,8 @@
 	.cate-grid-img span{
 		font-size: 28px;
 		min-width: 210px;
+		padding: 18px 25px;
+		min-height: 60px;
 	}
 }
 
@@ -128,6 +130,8 @@
 	.cate-grid-img span{
 		font-size: 26px;
 		min-width: 200px;
+		padding: 16px 23px;
+		min-height: 50px;
 	}
 	.blog-grids-cntrl .blg-grds-item .blg-grd-items{
 		margin: 0 -10px; 
@@ -147,6 +151,8 @@
 	.cate-grid-img span{
 		font-size: 24px;
 		min-width: 170px;
+		padding: 16px 23px;
+		min-height: 50px;
 	}
 	.bgi-des p{
 		font-size: 14px;
@@ -164,6 +170,8 @@
 	.cate-grid-img span{
 		font-size: 22px;
 		min-width: 160px;
+		padding: 13px 22px;
+		min-height: 45px;
 	}
 }
 
@@ -173,6 +181,8 @@
 	}
 	.cate-grid-img span{
 		font-size: 21px;
+		padding: 12px 21px;
+		min-height: 40px;
 	}
 }
 
@@ -183,6 +193,10 @@
 	.cate-grid-img span{
 		font-size: 20px;
 		min-width: 150px;
+		padding: 10px 20px;
+		min-height: 36px;
+		left: 20px;
+		bottom: 20px;
 	}
 	.blog-grd-des .bgi-title{
 		font-size: 20px;
