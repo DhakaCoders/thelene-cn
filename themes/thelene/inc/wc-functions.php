@@ -30,6 +30,7 @@ function get_custom_wc_output_content_wrapper_end(){
     echo '</div>'; 
     echo '</div>'; 
     echo '</div></div></div></div></section>';
+    get_template_part('templates/shop', 'bottom');
   }
 
 }
