@@ -197,3 +197,15 @@
 .woocommerce .related.products li.first, .woocommerce-page ul.products li.first{
 	clear: initial!important;
 }
+
+.single_variation_wrap:after,
+.single_variation_wrap:before{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body.single-product .woocommerce div.product form.cart .button{
+	float: none!important;
+	margin-left: 0!important;
+}
