@@ -51,25 +51,35 @@ apply_filters(
 if ( $customer_orders ) :
 ?>
 <div class="faq-accordion-wrp cbvmyaccount">
-    <ul class="clearfix reset-list orders-list">
+    <ul class="clearfix reset-list tabs">
         <?php
     foreach ( $customer_orders as $customer_order ) :
       $order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
       $item_count = $order->get_item_count();
     ?>
         <li>
-        <div class="orders-crtl">
-        <time class="my-ac-time" datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created(), 'd F Y' ) ); ?></time>
-      <div class="code-text">
+        <div class="faq-accordion-controller">
+        <time class="my-ac-time" datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created(), 'd. m. Y' ) ); ?></time>
+      <a class="code-text">
         <?php echo __('Bestelnummer', 'woocommerce' ) . '#'.$order->get_order_number(); ?>
-      </div>
+      </a>
+      <?php 
+      echo "<div class='order-status color-green'>";
+      echo "<label>Status:</label> ";
+      echo esc_html( wc_get_order_status_name( $order->get_status() ) );
+      echo "</div>";
+      ?>
+
+      <?php
+        echo "<div class='order-price'>{$order->get_formatted_order_total()}</div>";
+      ?>
           <span></span>
-          <div class="order-details">
+          <div class="faq-accordion-dsc mac-single-accordion-dsc">
             <div class="myac-pro-grds">
                 <?php 
-                $order_items = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
-                if( $order_items ):
-                foreach ( $order_items as $item_id => $item ) {
+                    $order_items = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
+                    if( $order_items ):
+                    foreach ( $order_items as $item_id => $item ) {
                 $product = $item->get_product();
                 $itemImgID = get_post_thumbnail_id($product->get_id());
                 if( empty($itemImgID) ){
@@ -89,42 +99,20 @@ if ( $customer_orders ) :
                   <div class="myac-pro-grd-img">
                     <?php echo $order_img; ?>
                   </div>
-                  <div class="order-items-desc">
-                  <h5>
-                  	<?php
-						$exp_title = explode('-', $item->get_name());
-						if(!empty($exp_title)){
-							$cart_title = $exp_title[0];
-							$cart_attributes = $exp_title[1];
-						}else{
-							$cart_title = $item->get_name();
-							$cart_attributes = '';
-						}
-                  	    echo $cart_title; ?><strong class="product-quantity">&times;&nbsp;<?php echo $qty_display; 
-                  	?></strong>
-                    </h5>
-                  <?php if( !empty($cart_attributes) ) printf('<span>%s</span>', $cart_attributes); ?>
+                  <h5><?php echo $item->get_name(); ?> <strong class="product-quantity">&times;&nbsp;<?php echo $qty_display; ?></strong></h5>
+                  <?php 
+                            
+                  ?>
+                  <?php if( !empty($product->get_short_description()) ) echo wpautop($product->get_short_description()); ?>
+
                   <div class="product-price">
                     <?php echo $product->get_price_html(); ?>
-                  </div>
                   </div>
                 </div>
               </div>
               <?php } ?>
               <?php endif; ?>
             </div>
-			<?php 
-			echo "<div class='order-status color-green'>";
-			echo "<label>Status:</label> ";
-			echo esc_html( wc_get_order_status_name( $order->get_status() ) );
-			echo "</div>";
-			?>
-          </div>
-          <div class="contact-info">
-          	<i></i>
-          	<div>
-          		<a class="order-contact-btn" href="#">CONTACT</a>
-          	</div>
           </div>
         </div>
         </li>
@@ -139,9 +127,23 @@ if ( $customer_orders ) :
         echo '<ul class="reset-list page-numbers">';
 
         if($paged > 1){
-            echo '<li><a class="prev page-numbers" href="?pageno=1">Vorige</a></li>';
+            echo '<li><a class="prev page-numbers" href="?pageno=1">
+              <i>
+              <svg class="faq-lft-arrows-icon-svg" width="10" height="10" viewBox="0 0 10 10" fill="717171">
+                <use xlink:href="#faq-lft-arrows-icon-svg"></use>
+              </svg>  
+             </i>
+             Vorige
+            </a></li>';
         }else{
-            echo '<li><span>Vorige</span></li>';
+            echo '<li><span>
+              <i>
+              <svg class="faq-lft-arrows-icon-svg" width="10" height="10" viewBox="0 0 10 10" fill="717171">
+                <use xlink:href="#faq-lft-arrows-icon-svg"></use>
+              </svg>  
+             </i>
+             Vorige
+            </span></li>';
         }
 
         for($p = 1; $p <= $num_pages; $p++){
@@ -153,9 +155,23 @@ if ( $customer_orders ) :
         }
 
         if($paged < $num_pages){
-            echo '<li><a class="next page-numbers" href="?pageno='.$num_pages.'">Volgende</a></li>';
+            echo '<li><a class="next page-numbers" href="?pageno='.$num_pages.'">    
+            Volgende
+            <i>
+              <svg class="faq-rgt-arrows-icon-svg" width="10" height="10" viewBox="0 0 10 10" fill="717171">
+                <use xlink:href="#faq-rgt-arrows-icon-svg"></use>
+              </svg>  
+             </i>
+             </a></li>';
         }else{
-            echo '<li><span>Volgende</span></li>';
+            echo '<li><span>    
+            Volgende
+            <i>
+              <svg class="faq-rgt-arrows-icon-svg" width="10" height="10" viewBox="0 0 10 10" fill="717171">
+                <use xlink:href="#faq-rgt-arrows-icon-svg"></use>
+              </svg>  
+             </i>
+            </span></li>';
         }
 
         echo '</ul>';
@@ -163,4 +179,7 @@ if ( $customer_orders ) :
 ?>
 </div>
 <?php endif; ?>
+    <div class="back-to-dashboard-btn-cntlr">
+        <a class="back-to-dashboard-btn" href="javascript: history.go(-1)">terug naar dashboard</a>
+    </div>
 </div>

@@ -71,20 +71,6 @@ function add_the_error( $errors, $key, $field_name ) {
     echo sprintf( __( '<p class="field-error">%s is a required field.</p>', 'iconic' ), '<strong>' . $field_name . '</strong>' );
 }
 
-add_action('init', function() {
-    add_rewrite_endpoint('my-orders', EP_ROOT | EP_PAGES);
-});
-
-add_action('woocommerce_account_my-orders_endpoint', function() {
-    $order_id = get_query_var('my-orders');
-    $cbvorders = [];  // Function to return licenses for order ID
- 
-    wc_get_template('myaccount/cbv-orders.php', [
-        'cbvorder' => $cbvorders,
-        'order_id' => $order_id
-    ]);
-});
-
 
 
 function ajax_wc_user_signup_init(){

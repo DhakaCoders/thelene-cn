@@ -168,3 +168,15 @@ Stack trace:
 #5 [internal function]: do_shortcode_tag(Array)
 #6 C:\xampp\htdocs\2021\03\thelene\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(woocom...', 'do_shortcode_ta...', ' in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\woocommerce\cart\cart.php on line 41
 
+2021-03-28T13:25:22+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function misha_hook_endpoint(), 2 passed in C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php on line 289 and exactly 4 expected in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-functions.php:522
+Stack trace:
+#0 C:\xampp\htdocs\2021\03\thelene\wp-includes\class-wp-hook.php(289): misha_hook_endpoint('http://localhos...', 'orders')
+#1 C:\xampp\htdocs\2021\03\thelene\wp-includes\plugin.php(206): WP_Hook->apply_filters('http://localhos...', Array)
+#2 C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-page-functions.php(118): apply_filters('woocommerce_get...', 'http://localhos...', 'orders', '', 'http://localhos...')
+#3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-account-functions.php(183): wc_get_endpoint_url('orders', '', 'http://localhos...')
+#4 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\woocommerce\myaccount\navigation.php(29): wc_get_account_endpoint_url('orde in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-functions.php on line 522
+
+2021-03-28T14:34:44+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\woocommerce\myaccount\my-account.php on line 54
+
+2021-03-28T18:19:00+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\woocommerce\myaccount\my-account.php on line 57
+
