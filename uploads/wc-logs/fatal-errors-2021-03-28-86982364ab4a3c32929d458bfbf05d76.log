@@ -176,3 +176,5 @@ Stack trace:
 #3 C:\xampp\htdocs\2021\03\thelene\thelene-cn\plugins\woocommerce\includes\wc-account-functions.php(183): wc_get_endpoint_url('orders', '', 'http://localhos...')
 #4 C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\woocommerce\myaccount\navigation.php(29): wc_get_account_endpoint_url('orde in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\inc\wc-functions.php on line 522
 
+2021-03-28T14:34:44+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\2021\03\thelene\thelene-cn\themes\thelene\woocommerce\myaccount\my-account.php on line 54
+

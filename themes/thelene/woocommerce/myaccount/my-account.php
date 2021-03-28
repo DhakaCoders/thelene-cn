@@ -25,9 +25,14 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <div class="myaccount-crtl">
 	<div class="account-page-title">
-	<?php if( is_wc_endpoint_url( 'view-order' ) ){ ?>
-	
-	<?php }else{ ?>
+	<?php if( is_wc_endpoint_url( 'orders' ) ){ ?>
+		<div><a href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
+		<h1>Bestellingen</h1>
+	<?php }else{ 
+	    $current_user = wp_get_current_user();
+	    $username = !empty($current_user->display_name)? $current_user->display_name : $current_user->user_firstname;
+	?>
+		<p class="loggedin-text"><?php printf( __( 'Hallo, <span>%s</span>', THEME_NAME ), esc_html( $username ) ); ?></p>
 		<h1>Welkom bij uw account</h1>
 		<p>Vanaf uw accountdashboard kunt u uw recente bestellingen bekijken, uw verzend- en factuuradressen beheren en uw wachtwoord en accountgegevens bewerken.</p>
 	<?php } ?>

@@ -27,3 +27,6 @@ $allowed_html = array(
 	),
 );
 ?>
+<div class="deshboard-inner">
+	<img src="<?php echo THEME_URI; ?>/assets/images/account-deshboard.jpg" alt="deshboard">
+</div>
