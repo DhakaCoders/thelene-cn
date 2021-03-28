@@ -93,7 +93,7 @@ global $woocommerce;
 	<div class="register-title">
 		<h3>Persoonlijke gegevens</h3>
 	</div>
-	<form>
+	<form action="" method="post">
 		<div class="woocommerce-billing-fields__field-wrapper">
 			<p class="form-row form-row-first" id="billing_first_name_field">
 				<label for="billing_first_name" class="">Naam</label>
@@ -165,11 +165,43 @@ global $woocommerce;
 						<input type="text" class="input-text " name="billing_gsm_number" id="billing_gsm_number" placeholder="Bijv. 0493 20 36 20" autocomplete="gsm-number">
 					</span>
 				</p>
-				<p class="form-row form-row-last billing_house" id="billing_house_field">
-					<label for="billing_house" class="">Huisnummer en bus</label>
+				<p class="form-row form-row-last billing_phone" id="billing_phone_field">
+					<label for="billing_phone" class="">Telefoon</label>
 					<span class="woocommerce-input-wrapper">
-						<input type="text" class="input-text " name="billing_house" id="billing_house" placeholder="Bijv. 113-C" autocomplete="house-number">
+						<input type="tel" class="input-text " name="billing_phone" id="billing_phone" placeholder="Bijv. 09 224 61 11" autocomplete="tel">
 					</span>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+			<div class="login-info">
+				<p><input type="checkbox" name="create_account" value="1" checked>&nbsp;Account aanmaken</p>
+				<h3>Inloggegevens</h3>
+				<p>Het e-mailadres en wachtwoord zijn nodig om toegang te krijgen tot de gegevens. Ook zullen we je via dit e-mailadres op de hoogte houden van de status van bestellingen.</p>
+				<p class="form-row form-row-wide" id="billing_email_field">
+					<label for="billing_email" class="">E-mailadres</label>
+					<span class="woocommerce-input-wrapper">
+						<input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="Bijv. jan@domein.be" autocomplete="email username">
+					</span>
+				</p>
+				<p class="form-row form-row-first password" id="password_field">
+					<label for="password" class="">Wachtwoord</label>
+					<span class="woocommerce-input-wrapper">
+						<input type="password" class="input-text " name="password" id="password" placeholder="Minimaal 8 karakters"  autocomplete="password">
+					</span>
+				</p>
+				<p class="form-row form-row-last confirm_password" id="confirm_password_field">
+					<label for="confirm_password" class="">Wachtwoord bevestigen</label>
+					<span class="woocommerce-input-wrapper">
+						<input type="password" class="input-text " name="confirm_password" id="confirm_password" autocomplete="confirm-password">
+					</span>
+				</p>
+			</div>
+			<div class="register-btn">
+				<p>
+					<button type="submit" name="user-register" value="<?php esc_attr_e( 'doorgaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Doorgaan', 'woocommerce' ); ?></button>
+				</p>
+				<p class="form-row html-text">
+					<span>Koop veilig & vertrouwd</span>
 				</p>
 			</div>
 		</div>
