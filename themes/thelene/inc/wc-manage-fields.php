@@ -1,4 +1,9 @@
 <?php
+add_action('wp_enqueue_scripts', 'wc_user_signup_action_hooks');
+
+function wc_user_signup_action_hooks(){
+        ajax_wc_user_signup_init();
+}
 // Function to check starting char of a string
 function startsWith($haystack, $needle){
     return $needle === '' || strpos($haystack, $needle) === 0;
@@ -79,3 +84,30 @@ add_action('woocommerce_account_my-orders_endpoint', function() {
         'order_id' => $order_id
     ]);
 });
+
+
+
+function ajax_wc_user_signup_init(){
+    wp_register_script('ajax-user-register-script', get_stylesheet_directory_uri(). '/assets/js/ajax-action.js', array('jquery') );
+    wp_enqueue_script('ajax-user-register-script');
+
+    wp_localize_script( 'ajax-user-register-script', 'ajax_user_register_signup_object', array(
+        'ajaxurl' => admin_url( 'admin-ajax.php' )
+    ));
+    // Enable the user with no privileges to run ajax_login() in AJAX
+}
+add_action('wp_ajax_nopriv_ajax_register_save', 'ajax_register_save');
+    //add_action('wp_ajax_ngo_user_create_account', 'ngo_user_create_account');
+function ajax_register_save(){
+    $data = array();
+    if (isset( $_POST["email"] ) && wp_verify_nonce($_POST['user_ngo_register_nonce'], 'user-ngo-register-nonce')) {
+        $user_email     = sanitize_email($_POST["email"]);
+        $usertype       = sanitize_text_field($_POST["usertype"]);
+        
+        $agree      = sanitize_text_field($_POST["agree"]);
+        $user_password  = esc_attr($_POST["user_password"]);
+        $conf_password  = esc_attr($_POST["confirm_password"]);
+        echo json_encode($data);
+        wp_die();
+    }
+}
