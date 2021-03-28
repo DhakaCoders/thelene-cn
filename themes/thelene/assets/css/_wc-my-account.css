@@ -127,3 +127,22 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 	padding-right: 0;
 	padding-left:0;
 }
+/* Orders */
+.myac-pro-grds {
+    display: flex;
+}
+.myac-pro-grd-item-inr {
+    display: flex;
+}
+.orders-list li {
+    background: #fff;
+    margin-bottom: 30px !important;
+}
+.order-details {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.orders-crtl {
+    padding: 20px;
+}

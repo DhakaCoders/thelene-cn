@@ -1,105 +1,166 @@
 <?php
-/**
- * Orders
- *
- * Shows orders on the account page.
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/orders.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
- * @version 3.7.0
- */
-
 defined( 'ABSPATH' ) || exit;
+if(! empty($_GET['pageno']) && is_numeric($_GET['pageno']) ){
+    $paged = $_GET['pageno'];
+}else{
+    $paged = 1;
+}
+$posts_per_page = 3;
 
-do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
+$all_orders = get_posts(
+apply_filters(
+  'woocommerce_my_account_my_orders_query',
+  array(
+    'numberposts' => -1,
+    'meta_key'    => '_customer_user',
+    'meta_value'  => get_current_user_id(),
+    'post_type'   => wc_get_order_types( 'view-orders' ),
+    'post_status' => array_keys( wc_get_order_statuses() )
+  )
+)
+);
 
-<?php if ( $has_orders ) : ?>
+//how many total posts are there?
+$order_count = count($all_orders);
 
-	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
-		<thead>
-			<tr>
-				<?php foreach ( wc_get_account_orders_columns() as $column_id => $column_name ) : ?>
-					<th class="woocommerce-orders-table__header woocommerce-orders-table__header-<?php echo esc_attr( $column_id ); ?>"><span class="nobr"><?php echo esc_html( $column_name ); ?></span></th>
-				<?php endforeach; ?>
-			</tr>
-		</thead>
+//how many pages do we need to display all those posts?
+$num_pages = ceil($order_count / $posts_per_page);
 
-		<tbody>
-			<?php
-			foreach ( $customer_orders->orders as $customer_order ) {
-				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-				$item_count = $order->get_item_count() - $order->get_item_count_refunded();
-				?>
-				<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-<?php echo esc_attr( $order->get_status() ); ?> order">
-					<?php foreach ( wc_get_account_orders_columns() as $column_id => $column_name ) : ?>
-						<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-<?php echo esc_attr( $column_id ); ?>" data-title="<?php echo esc_attr( $column_name ); ?>">
-							<?php if ( has_action( 'woocommerce_my_account_my_orders_column_' . $column_id ) ) : ?>
-								<?php do_action( 'woocommerce_my_account_my_orders_column_' . $column_id, $order ); ?>
+//let's make sure we don't have a page number that is higher than we have posts for
+if($paged > $num_pages || $paged < 1){
+    $paged = $num_pages;
+}
 
-							<?php elseif ( 'order-number' === $column_id ) : ?>
-								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo esc_html( _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number() ); ?>
-								</a>
 
-							<?php elseif ( 'order-date' === $column_id ) : ?>
-								<time datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created() ) ); ?></time>
-
-							<?php elseif ( 'order-status' === $column_id ) : ?>
-								<?php echo esc_html( wc_get_order_status_name( $order->get_status() ) ); ?>
-
-							<?php elseif ( 'order-total' === $column_id ) : ?>
-								<?php
-								/* translators: 1: formatted order total 2: total order items */
-								echo wp_kses_post( sprintf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'woocommerce' ), $order->get_formatted_order_total(), $item_count ) );
-								?>
-
-							<?php elseif ( 'order-actions' === $column_id ) : ?>
-								<?php
-								$actions = wc_get_account_orders_actions( $order );
-
-								if ( ! empty( $actions ) ) {
-									foreach ( $actions as $key => $action ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-										echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
-									}
-								}
-								?>
-							<?php endif; ?>
-						</td>
-					<?php endforeach; ?>
-				</tr>
-				<?php
-			}
+$customer_orders = get_posts(
+apply_filters(
+  'woocommerce_my_account_my_orders_query',
+  array(
+    'numberposts' => $posts_per_page,
+    'meta_key'    => '_customer_user',
+    'meta_value'  => get_current_user_id(),
+    'post_type'   => wc_get_order_types( 'view-orders' ),
+    'post_status' => array_keys( wc_get_order_statuses() ),
+        'paged'       => $paged
+  )
+)
+);
+?>
+<div class="customer-order-details">
+<?php
+if ( $customer_orders ) :
+?>
+<div class="faq-accordion-wrp cbvmyaccount">
+    <ul class="clearfix reset-list orders-list">
+        <?php
+    foreach ( $customer_orders as $customer_order ) :
+      $order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+      $item_count = $order->get_item_count();
+    ?>
+        <li>
+        <div class="orders-crtl">
+        <time class="my-ac-time" datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created(), 'd F Y' ) ); ?></time>
+      <div class="code-text">
+        <?php echo __('Bestelnummer', 'woocommerce' ) . '#'.$order->get_order_number(); ?>
+      </div>
+          <span></span>
+          <div class="order-details">
+            <div class="myac-pro-grds">
+                <?php 
+                $order_items = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
+                if( $order_items ):
+                foreach ( $order_items as $item_id => $item ) {
+                $product = $item->get_product();
+                $itemImgID = get_post_thumbnail_id($product->get_id());
+                if( empty($itemImgID) ){
+                    $itemImgID = get_post_thumbnail_id($product->get_parent_id());
+                }
+                $order_img = cbv_get_image_tag( $itemImgID, 'thumbnail' );
+                    $qty = $item->get_quantity();
+                $refunded_qty = $order->get_qty_refunded_for_item( $item_id );
+                if ( $refunded_qty ) {
+                  $qty_display = '<del>' . esc_html( $qty ) . '</del> <ins>' . esc_html( $qty - ( $refunded_qty * -1 ) ) . '</ins>';
+                } else {
+                  $qty_display = esc_html( $qty );
+                }
+                ?>
+              <div class="myac-pro-grd-item">
+                <div class="myac-pro-grd-item-inr">
+                  <div class="myac-pro-grd-img">
+                    <?php echo $order_img; ?>
+                  </div>
+                  <div class="order-items-desc">
+                  <h5>
+                  	<?php
+						$exp_title = explode('-', $item->get_name());
+						if(!empty($exp_title)){
+							$cart_title = $exp_title[0];
+							$cart_attributes = $exp_title[1];
+						}else{
+							$cart_title = $item->get_name();
+							$cart_attributes = '';
+						}
+                  	    echo $cart_title; ?><strong class="product-quantity">&times;&nbsp;<?php echo $qty_display; 
+                  	?></strong>
+                    </h5>
+                  <?php if( !empty($cart_attributes) ) printf('<span>%s</span>', $cart_attributes); ?>
+                  <div class="product-price">
+                    <?php echo $product->get_price_html(); ?>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <?php } ?>
+              <?php endif; ?>
+            </div>
+			<?php 
+			echo "<div class='order-status color-green'>";
+			echo "<label>Status:</label> ";
+			echo esc_html( wc_get_order_status_name( $order->get_status() ) );
+			echo "</div>";
 			?>
-		</tbody>
-	</table>
+          </div>
+          <div class="contact-info">
+          	<i></i>
+          	<div>
+          		<a class="order-contact-btn" href="#">CONTACT</a>
+          	</div>
+          </div>
+        </div>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  </div>
+<div class="faq-pagi-ctlr">
+<?php
+    //we need to display some pagination if there are more total posts than the posts displayed per page
+    if($order_count > $posts_per_page ){
 
-	<?php do_action( 'woocommerce_before_account_orders_pagination' ); ?>
+        echo '<ul class="reset-list page-numbers">';
 
-	<?php if ( 1 < $customer_orders->max_num_pages ) : ?>
-		<div class="woocommerce-pagination woocommerce-pagination--without-numbers woocommerce-Pagination">
-			<?php if ( 1 !== $current_page ) : ?>
-				<a class="woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous button" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page - 1 ) ); ?>"><?php esc_html_e( 'Previous', 'woocommerce' ); ?></a>
-			<?php endif; ?>
+        if($paged > 1){
+            echo '<li><a class="prev page-numbers" href="?pageno=1">Vorige</a></li>';
+        }else{
+            echo '<li><span>Vorige</span></li>';
+        }
 
-			<?php if ( intval( $customer_orders->max_num_pages ) !== $current_page ) : ?>
-				<a class="woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next button" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ); ?>"><?php esc_html_e( 'Next', 'woocommerce' ); ?></a>
-			<?php endif; ?>
-		</div>
-	<?php endif; ?>
+        for($p = 1; $p <= $num_pages; $p++){
+            if ($paged == $p) {
+                echo '<li><span class="page-numbers current">'.$p.'</span></li>';
+            }else{
+                echo '<li><a class="page-numbers" href="?pageno='.$p.'">'.$p.'</a></li>';
+            }
+        }
 
-<?php else : ?>
-	<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
-		<a class="woocommerce-Button button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>"><?php esc_html_e( 'Browse products', 'woocommerce' ); ?></a>
-		<?php esc_html_e( 'No order has been made yet.', 'woocommerce' ); ?>
-	</div>
+        if($paged < $num_pages){
+            echo '<li><a class="next page-numbers" href="?pageno='.$num_pages.'">Volgende</a></li>';
+        }else{
+            echo '<li><span>Volgende</span></li>';
+        }
+
+        echo '</ul>';
+    }
+?>
+</div>
 <?php endif; ?>
-
-<?php do_action( 'woocommerce_after_account_orders', $has_orders ); ?>
+</div>

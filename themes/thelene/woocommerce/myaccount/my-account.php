@@ -28,6 +28,9 @@ defined( 'ABSPATH' ) || exit;
 	<?php if( is_wc_endpoint_url( 'orders' ) ){ ?>
 		<div><a href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
 		<h1>Bestellingen</h1>
+    <?php }elseif( is_wc_endpoint_url( 'edit-account' ) ){ ?>
+		<div><a href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
+		<h1>Account Info</h1>
 	<?php }else{ 
 	    $current_user = wp_get_current_user();
 	    $username = !empty($current_user->display_name)? $current_user->display_name : $current_user->user_firstname;

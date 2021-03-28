@@ -72,6 +72,7 @@ function add_the_error( $errors, $key, $field_name ) {
 }
 
 
+
 function ajax_wc_user_signup_init(){
     wp_register_script('ajax-user-register-script', get_stylesheet_directory_uri(). '/assets/js/ajax-action.js', array('jquery') );
     wp_enqueue_script('ajax-user-register-script');
