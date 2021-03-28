@@ -356,6 +356,7 @@ if (windowWidth <= 767) {
   if( $('.BlogGridSlider').length ){
     $('.BlogGridSlider').slick({
       dots: true,
+      arrows: false,
       infinite: true,
       autoplay: false,
       autoplaySpeed: 4000,
