@@ -290,6 +290,13 @@ input.select2-search__field{
 .page-title {
     margin-top: 80px;
 }
+.register-form-hide,
+.login-register-wrap.hide-login-form{
+	display: none;
+}
+.register-nextstep.register-form-hide.show-next-form{
+	display: block;
+}
 @media(max-width: 991px){
 	.woocommerce #customer_details .col-1,
 	.woocommerce #customer_details .col-2 {
