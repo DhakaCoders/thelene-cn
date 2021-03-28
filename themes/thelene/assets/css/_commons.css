@@ -189,10 +189,11 @@ ul.ab-top-menu,
 .fl-products-cntlr ul.products,
 ul.products,
 .product-page-sidebar .sidebar-widget ul,
-.custom-info-crtl ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.custom-info-crtl ul,
+.variations select ul.dropdown-menu.inner{
+	margin: 0!important;
+	padding: 0!important;
+	list-style: none!important;
 }
 .reset-list li,
 ul.products li,
@@ -204,11 +205,12 @@ ul.ab-top-menu li,
 .meta-crtl ul li,
 .fl-products-cntlr ul.products li,
 .product-page-sidebar .sidebar-widget ul li,
-.custom-info-crtl ul li{
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	margin: 0;
+.custom-info-crtl ul li,
+.variations select ul.dropdown-menu.inner li{
+	padding: 0!important;
+	margin: 0!important;
+	list-style: none!important;
+	margin: 0!important;
 }
 .reset-list li:before,
 ul.sub-menu li:before,
@@ -220,7 +222,8 @@ ul.ab-top-menu li:before,
 .fl-products-cntlr ul.products li:before,
 ul.products li:before,
 .product-page-sidebar .sidebar-widget ul li:before,
-.custom-info-crtl ul li:before{
+.custom-info-crtl ul li:before,
+.variations select ul.dropdown-menu.inner li:before{
 	content: none!important;
 }
 
