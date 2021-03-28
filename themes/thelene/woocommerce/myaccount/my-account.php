@@ -22,15 +22,27 @@ defined( 'ABSPATH' ) || exit;
  *
  * @since 2.6.0
  */
-do_action( 'woocommerce_account_navigation' ); ?>
+?>
+<div class="myaccount-crtl">
+	<div class="account-page-title">
+	<?php if( is_wc_endpoint_url( 'view-order' ) ){ ?>
+	
+	<?php }else{ ?>
+		<h1>Welkom bij uw account</h1>
+		<p>Vanaf uw accountdashboard kunt u uw recente bestellingen bekijken, uw verzend- en factuuradressen beheren en uw wachtwoord en accountgegevens bewerken.</p>
+	<?php } ?>
 
-<div class="woocommerce-MyAccount-content">
-	<?php
-		/**
-		 * My Account content.
-		 *
-		 * @since 2.6.0
-		 */
-		do_action( 'woocommerce_account_content' );
-	?>
+	<?php 
+	do_action( 'woocommerce_account_navigation' ); ?>
+
+	<div class="woocommerce-MyAccount-content">
+		<?php
+			/**
+			 * My Account content.
+			 *
+			 * @since 2.6.0
+			 */
+			do_action( 'woocommerce_account_content' );
+		?>
+	</div>
 </div>

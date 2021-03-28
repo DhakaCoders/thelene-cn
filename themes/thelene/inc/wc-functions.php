@@ -503,21 +503,38 @@ remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_paymen
 // body .woocommerce-checkout-payment { float: none; width: 100%; }
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 20 );
 
-
-//add_action( 'woocommerce_after_cart', 'custom_after_cart' );
-function custom_after_cart() {
-    echo '<script>
-    jQuery(document).ready(function($) {
-
-        var upd_cart_btn = $(".update-cart-button");
-        upd_cart_btn.hide();
-
-        $(".woocommerce-cart-form .quantity.qty").find(".plus").on("click", function(){
-            upd_cart_btn.trigger("click");
-        });
-
-    });
-    </script>';
+add_filter( 'woocommerce_get_endpoint_url', 'misha_hook_endpoint', 10, 4 );
+function misha_hook_endpoint( $url, $endpoint, $value, $permalink ){
+ 
+    if( $endpoint === 'winkelmandje' ) {
+        // ok, here is the place for your custom URL, it could be external
+        $url = site_url();
+    }
+    return $url;
+ 
 }
+
+
+
+add_filter ( 'woocommerce_account_menu_items', 'misha_remove_my_account_links' );
+function misha_remove_my_account_links( $menu_links ){
+ // we will hook "anyuniquetext123" later
+    unset( $menu_links['edit-address'] ); // Addresses
+    unset( $menu_links['dashboard'] ); // Remove Dashboard
+    unset( $menu_links['payment-methods'] ); // Remove Payment Methods
+    unset( $menu_links['orders'] ); // Remove Orders
+    unset( $menu_links['downloads'] ); // Disable Downloads
+    unset( $menu_links['edit-account'] ); // Remove Account details tab
+    unset( $menu_links['customer-logout'] ); // Remove Logout link
+
+    $menu_links['orders'] = 'Bestellingen';
+    $menu_links['winkelmandje'] = 'Winkelmandje';
+    $menu_links['edit-account'] = 'ACCOUNT info';
+    $menu_links['customer-logout'] = 'LOGOUT';
+    return $menu_links;
+ 
+}
+
+
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
