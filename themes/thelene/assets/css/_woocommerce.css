@@ -291,6 +291,9 @@ input.select2-search__field{
 .page-title {
     margin-top: 80px;
 }
+.hide-account-title .page-title {
+    display: none !important;
+}
 .register-form-hide,
 .login-register-wrap.hide-login-form{
 	display: none;

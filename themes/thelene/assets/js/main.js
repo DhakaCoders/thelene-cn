@@ -393,6 +393,7 @@ $("#register_next").on('click', function(){
     $("#form_next").addClass('show-next-form');
     $("#login_register").addClass('hide-login-form');
     $("#billing_email_2").val(email);
+    $('body').addClass('hide-account-title');
   }
 });
 
