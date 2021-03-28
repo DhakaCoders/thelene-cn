@@ -504,7 +504,7 @@ remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_paymen
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 20 );
 
 
-add_action( 'woocommerce_after_cart', 'custom_after_cart' );
+//add_action( 'woocommerce_after_cart', 'custom_after_cart' );
 function custom_after_cart() {
     echo '<script>
     jQuery(document).ready(function($) {
