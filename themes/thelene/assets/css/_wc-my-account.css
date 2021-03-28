@@ -127,3 +127,86 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 	padding-right: 0;
 	padding-left:0;
 }
+
+
+@media(max-width:1199px){
+	body.woocommerce-account .woocommerce input[type="text"],
+	body.woocommerce-account .woocommerce input[type="email"], 
+	body.woocommerce-account .woocommerce input[type="tel"],
+	body.woocommerce-account .woocommerce input[type="password"],
+	body.woocommerce-account .woocommerce textarea{
+		height:40px;
+	}
+	body.woocommerce-account .woocommerce button[type=submit],
+	body.woocommerce-account .woocommerce button[type=button]{
+		padding:13px 60px!important;
+	}
+}
+
+@media(max-width: 768px){
+	body.woocommerce-account .woocommerce .u-columns{
+		display: flex!important;
+		flex-direction:column;
+	}
+	body.woocommerce-account .woocommerce .u-column1:nth-child(1){
+		order:2;
+		padding-top: 50px;
+	} 
+	body.woocommerce-account .woocommerce .u-column2:nth-child(2){
+		order:1;
+	}
+	body.woocommerce-account .page-title{
+		display: none;
+	}
+	body.woocommerce-account .woocommerce-form{
+		margin:0;
+		padding-bottom:32px;
+		border-bottom: 1px solid #ECE9E9;
+	}
+	body.woocommerce-account .woocommerce-form{
+		border-top:none;
+	}
+	body.woocommerce-account .woocommerce input[type="text"], 
+	body.woocommerce-account .woocommerce input[type="email"], 
+	body.woocommerce-account .woocommerce input[type="tel"], 
+	body.woocommerce-account .woocommerce input[type="password"], 
+	body.woocommerce-account .woocommerce textarea{
+		height:48px;
+	}
+	body.woocommerce-account .woocommerce form .show-password-input, 
+	body.woocommerce-account .woocommerce-page form .show-password-input{
+		top:50%!important;
+		transform:translateY(-50%)!important;
+		-ms-transform:translateY(-50%)!important;
+		-webkit-transform:translateY(-50%)!important;
+	}
+	body.woocommerce-account .login-btm-wrap h2{
+		font-size:26px;
+	}
+}
+
+@media(max-width:575px){
+	body.woocommerce-account .woocommerce button[type=submit], 
+	body.woocommerce-account .woocommerce button[type=button]{
+		width:100%;
+		font-size: 12px!important;
+	}
+	body.woocommerce-account #customer_login .u-column1.col-1 > h2, 
+	body.woocommerce-account #customer_login .u-column2.col-2 > h2{
+		font-size:26px;
+	}
+	body.woocommerce-account .default-page-con{
+		padding-top:0px;
+	}
+	body.woocommerce-account .woocommerce form .form-row label{
+		font-size:14px;
+	}
+	body.woocommerce-account .login-btm-wrap h2{
+		font-size:20px;
+		margin-bottom: 19px;
+	}
+	body.woocommerce-account .login-btm-wrap{
+		padding-top:35px;
+	}
+	
+}
