@@ -128,7 +128,8 @@ body.woocommerce-cart .empty-cart-btn a{
 	color: #8AA4E4;
 	text-decoration: underline;
 }
-body.woocommerce-cart .empty-cart-btn a:hover{
+body.woocommerce-cart .empty-cart-btn a:hover,
+body.woocommerce-cart .add-more-product a:hover{
 	color: #EC5387;
 }
 body.woocommerce-cart table.shop_table tbody tr td.actions{
@@ -168,6 +169,11 @@ body.woocommerce-cart .cart_totals tbody tr td:last-child{
 	padding-right: 0;
 	text-align: right;
 }
+body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-form .coupon{
+	padding-bottom: 35px;
+	margin-bottom: 35px;
+	border-bottom: 1px solid #ECE9E9;
+}
 body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-form .coupon #coupon_code{
 	border: 1px solid #f2ede9!important;
 	border-radius: 5px!important;
@@ -178,5 +184,51 @@ body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-f
 	margin-top: 20px;
 	margin-left: 0!important;
 	width: 100%;
-	height: 40px;
+	padding: 10px 50px 10px 50px!important;
+	margin-left: auto!important;
+	background: transparent!important;
+	color: #31304F!important;
+	display: flex;
+	width: initial!important;
+	font-family: 'Open Sans', sans-serif;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+body.woocommerce-cart .cart_totals .wc-proceed-to-checkout a.checkout-button{
+	background: #8dcc0c!important;
+	border-color: #8dcc0c!important;
+	padding: 15px!important;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
+body.woocommerce-cart .cart_totals .wc-proceed-to-checkout a.checkout-button:hover,
+body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-form .coupon button:hover{
+	border-color: #EC5387!important;
+	background: #EC5387!important;
+	color: #fff!important;
+
+}
+body.woocommerce-cart .add-more-product a{
+    color: #78797B;
+    position: relative;
+    padding-left: 24px;
+}
+body.woocommerce-cart .add-more-product{
+	text-align: right;
+}
+body.woocommerce-cart .add-more-product a:after{
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 50%;
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	height: 12px;
+	width: 12px;
+	background-image: url('../images/left-arrow-icon.svg');
+	background-repeat: no-repeat;
 }

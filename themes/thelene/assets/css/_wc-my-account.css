@@ -128,7 +128,6 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 	padding-left:0;
 }
 
-
 @media(max-width:1199px){
 	body.woocommerce-account .woocommerce input[type="text"],
 	body.woocommerce-account .woocommerce input[type="email"], 
@@ -209,4 +208,24 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 		padding-top:35px;
 	}
 	
+}
+
+/* Orders */
+.myac-pro-grds {
+    display: flex;
+}
+.myac-pro-grd-item-inr {
+    display: flex;
+}
+.orders-list li {
+    background: #fff;
+    margin-bottom: 30px !important;
+}
+.order-details {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.orders-crtl {
+    padding: 20px;
 }
