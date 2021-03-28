@@ -221,6 +221,7 @@ function cbv_get_single_price(){
     echo '<span class="plus">+</span></div>';
     echo '</div></div>';
     echo '<div class="qty-price-wrap">';
+    echo '<span class="price-pre-title">Totaal: </span>';
     echo $product->get_price_html();
     echo '</div>';
 }
@@ -511,7 +512,7 @@ function custom_after_cart() {
         var upd_cart_btn = $(".update-cart-button");
         upd_cart_btn.hide();
 
-        $(".cart-form").find(".qty").on("change", function(){
+        $(".woocommerce-cart-form .quantity.qty").find(".plus").on("click", function(){
             upd_cart_btn.trigger("click");
         });
 
