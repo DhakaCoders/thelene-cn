@@ -1,3 +1,9 @@
+# ignore everything in the root except the "plugins, themes" and "uploads" directory.
+/*
+!plugins/
+!themes/
+!uploads/
+
 # ignore log files and databases
 *.log
 *.sql
