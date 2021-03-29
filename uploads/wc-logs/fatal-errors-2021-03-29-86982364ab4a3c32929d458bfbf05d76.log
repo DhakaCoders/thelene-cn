@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2021-03-29T09:28:16+00:00 CRITICAL Uncaught Error: Unsupported operand types in D:\xampp\htdocs\project\2021\march\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php:155
 Stack trace:
 #0 D:\xampp\htdocs\project\2021\march\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php(93): MHNotice->readNotices()
@@ -67,4 +68,50 @@ Stack trace:
 #4 D:\xampp\htdocs\project\2021\march\thelene\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
 #5 D:\xampp\htdocs\project\2021\march\thelene\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
 #6 D:\xampp\ in D:\xampp\htdocs\project\2021\march\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php on line 155
+=======
+2021-03-29T09:26:04+00:00 CRITICAL Uncaught Error: Unsupported operand types in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php:155
+Stack trace:
+#0 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php(93): MHNotice->readNotices()
+#1 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHCommon.php(95): MHNotice->addNotice('premium_adverti...', 'success', 'You're using a ...', 0)
+#2 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\wooajaxcart.php(36): MHCommon::initializeV2('woocommerce-aja...', 'wac', 'G:\\Xampp\\htdocs...', 'WooCommerce Aja...')
+#3 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(287): wac_init('')
+#4 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#5 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\plugin.php(484): WP_Hook->do_actio in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php on line 155
+
+2021-03-29T09:26:04+00:00 CRITICAL Uncaught Error: Unsupported operand types in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php:155
+Stack trace:
+#0 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php(93): MHNotice->readNotices()
+#1 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHCommon.php(95): MHNotice->addNotice('premium_adverti...', 'success', 'You're using a ...', 0)
+#2 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\wooajaxcart.php(36): MHCommon::initializeV2('woocommerce-aja...', 'wac', 'G:\\Xampp\\htdocs...', 'WooCommerce Aja...')
+#3 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(287): wac_init('')
+#4 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#5 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\plugin.php(484): WP_Hook->do_actio in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php on line 155
+
+2021-03-29T09:26:29+00:00 CRITICAL Uncaught Error: Unsupported operand types in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php:155
+Stack trace:
+#0 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php(93): MHNotice->readNotices()
+#1 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHCommon.php(95): MHNotice->addNotice('premium_adverti...', 'success', 'You're using a ...', 0)
+#2 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\wooajaxcart.php(36): MHCommon::initializeV2('woocommerce-aja...', 'wac', 'G:\\Xampp\\htdocs...', 'WooCommerce Aja...')
+#3 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(287): wac_init('')
+#4 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#5 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\plugin.php(484): WP_Hook->do_actio in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php on line 155
+
+2021-03-29T09:31:34+00:00 CRITICAL Uncaught Error: Unsupported operand types in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php:155
+Stack trace:
+#0 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php(93): MHNotice->readNotices()
+#1 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHCommon.php(95): MHNotice->addNotice('premium_adverti...', 'success', 'You're using a ...', 0)
+#2 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\wooajaxcart.php(36): MHCommon::initializeV2('woocommerce-aja...', 'wac', 'G:\\Xampp\\htdocs...', 'WooCommerce Aja...')
+#3 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(287): wac_init('')
+#4 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#5 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\plugin.php(484): WP_Hook->do_actio in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php on line 155
+
+2021-03-29T09:31:34+00:00 CRITICAL Uncaught Error: Unsupported operand types in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php:155
+Stack trace:
+#0 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php(93): MHNotice->readNotices()
+#1 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHCommon.php(95): MHNotice->addNotice('premium_adverti...', 'success', 'You're using a ...', 0)
+#2 G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\wooajaxcart.php(36): MHCommon::initializeV2('woocommerce-aja...', 'wac', 'G:\\Xampp\\htdocs...', 'WooCommerce Aja...')
+#3 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(287): wac_init('')
+#4 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#5 G:\Xampp\htdocs\project\2021\February\thelene\wp-includes\plugin.php(484): WP_Hook->do_actio in G:\Xampp\htdocs\project\2021\February\thelene\thelene-cn\plugins\woocommerce-ajax-cart\common\MHNotice.php on line 155
+>>>>>>> ff6aef54f5d2d8dd89311e83c713238e1b41b258
 
