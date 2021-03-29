@@ -271,6 +271,18 @@
 	.two-grid-module-cntlr{
 		padding: 55px 0;
 	}
+	.geschenken-overzitch-grd-ctlr ul li:nth-child(3n+1) {
+	    clear: none;
+	}
+	.geschenken-overzitch-grd-ctlr ul li:nth-child(2n+1) {
+	    clear: left;
+	}
+	.geschenken-overzitch-grd-ctlr ul li {
+	    width: 50%;
+	}
+	.geschenken-overzitch-grd-ctlr ul li{
+		padding-bottom: 55px;
+	}
 }
 @media(max-width: 767px){
 	.breadcrumb-sec{
@@ -308,6 +320,10 @@
 	.two-grid-module-desc{
 		padding: 0 10px;
 	}
+	.geschenken-overzitch-grd-ctlr ul li{
+		padding-bottom: 40px;
+	}
+}
 
 	@media(max-width: 575px){
 		.two-grid-module-cntlr{
@@ -322,5 +338,35 @@
 			padding: 0;
 			width: 100%;
 		}
+		.geschenken-overzitch-grd-ctlr .fl-pro-grd-price > span {
+		    width: initial;
+		}
+		.geschenken-overzitch-grd-ctlr ul{
+			margin-left: -8px;
+    		margin-right: -8px;
+		}
+		.geschenken-overzitch-grd-ctlr ul li{
+			padding-left: 8px;
+			padding-right: 8px;
+			padding-bottom: 20px;
+		}
+	}
+
+@media(max-width: 479px){
+	.geschenken-overzitch-grd-ctlr ul li .fl-product-grd{
+		padding: 10px 10px 20px;
+	}
+	.geschenken-overzitch-grd-ctlr .fl-trnsprnt-btn {
+	    padding: 9px 6px;
+	    font-size: 10px;
+	}
+	.geschenken-overzitch-grd-ctlr ul li .fl-pro-grd-price {
+	    margin-bottom: 15px;
+	}
+	.geschenken-overzitch-grd-ctlr ul li .fl-product-grd .fl-pro-grd-title {
+	    margin-bottom: 15px;
+	}
+	.geschenken-overzitch-grd-ctlr ul li .fl-pro-grd-img-cntlr {
+	    margin-bottom: 18px;
 	}
 }
