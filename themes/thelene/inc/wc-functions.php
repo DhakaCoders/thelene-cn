@@ -535,6 +535,27 @@ function misha_remove_my_account_links( $menu_links ){
  
 }
 
+add_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
+
+function custom_pre_get_posts_query( $q ) {
+
+    if ( ! $q->is_main_query() ) return;
+    if ( ! $q->is_post_type_archive() ) return;
+
+    if ( ! is_admin() && (is_shop() || is_product_category()) ) {
+
+        $q->set( 'tax_query', array(array(
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => array( 'gift-card' ), // Don't display products in the knives category on the shop page
+            'operator' => 'NOT IN'
+        )));
+
+    }
+
+    remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
+
+}
 
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
