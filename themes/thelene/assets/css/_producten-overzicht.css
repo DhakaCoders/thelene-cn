@@ -221,23 +221,38 @@
 }
 
 @media(max-width: 991px){
-
+	.product-page-col-cntlr {
+	    display: block;
+	}
+	.product-page-sidebar{
+		width: 100%;
+		padding-right: 0;
+	}
+	.product-page-col-rgt {
+	    width: 100%;
+	}
 	
 	
 }
 
 @media(max-width: 767px){
-
+	.fl-products-cntlr > ul > li {
+	    width: 50%!important;
+	}
 }
 
 @media(max-width: 575px){
-
+	.product-page-col-rgt .fl-pro-grd-price > span {
+	    width: initial;
+	}
 	
 
 }
 
 @media(max-width: 479px){
-	
+	.fl-products-cntlr .fl-product-grd {
+	    padding: 10px 10px 20px;
+	}
 
 }
 
