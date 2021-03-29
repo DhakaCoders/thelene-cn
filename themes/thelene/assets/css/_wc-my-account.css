@@ -164,6 +164,7 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 	}
 	body.woocommerce-account .woocommerce-form{
 		border-top:none;
+		padding-top: 8px;
 	}
 	body.woocommerce-account .woocommerce input[type="text"], 
 	body.woocommerce-account .woocommerce input[type="email"], 
