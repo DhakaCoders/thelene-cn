@@ -323,6 +323,10 @@
 	.geschenken-overzitch-grd-ctlr ul li{
 		padding-bottom: 40px;
 	}
+	.gift-overview-grd-sec .fl-pagi-cntlr {
+	    padding-bottom: 30px;
+	    padding-top: 15px;
+	}
 }
 
 	@media(max-width: 575px){
