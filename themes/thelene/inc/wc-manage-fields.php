@@ -4,75 +4,6 @@ add_action('wp_enqueue_scripts', 'wc_user_signup_action_hooks');
 function wc_user_signup_action_hooks(){
         ajax_wc_user_signup_init();
 }
-// Function to check starting char of a string
-function startsWith($haystack, $needle){
-    return $needle === '' || strpos($haystack, $needle) === 0;
-}
-
-add_action('init','zk_save_billing_address');
-// Custom function to save Usermeta or Billing Address of registered user
-function zk_save_billing_address(){
-    if (isset( $_POST["action"] ) && !empty($_POST["action"])) {
-        $user_id = get_current_user_id();
-        global $woocommerce;
-        $address = $_POST;
-
-        foreach ($address as $key => $field){
-            if(startsWith($key,'billing_')){
-                // Condition to add firstname and last name to user meta table
-                //var_dump($key);
-                if($key == 'billing_first_name' || $key == 'billing_last_name'){
-                    $new_key = explode('billing_',$key);
-                    update_user_meta( $user_id, $new_key[1], $_POST[$key] );
-                }
-                update_user_meta( $user_id, $key, $_POST[$key] );
-            }
-        }
-    }
-    return false;
-}
-
-
-// Registration page billing address form Validation
-function zk_validation_billing_address( $errors ) {
-    $address = $_POST;
-    foreach ($address as $key => $field) :
-        if(startsWith($key,'billing_')){
-            if($key == 'billing_country' && $field == ''){
-                add_the_error($errors, $key, 'Country');
-            }
-            if($key == 'billing_first_name' && $field == ''){
-                wc_add_notice( '<strong>Please enter first name</strong>', 'error' );
-            }
-            if($key == 'billing_last_name' && $field == ''){
-                add_the_error($errors, $key, 'Last Name');
-            }
-            if($key == 'billing_address_1' && $field == ''){
-                add_the_error($errors, $key, 'Address');
-            }
-            if($key == 'billing_city' && $field == ''){
-                add_the_error($errors, $key, 'City');
-            }
-            if($key == 'billing_postcode' && $field == ''){
-                add_the_error($errors, $key, 'Post Code');
-            }
-            if($key == 'billing_phone' && $field == ''){
-                add_the_error($errors, $key, 'Phone Number');
-            }
-
-        }
-    endforeach;
-
-    return $errors;
-}
-add_action( 'woocommerce_custom_account_content', 'zk_validation_billing_address' );
-
-function add_the_error( $errors, $key, $field_name ) {
-    echo sprintf( __( '<p class="field-error">%s is a required field.</p>', 'iconic' ), '<strong>' . $field_name . '</strong>' );
-}
-
-
-
 function ajax_wc_user_signup_init(){
     wp_register_script('ajax-user-register-script', get_stylesheet_directory_uri(). '/assets/js/ajax-action.js', array('jquery') );
     wp_enqueue_script('ajax-user-register-script');
@@ -199,4 +130,81 @@ function ajax_register_save(){
         echo json_encode($data);
         wp_die();
     }
+}
+
+function registered_user_info_update(){
+    $data = array();
+    if (isset( $_POST["billing_email"] ) && wp_verify_nonce($_POST['update-custom-account-details-nonce'], 'update_custom_account_details_nonce')) {
+        var_dump($_POST);
+        $user_password = $email = '';
+        if( isset($_POST['billing_email']) && !empty($_POST['billing_email'])){
+            $email = sanitize_email($_POST['billing_email']);
+        }
+        if( isset($_POST['password']) && !empty($_POST['password'])){
+            $user_password = $_POST['password'];
+        }
+        if( isset($_POST['user_id']) && !empty($_POST['user_id'])){
+            $userID = $_POST['user_id'];
+        }else{
+            $user = wp_get_current_user();
+            $userID = $user->ID;
+        }
+        $firstname = (isset($_POST['billing_first_name']) && !empty($_POST['billing_first_name']))? $_POST['billing_first_name']:'';
+        $lastname = (isset($_POST['billing_last_name']) && !empty($_POST['billing_first_name']))? $_POST['billing_last_name']:'';
+        if( !empty($userID) ){
+            if( empty($user_password)){
+                $customerId = wp_update_user(array(
+                    'ID'                => $userID,
+                    'user_email'        => $email,
+                    'first_name'        => $firstname,
+                    'last_name'         => $lastname
+                    )
+                );
+            }else{
+                $customerId = wp_update_user(array(
+                    'ID'                => $userID,
+                    'user_pass'         => $user_password,
+                    'user_email'        => $email,
+                    'first_name'        => $firstname,
+                    'last_name'         => $lastname
+                    )
+                );
+            }
+            if( $customerId ){
+                if( !empty($firstname) ){
+                    update_user_meta( $customerId, "billing_first_name", $firstname );
+                }
+                if( !empty($lastname) ){
+                    update_user_meta( $customerId, "billing_last_name", $lastname );
+                }
+                if( isset($_POST['billing_email']) && !empty($_POST['billing_email']) ){
+                    update_user_meta( $customerId, "billing_email", $_POST['billing_email'] );
+                }
+
+                if( isset($_POST['billing_address_1']) && !empty($_POST['billing_address_1']) ){
+                    update_user_meta( $customerId, "billing_address_1", $_POST['billing_address_1']);
+                }
+                if( isset($_POST['billing_house']) && !empty($_POST['billing_house']) ){
+                    update_user_meta( $customerId, "billing_house", $_POST['billing_house'] );
+                }
+
+                if( isset($_POST['billing_city']) && !empty($_POST['billing_city']) ){
+                    update_user_meta( $customerId, "billing_city", $_POST['billing_city']);
+                }
+                if( isset($_POST['billing_postcode']) && !empty($_POST['billing_postcode']) ){
+                    update_user_meta( $customerId, "billing_postcode", $_POST['billing_postcode'] );
+                }
+                if( isset($_POST['billing_gsm_number']) && !empty($_POST['billing_gsm_number'])){
+                    update_user_meta( $customerId, "billing_gsm_number", $_POST['billing_gsm_number'] );
+                }
+                if( isset($_POST['billing_phone']) && !empty($_POST['billing_phone'])){
+                    update_user_meta( $customerId, "billing_phone", $_POST['billing_phone'] );
+                }
+
+            }
+            $data['status'] = 'error';
+        }
+        
+    }
+    return $data;
 }

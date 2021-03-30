@@ -83,6 +83,14 @@ add_action('woocommerce_shop_loop_item_title', 'add_shorttext_below_title_loop',
 if (!function_exists('add_shorttext_below_title_loop')) {
     function add_shorttext_below_title_loop() {
         global $product, $woocommerce, $post;
+          switch ( $product->get_type() ) {
+          case "pw-gift-card" :
+              $label  = __('selecteer bedrag', 'woocommerce');
+          break;
+          default :
+              $label  = __('MEER INFO', 'woocommerce');
+          break;
+          }
         $gridtag = cbv_get_image_tag( get_post_thumbnail_id($product->get_id()), 'pgrid' );
         echo '<div class="fl-product-grd mHc">';
         echo '<div class="fl-product-grd-inr">';
@@ -94,7 +102,7 @@ if (!function_exists('add_shorttext_below_title_loop')) {
         echo '<div class="fl-pro-grd-price">';
         echo $product->get_price_html();
         echo '</div>';/*end loop price*/
-        echo '<div><a class="fl-trnsprnt-btn" href="'.get_permalink( $product->get_id() ).'">MEER INFO</a></div>';
+        echo '<div><a class="fl-trnsprnt-btn" href="'.get_permalink( $product->get_id() ).'">'.$label.'</a></div>';
         echo '</div>';
         echo '</div>';
         
@@ -261,36 +269,6 @@ function cbv_add_custom_info(){
         echo '</div>';
     endif;
 }
-
-function sm_pre_get_posts( $query ) {
-    // check if the user is requesting an admin page 
-    // or current query is not the main query
-    if ( is_admin() || ! $query->is_main_query() ){
-        return;
-    }
-
-    // edit the query only when post type is 'accommodation'
-    // if it isn't, return
-    if ( !is_post_type_archive( 'product' ) ){
-        return;
-    }
-    $post_type = 'product';
-    $meta_query = array();
-    $keyword = '';
-
-    if( isset($_GET['keyword']) && !empty($_GET['keyword']) ){
-        $keyword = $_GET['keyword'];
-    }
-
-    if( !empty( $keyword ) ){
-        $query->set('post_type', $post_type);
-        $query->set( 's', $keyword );
-        //$query->set( 'category_name', $keyword );
-    }
-    return $query;
-    
-}
-add_action( 'pre_get_posts', 'sm_pre_get_posts', 1 );
 
 add_action( 'woocommerce_product_options_inventory_product_data', 'misha_adv_product_options');
 function misha_adv_product_options(){
@@ -577,16 +555,5 @@ function custom_pre_get_posts_query( $q ) {
     remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
 
 }
-
-//add_action('admin_head', 'add_custom_css_in_wpadmin');
-function add_custom_css_in_wpadmin(){
-    echo '<style>
-    .taxonomy-product_cat .form-field.term-description-wrap {
-    display: block !important;
-    }
-    </style>';
-}
-
-
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
