@@ -347,8 +347,20 @@ $('.wpforms-error').on('click', function(){
 
 
 /*Start of Niaz*/
-
-
+if (windowWidth <= 767) {
+if( $('.loginInfoSlider').length ){
+    $('.loginInfoSlider').slick({
+      dots: true,
+      infinite: false,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows:false,
+    });
+  }
+}
 
 /*Start of Sabbir*/
 

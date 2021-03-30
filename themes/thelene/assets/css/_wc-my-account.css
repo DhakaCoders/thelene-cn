@@ -1,3 +1,4 @@
+
 body.woocommerce-account .default-page-con h1{
     border-bottom: 1px solid #F1E8E1;
     padding-bottom: 28px;
@@ -95,14 +96,15 @@ body.woocommerce-account .login-btm-wrap h2{
     font-size: 30px;
     margin-bottom: 44px;
 }
-body.woocommerce-account .login-info-crtl ul{
+body.woocommerce-account .login-info-crtl .login-info-inr{
 	display: flex;
 	justify-content: center;
 }
-body.woocommerce-account .login-info-crtl ul li{
+body.woocommerce-account .login-info-crtl .login-info-inr .loginInfoSlideItem{
     max-width: 33.3333%;
     width: 100%;
     text-align: center;
+    padding-bottom: 33px;
 }
 body.woocommerce-account .default-page-con{
 	padding-bottom:0;
@@ -110,7 +112,7 @@ body.woocommerce-account .default-page-con{
 body.woocommerce-account .login-info-crtl{
     padding-bottom: 23px;
 }
-body.woocommerce-account .login-info-crtl ul li i{
+body.woocommerce-account .login-info-crtl .login-info-inr .loginInfoSlideItem .loginInfoItem i{
 	display: inline-block;
     width: 20px;
     height: 17px;
@@ -183,6 +185,24 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 	body.woocommerce-account .login-btm-wrap h2{
 		font-size:26px;
 	}
+	body.woocommerce-account .login-info-crtl .login-info-inr{
+		display: initial;
+	}
+	body.woocommerce-account .login-info-crtl .login-info-inr .loginInfoSlideItem{
+		padding-bottom:0;
+	}
+	body.woocommerce-account .login-info-crtl{
+		padding-bottom: 50px;
+	}
+	body.woocommerce-account .login-btm-wrap h2{
+		margin-bottom: 20px;
+	}
+	body.woocommerce-account .login-btm-wrap{
+		padding-top: 60px;
+	}
+	body.woocommerce-account .loginInfoItem {
+	    padding-bottom: 10px;
+	}
 }
 
 @media(max-width:575px){
@@ -207,6 +227,12 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 	}
 	body.woocommerce-account .login-btm-wrap{
 		padding-top:35px;
+	}
+	body.woocommerce-account .login-btm-wrap{
+		padding-top: 30px;
+	}
+	body.woocommerce-account .loginInfoItem {
+	    padding-bottom:0px;
 	}
 	
 }
