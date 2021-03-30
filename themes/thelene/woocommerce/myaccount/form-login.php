@@ -244,13 +244,15 @@ global $woocommerce;
 				</p>
 			</div>
 			<div class="register-btn">
-				<p>
-					<button type="submit" name="user-register" id="register_action_btn" value="<?php esc_attr_e( 'doorgaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Doorgaan', 'woocommerce' ); ?></button>
-					<input type="hidden" name="user_register_nonce" value="<?php echo wp_create_nonce('user-register-nonce'); ?>"/>
-				</p>
-				<p class="form-row html-text">
-					<span>Koop veilig & vertrouwd</span>
-				</p>
+				<div class="reg-btn-crtl">
+					<p>
+						<button type="submit" name="user-register" id="register_action_btn" value="<?php esc_attr_e( 'doorgaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Doorgaan', 'woocommerce' ); ?></button>
+						<input type="hidden" name="user_register_nonce" value="<?php echo wp_create_nonce('user-register-nonce'); ?>"/>
+					</p>
+					<p class="form-row html-text">
+						<span>Koop veilig & vertrouwd</span>
+					</p>
+				</div>
 			</div>
 		</div>
 	</form>
@@ -258,11 +260,11 @@ global $woocommerce;
 		<h3 class="payment-title">Veilig betalen kan bij ons met</h3>
 		<div class="payment-logo-crtl">
 			<ul class="reset-list">
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.jpg"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.jpg"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-03.jpg"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-04.jpg"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-05.jpg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-03.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-04.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-05.png"></li>
             </ul>
 		</div>
 	</div>

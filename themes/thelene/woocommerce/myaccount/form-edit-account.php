@@ -17,10 +17,12 @@
 
 defined( 'ABSPATH' ) || exit;
 
-do_action( 'woocommerce_before_edit_account_form' ); ?>
+do_action( 'woocommerce_before_edit_account_form' ); 
+add_action('init', 'registered_user_info_update');
+?>
 
-<form class="woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> >
-
+<form class="woocommerce-EditAccountForm edit-account" action="" method="post" >
+	<input type="hidden" name="user_id" value="<?php echo $user->ID; ?>">
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 	<fieldset>
 		<legend><?php esc_html_e( 'Contactpersoon', 'woocommerce' ); ?></legend>
@@ -36,13 +38,13 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<p class="form-row form-row-first billing_gsm_number" id="billing_address_1_field">
 		<label for="billing_gsm_number" class="">GSM nummer</label>
 		<span class="woocommerce-input-wrapper">
-			<input type="text" class="input-text " name="billing_gsm_number" id="billing_gsm_number" placeholder="Bijv. 0493 20 36 20" autocomplete="gsm-number">
+			<input type="text" class="input-text " name="billing_gsm_number" id="billing_gsm_number" value="<?php echo esc_attr( get_user_meta( $user->ID, 'billing_gsm_number', true ) ); ?>" placeholder="Bijv. 0493 20 36 20" autocomplete="gsm-number">
 		</span>
 	</p>
 	<p class="form-row form-row-last billing_phone" id="billing_phone_field">
 		<label for="billing_phone" class="">Telefoon</label>
 		<span class="woocommerce-input-wrapper">
-			<input type="tel" class="input-text " name="billing_phone" id="billing_phone" placeholder="Bijv. 09 224 61 11" autocomplete="tel">
+			<input type="tel" class="input-text " name="billing_phone" id="billing_phone" value="<?php echo esc_attr( get_user_meta( $user->ID, 'billing_phone', true ) ); ?>" placeholder="Bijv. 09 224 61 11" autocomplete="tel">
 		</span>
 	</p>
 	<div class="clear"></div>
@@ -58,26 +60,26 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<p class="form-row form-row-first billing_address_1" id="billing_address_1_field">
 			<label for="billing_address_1" class="">Straatnaam</label>
 			<span class="woocommerce-input-wrapper">
-				<input type="text" class="input-text " name="billing_address_1" id="billing_address_1" placeholder="Bijv. Stationstraat" autocomplete="address-line1">
+				<input type="text" class="input-text " name="billing_address_1" id="billing_address_1" value="<?php echo esc_attr( get_user_meta( $user->ID, 'billing_address_1', true ) ); ?>" placeholder="Bijv. Stationstraat" autocomplete="address-line1">
 			</span>
 		</p>
 		<p class="form-row form-row-last billing_house" id="billing_house_field">
 			<label for="billing_house" class="">Nummer</label>
 			<span class="woocommerce-input-wrapper">
-				<input type="text" class="input-text " name="billing_house" id="billing_house" placeholder="Bijv. 113-C" autocomplete="house-number">
+				<input type="text" class="input-text " name="billing_house" id="billing_house" value="<?php echo esc_attr( get_user_meta( $user->ID, 'billing_house', true ) ); ?>" placeholder="Bijv. 113-C" autocomplete="house-number">
 			</span>
 		</p>
 		<div class="clear"></div>
 		<p class="form-row form-row-first billing_postcode" id="billing_postcode_field">
 			<label for="billing_postcode" class="">Postcode</label>
 			<span class="woocommerce-input-wrapper">
-				<input type="text" class="input-text " name="billing_postcode" id="billing_postcode" placeholder="Bijv. 9300" autocomplete="postal-code">
+				<input type="text" class="input-text " name="billing_postcode" id="billing_postcode" value="<?php echo esc_attr( get_user_meta( $user->ID, 'billing_postcode', true ) ); ?>" placeholder="Bijv. 9300" autocomplete="postal-code">
 			</span>
 		</p>
 		<p class="form-row form-row-last billing_city" id="billing_city_field">
 			<label for="billing_city" class="">Gemeente</label>
 			<span class="woocommerce-input-wrapper">
-				<input type="text" class="input-text " name="billing_city" id="billing_city" placeholder="Bijv. 9300" autocomplete="address-level2">
+				<input type="text" class="input-text " name="billing_city" id="billing_city" value="<?php echo esc_attr( get_user_meta( $user->ID, 'billing_city', true ) ); ?>" placeholder="Bijv. 9300" autocomplete="address-level2">
 			</span>
 		</p>
 	</fieldset>
@@ -97,7 +99,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<?php do_action( 'woocommerce_edit_account_form' ); ?>
 
 	<p>
-		<?php wp_nonce_field( 'save_account_details', 'save-account-details-nonce' ); ?>
+		<?php wp_nonce_field( 'update_custom_account_details', 'update-custom-account-details-nonce' ); ?>
 		<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Opslaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Opslaan', 'woocommerce' ); ?></button>
 		<input type="hidden" name="action" value="save_account_details" />
 	</p>
