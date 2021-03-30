@@ -191,8 +191,8 @@ if (!function_exists('add_custom_box_product_summary')) {
                 echo '<li>';
                     echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in"><strong>' .esc_html__( 'Categorie: ', 'woocommerce' ). '</strong> ', '</span>' );
                 echo '</li>';
-                if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) :
                 cbv_display_some_product_attributes();
+                if ( wc_product_sku_enabled() && !empty($product->get_sku()) && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) :
                 echo '<li>';
                     echo '<strong>';
                     esc_html_e( 'SKU:', 'woocommerce' );
@@ -210,7 +210,7 @@ if (!function_exists('add_custom_box_product_summary')) {
     }
 }
 
-add_action('woocommerce_before_add_to_cart_quantity', 'cbv_start_div_single_price');
+add_action('woocommerce_before_add_to_cart_quantity', 'cbv_start_div_single_price', 99);
 function cbv_start_div_single_price(){
     echo '<div class="cartbtn-wrap clearfix"><strong>Aantal</strong><div class="cart-btn-qty">';
     echo '<div class="quantity qty"><span class="minus">-</span>';
@@ -384,7 +384,7 @@ add_action('cbv_catalog', 'cbv_catalog_ordering');
 function cbv_catalog_ordering() {
     global $wp_query;
 
-    if ( 1 == $wp_query->found_posts || ! woocommerce_products_will_display() ) {
+    if ( 0 == $wp_query->found_posts || ! woocommerce_products_will_display() ) {
         return;
     }
 
@@ -542,7 +542,7 @@ function custom_pre_get_posts_query( $q ) {
     if ( ! $q->is_main_query() ) return;
     if ( ! $q->is_post_type_archive() ) return;
 
-    if ( ! is_admin() && (is_shop() || is_product_category()) ) {
+    if ( ! is_admin() && is_shop() ) {
 
         $q->set( 'tax_query', array(array(
             'taxonomy' => 'product_cat',

@@ -6,7 +6,11 @@ get_header();
       <div class="row">
         <div class="col-md-12">
           <article class="default-page-con">
-            <?php if( !is_account_page() ){ ?>
+            <?php if( is_account_page() && !is_user_logged_in()){ ?>
+              <div class="page-title">
+                <h1><?php the_title(); ?></h1>
+              </div>
+            <?php }elseif( !is_account_page()){ ?>
               <div class="page-title">
                 <h1><?php the_title(); ?></h1>
               </div>
