@@ -32,7 +32,8 @@ ul.select2-results__options li{
 .woocommerce #respond input#submit, 
 .woocommerce a.button, 
 .woocommerce button.button, 
-.woocommerce input.button{
+.woocommerce input.button,
+.woocommerce button[type=submit]{
 	background: #31304F!important;
     text-transform: uppercase;
     border: 2px solid #31304F!important;
