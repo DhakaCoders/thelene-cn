@@ -130,6 +130,112 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 	padding-left:0;
 }
 
+/*  ----------------------------- my account ------------------------- */
+.woocommerce-account .register-title h3{
+	font-size:24px;
+	border-bottom: 1px solid #F1E8E1;
+    padding-bottom: 15px;
+}
+.register-top-title h1{
+	border-bottom:none!important;
+}
+
+ .woocommerce-input-wrapper span input{
+ 	opacity: 0;
+ 	opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.woocommerce-input-wrapper span{
+    margin-right: 30px;
+}
+ .woocommerce-input-wrapper span{
+ 	position: relative;
+ 	padding-left:30px
+ }
+.radio-custom{
+    height: 18px;
+    position: absolute;
+    width: 18px;
+    border-radius: 50%;
+    border: 1px solid #8AA4E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    margin-top: -1px;
+}
+/*.container input:checked ~ .radio-custom{
+	background:#8aa4e4!important
+}*/
+.container input:checked ~ .radio-custom:after{
+	display: block;
+}
+ .radio-custom:after{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #8aa4e4;
+	border-radius: 50%;
+	display: none;
+}
+body.woocommerce-account .woocommerce form .form-row-first,
+body.woocommerce-account .woocommerce form .form-row-last, 
+body.woocommerce-account .woocommerce-page form .form-row-first,
+body.woocommerce-account .woocommerce-page form .form-row-last{
+	width: 50%;
+}
+body.woocommerce-account .woocommerce form .form-row-first,
+body.woocommerce-account .woocommerce-page form .form-row-first{
+	padding-right: 13px
+}
+
+body.woocommerce-account .woocommerce form .form-row-last, 
+body.woocommerce-account .woocommerce-page form .form-row-last{
+	padding-left: 13px;
+}
+body.woocommerce-account .woocommerce form .form-row select, 
+body.woocommerce-account  .woocommerce-page form .form-row select{
+	width: 100%;
+    height: 48px;
+    border: 2px solid #F2EDE9;
+    border-radius: 6px;
+    color: #9EA5AB;
+    padding: 5px 18px 5px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width:1199px){
 	body.woocommerce-account .woocommerce input[type="text"],
 	body.woocommerce-account .woocommerce input[type="email"], 
