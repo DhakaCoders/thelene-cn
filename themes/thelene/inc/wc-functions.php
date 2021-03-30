@@ -14,10 +14,21 @@ function get_custom_wc_output_content_wrapper(){
         get_template_part('templates/breadcrumbs');
         echo '<section class="product-page-cntlr"><div class="container"><div class="row"><div class="col-md-12"><div class="product-page-col-cntlr clearfix">';
         //get_template_part('templates/shop', 'search');
-        echo '<div class="product-page-sidebar">';
-            get_sidebar('shop');
-        echo '</div>';
-        echo '<div class="product-page-col-rgt">';
+        $off_sidebar = false;
+        $classCss = '';
+        if(is_product_category()){
+            $category = get_queried_object();
+            if( in_array($category->slug, assign_gift_card_cat()) ){
+                $off_sidebar = true;
+                $classCss = ' full-product-page';
+            }
+        }
+        if( !$off_sidebar ){
+            echo '<div class="product-page-sidebar">';
+                get_sidebar('shop');
+            echo '</div>';
+        }
+        echo '<div class="product-page-col-rgt'.$classCss.'">';
         get_template_part('templates/shop', 'top');
         echo '<div class="fl-products-cntlr">';
     }
@@ -535,6 +546,16 @@ function misha_remove_my_account_links( $menu_links ){
  
 }
 
+
+function assign_gift_card_cat(){
+    $gift_cat = array( 'geschenken' );
+    if( !empty($gift_cat) )
+        return $gift_cat;
+    else
+        return false;
+}
+
+
 add_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
 
 function custom_pre_get_posts_query( $q ) {
@@ -542,12 +563,12 @@ function custom_pre_get_posts_query( $q ) {
     if ( ! $q->is_main_query() ) return;
     if ( ! $q->is_post_type_archive() ) return;
 
-    if ( ! is_admin() && is_shop() ) {
+    if ( ! is_admin() && is_shop() && assign_gift_card_cat() ) {
 
         $q->set( 'tax_query', array(array(
             'taxonomy' => 'product_cat',
             'field' => 'slug',
-            'terms' => array( 'gift-card' ), // Don't display products in the knives category on the shop page
+            'terms' => assign_gift_card_cat(), // Don't display products in the knives category on the shop page
             'operator' => 'NOT IN'
         )));
 
@@ -556,6 +577,16 @@ function custom_pre_get_posts_query( $q ) {
     remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
 
 }
+
+//add_action('admin_head', 'add_custom_css_in_wpadmin');
+function add_custom_css_in_wpadmin(){
+    echo '<style>
+    .taxonomy-product_cat .form-field.term-description-wrap {
+    display: block !important;
+    }
+    </style>';
+}
+
 
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
