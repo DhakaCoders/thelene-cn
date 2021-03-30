@@ -151,6 +151,7 @@ function registered_user_info_update(){
         }
         $firstname = (isset($_POST['billing_first_name']) && !empty($_POST['billing_first_name']))? $_POST['billing_first_name']:'';
         $lastname = (isset($_POST['billing_last_name']) && !empty($_POST['billing_first_name']))? $_POST['billing_last_name']:'';
+        echo $userID;
         if( !empty($userID) ){
             if( empty($user_password)){
                 $customerId = wp_update_user(array(
@@ -170,6 +171,7 @@ function registered_user_info_update(){
                     )
                 );
             }
+            echo $customerId;
             if( $customerId ){
                 if( !empty($firstname) ){
                     update_user_meta( $customerId, "billing_first_name", $firstname );
