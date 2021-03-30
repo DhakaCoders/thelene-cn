@@ -1,4 +1,12 @@
 
+/* ------------------- my account deshboard-----------------------*/
+
+
+
+
+
+/* ---------------------- my account login page---------------------------*/
+
 body.woocommerce-account .default-page-con h1{
     border-bottom: 1px solid #F1E8E1;
     padding-bottom: 28px;
@@ -131,7 +139,7 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 	padding-left:0;
 }
 
-/*  ----------------------------- my account ------------------------- */
+/*  ----------------------------- my account reg page ------------------------- */
 .woocommerce-account .register-title h3{
 	font-size:24px;
 	border-bottom: 1px solid #F1E8E1;
@@ -296,8 +304,11 @@ body.woocommerce-account .register-btn button[type="submit"]{
 .show-password-input{
 	margin-right:0px!important;
 }
-
-
+.reg-btn-crtl {
+    display: inline-block;
+    margin-left: auto;
+    text-align: center;
+}
 
 
 
