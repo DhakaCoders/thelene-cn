@@ -361,7 +361,9 @@ if( $('.loginInfoSlider').length ){
     });
   }
 }
-
+$(".type-order-format .woocommerce-input-wrapper span").each(function(){
+        $(this).append('<div class="radio-custom"></div>')
+  });
 /*Start of Sabbir*/
 
 if (windowWidth <= 767) {
