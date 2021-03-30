@@ -28,7 +28,7 @@ function ajax_register_save(){
             $user_password = $_POST['password'];
         }
         $firstname = (isset($_POST['billing_first_name']) && !empty($_POST['billing_first_name']))? $_POST['billing_first_name']:'';
-        $lastname = (isset($_POST['billing_last_name']) && !empty($_POST['billing_first_name']))? $_POST['billing_last_name']:'';
+        $lastname = (isset($_POST['billing_last_name']) && !empty($_POST['billing_last_name']))? $_POST['billing_last_name']:'';
         if(isset($email) && !empty($email)){
             $exp = explode('@', $email);
             $user_login = $exp[0];
@@ -134,11 +134,11 @@ function ajax_register_save(){
 add_action('init', 'registered_user_info_update');
 function registered_user_info_update(){
     $data = array();
-    if (isset( $_POST["billing_email"] ) && wp_verify_nonce($_POST['update-custom-account-details-nonce'], 'update_custom_account_details_nonce')) {
+    if (isset( $_POST["account_email"] ) && isset($_POST['user_id'])) {
         
         $user_password = $email = '';
-        if( isset($_POST['billing_email']) && !empty($_POST['billing_email'])){
-            $email = sanitize_email($_POST['billing_email']);
+        if( isset($_POST['account_email']) && !empty($_POST['account_email'])){
+            $email = sanitize_email($_POST['account_email']);
         }
         if( isset($_POST['password']) && !empty($_POST['password'])){
             $user_password = $_POST['password'];
@@ -149,9 +149,8 @@ function registered_user_info_update(){
             $user = wp_get_current_user();
             $userID = $user->ID;
         }
-        $firstname = (isset($_POST['billing_first_name']) && !empty($_POST['billing_first_name']))? $_POST['billing_first_name']:'';
-        $lastname = (isset($_POST['billing_last_name']) && !empty($_POST['billing_first_name']))? $_POST['billing_last_name']:'';
-        echo $userID;
+        $firstname = (isset($_POST['account_first_name']) && !empty($_POST['account_first_name']))? $_POST['account_first_name']:'';
+        $lastname = (isset($_POST['account_last_name']) && !empty($_POST['account_last_name']))? $_POST['account_last_name']:'';
         if( !empty($userID) ){
             if( empty($user_password)){
                 $customerId = wp_update_user(array(
@@ -171,7 +170,6 @@ function registered_user_info_update(){
                     )
                 );
             }
-            echo $customerId;
             if( $customerId ){
                 if( !empty($firstname) ){
                     update_user_meta( $customerId, "billing_first_name", $firstname );
@@ -179,8 +177,8 @@ function registered_user_info_update(){
                 if( !empty($lastname) ){
                     update_user_meta( $customerId, "billing_last_name", $lastname );
                 }
-                if( isset($_POST['billing_email']) && !empty($_POST['billing_email']) ){
-                    update_user_meta( $customerId, "billing_email", $_POST['billing_email'] );
+                if( isset($_POST['account_email']) && !empty($_POST['account_email']) ){
+                    update_user_meta( $customerId, "billing_email", $_POST['account_email'] );
                 }
 
                 if( isset($_POST['billing_address_1']) && !empty($_POST['billing_address_1']) ){

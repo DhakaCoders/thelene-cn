@@ -18,6 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_edit_account_form' ); 
+
 ?>
 
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post" >
@@ -95,14 +96,14 @@ do_action( 'woocommerce_before_edit_account_form' );
 	</fieldset>
 	<div class="clear"></div>
 
-	<?php //do_action( 'woocommerce_edit_account_form' ); ?>
+	<?php do_action( 'woocommerce_edit_account_form' ); ?>
 
 	<p>
 		<input type="hidden" name="update_custom_account_details_nonce" value="<?php echo wp_create_nonce('update-custom-account-details-nonce'); ?>"/>
 		<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Opslaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Opslaan', 'woocommerce' ); ?></button>
 	</p>
 
-	<?php //do_action( 'woocommerce_edit_account_form_end' ); ?>
+	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
 </form>
 
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>
