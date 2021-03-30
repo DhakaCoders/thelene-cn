@@ -134,7 +134,6 @@ function ajax_register_save(){
 add_action('init', 'registered_user_info_update');
 function registered_user_info_update(){
     $data = array();
-    var_dump($_POST);
     if (isset( $_POST["billing_email"] ) && wp_verify_nonce($_POST['update-custom-account-details-nonce'], 'update_custom_account_details_nonce')) {
         
         $user_password = $email = '';

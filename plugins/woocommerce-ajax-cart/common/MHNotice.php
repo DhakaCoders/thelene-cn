@@ -16,7 +16,7 @@ if ( !class_exists('MHNotice') ) {
 
             $pluginAlias = $common->getPluginAlias();
 
-            //add_action('admin_notices', array($this, 'checkNotices'));
+            add_action('admin_notices', array($this, 'checkNotices'));
 
             if ( !empty($_GET['MHCommonDismiss']) && !empty($_GET['alias']) && ( $_GET['MHCommonDismiss'] == $pluginAlias ) ) {
                 $this->dismissNotice( sanitize_text_field($_GET['alias']) );
@@ -91,11 +91,11 @@ if ( !class_exists('MHNotice') ) {
         public function addNotice($alias, $type, $message, $dismissDays) {
 
             $notices = $this->readNotices();
-            $notices[$alias] = array(
+            /*$notices[$alias] = array(
                 'message' => $message,
                 'type' => $type,
                 'dismissDays' => $dismissDays,
-            );
+            );*/
 
             $this->storeNotices($notices);
         }
