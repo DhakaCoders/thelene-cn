@@ -364,7 +364,7 @@ function product_max_qty($product_id = '', $_product = array()){
     }
     return $get_max_purchase_qty;
 }
-add_filter('woocommerce_catalog_orderby', 'wc_customize_product_sorting');
+//add_filter('woocommerce_catalog_orderby', 'wc_customize_product_sorting');
 
 function wc_customize_product_sorting($sorting_options){
     $sorting_options = array(
@@ -384,9 +384,9 @@ add_action('cbv_catalog', 'cbv_catalog_ordering');
 function cbv_catalog_ordering() {
     global $wp_query;
 
-    /*if ( 1 == $wp_query->found_posts || ! woocommerce_products_will_display() ) {
+    if ( 0 == $wp_query->found_posts || ! woocommerce_products_will_display() ) {
         return;
-    }*/
+    }
 
     $orderby                 = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
     $show_default_orderby    = 'menu_order' === apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
