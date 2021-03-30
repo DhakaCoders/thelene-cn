@@ -260,11 +260,11 @@ global $woocommerce;
 		<h3 class="payment-title">Veilig betalen kan bij ons met</h3>
 		<div class="payment-logo-crtl">
 			<ul class="reset-list">
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.png"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.png"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-03.png"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-04.png"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-05.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.svg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-01.svg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-03.svg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-04.svg"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/payment-logo-05.svg"></li>
             </ul>
 		</div>
 	</div>
