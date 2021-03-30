@@ -18,7 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_edit_account_form' ); 
-add_action('init', 'registered_user_info_update');
 ?>
 
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post" >
@@ -100,6 +99,7 @@ add_action('init', 'registered_user_info_update');
 
 	<p>
 		<?php wp_nonce_field( 'update_custom_account_details', 'update-custom-account-details-nonce' ); ?>
+		<input type="hidden" name="update_custom_account_details_nonce" value="<?php echo wp_create_nonce('update-custom-account-details-nonce'); ?>"/>
 		<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Opslaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Opslaan', 'woocommerce' ); ?></button>
 		<input type="hidden" name="action" value="save_account_details" />
 	</p>

@@ -131,11 +131,12 @@ function ajax_register_save(){
         wp_die();
     }
 }
-
+add_action('init', 'registered_user_info_update');
 function registered_user_info_update(){
     $data = array();
+    var_dump($_POST);
     if (isset( $_POST["billing_email"] ) && wp_verify_nonce($_POST['update-custom-account-details-nonce'], 'update_custom_account_details_nonce')) {
-        var_dump($_POST);
+        
         $user_password = $email = '';
         if( isset($_POST['billing_email']) && !empty($_POST['billing_email'])){
             $email = sanitize_email($_POST['billing_email']);
