@@ -45,12 +45,12 @@ body.woocommerce-cart .product-thumbnail .product-name{
 body.woocommerce-cart .product-quantity {
 
 }
-body.woocommerce-cart .product-quantity .quantity.qty{
+body.woocommerce-cart .product-quantity .quantity{
 	display: flex;
 	align-items: center;
 }
-body.woocommerce-cart .product-quantity .quantity.qty .minus,
-body.woocommerce-cart .product-quantity .quantity.qty .plus{
+body.woocommerce-cart .product-quantity .quantity .minus,
+body.woocommerce-cart .product-quantity .quantity .plus{
 	height: 16px;
 	width: 20px;
 	color: #fff;
@@ -67,11 +67,11 @@ body.woocommerce-cart .product-quantity .quantity.qty .plus{
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-body.woocommerce-cart .product-quantity .quantity.qty .minus:hover,
-body.woocommerce-cart .product-quantity .quantity.qty .plus:hover{
+body.woocommerce-cart .product-quantity .quantity .minus:hover,
+body.woocommerce-cart .product-quantity .quantity .plus:hover{
 	background: #EC5387;
 }
-body.woocommerce-cart .product-quantity .quantity.qty .quantity input{
+body.woocommerce-cart .product-quantity .quantity input{
 	background: transparent;
 }
 body.woocommerce-cart .woocommerce table.shop_table td{
