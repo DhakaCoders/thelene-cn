@@ -86,20 +86,26 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	<div class="login-btm-wrap">
 		<h2 class="login-btm-title">DOLOR SIT AMET</h2>
 		<div class="login-info-crtl">
-			<ul class="reset-list">
-				<li>
-					<i></i>
-					<p>Lorem ipsum dolor sit amet</p>
-				</li>
-				<li>
-					<i></i>
-					<p>Lorem ipsum dolor sit amet</p>
-				</li>
-				<li>
-					<i></i>
-					<p>Lorem ipsum dolor sit amet</p>
-				</li>
-			</ul>
+			<div class="login-info-inr loginInfoSlider">
+				<div class="loginInfoSlideItem">
+					<div class="loginInfoItem">
+						<i></i>
+						<p>Lorem ipsum dolor sit amet</p>
+					</div>
+				</div>
+				<div class="loginInfoSlideItem">
+					<div class="loginInfoItem">
+						<i></i>
+						<p>Lorem ipsum dolor sit amet</p>
+					</div>
+				</div>
+				<div class="loginInfoSlideItem">
+					<div class="loginInfoItem">
+						<i></i>
+						<p>Lorem ipsum dolor sit amet</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
