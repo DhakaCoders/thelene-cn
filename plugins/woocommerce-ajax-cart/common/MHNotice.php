@@ -152,7 +152,7 @@ if ( !class_exists('MHNotice') ) {
             $pluginAbbrev = $this->common->getPluginAbbrev();
 
             $notices = get_option($pluginAbbrev . '_notices', array());
-            $notices += $this->tempNotices;
+            $notices .= $this->tempNotices;
 
             return $notices;
         }
