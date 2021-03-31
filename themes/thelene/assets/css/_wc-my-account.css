@@ -117,11 +117,13 @@ body.woocommerce-account .account-page-title h1{
 .woocommerce-edit-account .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
 	max-width:65.98%;
 }
-body.woocommerce-edit-account .account-page-title h1{
+body.woocommerce-edit-account .account-page-title h1,
+body.woocommerce-orders .account-page-title h1{
 	border-bottom: 1px solid #F1E8E1!important;
 	padding-bottom:40px!important;
 }
-.woocommerce-edit-account .account-page-title  div:first-child a{
+.woocommerce-edit-account .account-page-title  div:first-child a,
+.woocommerce-orders .account-page-title  div:first-child a{
     color: #78797B;
     position: relative;
     padding-left: 20px;
@@ -129,7 +131,8 @@ body.woocommerce-edit-account .account-page-title h1{
     vertical-align: baseline;
     margin-bottom: 32px;
 }
-.woocommerce-edit-account .account-page-title  div:first-child a:after{
+.woocommerce-edit-account .account-page-title  div:first-child a:after,
+.woocommerce-orders .account-page-title  div:first-child a:after{
     content: "\f053";
     position: absolute;
     font-family: 'Font Awesome 5 free';
@@ -163,6 +166,7 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 .woocommerce-orders .myac-pro-grd-item-inr .myac-pro-grd-img{
 	max-width:90px;
 	height: auto;
+	margin-right: 30px;
 }
 .woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
 	max-width:66.05%;
@@ -174,9 +178,83 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 	font-weight: normal;
 	margin-bottom:7px;
 }
+.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc span{
+	color: #78797B;
+}
+.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc .product-price bdi{
+	color: #31304F;
+	font-weight:500;
+}
 .woocommerce-orders .myac-pro-grd-item-inr .order-items-desc h5 strong{
 	display: none
 }
+.woocommerce-orders .myac-pro-grds .myac-pro-grd-item{
+	max-width: 50%;
+	width: 100%;
+}
+.woocommerce-orders .orders-crtl .code-text{
+	font-size:24px;
+	letter-spacing: -0.02em;
+	font-weight:700;
+	color: #202020;
+	padding-bottom:23px;
+	border-bottom: 1px solid #F2EDE9;
+	font-family: 'Open Sans';
+	margin-top:5px;
+}
+.woocommerce-orders .orders-crtl .my-ac-timea{
+	margin-bottom:5px;
+}
+.woocommerce-orders  .myac-pro-grd-item .myac-pro-grd-item-inr{
+    align-items: center;
+    padding-top: 40px;
+}
+.woocommerce-orders  .order-details .color-green{
+	color: #8CCC0C;
+	font-weight:500;
+	font-family: 'Work Sans', sans-serif;
+	padding-left:30px;
+	margin-top: 8px
+}
+.woocommerce-orders  .orders-crtl .contact-info a.order-contact-btn{
+	display: inline-block;
+    padding: 7px 48px;
+    font-size: 12px!important;
+    font-family: 'Open Sans'!important;
+}
+.woocommerce-orders .orders-crtl .contact-info a.order-contact-btn:after{
+	content: none;
+}
+.woocommerce-orders .faq-accordion-wrp ul li .orders-crtl {
+    padding-top: 25px;
+    padding-bottom: 27px;
+}
+.woocommerce-orders .faq-accordion-wrp ul li{
+	border-radius:6px;
+}
+.woocommerce-orders .orders-crtl .contact-info i{
+	background: url(../images/woordr-conifo-icon.svg);
+	width:25px;
+	height: 25px;
+	background-repeat:no-repeat;
+	background-size:100% auto;
+	background-position:center;
+	display: inline-block;
+	margin-bottom:25px;
+}
+
+.woocommerce-orders .orders-crtl .contact-info {
+    padding-top: 13px;
+}
+.woocommerce-orders .woocommerce-account-grds-cntlr{
+	padding-top:72px;
+}
+
+
+
+
+
+
 
 
 
