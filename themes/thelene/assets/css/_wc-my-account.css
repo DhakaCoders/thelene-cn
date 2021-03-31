@@ -2,7 +2,126 @@
 /* ------------------- my account  deshboard-----------------------*/
 /*body.woocommerce-account .innerpage-con-wrap {
     margin-bottom: 75px;*/
+.account-page-title {
+    padding-top: 40px;
 }
+body.woocommerce-account .account-page-title h1{
+	border-bottom:none!important;
+	margin-bottom: 18px!important;
+	padding-bottom: 0!important;
+}
+.woocommerce-account-grds-cntlr {
+    padding-top: 43px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 75px;
+}
+.woocommerce-account-grds-cntlr .woocommerce-notices-wrapper{
+	display: none;
+}
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li{
+    border: 1px solid #31304F;
+    border-radius: 6px;
+    padding:0;
+    position:relative;
+    cursor: pointer;
+}
+
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li:not(:last-child){
+    margin-bottom: 19px;
+}
+
+
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+    max-width: 51.2%;
+    width: 100%;
+    padding-right: 24px;
+}
+
+.woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+    max-width: 48.80%;
+    width: 100%;
+}
+
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a:after{
+    content: "";
+    position: absolute;
+    background: url(../images/my-ac-login-icon-01.svg);
+    height: 20px;
+    width: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.is-active a:after{
+    background: url(../images/my-ac-login-icon-active-01.svg);
+
+}
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:after{
+    background: url(../images/my-ac-login-icon-02.svg);
+    width:17px;
+    height: 21px;
+}
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account.is-active a:after{
+    background: url(../images/my-ac-login-icon-active-02.svg);
+}
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:after{
+    background: url(../images/my-ac-login-icon-03.svg);
+    height: 19px;
+    width: 16px;
+}
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout{
+	border-color:#D17181;
+	
+}
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a{
+	color:#D17181!important;
+}
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a{
+    display: block;
+    padding: 14px 20px;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius:6px;
+}
+.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.is-active a{
+	background: #31304F;
+	color:#fff;
+}
+
+
+
+/*------------------innerpage-con-wrap--------------------*/
+.innerpage-con-wrap .woocommerce-account-grds-cntlr{
+	align-items: flex-start;
+}
+.innerpage-con-wrap .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+	padding-top:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
