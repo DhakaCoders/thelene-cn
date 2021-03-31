@@ -241,7 +241,8 @@ body.woocommerce-order-received h2.woocommerce-column__title {
     color: #43587B !important;
 }
 .woocommerce-MyAccount-navigation ul li.is-active a{
-    border-left: 3px solid #d62234;
+   	background: #31304F;
+    color: #fff!important;
     padding-left: 10px;
 }
 .woocommerce-MyAccount-navigation ul li a{
