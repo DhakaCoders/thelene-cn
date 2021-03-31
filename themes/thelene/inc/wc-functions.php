@@ -455,7 +455,7 @@ remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message');
 add_action( 'woocommerce_cart_is_empty', 'woo_if_cart_empty' );
 function woo_if_cart_empty(){
     echo '<div class="cart-is-emtpy">';
-        echo '<div class="cie-icon"><img src="'.THEME_URI.'/assets/images/cart-empty.svg"/></div>';
+        echo '<div class="cie-icon"><img src="'.THEME_URI.'/assets/images/bag-icon.svg.svg"/></div>';
         echo '<strong>'.__('Uw winkelwagen is leeg!', 'thelene').'</strong>';
         echo '<p>'.__('Je hebt geen artikelen in je winkelwagen.', 'thelene').'</p>';
     echo '</div>';
