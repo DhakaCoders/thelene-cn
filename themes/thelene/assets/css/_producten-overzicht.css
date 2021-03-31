@@ -15,6 +15,11 @@
 .product-page-col-rgt{
 	width: 74.30%;
 }
+.product-page-col-rgt.full-product-page{
+	width: 100%;
+}
+
+
 .fl-products-cntlr > ul{
 	display: flex;
 	flex-wrap: wrap;
