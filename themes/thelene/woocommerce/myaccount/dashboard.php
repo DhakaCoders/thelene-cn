@@ -28,5 +28,10 @@ $allowed_html = array(
 );
 ?>
 <div class="deshboard-inner">
+<?php if( strpos($_SERVER['REQUEST_URI'], "winkelmandje") !== false ){ wc_get_template('myaccount/winkelmandje.php');
+wc_get_template('myaccount/winkelmandje.php');
+}else{ ?>
 	<img src="<?php echo THEME_URI; ?>/assets/images/account-deshboard.jpg" alt="deshboard">
+
+<?php } ?>
 </div>

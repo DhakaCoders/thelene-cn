@@ -201,10 +201,35 @@ function registered_user_info_update($post){
                     update_user_meta( $customerId, "billing_phone", $post['billing_phone'] );
                 }
                 $data['success'] = 'Updated';
+            }else{
+              $data['error'] = 'Could not update';  
             }
-            $data['error'] = 'Could not update';
+            
+        }else{
+            $data['error'] = 'Could not update';  
         }
         
     }
     return $data;
 }
+
+
+function cbv_my_custom_endpoints() {
+    add_rewrite_endpoint( 'winkelmandje', EP_ROOT | EP_PAGES );
+}
+
+add_action( 'init', 'cbv_my_custom_endpoints' );
+
+function cbv_my_custom_query_vars( $vars ) {
+    $vars[] = 'winkelmandje';
+
+    return $vars;
+}
+
+add_filter( 'query_vars', 'cbv_my_custom_query_vars', 0 );
+
+function cbv_my_custom_flush_rewrite_rules() {
+    flush_rewrite_rules();
+}
+
+add_action( 'wp_loaded', 'cbv_my_custom_flush_rewrite_rules' );

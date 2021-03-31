@@ -373,9 +373,9 @@ add_action('cbv_catalog', 'cbv_catalog_ordering');
 function cbv_catalog_ordering() {
     global $wp_query;
 
-    if ( 0 == $wp_query->found_posts || ! woocommerce_products_will_display() ) {
+    /*if ( 0 == $wp_query->found_posts || ! woocommerce_products_will_display() ) {
         return;
-    }
+    }*/
 
     $orderby                 = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
     $show_default_orderby    = 'menu_order' === apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
@@ -491,19 +491,6 @@ remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_paymen
 // Important you will have to also add the following custom CSS to your site:
 // body .woocommerce-checkout-payment { float: none; width: 100%; }
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 20 );
-
-add_filter( 'woocommerce_get_endpoint_url', 'misha_hook_endpoint', 10, 4 );
-function misha_hook_endpoint( $url, $endpoint, $value, $permalink ){
- 
-    if( $endpoint === 'winkelmandje' ) {
-        // ok, here is the place for your custom URL, it could be external
-        $url = site_url();
-    }
-    return $url;
- 
-}
-
-
 
 add_filter ( 'woocommerce_account_menu_items', 'misha_remove_my_account_links' );
 function misha_remove_my_account_links( $menu_links ){
