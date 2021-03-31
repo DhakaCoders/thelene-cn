@@ -40,17 +40,19 @@ defined( 'ABSPATH' ) || exit;
 		<p>Vanaf uw accountdashboard kunt u uw recente bestellingen bekijken, uw verzend- en factuuradressen beheren en uw wachtwoord en accountgegevens bewerken.</p>
 	<?php } ?>
 
-	<?php 
-	do_action( 'woocommerce_account_navigation' ); ?>
+	<div class="woocommerce-account-grds-cntlr clearfix">
+		<?php 
+		do_action( 'woocommerce_account_navigation' ); ?>
 
-	<div class="woocommerce-MyAccount-content">
-		<?php
-			/**
-			 * My Account content.
-			 *
-			 * @since 2.6.0
-			 */
-			do_action( 'woocommerce_account_content' );
-		?>
+		<div class="woocommerce-MyAccount-content">
+			<?php
+				/**
+				 * My Account content.
+				 *
+				 * @since 2.6.0
+				 */
+				do_action( 'woocommerce_account_content' );
+			?>
+		</div>
 	</div>
 </div>
