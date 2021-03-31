@@ -422,19 +422,19 @@ $("#for_business").on('change', function(){
 var html = '<p class="form-row form-row-first" id="billing_company_field">' +
         '<label for="billing_company" class="">Bedrijfsnaam</label>' +
         '<span class="woocommerce-input-wrapper">' +
-          '<input type="text" class="input-text " name="billing_company" id="billing_company" placeholder="">' +
+          '<input type="text" class="input-text " name="billing_company" id="billing_company" placeholder="Bedrijfsnaam">' +
         '</span>' +
       '</p>' +
       '<p class="form-row form-row-last" id="billing_btw_nummer_field">' +
         '<label for="billing_btw_nummer" class="">BTW-nummer</label>' +
         '<span class="woocommerce-input-wrapper">' +
-          '<input type="text" class="input-text " name="billing_btw_nummer" id="billing_btw_nummer" placeholder="">' +
+          '<input type="text" class="input-text " name="billing_btw_nummer" id="billing_btw_nummer" placeholder="BTW-nummer">' +
         '</span>' +
       '</p>'+
       '<p class="form-row form-row-wide" id="billing_btw_nummer_field">' +
         '<label for="billing_reference" class="">Referentie</label>' +
         '<span class="woocommerce-input-wrapper">' +
-          '<input type="text" class="input-text " name="billing_reference" id="billing_reference" placeholder="Naam" autocomplete="reference">' +
+          '<input type="text" class="input-text " name="billing_reference" id="billing_reference" placeholder="Referentie" autocomplete="reference">' +
         '</span>' +
       '</p>';
 

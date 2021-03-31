@@ -121,6 +121,15 @@ global $woocommerce;
 	<div class="register-title">
 		<h3>Persoonlijke gegevens</h3>
 	</div>
+	<div class="register-field-error">
+		<div class="contact-er-msg">
+          <span>
+            <i><svg class="error-msg-icon-svg" width="32" height="32" viewBox="0 0 32 32" fill="#ffffff">
+            <use xlink:href="#error-msg-icon-svg"></use> </svg></i>
+            Oh snap! Het formulier lijkt niet correct!</span>
+        </div>
+	</div>
+
 	<form id="regiter_action_form">
 		<input type="hidden" name="action" value="ajax_register_save">
 		<div class="type-order-format">
