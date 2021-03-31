@@ -242,6 +242,7 @@ ul.products li:before,
 }
 .woocommerce ul li:before{
 	content: none!important;
+	
 }
 
 
