@@ -267,11 +267,12 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 }
 .woocommerce-account .woocommerce-EditAccountForm legend {
     padding-top: 20px;
-    font-weight: 500;
-    color: #7B8CA8;
+    font-weight: 700;
+    color: #202020;
     font-size: 24px;
     margin-bottom: 20px;
     padding-bottom: 15px;
+    letter-spacing: -0.02em;
 }
 .woocommerce-account .addresses .title a.edit {
     background: #3f3f3f;
