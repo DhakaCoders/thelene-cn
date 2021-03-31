@@ -1,6 +1,8 @@
 
 /* ------------------- my account  deshboard-----------------------*/
-
+body.woocommerce-account .innerpage-con-wrap {
+    margin-bottom: 75px;
+}
 
 
 
@@ -262,20 +264,24 @@ body.woocommerce-account .woocommerce-input-wrapper .bootstrap-select{
     
 }
 .same-as-shipping-address input:checked ~ .checkbox-custom,
-.login-info p > input:checked ~ .checkbox-custom{
+.login-info p > input:checked ~ .checkbox-custom,
+.woocommerce-form .form-row .woocommerce-form__label-for-checkbox input:checked ~ .checkbox-custom{
 	background: #8AA4E4;
 }
  .login-info p > input:checked ~ .checkbox-custom:after,
- .same-as-shipping-address input:checked ~ .checkbox-custom:after{
+ .same-as-shipping-address input:checked ~ .checkbox-custom:after,
+.woocommerce-form .form-row .woocommerce-form__label-for-checkbox input:checked ~ .checkbox-custom:after{
 	content: "";
 }
 .same-as-shipping-address,
-.login-info p:first-child{
+.login-info p:first-child,
+.woocommerce-form .form-row .woocommerce-form__label-for-checkbox{
     position: relative;
     padding-left: 30px;
 }
 .same-as-shipping-address input,
-.login-info p > input{
+.login-info p > input,
+.woocommerce-form .form-row .woocommerce-form__label-for-checkbox input{
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -287,7 +293,9 @@ body.woocommerce-account .woocommerce-input-wrapper .bootstrap-select{
     z-index: 1;
     height: 100%;
 }
-
+.woocommerce-form .form-row .woocommerce-form__label-for-checkbox .checkbox-custom{
+	margin-top:-7px;
+}
 .login-info h3{
 	font-size: 24px;
 	margin-top:65px;
@@ -296,7 +304,8 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	background:#8CCC0C!important;
 	border: 2px solid #8CCC0C!important;
 	padding:15px 106px!important;
-	margin-top: 23px
+	margin-top: 23px;
+	cursor: pointer;
 }
 .register-btn{
 	text-align: right;
@@ -309,12 +318,44 @@ body.woocommerce-account .register-btn button[type="submit"]{
     margin-left: auto;
     text-align: center;
 }
+.payment-logo-crtl ul {
+    display: flex;
+}
 
+.register-pay-logo-wrap h3 {
+    font-size: 14px;
+    font-weight: normal;
+    display: inline-block;
+    padding-right: 14px;
+    margin-bottom: 0px!important;
+    color: #525A61;
+}
 
-
-
-
-
+.register-pay-logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ECE9E9;
+}
+.innerpage-con-wrap{
+	overflow: hidden;
+	position: relative;
+	max-width: 985px;
+	width: 100%;
+	margin: 0 auto;
+}
+.register-pay-logo-wrap .payment-logo-crtl ul{
+    padding-bottom: 0;
+}
+.register-pay-logo-wrap .payment-logo-crtl ul li{
+	padding: 5px 0 8px 18px!important;
+}
+.register-btn .reg-btn-crtl {
+    margin-bottom: 12px;
+}
+.reg-btn-crtl .html-text span {
+    font-size: 12px;
+}
 
 
 @media(max-width:1199px){
