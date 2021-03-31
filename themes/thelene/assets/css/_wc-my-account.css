@@ -160,7 +160,10 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 	max-width: 33.95%;
 
 }
-.woocommerce-orders .myac-pro-grd-img 
+.woocommerce-orders .myac-pro-grd-item-inr .myac-pro-grd-img{
+	max-width:90px;
+	height: auto;
+}
 .woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
 	max-width:66.05%;
 	padding-left:120px;
