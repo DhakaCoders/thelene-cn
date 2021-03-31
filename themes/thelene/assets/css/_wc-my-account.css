@@ -1,7 +1,7 @@
 
 /* ------------------- my account  deshboard-----------------------*/
-body.woocommerce-account .innerpage-con-wrap {
-    margin-bottom: 75px;
+/*body.woocommerce-account .innerpage-con-wrap {
+    margin-bottom: 75px;*/
 }
 
 
@@ -356,6 +356,31 @@ body.woocommerce-account .register-btn button[type="submit"]{
 .reg-btn-crtl .html-text span {
     font-size: 12px;
 }
+#billing_email_field {
+    border-top: 1px solid #ECE9E9;
+    padding-top: 23px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media(max-width:1199px){
@@ -369,6 +394,19 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	body.woocommerce-account .woocommerce button[type=submit],
 	body.woocommerce-account .woocommerce button[type=button]{
 		padding:13px 60px!important;
+	}
+
+
+	/*  ----------------------------- my account reg page ------------------------- */
+	body.woocommerce-account .register-btn button[type="submit"]{
+		padding: 15px 106px!important;
+	}
+}
+
+@media(max-width: 992px){
+	.woocommerce-account .register-title h3, 
+	.login-info h3{
+	    font-size: 21px;
 	}
 }
 
@@ -431,7 +469,53 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	body.woocommerce-account .loginInfoItem {
 	    padding-bottom: 10px;
 	}
+
+
+	/*  ----------------------------- my account reg page ------------------------- */
+	.woocommerce-account .register-title h3, .login-info h3 {
+	    font-size: 19px;
+	}
+	.woocommerce-input-wrapper span {
+	    padding-left: 25px;
+	}
+	body.woocommerce-account .woocommerce form .form-row-first,
+	body.woocommerce-account .woocommerce form .form-row-last, 
+	body.woocommerce-account .woocommerce-page form .form-row-first,
+	body.woocommerce-account .woocommerce-page form .form-row-last{
+		width: 100%;
+	}
+	body.woocommerce-account .woocommerce form .form-row-first,
+	body.woocommerce-account .woocommerce-page form .form-row-first{
+		padding-right: 0px
+	}
+
+	body.woocommerce-account .woocommerce form .form-row-last, 
+	body.woocommerce-account .woocommerce-page form .form-row-last{
+		padding-left:0px;
+	}
+
+	.login-info h3{
+	    margin-top: 35px;
+	}
+	.reg-btn-crtl {
+	    max-width: 500px;
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	.register-btn {
+	    text-align: center;
+	}
+
+	.register-pay-logo-wrap .payment-title{
+		display: none;
+	}
+	body.woocommerce-account .woocommerce form .form-row{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
+
+
 
 @media(max-width:575px){
 	body.woocommerce-account .woocommerce button[type=submit], 
@@ -463,6 +547,17 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	    padding-bottom:0px;
 	}
 	
+
+	/*  ----------------------------- my account reg page ------------------------- */
+
+	.woocommerce-account .register-title h3, .login-info h3 {
+	    font-size: 16px;
+	}
+	.same-as-shipping-address, 
+	.login-info p:first-child, 
+	.woocommerce-form .form-row .woocommerce-form__label-for-checkbox{
+		padding-left:25px;
+	}
 }
 
 /* Orders */
