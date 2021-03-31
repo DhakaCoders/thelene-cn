@@ -229,6 +229,22 @@ ul.products li:before,
 
 
 
+.woocommerce ul{
+	margin: 0!important;
+	padding: 0!important;
+	list-style: none!important;
+}
+.woocommerce ul li{
+	padding: 0!important;
+	margin: 0!important;
+	list-style: none!important;
+	margin: 0!important;
+}
+.woocommerce ul li:before{
+	content: none!important;
+}
+
+
 
 
 /**
