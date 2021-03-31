@@ -630,13 +630,30 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	width:100%;
 }
 
+.woocommerce-cart .woocommerce .cart-is-emtpy strong{
+	font-size:48px;
+	color: #202020;
+	font-family: Open Sans;
+	display: inline-block;
+	vertical-align: baseline;
+	line-height: 1;
+	margin-bottom:12px;
+}
+.woocommerce-cart .woocommerce .cart-is-emtpy .cie-icon{
+	margin-bottom:40px;
+}
+.woocommerce-cart .woocommerce .cart-is-emtpy p{
+	color: #525A61;
 
+}
+.woocommerce-cart .woocommerce .return-to-shop{
+	margin-top:14px;
+	margin-bottom:38px;
+}
 
-
-
-
-
-
+.woocommerce-cart .woocommerce .return-to-shop a{
+	padding:16px 100px!important;
+}
 
 
 
