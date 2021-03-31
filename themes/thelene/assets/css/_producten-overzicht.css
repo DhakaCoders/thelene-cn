@@ -99,7 +99,7 @@
 
 }
 .product-page-sidebar .sidebar-widget ul li{
-	margin-bottom: 15px;
+	margin-bottom: 15px!important;
 }
 .product-page-sidebar .sidebar-widget ul li a{
 	color: #525A61;
