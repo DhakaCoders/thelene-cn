@@ -118,9 +118,6 @@ global $woocommerce;
 	<div class="register-top-title">
 		<h1>Nieuw bij Thelene</h1>
 	</div>
-	<div class="register-title">
-		<h3>Persoonlijke gegevens</h3>
-	</div>
 	<div class="register-field-error">
 		<div class="contact-er-msg">
           <span>
@@ -129,7 +126,9 @@ global $woocommerce;
             Oh snap! Het formulier lijkt niet correct!</span>
         </div>
 	</div>
-
+	<div class="register-title">
+		<h3>Persoonlijke gegevens</h3>
+	</div>
 	<form id="regiter_action_form">
 		<input type="hidden" name="action" value="ajax_register_save">
 		<div class="type-order-format">
