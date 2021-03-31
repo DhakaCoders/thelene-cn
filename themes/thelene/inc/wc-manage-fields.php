@@ -131,26 +131,26 @@ function ajax_register_save(){
         wp_die();
     }
 }
-add_action('init', 'registered_user_info_update');
-function registered_user_info_update(){
+//add_action('init', 'registered_user_info_update');
+function registered_user_info_update($post){
     $data = array();
-    if (isset( $_POST["account_email"] ) && isset($_POST['user_id'])) {
+    if (isset( $post["account_email"] ) && isset($post['user_id'])) {
         
         $user_password = $email = '';
-        if( isset($_POST['account_email']) && !empty($_POST['account_email'])){
-            $email = sanitize_email($_POST['account_email']);
+        if( isset($post['account_email']) && !empty($post['account_email'])){
+            $email = sanitize_email($post['account_email']);
         }
-        if( isset($_POST['password']) && !empty($_POST['password'])){
-            $user_password = $_POST['password'];
+        if( isset($post['password']) && !empty($post['password'])){
+            $user_password = $post['password'];
         }
-        if( isset($_POST['user_id']) && !empty($_POST['user_id'])){
-            $userID = $_POST['user_id'];
+        if( isset($post['user_id']) && !empty($post['user_id'])){
+            $userID = $post['user_id'];
         }else{
             $user = wp_get_current_user();
             $userID = $user->ID;
         }
-        $firstname = (isset($_POST['account_first_name']) && !empty($_POST['account_first_name']))? $_POST['account_first_name']:'';
-        $lastname = (isset($_POST['account_last_name']) && !empty($_POST['account_last_name']))? $_POST['account_last_name']:'';
+        $firstname = (isset($post['account_first_name']) && !empty($post['account_first_name']))? $post['account_first_name']:'';
+        $lastname = (isset($post['account_last_name']) && !empty($post['account_last_name']))? $post['account_last_name']:'';
         if( !empty($userID) ){
             if( empty($user_password)){
                 $customerId = wp_update_user(array(
@@ -177,32 +177,32 @@ function registered_user_info_update(){
                 if( !empty($lastname) ){
                     update_user_meta( $customerId, "billing_last_name", $lastname );
                 }
-                if( isset($_POST['account_email']) && !empty($_POST['account_email']) ){
-                    update_user_meta( $customerId, "billing_email", $_POST['account_email'] );
+                if( isset($post['account_email']) && !empty($post['account_email']) ){
+                    update_user_meta( $customerId, "billing_email", $post['account_email'] );
                 }
 
-                if( isset($_POST['billing_address_1']) && !empty($_POST['billing_address_1']) ){
-                    update_user_meta( $customerId, "billing_address_1", $_POST['billing_address_1']);
+                if( isset($post['billing_address_1']) && !empty($post['billing_address_1']) ){
+                    update_user_meta( $customerId, "billing_address_1", $post['billing_address_1']);
                 }
-                if( isset($_POST['billing_house']) && !empty($_POST['billing_house']) ){
-                    update_user_meta( $customerId, "billing_house", $_POST['billing_house'] );
-                }
-
-                if( isset($_POST['billing_city']) && !empty($_POST['billing_city']) ){
-                    update_user_meta( $customerId, "billing_city", $_POST['billing_city']);
-                }
-                if( isset($_POST['billing_postcode']) && !empty($_POST['billing_postcode']) ){
-                    update_user_meta( $customerId, "billing_postcode", $_POST['billing_postcode'] );
-                }
-                if( isset($_POST['billing_gsm_number']) && !empty($_POST['billing_gsm_number'])){
-                    update_user_meta( $customerId, "billing_gsm_number", $_POST['billing_gsm_number'] );
-                }
-                if( isset($_POST['billing_phone']) && !empty($_POST['billing_phone'])){
-                    update_user_meta( $customerId, "billing_phone", $_POST['billing_phone'] );
+                if( isset($post['billing_house']) && !empty($post['billing_house']) ){
+                    update_user_meta( $customerId, "billing_house", $post['billing_house'] );
                 }
 
+                if( isset($post['billing_city']) && !empty($post['billing_city']) ){
+                    update_user_meta( $customerId, "billing_city", $post['billing_city']);
+                }
+                if( isset($post['billing_postcode']) && !empty($post['billing_postcode']) ){
+                    update_user_meta( $customerId, "billing_postcode", $post['billing_postcode'] );
+                }
+                if( isset($post['billing_gsm_number']) && !empty($post['billing_gsm_number'])){
+                    update_user_meta( $customerId, "billing_gsm_number", $post['billing_gsm_number'] );
+                }
+                if( isset($post['billing_phone']) && !empty($post['billing_phone'])){
+                    update_user_meta( $customerId, "billing_phone", $post['billing_phone'] );
+                }
+                $data['success'] = 'Updated';
             }
-            $data['status'] = 'error';
+            $data['error'] = 'Could not update';
         }
         
     }

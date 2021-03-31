@@ -17,10 +17,20 @@
 
 defined( 'ABSPATH' ) || exit;
 
-do_action( 'woocommerce_before_edit_account_form' ); 
-
+do_action( 'woocommerce_before_edit_account_form' );
+$reg = array();
+if (isset( $_POST["account_email"] ) && isset($_POST['user_id'])) { 
+	$reg = registered_user_info_update($_POST);
+}
 ?>
 <div class="woocommerce-edit-account-crtl">
+	<?php 
+		if( in_array('error', $reg) ){
+			printf('<div class="contact-er-msg"><span><i><svg class="error-msg-icon-svg" width="32" height="32" viewBox="0 0 32 32" fill="#ffffff"><use xlink:href="#error-msg-icon-svg"></use> </svg></i>%s</div>', $reg['error']);
+		}elseif( in_array('success', $reg) ){
+			printf('<div class="contact-success-msg">%s</div>', $reg['success']);
+		}
+	?>
 	<form class="woocommerce-EditAccountForm edit-account" action="" method="post" >
 		<input type="hidden" name="user_id" value="<?php echo $user->ID; ?>">
 		<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
