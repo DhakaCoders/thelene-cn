@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="myaccount-crtl">
 	<div class="account-page-title">
 		<?php if( is_wc_endpoint_url( 'orders' ) ){ ?>
-			<div><a href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
+			<div class="back-to-dashboard-btn-cntlr"><a href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
 			<h1>Bestellingen</h1>
 		<?php }elseif( strpos($_SERVER['REQUEST_URI'], "winkelmandje") !== false ){ ?>
 			<div><a href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
