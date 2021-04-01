@@ -193,6 +193,10 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
       <?php endwhile; ?>
     </div>
   </div>
+  <div class="popup-bottom-btn">
+    <a class="fl-btn continue-shopping-btn xoo-cp-close xcp-btn"><?php _e('Verder winkelen','added-to-cart-popup-woocommerce'); ?></a>
+    <a class="fl-btn" href="<?php echo wc_get_cart_url() ?>"><?php _e('ik ga bestellen','added-to-cart-popup-woocommerce'); ?></a>
+  </div>
   </div>
 <?php endif; wp_reset_postdata(); ?>
 <?php } ?>
