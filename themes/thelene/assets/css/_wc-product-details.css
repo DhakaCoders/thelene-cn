@@ -272,3 +272,58 @@ body.single-product  div.product form.cart .button{
 	text-align: center;
 	color: #202020;
 }
+
+
+@media (max-width: 1699px){
+	
+}
+
+
+@media (max-width: 1499px) {
+	.woocommerce div.product div.summary {
+	    width: 51%!important;
+	    padding-left: 80px;
+	}
+	.long-desc {
+	    padding: 40px 25px 30px 40px;
+	}
+}
+
+@media(max-width: 1399px){
+
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+
+
+}
+
+@media(max-width: 991px){
+
+	
+	
+}
+
+@media(max-width: 767px){
+
+
+}
+
+@media(max-width: 575px){
+
+	
+
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
+}

@@ -229,20 +229,22 @@ ul.products li:before,
 
 
 
-.sidebar-widget ul{
+.sidebar-widget ul,
+ul.dropdown-menu{
 	margin: 0!important;
 	padding: 0!important;
 	list-style: none!important;
 }
-.sidebar-widget ul li{
+.sidebar-widget ul li,
+ul.dropdown-menu li{
 	padding: 0!important;
 	margin: 0!important;
 	list-style: none!important;
 	margin: 0!important;
 }
-.sidebar-widget ul li:before{
+.sidebar-widget ul li:before,
+ul.dropdown-menu li:before{
 	content: none!important;
-	
 }
 
 
@@ -417,7 +419,7 @@ Selects
 .dropdown-menu>.active>a, 
 .dropdown-menu>.active>a:focus, 
 .dropdown-menu>.active>a:hover{
-	background-color: #F3BF00;
+	background-color: #8CCC0C;;
 }
 
 .bootstrap-select .dropdown-toggle:focus{
