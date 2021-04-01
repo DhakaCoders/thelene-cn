@@ -299,12 +299,12 @@ Selects
 }
 .dropdown-toggle::before,
 .fl-select .woocommerce-ordering .dropdown-toggle::before{
-	content: "\f107"!important;
-    font-family: 'Font Awesome 5 Free';
+	content: ""!important;
+   /* font-family: 'Font Awesome 5 Free';
     font-weight: 600;
     text-decoration: inherit;
     color: #1E1E1E;
-    font-size: 22px;
+    font-size: 22px;*/
     padding-right: 0;
     position: absolute;
     top: 50%;
@@ -313,9 +313,16 @@ Selects
     -webkit-transform: translateY(-50%);
     right: 0;
     line-height: 15px;
+    background: url(../images/left-arrow-angle3.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
 }
 .bootstrap-select.show .dropdown-toggle::before{
-	content: "\f106"!important;
+	transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	margin-top: -4px;
 }
 .fl-select .bootstrap-select .dropdown-menu{
 	padding: 0;
@@ -538,7 +545,12 @@ Selects
 @media (max-width: 1499px) {
 	.fl-trnsprnt-btn {
     	padding: 10px 30px;
-    	font-size: 14px;
+    	font-size: 14.5px;
+	}
+	.bootstrap-select .dropdown-toggle .filter-option-inner, 
+	.fl-select .woocommerce-ordering .dropdown-toggle .filter-option-inner {
+	    line-height: 2.6!important;
+	    font-size: 15px;
 	}
 }
 
