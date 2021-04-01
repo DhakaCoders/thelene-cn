@@ -2,11 +2,19 @@
 	max-width:950px;
 	width: 100%;
 }
+.xoo-cp-container h5 {
+    font-size: 30px;
+    color: #202020;
+    letter-spacing: -0.02em;
+    font-family: Open Sans;
+    margin-bottom:30px;
+}
 .xoo-cp-active{
 	background: rgba(252, 248, 248, 0.88)!important;
 }
 .xoo-cp-container{
 	background:#fff;
+	padding-top: 40px;
 }
 
 .xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des{
@@ -15,7 +23,12 @@
 }
 .xoo-cp-content .xoo-cp-pdetails-row{
 	display: flex;
-	flex-direction: row;
+    flex-direction: row;
+    min-height: 207px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ECEEEF;
+    border-top: 1px solid #ECEEEF;
 }
 .xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-1,
 .xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-2{
@@ -68,7 +81,74 @@
     color: #fff;
     width: 212px;
     letter-spacing: 0.04em;
+    display: flex;
 }
 .overlay-link{
 	display: none;
+}
+
+.spotlight-popup-cntlr h5 {
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    color: #202020;
+}
+
+.spotlight-popup-cntlr {
+    padding-top: 52px;
+}
+
+.flex-fill {
+    padding: 0px 13px;
+}
+.pro-item-cntlr {
+    border: 1px solid #F5F6F7;
+    padding-top: 25px;
+}
+.spotlight-popup {
+    margin: 0 -13px;
+}
+.pro-item-img {
+    width: 164px;
+    height: auto;
+    margin: 0 auto;
+}
+.pro-item-desc .pro-item-descWrap .pro-item-desc-title a {
+    font-size: 18px;
+    color: #31304F;
+    font-weight: 400;
+    font-family: Bitter;
+}
+
+.pro-item-desc {
+    text-align: center;
+}
+.product-quantity .product-order-btn a {
+    background: transparent;
+    color: #31304F;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+    border: 1px solid #31304F;
+    text-decoration: none;
+}
+.product-quantity a{
+	color: #8AA4E4;
+	font-size: 14px;
+	text-decoration-line: underline;
+	font-family: Bitter;
+}
+span.xoo-cp-close.xoo-cp-icon-cross:before {
+    content: "";
+    background: url(../images/single-pro-popup-cross-icon.svg);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    right: 45px;
+    top: 60px;
 }
