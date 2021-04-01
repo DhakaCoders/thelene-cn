@@ -18,6 +18,9 @@
 	border: none!important;
 	padding-left: 47px;
     padding-right: 47px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding-bottom:50px;
 }
 
 .xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des{
@@ -106,6 +109,8 @@
 .pro-item-cntlr {
     border: 1px solid #F5F6F7;
     padding-top: 25px;
+    padding-bottom: 26px;
+    margin-bottom: 28px;
 }
 .spotlight-popup {
     margin: 0 -13px;
@@ -125,23 +130,27 @@
 .pro-item-desc {
     text-align: center;
 }
-.product-quantity .product-order-btn a {
-    background: transparent;
-    color: #31304F;
+.product-quantity .product-order-btn button[type="submit"] {
+    background: transparent!important;
+    color: #31304F!important;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 14px!important;
     width: 160px;
     height: 40px;
     margin: 0 auto;
-    border: 1px solid #31304F;
+    border: 1px solid #31304F!important;
     text-decoration: none;
 }
-.product-quantity a{
+.flex-fill > div:nth-child(2) a{
 	color: #8AA4E4;
 	font-size: 14px;
 	text-decoration-line: underline;
 	font-family: Bitter;
+	text-align: center;
+}
+.flex-fill > div:nth-child(2){
+	text-align: center;
 }
 span.xoo-cp-close.xoo-cp-icon-cross:before {
     content: "";
@@ -154,4 +163,52 @@ span.xoo-cp-close.xoo-cp-icon-cross:before {
     background-size: 100% auto;
     right: 60px;
     top: 60px;
+}
+.product-quantity form .quantity {
+	display: flex;
+	justify-content: center;
+}
+.product-quantity form .quantity span {
+    width: 20px;
+    height: 20px;
+    background: #31304F;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.product-quantity form .quantity input.qty{
+	width: 33px;
+	line-height: 1;
+}
+.product-quantity form .product-order-btn {
+    margin-top: 18px;
+}
+.product-price ins span {
+    color: #31304F;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.product-price del span {
+    color: #525A61;
+    font-size: 12px;
+    text-decoration-line: line-through;
+    margin-right: 0;
+}
+.product-quantity .product-order-btn button[type="submit"]:hover {
+    background: #31304f!important;
+    color: #fff!important;
+}
+.flex-fill > div:nth-child(2) a:hover,
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-2 .product-order-btn a:first-child:hover{
+	color: #9c9ea2;
+}
+.product-quantity form .quantity span:active {
+    background: #8ccc0c;
+}
+.pro-item-desc  .pro-item-descWrap .product-price {
+    margin-bottom: 7px;
 }
