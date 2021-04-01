@@ -273,6 +273,12 @@ body.single-product  div.product form.cart .button{
 	color: #202020;
 }
 
+.summary-ctrl .qty-price-wrap{
+	margin-bottom: 40px;
+	padding-top: 40px;
+	border-top: 1px solid #F1E8E1;
+	margin-top: 40px;
+}
 
 @media (max-width: 1699px){
 	
