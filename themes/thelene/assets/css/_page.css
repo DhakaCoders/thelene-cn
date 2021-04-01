@@ -171,3 +171,53 @@ body.woocommerce-cart .page-title{
 div.coupon:not(.under-proceed){ 
 	display: none !important; 
 }
+
+
+
+@media (max-width: 1699px){
+	
+}
+
+
+@media (max-width: 1499px) {
+
+}
+
+@media(max-width: 1399px){
+
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+	.fl-pagi-cntlr ul{
+		margin-right: 0;
+	}
+
+}
+
+@media(max-width: 991px){
+
+	
+	
+}
+
+@media(max-width: 767px){
+
+}
+
+@media(max-width: 575px){
+
+
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
+}

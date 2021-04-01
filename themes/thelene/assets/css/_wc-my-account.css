@@ -293,6 +293,10 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 body.woocommerce-account .default-page-con h1{
     border-bottom: 1px solid #F1E8E1;
     padding-bottom: 28px;
+    margin-bottom:0;
+}
+body.woocommerce-account .register-field-error{
+	margin-bottom:33px;
 }
 body.woocommerce-account .woocommerce-form{
 	border:none;
@@ -645,7 +649,7 @@ body.woocommerce-account .register-btn button[type="submit"]{
 
 /* ------------------ woocommerce-cart ----------------------*/
 
-.woocommerce-cart .innerpage-con-wrap{
+/*.woocommerce-cart .innerpage-con-wrap{
 	max-width: 100%;
 }
 
@@ -681,11 +685,11 @@ body.woocommerce-account .register-btn button[type="submit"]{
 .woocommerce-cart .woocommerce .return-to-shop a{
 	padding:16px 100px!important;
 }
+*/
 
 
-
-
-
+/* ---------------------------- checkout page ----------------------------------*/
+.woocommerce-checkout
 
 
 
@@ -795,15 +799,17 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	.woocommerce-orders .myac-pro-grds{
 		flex-wrap: wrap;
 	}
-	.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation {
+	.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation {
 	    padding-right:0px;
 	}
 
 
-	/* ------------------------ woocommerce-edit-account ----------------------*/
-	.woocommerce-edit-account .innerpage-con-wrap .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
-		padding-right:25px;
+	/* ------------------------ accound deshboard ----------------------*/
+	.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a {
+	    padding: 10px 15px;
+	    font-size: 14px;
 	}
+
 }
 
 @media(max-width: 768px){
@@ -1008,6 +1014,29 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	.woocommerce-edit-account .account-page-title div:first-child a{
 		margin-bottom:0;
 	}
+
+
+	/* ---------------------- woocommerce-MyAccount-content --------------------------*/
+	.loggedin-deshboard-crtl .woocommerce-MyAccount-content{
+		display: none;
+	}
+	.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+		max-width:100%;
+		text-align:left;
+	}
+	.loggedin-deshboard-crtl .account-page-title{
+		text-align: center;
+		max-width: 500px;
+
+		margin-left: auto;
+		margin-right:auto;
+	}
+	.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr{
+		padding-top:10px;
+	}
+	.woocommerce-account .woocommerce-MyAccount-navigation{
+		margin-bottom: 6px;
+	}
 }
 
 @media(max-width: 659px){
@@ -1043,8 +1072,12 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	body.woocommerce-account .loginInfoItem {
 	    padding-bottom:0px;
 	}
-	
-
+	body.woocommerce-account .register-field-error .contact-er-msg{
+		display: block;
+	}
+	body.woocommerce-account .register-field-error .contact-er-msg span{
+		display: flex;
+	}
 	/*  ----------------------------- my account reg page ------------------------- */
 
 	.woocommerce-account .register-title h3, .login-info h3 {
@@ -1069,7 +1102,7 @@ body.woocommerce-account .register-btn button[type="submit"]{
 		max-width: 150px;
 		height: auto;
 	}
-/* --------------- order -----------------------*/
+	/* --------------- order -----------------------*/
 	
 
 
@@ -1077,7 +1110,13 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	.woocommerce-account .woocommerce-EditAccountForm legend{
 		font-size: 20px;
 	}
-
+	/* --------------- account deshboard ----------------*/
+	.loggedin-deshboard-crtl .account-page-title .loggedin-text{
+		font-size: 12px
+	}
+	.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a {
+	    font-size: 12px;
+	}
 }
 
 
