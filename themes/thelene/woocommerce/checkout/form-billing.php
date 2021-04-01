@@ -18,6 +18,10 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
+<div class="checkout-page-title">
+	<div><a class="backshop-cart" href="">Terug naar winkelmandje</a></div>
+	<h1><?php the_title(); ?></h1>
+</div>
 <div class="woocommerce-billing-fields">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 

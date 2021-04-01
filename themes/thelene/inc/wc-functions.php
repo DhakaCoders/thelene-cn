@@ -405,8 +405,26 @@ function cbv_catalog_ordering() {
 function projectnamespace_woocommerce_text( $translated, $text, $domain ) {
     if ( $domain === 'woocommerce' ) {
         $translated = str_replace(
-            array( 'Proceed to checkout', 'Return to shop' ),
-            array( 'ik ga bestellen', 'ik ga bestellen'),
+            array( 
+                'Proceed to checkout', 
+                'Return to shop', 
+                'Billing details', 
+                'Your order', 
+                'Place order',
+                'Additional information',
+                'Subtotal',
+                'Total'
+            ),
+            array( 
+                'ik ga bestellen', 
+                'ik ga bestellen', 
+                '1. Persoonlijke gegevens', 
+                'Overzicht', 
+                'Afrekenen',
+                '4. Extra Info',
+                'Subtotaal',
+                'Totaal'
+            ),
             $translated
         );
     }
