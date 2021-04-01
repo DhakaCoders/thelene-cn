@@ -10,7 +10,7 @@ get_header();
               <div class="page-title">
                 <h1><?php the_title(); ?></h1>
               </div>
-            <?php }elseif( !is_account_page()){ ?>
+            <?php }elseif( !is_account_page() && !is_checkout()){ ?>
               <div class="page-title">
                 <h1><?php the_title(); ?></h1>
               </div>

@@ -405,8 +405,26 @@ function cbv_catalog_ordering() {
 function projectnamespace_woocommerce_text( $translated, $text, $domain ) {
     if ( $domain === 'woocommerce' ) {
         $translated = str_replace(
-            array( 'Proceed to checkout', 'Return to shop' ),
-            array( 'ik ga bestellen', 'ik ga bestellen'),
+            array( 
+                'Proceed to checkout', 
+                'Return to shop', 
+                'Billing details', 
+                'Your order', 
+                'Place order',
+                'Additional information',
+                'Subtotal',
+                'Total'
+            ),
+            array( 
+                'ik ga bestellen', 
+                'ik ga bestellen', 
+                '1. Persoonlijke gegevens', 
+                'Overzicht', 
+                'Afrekenen',
+                '4. Extra Info',
+                'Subtotaal',
+                'Totaal'
+            ),
             $translated
         );
     }
@@ -541,6 +559,17 @@ function custom_pre_get_posts_query( $q ) {
 
     remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
 
+}
+add_filter( 'body_class', 'cbv_wc_custom_class' );
+function cbv_wc_custom_class( $classes ) {
+    if( strpos($_SERVER['REQUEST_URI'], "winkelmandje") !== false && is_account_page() && is_user_logged_in()){
+
+    }else{
+        if( is_account_page() && is_user_logged_in() && (!is_wc_endpoint_url( 'orders' ) ||  is_wc_endpoint_url( 'edit-account' ))) {
+            $classes[] = 'loggedin-deshboard-crtl';
+        }
+    }
+    return $classes;
 }
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
