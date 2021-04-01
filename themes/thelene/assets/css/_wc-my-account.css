@@ -177,6 +177,7 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 	color: #31304F;
 	font-weight: normal;
 	margin-bottom:7px;
+	line-height:1.2;
 }
 .woocommerce-orders .myac-pro-grd-item-inr .order-items-desc span{
 	color: #78797B;
@@ -208,19 +209,38 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 .woocommerce-orders  .myac-pro-grd-item .myac-pro-grd-item-inr{
     align-items: center;
     padding-top: 40px;
+    padding-bottom: 12px;
 }
 .woocommerce-orders  .order-details .color-green{
 	color: #8CCC0C;
 	font-weight:500;
 	font-family: 'Work Sans', sans-serif;
-	padding-left:30px;
-	margin-top: 8px
+	padding-left:36px;
+	margin-top: 20px;
+	position: relative;
+}
+.woocommerce-orders .order-details .order-status:after {
+    content: "";
+    background-image: url(../images/woordr-conifo-icon.svg);
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top:-4px;
 }
 .woocommerce-orders  .orders-crtl .contact-info a.order-contact-btn{
 	display: inline-block;
     padding: 7px 48px;
     font-size: 12px!important;
     font-family: 'Open Sans'!important;
+    margin-bottom:0px;
 }
 .woocommerce-orders .orders-crtl .contact-info a.order-contact-btn:after{
 	content: none;
@@ -241,16 +261,21 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 	background-position:center;
 	display: inline-block;
 	margin-bottom:25px;
+	display: none;
 }
-.woocommerce-orders .orders-crtl .contact-info {
+/*.woocommerce-orders .orders-crtl .contact-info {
     padding-top: 13px;
-}
+}*/
 .woocommerce-orders .woocommerce-account-grds-cntlr{
 	padding-top:72px;
 }
 
-
-
+.woocommerce-orders .order-details .myac-pro-grds{
+	border-bottom: 1px solid #ddd;
+}
+.woocommerce-orders .order-details{
+	border:none;
+}
 
 
 
