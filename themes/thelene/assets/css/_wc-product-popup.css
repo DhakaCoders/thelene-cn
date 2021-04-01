@@ -2,11 +2,19 @@
 	max-width:950px;
 	width: 100%;
 }
+.xoo-cp-container h5 {
+    font-size: 30px;
+    color: #202020;
+    letter-spacing: -0.02em;
+    font-family: Open Sans;
+    margin-bottom:30px;
+}
 .xoo-cp-active{
 	background: rgba(252, 248, 248, 0.88)!important;
 }
 .xoo-cp-container{
 	background:#fff;
+	padding-top: 40px;
 }
 
 .xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des{
@@ -131,4 +139,16 @@
 	font-size: 14px;
 	text-decoration-line: underline;
 	font-family: Bitter;
+}
+span.xoo-cp-close.xoo-cp-icon-cross:before {
+    content: "";
+    background: url(../images/single-pro-popup-cross-icon.svg);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    right: 45px;
+    top: 60px;
 }
