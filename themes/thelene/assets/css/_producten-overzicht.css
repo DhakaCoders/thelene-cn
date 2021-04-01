@@ -1,6 +1,11 @@
 
 .product-page-col-cntlr{
 	display: flex;
+	padding-bottom: 53px;
+}
+
+.product-page-col-cntlr .fl-pagi-cntlr{
+	padding-bottom: 0;
 }
 .sidebar-title .fl-h4{
 	border-bottom: 1px solid rgba(166, 166, 166, 0.3);
@@ -20,13 +25,13 @@
 }
 
 
-.fl-products-cntlr > ul{
+.fl-products-cntlr ul.products {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -10px!important;
 	padding-bottom: 45px!important;
 }
-.fl-products-cntlr > ul > li{
+.fl-products-cntlr ul.products > li{
 	width: 25%!important;
 	padding: 0 10px 25px!important;
 	margin: 0!important;
@@ -208,7 +213,7 @@
 	.product-page-sidebar{
 		padding-right: 40px;
 	}
-	.fl-products-cntlr > ul > li{
+	.fl-products-cntlr ul.products > li{
 		width: 33.3333%!important;
 	}
 }
