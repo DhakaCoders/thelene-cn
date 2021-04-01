@@ -15,6 +15,9 @@
 .xoo-cp-container{
 	background:#fff;
 	padding-top: 40px;
+	border: none!important;
+	padding-left: 47px;
+    padding-right: 47px;
 }
 
 .xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des{
@@ -149,6 +152,6 @@ span.xoo-cp-close.xoo-cp-icon-cross:before {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
-    right: 45px;
+    right: 60px;
     top: 60px;
 }
