@@ -25,7 +25,7 @@ if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
 global $product;
 
 $attachment_ids = $product->get_gallery_image_ids();
-
+echo '<span class="fl-singgle-pro-prev"></span><span class="fl-singgle-pro-next"></span>';
 echo '<div class="thumbnails-cntlr"><div class="thumbnails">';
 if ( $product->get_image_id() ) {
 	$imgtag = wp_get_attachment_image( $product->get_image_id(), 'thumbnail' );
