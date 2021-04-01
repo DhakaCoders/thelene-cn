@@ -571,5 +571,17 @@ function cbv_wc_custom_class( $classes ) {
     }
     return $classes;
 }
+
+add_filter( 'woocommerce_cart_item_price', 'woodiscpr_change_cart_table_price_display', 30, 3 );
+
+function woodiscpr_change_cart_table_price_display( $price, $values, $cart_item_key ) {
+    $slashed_price = $values['data']->get_price_html();
+    $is_on_sale = $values['data']->is_on_sale();
+    if ( $is_on_sale ) {
+        $price = $slashed_price;
+    }
+    return $price;
+}
+
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 

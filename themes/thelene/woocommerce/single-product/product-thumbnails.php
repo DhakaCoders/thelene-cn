@@ -29,13 +29,11 @@ echo '<span class="fl-singgle-pro-prev"></span><span class="fl-singgle-pro-next"
 echo '<div class="thumbnails-cntlr"><div class="thumbnails">';
 if ( $product->get_image_id() ) {
 	$imgtag = wp_get_attachment_image( $product->get_image_id(), 'thumbnail' );
-	echo '<div class="woocommerce-product-gallery__image">';
       echo '<div class="thumb-bg">';
       echo $imgtag;
       echo '</div>';
-    echo '</div>';
 } else {
-	echo '<div class="woocommerce-product-gallery__image--placeholder">';
+	echo '<div class="thumb-bg">';
 	echo sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
 	echo '</div>';
 }
