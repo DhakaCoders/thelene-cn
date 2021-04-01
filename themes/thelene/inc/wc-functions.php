@@ -571,5 +571,7 @@ function cbv_wc_custom_class( $classes ) {
     }
     return $classes;
 }
+
+
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 

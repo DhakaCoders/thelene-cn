@@ -59,7 +59,6 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
             <div class="xoo-cp-ptitle">
             <div class="popup-product-title">
               <div><a href="<?php echo  $product_permalink; ?>"><?php echo $product_name; ?></a></div>
-              <span><?php echo $exc; ?></span>
             </div>
 
           <?php if($attributes): ?>
@@ -76,15 +75,6 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
                 </div>
                 <?php endif; ?>
                 <div class="mpriceWrap">
-                    <?php 
-                        if( has_term( 48, 'product_cat', $product_id ) || has_term( 49, 'product_cat', $product_id ) ) {
-                            echo '<span class="tagPriceperPerson">Aantal stuks</span>';
-                        }elseif( has_term( 46, 'product_cat', $product_id ) ) {
-                            echo '<span class="tagPriceperPerson">Prijs per stuk</span>';
-                        }else{
-                            echo '<span class="tagPriceperPerson">Prijs per persoon</span>';
-                        }
-                    ?>
                     <span class="xoo-cp-pprice"><?php echo  $product_price; ?></span>
                     <small class="woocommerce-price-suffix">incl. btw</small>
                 </div>
@@ -94,8 +84,8 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
 			</div>
 			<div class="xoo-cp-pdetails-col-2">
   			<div class="product-order-btn">
-  				<a class="fl-btn" href="<?php echo wc_get_cart_url() ?>"><?php _e('afrekenen','added-to-cart-popup-woocommerce'); ?></a>
-  				<a class="fl-btn continue-shopping-btn xoo-cp-close xcp-btn"><?php _e('Winkel verder','added-to-cart-popup-woocommerce'); ?></a>
+  				<a class="fl-btn continue-shopping-btn xoo-cp-close xcp-btn"><?php _e('Verder winkelen','added-to-cart-popup-woocommerce'); ?></a>
+          <a class="fl-btn" href="<?php echo wc_get_cart_url() ?>"><?php _e('ik ga bestellen','added-to-cart-popup-woocommerce'); ?></a>
   			</div>
 			</div>
 		</div>
@@ -141,7 +131,7 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
             switch ( $product->get_type() ) {
             case "variable" :
                 $link   = get_permalink($product->get_id());
-                $label  = apply_filters('bestellen', __('Selecteer optie', 'woocommerce'));
+                $label  = apply_filters('variable_add_to_cart_text', __('bestellen', 'woocommerce'));
             break;
             case "grouped" :
                 $link   = get_permalink($product->get_id());
@@ -174,14 +164,8 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
             echo '<div class="pro-item-descWrap mHc">';
             echo '<h3 class="pro-item-desc-title"><a href="'.get_permalink( $product->get_id() ).'">'.get_the_title().'</a></h3>';
             echo '<div class="product-price">';
-            if( has_term( 48, 'product_cat', $product_id ) || has_term( 49, 'product_cat', $product_id ) ) {
-                echo '<span class="tagPriceperPerson">Aantal stuks</span>';
-                $person = 'Aantal stuks';
-            }else{
-                echo '<span class="tagPriceperPerson">Prijs per persoon</span>';
-            }
             echo $product->get_price_html();
-            echo '<span class="pro-prize-shrt-title show-sm">pp</span>';
+            echo '<span class="pro-prize-shrt-title show-sm"></span>';
             echo '</div></div>';
             echo "<strong>{$person}</strong>";
             echo '<div class="product-quantity product-quantity-cntlr">';
@@ -193,18 +177,18 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
             echo '<div class="quantity"><span class="minus">-</span>';
             echo loop_qty_input();
             echo '<span class="plus">+</span></div>';
-            echo '<div class="product-order-btn"><button type="submit" class="fl-btn">Bestel nu</button></div>';
+            echo '<div class="product-order-btn"><button type="submit" class="fl-btn">bestellen</button></div>';
             echo '</form>';
             }else{
                 printf('<div class="product-order-btn"><a class="fl-btn" href="%s" rel="nofollow" data-product_id="%s" class="button add_to_cart_button product_type_%s">%s</a></div>', $link, $product->get_id(), $product->get_type(), $label);
             }
             endif;
-            echo '<div><a class="backto-product-cat" href="#">Bekijk alle “Categorie”</a></div>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
           ?>
         </div>
+        <div><a class="backto-product-cat" href="#">Bekijk alle “Categorie”</a></div>
       </div>
       <?php endwhile; ?>
     </div>
