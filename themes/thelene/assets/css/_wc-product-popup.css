@@ -1,0 +1,74 @@
+.xoo-cp-container{
+	max-width:950px;
+	width: 100%;
+}
+.xoo-cp-active{
+	background: rgba(252, 248, 248, 0.88)!important;
+}
+.xoo-cp-container{
+	background:#fff;
+}
+
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des{
+	display: flex;
+	align-items: center;
+}
+.xoo-cp-content .xoo-cp-pdetails-row{
+	display: flex;
+	flex-direction: row;
+}
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-1,
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-2{
+	max-width: 50%;
+	width: 100%
+}
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des .xoo-cp-pimg {
+    width: 145px;
+    height: auto;
+}
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des .xoo-cp-ptitle .popup-product-title a{
+	font-size: 24px;
+	color: #31304F;
+}
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des .xoo-cp-ptitle .popup-product-title span,
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des .xoo-cp-ptitle .xoo-cp-variations{
+	display: none;
+}
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des .xoo-cp-ptitle .qty-price-wrap .quantity{
+	display: none;
+}
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des .xoo-cp-ptitle{
+	padding-left: 30px!important;
+	padding-right:0!important;
+}
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-2 .product-order-btn,
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-2{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-2 .product-order-btn a:first-child {
+   background: none;
+    border: none;
+    color: #8AA4E4;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: Bitter;
+    text-decoration: underline;
+    width: initial;
+    margin-right: 30px;
+}
+
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-2 .product-order-btn{
+	justify-content: flex-end;
+}
+.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-pdetails-col-2 .product-order-btn a {
+    color: #fff;
+    width: 212px;
+    letter-spacing: 0.04em;
+}
+.overlay-link{
+	display: none;
+}
