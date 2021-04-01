@@ -24,6 +24,8 @@ $product_name 	=  apply_filters( 'woocommerce_cart_item_name', $_product->get_ti
 					
 $product_price 	= apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 
+
+
 $product_subtotal = apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 $exc = get_the_excerpt( $product_id );
 // Meta data
@@ -144,7 +146,6 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
             default :
                 $link   = esc_url( $product->add_to_cart_url() );
                 $label  = apply_filters('add_to_cart_text', __('bestellen', 'woocommerce'));
-                $person = 'Aantal personen';
                 $itemCls = 'prsimple';
             break;
             }
@@ -167,7 +168,6 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
             echo $product->get_price_html();
             echo '<span class="pro-prize-shrt-title show-sm"></span>';
             echo '</div></div>';
-            echo "<strong>{$person}</strong>";
             echo '<div class="product-quantity product-quantity-cntlr">';
             if ( ! $product->is_in_stock() ) :
 
