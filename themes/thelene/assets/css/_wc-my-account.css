@@ -293,6 +293,10 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 body.woocommerce-account .default-page-con h1{
     border-bottom: 1px solid #F1E8E1;
     padding-bottom: 28px;
+    margin-bottom:0;
+}
+body.woocommerce-account .register-field-error{
+	margin-bottom:33px;
 }
 body.woocommerce-account .woocommerce-form{
 	border:none;
@@ -1068,8 +1072,12 @@ body.woocommerce-account .register-btn button[type="submit"]{
 	body.woocommerce-account .loginInfoItem {
 	    padding-bottom:0px;
 	}
-	
-
+	body.woocommerce-account .register-field-error .contact-er-msg{
+		display: block;
+	}
+	body.woocommerce-account .register-field-error .contact-er-msg span{
+		display: flex;
+	}
 	/*  ----------------------------- my account reg page ------------------------- */
 
 	.woocommerce-account .register-title h3, .login-info h3 {
