@@ -91,11 +91,11 @@ if ( !class_exists('MHNotice') ) {
         public function addNotice($alias, $type, $message, $dismissDays) {
 
             $notices = $this->readNotices();
-            /*$notices[$alias] = array(
+            $notices[$alias] = array(
                 'message' => $message,
                 'type' => $type,
                 'dismissDays' => $dismissDays,
-            );*/
+            );
 
             $this->storeNotices($notices);
         }
@@ -152,7 +152,7 @@ if ( !class_exists('MHNotice') ) {
             $pluginAbbrev = $this->common->getPluginAbbrev();
 
             $notices = get_option($pluginAbbrev . '_notices', array());
-            $notices .= $this->tempNotices;
+            $notices += $this->tempNotices;
 
             return $notices;
         }

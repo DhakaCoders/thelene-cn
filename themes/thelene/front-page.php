@@ -267,7 +267,7 @@
                   while($blogQuery->have_posts()): $blogQuery->the_post(); 
                   global $post;
                   $blogimgID = get_post_thumbnail_id(get_the_ID());
-                  $blog_imgsrc = !empty($blogimgID)? cbv_get_image_src($imgID, 'blog_grid'): THEME_URI.'/assets/images/blog-img-teapot.jpg';
+                  $blog_imgsrc = !empty($blogimgID)? cbv_get_image_src($blogimgID, 'blog_grid'): THEME_URI.'/assets/images/blog-img-teapot.jpg';
                 ?>
                 <div class="BlogGridSlide">
                   <div class="blog-grd-itm">

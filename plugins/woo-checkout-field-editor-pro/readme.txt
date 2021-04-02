@@ -3,9 +3,9 @@ Contributors: ThemeHigh
 Donate link: https://themehigh.com/
 Tags: checkout field editor, woocommerce checkout field editor, checkout manager, woocommerce checkout manager, checkout field customizer, checkout form editor, checkout form customizer, checkout, WooCommerce checkout, checkout form designer, woocommerce checkout fields, woocommerce checkout addons
 Requires at least: 4.9
-Tested up to: 5.5
+Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.4.4
+Stable tag: 1.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -197,16 +197,25 @@ With the free plugin, the fields can be displayed and edited only from the Check
 Yes. There is a button 'reset to default fields' to go back to the WooCommerce default fields. 
 
 == Screenshots ==
-1. WooCommerce > Checkout Form 
-2. Reset to default field set
-3. Save changes.
-4. Enable, disable or remove field(s).
-5. Change field(s) order.
-6. Add new field popup form.
-7. Edit field popup form.
-8. Newly added field
+1. WooCommerce > Checkout Form
+2. Add new field
+3. New field popup form
+4. Edit existing field
+5. Edit field popup form
+6. Rearrange fields (change field's display order)
+7. Reset to default settings
+8. Save changes.
 
 == Changelog ==
+= 1.4.6 =
+* Settings screen UI improved.
+* WordPress and WooCommerce compatible version updated.
+
+= 1.4.5 =
+* Enhanced Select(Select2) style issues fixed.
+* Settings screen popup button style issues fixed.
+* WordPress and WooCommerce compatible version updated.
+
 = 1.4.4 =
 * Fixed the issue for showing red asterisk for optional address fields when overridng with locale.
 * New settings to manage locale overrides.

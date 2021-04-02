@@ -25,54 +25,15 @@ get_template_part('templates/breadcrumbs');
     <div class="contact-form-block clearfix">
       <?php if( !empty($intro['beschrijving']) ): ?>
       <div class="contact-form-lft">
-        <div class="contact-er-msg">
+<!--         <div class="contact-er-msg">
           <span>
             <i><svg class="error-msg-icon-svg" width="32" height="32" viewBox="0 0 32 32" fill="#ffffff">
             <use xlink:href="#error-msg-icon-svg"></use> </svg></i>
             Oh snap! Het formulier lijkt niet correct!</span>
-        </div>
+        </div> -->
         <div class="contact-form-wrp clearfix">
           <div class="wpforms-container">
-            <form class="wpforms-form needs-validation" novalidate>
-              
-              <div class="wpforms-field-container">
-                
-                <div class="wpforms-field XsNameField">
-                  <label class="wpforms-field-label">Naam</label>
-                  <input type="text" name="name" placeholder="Voornaam" required>
-                </div>
-                <div class="wpforms-field NameField">
-                  <input type="text" name="name" placeholder="Naam" required>
-                </div>
-
-                <div class="wpforms-field wpforms-has-error FullWidthField">
-                  <label class="wpforms-field-label">Telefoonnummer</label>
-                  <input type="text" name="text" placeholder="Bijv. 09 224 61 11" required>
-                  <label class="wpforms-error">X</label>
-                </div>
-
-                <div class="wpforms-field wpforms-has-error FullWidthField">
-                  <label class="wpforms-field-label">E-mail</label>
-                  <input type="email" name="email" placeholder="Bijv. jan@domein.be" class="form-control" required>
-                  <label class="wpforms-error">X</label>
-                  <span>Controleer dit veld</span>
-                </div>
-
-                <div class="wpforms-field wpforms-field-textarea">
-                  <label class="wpforms-field-label">Bericht</label>
-                  <textarea name="message" placeholder="Bericht"></textarea>
-                </div>
-              </div><!-- end of .wpforms-field-container-->
-
-              <div class="wpforms-field-text">
-                <p>Wij respecteren uw <a href="#"> privacy.</a> Jouw gegevens worden altijd vertrouwelijk behandeld.</p>
-              </div>
-
-              <div class="wpforms-submit-container">
-                <button type="submit" name="submit" class="wpforms-submit">VERZENDEN</button>
-              </div>
-
-            </form>
+            <?php if(!empty($intro['shortcode'])) echo do_shortcode( $intro['shortcode'] ); ?>
           </div>
         </div>
       </div>
