@@ -622,7 +622,7 @@ body.woocommerce-account .register-btn button[type="submit"]{
     align-items: center;
     border-top: 1px solid #ECE9E9;
 }
-.innerpage-con-wrap{
+.loggedin-deshboard-crtl .innerpage-con-wrap,.innerpage-con-wrap{
 	overflow: hidden;
 	position: relative;
 	max-width: 985px;

@@ -49,8 +49,8 @@ body.woocommerce-cart .product-quantity .quantity{
 	display: flex;
 	align-items: center;
 }
-body.woocommerce-cart .product-quantity .quantity .minus,
-body.woocommerce-cart .product-quantity .quantity .plus{
+body.woocommerce-cart .product-quantity .quantity a,
+body.woocommerce-cart .product-quantity .quantity a{
 	height: 16px;
 	width: 20px;
 	color: #fff;
@@ -66,9 +66,10 @@ body.woocommerce-cart .product-quantity .quantity .plus{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
+	padding:0;
 }
-body.woocommerce-cart .product-quantity .quantity .minus:hover,
-body.woocommerce-cart .product-quantity .quantity .plus:hover{
+body.woocommerce-cart .product-quantity .quantity a:hover,
+body.woocommerce-cart .product-quantity .quantity a:hover{
 	background: #EC5387;
 }
 body.woocommerce-cart .product-quantity .quantity input{
@@ -180,7 +181,10 @@ body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-f
 	outline: 0!important;
 	height: 48px;
 }
-body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-form .coupon button{
+body.woocommerce-cart .cart_totals .wc-proceed-to-checkout #pwgc-redeem-form #pwgc-redeem-gift-card-container input[type=text]{
+	width: 100%;
+}
+body.woocommerce-cart .cart_totals .wc-proceed-to-checkout #pwgc-redeem-form #pwgc-redeem-gift-card-container input[type=submit]{
 	margin-top: 20px;
 	margin-left: 0!important;
 	width: 100%;
