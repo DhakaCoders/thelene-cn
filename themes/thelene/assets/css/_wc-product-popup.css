@@ -106,9 +106,6 @@
     display: flex;
     justify-content: flex-end;
 }
-.overlay-link{
-	display: none;
-}
 .spotlight-popup-cntlr h5{
     font-size: 26px;
     letter-spacing: -0.02em;
