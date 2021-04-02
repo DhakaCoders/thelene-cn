@@ -162,7 +162,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			</table>
 			<?php do_action( 'woocommerce_after_cart_table' ); ?>
 		</form>
-		<div class="empty-cart-btn"><a href="">Winkelmand legen</a></div>
+		<div class="empty-cart-btn"><a href="<?php echo esc_url( wc_get_cart_url() ); ?>?clear-cart=yes">Winkelmand legen</a></div>
 </div>
 	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 	<div class="cart-total-crtl">

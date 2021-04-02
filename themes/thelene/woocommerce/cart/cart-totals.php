@@ -106,7 +106,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>
-	<div class="add-more-product"><a href="#">Meer producten toevoegen</a></div>
+	<div class="add-more-product"><a href="<?php echo get_permalink(get_option( 'woocommerce_shop_page_id' ) );?>">Meer producten toevoegen</a></div>
 
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
 

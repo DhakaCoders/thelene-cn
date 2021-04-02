@@ -583,5 +583,30 @@ function cbv__change_cart_table_price_display( $price, $values, $cart_item_key )
     return $price;
 }
 
+add_action( 'woocommerce_cart_calculate_fees','add_custom_surcharge', 10, 1 );
+function add_custom_surcharge( $cart ) {
+    if ( is_admin() && ! defined( 'DOING_AJAX' ) )
+        return;
+
+    $state = array('BD');
+    $surcharge  = 10;
+
+    if ( in_array( WC()->customer->get_shipping_state(), $state ) ) {
+       
+    }
+     $cart->add_fee( 'Extra diensten', $surcharge, true );
+}
+
+
+
+add_action( 'init', 'woocommerce_clear_cart_url' );
+function woocommerce_clear_cart_url() {
+    if ( isset( $_GET['clear-cart'] ) && esc_html($_GET['clear-cart']) == 'yes' ) {
+        global $woocommerce;
+        $woocommerce->cart->empty_cart();
+        wp_redirect( esc_url( wc_get_cart_url() ) );
+        exit();
+    }
+}
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
