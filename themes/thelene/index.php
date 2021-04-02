@@ -1,6 +1,11 @@
 <?php 
 get_header(); 
 get_template_part('templates/breadcrumbs');
+$thisID = get_option( 'page_for_posts' )
+$titel = get_field('titel', $thisID);
+$subtitel = get_field('subtitel', $thisID);
+$beschrijving = get_field('beschrijving', $thisID); 
+$titel = !empty($titel)? $titel:get_the_title($thisID);
 ?>
 <section class="blg-page-hdr">
   <div class="container">
@@ -8,9 +13,11 @@ get_template_part('templates/breadcrumbs');
       <div class="col-md-12">
         <div class="bph-inner">  
           <div class="page-entry-header">        
-            <h1 class="fl-h1">Producten (H1)</h1>
-            <h6 class="fl-h6">Proin eu vitae sit pellentesque.</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui eros, ut imperdiet in. Tincidunt eget sit ac ut. Luctus fermentum condimentum faucibus sit. Morbi quisque a vestibulum, quis hac libero lorem sit aenean. Neque, vel amet porttitor dolor.</p>
+            <?php 
+                printf('<h1 class="fl-h1">%s</h1>', $titel); 
+                if( !empty($subtitel) ) printf('<h6 class="fl-h6">%s</h6>', $subtitel);
+                if( !empty($beschrijving) ) echo wpautop( $beschrijving );
+            ?>
           </div>
         </div>  
       </div>  
