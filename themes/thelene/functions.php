@@ -115,7 +115,7 @@ function defer_parsing_of_js ( $url ) {
     
 }
 if ( ! is_admin() ) {
-    add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+    //add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 }
 
 add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);

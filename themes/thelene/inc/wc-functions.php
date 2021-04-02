@@ -503,12 +503,12 @@ function bbloomer_display_coupon_form_below_proceed_checkout() {
 }
 
 // Remove the payment options form from default location
-remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+//remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 
 // Add the payment options form under the "order notes" section
 // Important you will have to also add the following custom CSS to your site:
 // body .woocommerce-checkout-payment { float: none; width: 100%; }
-add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 20 );
+//add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 20 );
 
 add_filter ( 'woocommerce_account_menu_items', 'misha_remove_my_account_links' );
 function misha_remove_my_account_links( $menu_links ){

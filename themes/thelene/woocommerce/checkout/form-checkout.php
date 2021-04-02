@@ -62,17 +62,32 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 </div>
 
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
-	<div class="orcer-review-crtl">
-		<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+	<div class="over-review-crtl">
+		<!-- <h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3> -->
 		
 		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
 		<div id="order_review" class="woocommerce-checkout-review-order">
 			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 		</div>
+		<div class="woocommerce-additional-fields extra-info">	
+			<h3>4.<?php esc_html_e( 'Extra Info', 'woocommerce' ); ?></h3>
+			<div class="woocommerce-additional-fields__field-wrapper">
+				<p class="form-row notes thwcfd-field-wrapper thwcfd-field-textarea" id="order_comments_field" ><span class="woocommerce-input-wrapper"><textarea name="order_comments" class="input-text " id="order_comments" placeholder="" rows="2" cols="5"></textarea></span></p>	
+			</div>
+		</div>
+		<div class="custom-checkout-btn">
+			<button type="submit" class="button alt" name="woocommerce_checkout_place_order" value="Afrekenen" data-value="Afrekenen"><?php esc_html_e( 'Afrekenen', 'woocommerce' ); ?></button>
+		</div>
 	</div>
 	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+	<div class="custom-checkout-order-review">
+		<h3 class="order-review-title"><?php esc_html_e( 'Overzicht', 'woocommerce' ); ?></h3>
+		<?php wc_get_template_part('checkout/review-order');?>
+		<button type="submit" class="button alt" name="woocommerce_checkout_place_order" value="Afrekenen" data-value="Afrekenen"><?php esc_html_e( 'Afrekenen', 'woocommerce' ); ?></button>
+	</div>
 
+	
 </form>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
