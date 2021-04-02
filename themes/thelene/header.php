@@ -4,8 +4,6 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
   <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
   <?php } ?>
@@ -14,6 +12,9 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->	
+<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
   <svg style="display: none;">
     <!-- <svg class="id-name" width="16" height="16" viewBox="0 0 16 16" fill="#FF5C26">
       <use xlink:href="#id-name"></use> </svg> -->
@@ -58,11 +59,7 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M93.4594 0.491446C86.4 1.1616 81.5718 2.0002 73.1071 4.0324C43.0388 11.2483 19.0266 27.8428 5.41133 50.8146C3.36125 54.2759 -0.181128 61.1784 0.0072178 61.3505C0.0651704 61.403 1.78748 59.9975 3.83574 58.2279C16.7863 47.0346 31.729 36.1527 40.9145 31.2244C42.1605 30.556 43.3268 29.9022 43.5043 29.7718C44.0693 29.357 49.2615 27.1382 51.1069 26.5224C53.0592 25.8704 53.7003 25.8867 52.016 26.5441C45.6467 29.0291 36.1298 34.8993 25.9465 42.6224C17.0634 49.3566 -0.0108883 63.6073 0.358559 63.9768C0.517929 64.1362 3.29788 63.4642 7.31653 62.2942C8.78707 61.8667 11.2627 61.1458 12.822 60.693C51.1739 49.5341 81.6534 30.8603 90.8714 12.8748C93.3471 8.04246 96.7029 4.22982 101.076 1.27752C103.239 -0.18052 101.953 -0.31455 93.4594 0.491446Z" fill="#8CCC0C"/>
       </symbol>
 
-    </svg>
-
-<?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
+</svg>
 <?php 
 $logoObj = get_field('hdlogo', 'options');
 if( is_array($logoObj) ){

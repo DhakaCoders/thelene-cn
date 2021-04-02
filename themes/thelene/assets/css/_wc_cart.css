@@ -1,3 +1,6 @@
+body.woocommerce-cart.woocommerce-page .innerpage-con-wrap{
+	max-width: 100%;
+}
 body.woocommerce-cart .page-title h1{
 	padding-bottom: 28px;
 	border-bottom: 1px solid #F1E8E1;
@@ -184,20 +187,21 @@ body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-f
 body.woocommerce-cart .cart_totals .wc-proceed-to-checkout #pwgc-redeem-form #pwgc-redeem-gift-card-container input[type=text]{
 	width: 100%;
 }
-body.woocommerce-cart .cart_totals .wc-proceed-to-checkout #pwgc-redeem-form #pwgc-redeem-gift-card-container input[type=submit]{
-	margin-top: 20px;
-	margin-left: 0!important;
-	width: 100%;
-	padding: 10px 50px 10px 50px!important;
-	margin-left: auto!important;
-	background: transparent!important;
-	color: #31304F!important;
-	display: flex;
-	width: initial!important;
-	font-family: 'Open Sans', sans-serif;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
+body.woocommerce-cart .cart_totals .wc-proceed-to-checkout #pwgc-redeem-form #pwgc-redeem-gift-card-container input[type=submit] {
+    margin-top: 20px;
+    margin-left: 0!important;
+    width: 100%;
+    padding: 10px 50px 10px 50px!important;
+    margin-left: auto!important;
+    background: transparent!important;
+    color: #31304F!important;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    width: 181px;
+    justify-content: center;
 }
 body.woocommerce-cart .cart_totals .wc-proceed-to-checkout a.checkout-button{
 	background: #8dcc0c!important;
@@ -236,7 +240,9 @@ body.woocommerce-cart .add-more-product a:after{
 	background-image: url('../images/left-arrow-icon.svg');
 	background-repeat: no-repeat;
 }
-
+body.woocommerce-cart.woocommerce-page table.shop_table th{
+	font-weight: 400;
+}
 
 /*responsive */
 @media(max-width: 1599px){
