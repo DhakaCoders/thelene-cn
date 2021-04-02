@@ -78,7 +78,6 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
                 <?php endif; ?>
                 <div class="mpriceWrap">
                     <span class="xoo-cp-pprice"><?php echo  $product_price; ?></span>
-                    <small class="woocommerce-price-suffix">incl. btw</small>
                 </div>
               </div>
           </div>
@@ -86,8 +85,8 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
 			</div>
 			<div class="xoo-cp-pdetails-col-2">
   			<div class="product-order-btn">
-  				<a class="fl-btn continue-shopping-btn xoo-cp-close xcp-btn"><?php _e('Verder winkelen','added-to-cart-popup-woocommerce'); ?></a>
-          <a class="fl-btn" href="<?php echo wc_get_cart_url() ?>"><?php _e('ik ga bestellen','added-to-cart-popup-woocommerce'); ?></a>
+  				<a class="fl-btn continue-shopping-btn xoo-cp-close xcp-btn" href="<?php echo get_permalink(get_option( 'woocommerce_shop_page_id' ) );?>"><?php _e('Verder winkelen','added-to-cart-popup-woocommerce'); ?></a>
+          <a class="fl-btn" href="<?php echo get_permalink(get_option( 'woocommerce_checkout_page_id' ) );?>"><?php _e('ik ga bestellen','added-to-cart-popup-woocommerce'); ?></a>
   			</div>
 			</div>
 		</div>
@@ -188,14 +187,14 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
             echo '</div>';
           ?>
         </div>
-        <div><a class="backto-product-cat" href="#">Bekijk alle “Categorie”</a></div>
+        <div><a class="backto-product-cat" href="#"><?php _e('Bekijk alle “Categorie”','added-to-cart-popup-woocommerce'); ?></a></div>
       </div>
       <?php endwhile; ?>
     </div>
   </div>
   <div class="popup-bottom-btn">
-    <a class="fl-btn continue-shopping-btn xoo-cp-close xcp-btn"><?php _e('Verder winkelen','added-to-cart-popup-woocommerce'); ?></a>
-    <a class="fl-btn" href="<?php echo wc_get_cart_url() ?>"><?php _e('ik ga bestellen','added-to-cart-popup-woocommerce'); ?></a>
+    <a class="fl-btn continue-shopping-btn xoo-cp-close xcp-btn" href="<?php echo get_permalink(get_option( 'woocommerce_shop_page_id' ) );?>"><?php _e('Verder winkelen','added-to-cart-popup-woocommerce'); ?></a>
+    <a class="fl-btn" href="<?php echo get_permalink(get_option( 'woocommerce_checkout_page_id' ) );?>"><?php _e('ik ga bestellen','added-to-cart-popup-woocommerce'); ?></a>
   </div>
   </div>
 <?php endif; wp_reset_postdata(); ?>

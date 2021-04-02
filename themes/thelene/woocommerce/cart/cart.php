@@ -96,6 +96,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								</td>
 
 								<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
+									<div class="quantity qty"><span class="minus">-</span>
 								<?php
 								if ( $_product->is_sold_individually() ) {
 									$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -115,6 +116,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
 								?>
+								<span class="plus">+</span></div>
 								</td>
 								<td class="product-remove">
 									<?php
@@ -162,7 +164,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			</table>
 			<?php do_action( 'woocommerce_after_cart_table' ); ?>
 		</form>
-		<div class="empty-cart-btn"><a href="<?php echo esc_url( wc_get_cart_url() ); ?>?clear-cart=yes">Winkelmand legen</a></div>
+		<div class="empty-cart-btn"><a href="<?php echo esc_url( wc_get_cart_url() ); ?>?clear-cart=yes"><?php esc_html_e( 'Winkelmand legen', 'woocommerce' ); ?></a></div>
 </div>
 	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 	<div class="cart-total-crtl">

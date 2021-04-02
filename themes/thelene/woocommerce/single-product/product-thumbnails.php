@@ -25,6 +25,7 @@ if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
 global $product;
 
 $attachment_ids = $product->get_gallery_image_ids();
+if ( $attachment_ids && $product->get_image_id() ) {
 echo '<span class="fl-singgle-pro-prev"></span><span class="fl-singgle-pro-next"></span>';
 echo '<div class="thumbnails-cntlr"><div class="thumbnails">';
 if ( $product->get_image_id() ) {
@@ -37,12 +38,13 @@ if ( $product->get_image_id() ) {
 	echo sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
 	echo '</div>';
 }
-if ( $attachment_ids && $product->get_image_id() ) {
+
 	foreach ( $attachment_ids as $attachment_id ) {
 		$imgtag = wp_get_attachment_image( $attachment_id, 'thumbnail' );
 		echo '<div class="thumb-bg">';
       		echo $imgtag;
       	echo '</div>';
 	}
-}
+
 echo '</div></div>';
+}

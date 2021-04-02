@@ -717,10 +717,6 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .select2-co
     padding-left:0;
     margin-right: 0px;
 }
-body.woocommerce-checkout .innerpage-con-wrap .woocommerce{
-    display: flex;
-}
-
 body.woocommerce-checkout .innerpage-con-wrap form.checkout{
     max-width: 100%;
     width: 100%;
@@ -732,8 +728,10 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl{
 }
  body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table,
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table tfoot th,
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table tfoot td{
+body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table tfoot td,
+body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table td strong{
     border:none!important;
+    font-weight:400;
  }
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table td{
     padding: 12px 12px;
@@ -745,6 +743,16 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr.order-
 body.woocommerce-checkout #customer_details .col-1 {
     width: 69%;
     padding: 0;
+}
+
+body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr.order-total td strong{
+    font-weight:700;
+}
+body.woocommerce-checkout .checkout-page-title h1{
+    padding-bottom:43px;
+}
+body.woocommerce-checkout .woocommerce-billing-fields {
+    padding-top: 78px;
 }
 body.woocommerce-checkout #customer_details .col-2{
     width: 31%;
@@ -775,6 +783,7 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr td{
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr td.product-name{
     text-align:left;
 }
+
 #billing_order_type_field span label,
 #billing_salutation_field span label{
     margin-left: 10px;
@@ -791,14 +800,15 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr td.pro
 #customer_details .shipping-methods{
     display: none;
 }
+
+/*body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
+body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}*/
 
 
 
