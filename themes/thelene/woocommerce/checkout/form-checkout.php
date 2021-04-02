@@ -38,56 +38,64 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<div class="col2-set" id="customer_details">
 			<div class="col-1">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
+				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+				<div class="shipping-methods">
+						<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
+
+							<?php do_action( 'woocommerce_review_order_before_shipping' ); ?>
+
+							<?php wc_cart_totals_shipping_html(); ?>
+
+							<?php do_action( 'woocommerce_review_order_after_shipping' ); ?>
+
+						<?php endif; ?>
+				</div>
+
+					<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
+					
+						<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+						<div class="payment-method-crtl">
+							<div id="order_review" class="woocommerce-checkout-review-order">
+								<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+							</div>
+							<div class="woocommerce-additional-fields extra-info">	
+								<h3>4.<?php esc_html_e( 'Extra Info', 'woocommerce' ); ?></h3>
+								<div class="woocommerce-additional-fields__field-wrapper">
+									<p class="form-row notes thwcfd-field-wrapper thwcfd-field-textarea" id="order_comments_field" ><span class="woocommerce-input-wrapper"><textarea name="order_comments" class="input-text " id="order_comments" placeholder="" rows="2" cols="5"></textarea></span></p>	
+								</div>
+							</div>
+							<div class="custom-checkout-btn">
+								<button type="submit" class="button alt" name="woocommerce_checkout_place_order" value="Afrekenen" data-value="Afrekenen"><?php esc_html_e( 'Afrekenen', 'woocommerce' ); ?></button>
+							</div>
+						</div>
+						<!-- end payment method -->
+					<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 			</div>
 
 			<div class="col-2">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+				
+				<div class="custom-checkout-order-review">
+					<h3 class="order-review-title"><?php esc_html_e( 'Overzicht', 'woocommerce' ); ?></h3>
+					<?php wc_get_template_part('checkout/review-order');?>
+					<div class="checkout-terms">
+						<?php wc_get_template_part( 'checkout/terms' ); ?>
+							<p class="form-row validate-required">
+							<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+							<input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" name="accept_condition" id="accept_condition" required/>
+								<span class="woocommerce-terms-and-conditions-checkbox-text">
+									Ik geef toestemming voor de verwerking van mijn persoonsgegevens
+								</span>
+							</label>
+						</p>
+					</div>
+					<button type="submit" class="button alt" name="woocommerce_checkout_place_order" value="Afrekenen" data-value="Afrekenen"><?php esc_html_e( 'Afrekenen', 'woocommerce' ); ?></button>
+				</div>
 			</div>
 		</div>
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 	<?php endif; ?>
-
-<div class="shipping-methods">
-		<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
-
-			<?php do_action( 'woocommerce_review_order_before_shipping' ); ?>
-
-			<?php wc_cart_totals_shipping_html(); ?>
-
-			<?php do_action( 'woocommerce_review_order_after_shipping' ); ?>
-
-		<?php endif; ?>
-</div>
-
-	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
-	<div class="over-review-crtl">
-		<!-- <h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3> -->
-		
-		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-
-		<div id="order_review" class="woocommerce-checkout-review-order">
-			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-		</div>
-		<div class="woocommerce-additional-fields extra-info">	
-			<h3>4.<?php esc_html_e( 'Extra Info', 'woocommerce' ); ?></h3>
-			<div class="woocommerce-additional-fields__field-wrapper">
-				<p class="form-row notes thwcfd-field-wrapper thwcfd-field-textarea" id="order_comments_field" ><span class="woocommerce-input-wrapper"><textarea name="order_comments" class="input-text " id="order_comments" placeholder="" rows="2" cols="5"></textarea></span></p>	
-			</div>
-		</div>
-		<div class="custom-checkout-btn">
-			<button type="submit" class="button alt" name="woocommerce_checkout_place_order" value="Afrekenen" data-value="Afrekenen"><?php esc_html_e( 'Afrekenen', 'woocommerce' ); ?></button>
-		</div>
-	</div>
-	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
-	<div class="custom-checkout-order-review">
-		<h3 class="order-review-title"><?php esc_html_e( 'Overzicht', 'woocommerce' ); ?></h3>
-		<?php wc_get_template_part('checkout/review-order');?>
-		<button type="submit" class="button alt" name="woocommerce_checkout_place_order" value="Afrekenen" data-value="Afrekenen"><?php esc_html_e( 'Afrekenen', 'woocommerce' ); ?></button>
-	</div>
-
-	
 </form>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

@@ -297,7 +297,7 @@ input.select2-search__field{
     margin-top: 80px;
 }
 .hide-account-title .page-title,
-.over-review-crtl table.woocommerce-checkout-review-order-table {
+.payment-method-crtl table.woocommerce-checkout-review-order-table {
     display: none !important;
 }
 .register-form-hide,

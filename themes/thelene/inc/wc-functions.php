@@ -509,7 +509,12 @@ function bbloomer_display_coupon_form_below_proceed_checkout() {
 // Important you will have to also add the following custom CSS to your site:
 // body .woocommerce-checkout-payment { float: none; width: 100%; }
 //add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 20 );
-
+add_filter('gettext', 'x_translated_text' );
+function x_translated_text($translated) {
+$your_translation = 'Insert your translation here';
+$translated = str_ireplace("I’ve read and accept", $your_translation, $translated);
+return $translated;
+}
 add_filter ( 'woocommerce_account_menu_items', 'misha_remove_my_account_links' );
 function misha_remove_my_account_links( $menu_links ){
  // we will hook "anyuniquetext123" later
