@@ -447,6 +447,11 @@ var html = '';
 })
     new WOW().init();
 
+jQuery('body').on('wc_cart_emptied', function(){
+  location.reload();
+  //console.log('wc_cart_emptied triggered');
+});
+
 })(jQuery);
 
 function isValidEmailAddress(emailAddress) {

@@ -613,5 +613,18 @@ function woocommerce_clear_cart_url() {
         exit();
     }
 }
+
+/**
+Add a body class when cart is empty
+*/
+function tristup_body_classes( $classes ){
+    global $woocommerce;
+    if( is_cart() && WC()->cart->cart_contents_count == 0){
+        $classes[]='empty-cart';
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'tristup_body_classes' );
+
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
