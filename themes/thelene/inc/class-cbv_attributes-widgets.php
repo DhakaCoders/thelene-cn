@@ -85,8 +85,7 @@ class cbv_wc_attribute_widget extends WC_Widget {
 				'std'     => 'list',
 				'label'   => __( 'Display type', 'woocommerce' ),
 				'options' => array(
-					'list'     => __( 'List', 'woocommerce' ),
-					'dropdown' => __( 'Dropdown', 'woocommerce' ),
+					'list'     => __( 'List', 'woocommerce' )
 				),
 			),
 			'query_type'   => array(
