@@ -84,9 +84,11 @@
 	margin-bottom: 40px;
 }
 .fl-secrh{
-	max-width: 342px;
-	width: 100%;
+	width: 342px;
 	position: relative; 
+}
+.fl-secrh form{
+	width: 100%;
 }
 .fl-secrh form input{
 	width: 	100%;

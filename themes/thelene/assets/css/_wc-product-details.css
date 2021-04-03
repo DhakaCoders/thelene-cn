@@ -18,14 +18,24 @@
 	display: block;
 }
 .thumbnails-cntlr{
-	padding-right: 120px;
 	position: relative;
+	padding-right: 120px;
+}
+.thumbnails-cntlr span:hover{
+	opacity: .7;
+}
+.main-img-crtl{
+	margin: 0!important;
+	margin-bottom: 20px!important;
 }
 .thumbnails-cntlr .thumbnails{
 	margin: 0 -12px!important;
+	padding: 0!important;
+	margin-bottom: 40px!important;
 }
 .thumbnails-cntlr .thumb-bg{
 	height: 135px;
+	padding: 0 12px;
 }
 .thumbnails-cntlr .thumb-bg img{
 	max-height: 135px;
@@ -38,29 +48,67 @@
 	height: 135px;
 }
 
-.thumbnails-cntlr .slick-arrow{
+.fl-singgle-pro-prev,
+.fl-singgle-pro-next{
 	width: 20px;
 	height: 20px;
 	text-indent: none;
 	left: auto!important;
 	right: 35px;
+	position: absolute;
+	cursor: pointer;
 }
-.thumbnails-cntlr .slick-arrow:before{
+/*.thumbnails-cntlr .slick-arrow:before{
 	content: none!important;
-}
+}*/
 
-.thumbnails-cntlr .slick-arrow.slick-next{
+.fl-singgle-pro-prev{
 	background: url(../images/next-arrow-gray.svg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100% auto;
+	top: 24%;
+	transform: translateY(24%);
 }
 
-.thumbnails-cntlr .slick-arrow.slick-prev{
+.fl-singgle-pro-next{
 	background: url(../images/prev-arrow-gray.svg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100% auto;
+	top: 57%;
+	transform: translateY(57%);
+}
+
+.custom-info-crtl ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.custom-info-crtl ul li{
+	width: 50%;
+	padding: 0 15px 0 80px;
+	margin-bottom: 35px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	color: #31304F;
+}
+.custom-info-crtl ul li.qnty{
+	background: url(../images/pro-single-into-time-icon.svg);
+	background-repeat: no-repeat;
+}
+.custom-info-crtl ul li.water-temp{
+	background: url(../images/pro-single-water-temp-icon.svg);
+	background-repeat: no-repeat;
+}
+.custom-info-crtl ul li.into-time{
+	background: url(../images/pro-single-qnty-icon.svg);
+	background-repeat: no-repeat;
+}
+.custom-info-crtl ul li span{
+	display: block;
+	 font-family: 'Bitter', serif;
+	 font-weight: 400;
+	 color: #525A61;
 }
 
 .woocommerce div.product div.summary{
