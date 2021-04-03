@@ -377,6 +377,12 @@ body.single-product .xoo-cp-icon-check.xoo-cp-added{
 body.single-product .qty-price-wrap .price-pre-title{
 	margin-right: 10px;
 }
+body.archive.tax-product_cat .fl-pro-grd-img-cntlr{
+	margin-bottom: 20px;
+}
+body.archive.tax-product_cat .fl-pro-grd-img-cntlr img{
+	max-height: 100px;
+}
 @media (max-width: 1699px){
 	
 }
