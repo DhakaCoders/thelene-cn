@@ -251,8 +251,10 @@ $('.main-img-crtl').slick({
    slidesToShow: 3,
    slidesToScroll: 1,
    asNavFor: '.main-img-crtl',
-   dots: true,
-   focusOnSelect: true
+   dots: false,
+   focusOnSelect: true,
+   prevArrow: '.fl-singgle-pro-prev',
+   nextArrow: '.fl-singgle-pro-next',
  });
 
 $('.fl-product .price-quentity-ctrl form .variations tbody tr td select').addClass('selectpicker');
