@@ -102,11 +102,14 @@
                   $label  = __('MEER INFO', 'woocommerce');
                 break;
                 }
+                $seller_flash = get_field('seller_flash', $product->get_id());
                 $gridtag = cbv_get_image_tag( get_post_thumbnail_id($product->get_id()), 'pgrid' );
               ?>
               <div class="hmProdctGrdsSlideItme">
                 <?php 
                   echo '<div class="fl-product-grd mHc">';
+                  if( !empty($seller_flash) ) printf('<span class="seller-flash">%s</span>', $seller_flash); 
+                  wc_get_template_part('loop/sale-flash');
                   echo '<div class="fl-product-grd-inr">';
                   echo '<div class="fl-pro-grd-img-cntlr mHc1">';
                   echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';

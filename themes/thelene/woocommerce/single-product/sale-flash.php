@@ -20,10 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $post, $product;
-
+$seller_flash = get_field('seller_flash', $product->get_id());
 ?>
+<?php if( !empty($seller_flash) ) printf('<span class="seller-flash">%s</span>', $seller_flash); ?>
 <?php if ( $product->is_on_sale() ) : ?>
-
 	<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . esc_html__( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
 
 	<?php

@@ -3,7 +3,7 @@ remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
-
+remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
 
 add_action('woocommerce_before_main_content', 'get_custom_wc_output_content_wrapper', 11);
 add_action('woocommerce_after_main_content', 'get_custom_wc_output_content_wrapper_end', 9);
@@ -91,8 +91,11 @@ if (!function_exists('add_shorttext_below_title_loop')) {
               $label  = __('MEER INFO', 'woocommerce');
           break;
           }
+        $seller_flash = get_field('seller_flash', $product->get_id());
         $gridtag = cbv_get_image_tag( get_post_thumbnail_id($product->get_id()), 'pgrid' );
         echo '<div class="fl-product-grd mHc">';
+        if( !empty($seller_flash) ) printf('<span class="seller-flash">%s</span>', $seller_flash); 
+        wc_get_template_part('loop/sale-flash');
         echo '<div class="fl-product-grd-inr">';
         echo '<div class="fl-pro-grd-img-cntlr mHc1">';
         echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
@@ -142,7 +145,7 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
   // Return the number of products you wanna show per page.
-  $cols = 12;
+  $cols = 4;
   return $cols;
 }
 
