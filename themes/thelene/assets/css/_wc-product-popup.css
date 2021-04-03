@@ -128,14 +128,22 @@
     height: 100%;
 }
 .spotlight-popup .flex-fill .pro-item-cntlr{
-	margin-top: 28px
+	/*margin-top: 28px;*/
+	height:100%;
+}
+.spotlight-popup .flex-fill .pro-item-cntlr + div{
+	position: absolute;
+	left: 13px;
+	right:13px;
+	bottom:0;
 }
 .pro-item-cntlr .pro-item{
-	height: 100%;
 	padding-bottom: 26px;
 }
 .spotlight-popup .flex-fill{
 	flex: initial!important;
+	position: relative;
+	padding-bottom:50px;
 }
 
 /*.spotlight-popup .flex-fill{
@@ -219,7 +227,8 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
     margin-top: 18px;
 }
 .product-price ins span,
-.xoo-cp-pprice ins span{
+.xoo-cp-pprice ins span,
+.product-price > span:nth-child(2){
     color: #31304F;
     font-size: 14px;
     font-weight: 500;
@@ -230,13 +239,14 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 }
 .product-price del span,
 .xoo-cp-pprice del span,
-.product-price span:first-child bdi{
+.product-price > span:first-child bdi{
     color: #525A61;
     font-size: 12px;
     text-decoration-line: line-through;
     margin-right: 0;
 }
-.product-quantity .product-order-btn button[type="submit"]:hover,
+.product-quantity .product-order-btn button[type="submit"],
+.product-quantity .product-order-btn a:hover,
 .product-quantity .product-order-btn a:hover{
     background: #31304f!important;
     color: #fff!important;
@@ -282,6 +292,10 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 	}
 	.flex-fill {
 	    padding: 0px 8px;
+	}
+	.spotlight-popup .flex-fill .pro-item-cntlr + div{
+		left: 8px;
+		right: 8px;
 	}
 	.xoo-cp-content .xoo-cp-pdetails-row .xoo-cp-left-des .xoo-cp-ptitle{
 		padding-left: 15px!important
@@ -330,7 +344,8 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 		font-size: 16px;
 		margin-bottom:10px;
 	}
-	.product-quantity .product-order-btn button[type="submit"]{
+	.product-quantity .product-order-btn button[type="submit"],
+	.product-quantity .product-order-btn a{
 	    font-size: 12px!important;
 	    width: 135px;
 	    height: 35px;
@@ -397,7 +412,8 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 	    border-top: 1px solid #f5f6f7;
 	    margin-top: 15px;
 	}
-	.product-quantity .product-order-btn button[type="submit"]{
+	.product-quantity .product-order-btn button[type="submit"],
+	.product-quantity .product-order-btn a{
 		display: none;
 	}
 	.pro-item.prsimple {
