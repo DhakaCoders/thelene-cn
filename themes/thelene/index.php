@@ -25,8 +25,8 @@ $titel = !empty($titel)? $titel : get_the_title($thisID);
   </div>  
 </section>
 <?php 
- if( isset($_GET['orderby']) && !empty($_GET['orderby']) ){
-      $order = $_GET['orderby'];
+ if( isset($_GET['sortby']) && !empty($_GET['sortby']) ){
+      $order = $_GET['sortby'];
   }
 ?>
 <section class="">
@@ -51,7 +51,7 @@ $titel = !empty($titel)? $titel : get_the_title($thisID);
               <span>Sorteren Op:</span>
               <div class="fl-select">
                 <form method="get" action="<?php echo get_permalink($thisID); ?>">
-                <select class="selectpicker" name="orderby" id="" onchange="this.form.submit()">
+                <select class="selectpicker" name="sortby" id="" onchange="this.form.submit()">
                   <option value="asc" <?php echo ($order == 'asc')?'selected':'';?>>A-Z</option>
                   <option value="desc" <?php echo ($order == 'desc')?'selected':'';?>>Z-A</option>
                 </select>

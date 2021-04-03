@@ -21,15 +21,17 @@
   ?>
 </div>
 <div class="secrh-select-cntlr">
-    <div class="fl-secrh">
-      <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-        <input type="text" placeholder="Naar welke thee ben jij opzoek?" name="s" value="<?php echo get_search_query(); ?>">
-        <button>
-          <i><svg class="search-icon" width="21" height="21" viewBox="0 0 21 21" fill="#31304F">
-            <use xlink:href="#search-icon"></use> </svg></i>
-        </button>
-        <input type="hidden" name="post_type" value="product" />
-      </form>
+    <div class="fl-secrh-cntlr">
+      <div class="fl-secrh">
+        <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <input type="text" placeholder="Naar welke thee ben jij opzoek?" name="s" value="<?php echo get_search_query(); ?>">
+          <button>
+            <i><svg class="search-icon" width="21" height="21" viewBox="0 0 21 21" fill="#31304F">
+              <use xlink:href="#search-icon"></use> </svg></i>
+          </button>
+          <input type="hidden" name="post_type" value="product" />
+        </form>
+      </div>
     </div>
     <div class="fl-select-cntlr">
       <span>Sorteren Op:</span>
