@@ -567,26 +567,28 @@ function assign_gift_card_cat(){
         return false;
 }
 
-add_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
+/**
+ * Exclude products from a particular category on the shop page
+ */
 function custom_pre_get_posts_query( $q ) {
-
     if ( ! $q->is_main_query() ) return;
     if ( ! $q->is_post_type_archive() ) return;
 
-    if ( ! is_admin() && is_shop() ) {
+    if ( ! is_admin() && !is_shop() && assign_gift_card_cat() ) {
+        $tax_query = (array) $q->get( 'tax_query' );
 
-        $q->set( 'tax_query', array(array(
-            'taxonomy' => 'product_cat',
-            'field' => 'slug',
-            'terms' => assign_gift_card_cat(), // Don't display products in the knives category on the shop page
-            'operator' => 'NOT IN'
-        )));
+        $tax_query[] = array(
+               'taxonomy' => 'product_cat',
+               'field' => 'slug',
+               'terms' => assign_gift_card_cat(), // Don't display products in the clothing category on the shop page.
+               'operator' => 'NOT IN'
+        );
 
+
+        $q->set( 'tax_query', $tax_query );
     }
-
-    remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
-
 }
+add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );  
 
 /**
     Myaccount body class
