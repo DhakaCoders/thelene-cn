@@ -556,6 +556,9 @@ function misha_remove_my_account_links( $menu_links ){
 }
 
 
+/**
+    Set gift card category
+*/
 function assign_gift_card_cat(){
     $gift_cat = array( 'geschenken' );
     if( !empty($gift_cat) )
@@ -564,9 +567,7 @@ function assign_gift_card_cat(){
         return false;
 }
 
-
 add_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
-
 function custom_pre_get_posts_query( $q ) {
 
     if ( ! $q->is_main_query() ) return;
@@ -588,7 +589,7 @@ function custom_pre_get_posts_query( $q ) {
 }
 
 /**
-    myaccount body class
+    Myaccount body class
 */
 add_filter( 'body_class', 'cbv_wc_custom_class' );
 function cbv_wc_custom_class( $classes ) {
@@ -603,7 +604,7 @@ function cbv_wc_custom_class( $classes ) {
 }
 
 /**
-    tabel price display
+    Tabel price display
 */
 add_filter( 'woocommerce_cart_item_price', 'cbv__change_cart_table_price_display', 30, 3 );
 function cbv__change_cart_table_price_display( $price, $values, $cart_item_key ) {
@@ -631,7 +632,7 @@ function add_custom_surcharge( $cart ) {
 
 
 /**
-    empty cart items
+    Empty cart items
 */
 add_action( 'init', 'woocommerce_clear_cart_url' );
 function woocommerce_clear_cart_url() {
