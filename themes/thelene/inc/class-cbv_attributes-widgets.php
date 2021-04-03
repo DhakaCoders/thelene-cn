@@ -508,16 +508,21 @@ class cbv_wc_attribute_widget extends WC_Widget {
 						}
 					}
 					$filterimp = $current_filter;
+					$link = add_query_arg( $filter_name, $filterimp, $link );
+					// Add Query type Arg to URL.
+					if ( 'or' === $query_type && $option_is_set  ) {
+						$link = add_query_arg( 'query_type_' . wc_attribute_taxonomy_slug( $taxonomy ), 'or', $link );
+					}
 				}else{
 					asort( $current_filter );
-					$filterimp = implode( ',', $current_filter );
+
+					$link = add_query_arg( $filter_name, implode( ',', $current_filter ), $link );
+					// Add Query type Arg to URL.
+					if ( 'or' === $query_type && ! ( 1 === count( $current_filter ) && $option_is_set ) ) {
+						$link = add_query_arg( 'query_type_' . wc_attribute_taxonomy_slug( $taxonomy ), 'or', $link );
+					}
 				}
 				
-				$link = add_query_arg( $filter_name, $filterimp, $link );
-				// Add Query type Arg to URL.
-				if ( 'or' === $query_type && ! ( 1 === count( $current_filter ) && $option_is_set ) ) {
-					$link = add_query_arg( 'query_type_' . wc_attribute_taxonomy_slug( $taxonomy ), 'or', $link );
-				}
 				$link = str_replace( '%2C', ',', $link );
 
 			}
