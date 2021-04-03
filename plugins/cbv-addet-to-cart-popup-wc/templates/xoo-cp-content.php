@@ -118,7 +118,7 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
 <?php if( $pQuery->have_posts() ): ?>
   <div class="plr-40">
     <div class="spotlight-popup-cntlr">
-    <h5 class="popup-related">gerelateerde producten</h5>
+    <h5 class="popup-related"><?php _e('Gerelateerde producten','added-to-cart-popup-woocommerce'); ?></h5>
     <div class="spotlight-popup d-flex bd-highlight">
       <?php 
         while($pQuery->have_posts()): $pQuery->the_post(); 
@@ -148,17 +148,13 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
                 $itemCls = 'prsimple';
             break;
             }
-            $isShowWeekProdict = get_field('weekend_product', $product->get_id());
+            $seller_flash = get_field('seller_flash', $product->get_id());
             $gridurl = cbv_get_image_tag( get_post_thumbnail_id($product->get_id()), 'hprogrid' );
             echo "<div class='pro-item {$itemCls}'>";
+            if( !empty($seller_flash) ) printf('<span class="seller-flash">%s</span>', $seller_flash); 
             echo '<div class="pro-item-img-cntlr pw-item-img-cntlr">';
             echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
             echo '<div class="pro-item-img">'.$gridurl.'</div>';
-            if( $isShowWeekProdict ):
-                echo '<div class="pro-item-highlight-text">';
-                echo '<span>Product van de week</span>';
-                echo '</div>';
-            endif;
             echo '</div>';
             echo '<div class="pro-item-desc pw-item-desc">';
             echo '<div class="pro-item-descWrap mHc">';

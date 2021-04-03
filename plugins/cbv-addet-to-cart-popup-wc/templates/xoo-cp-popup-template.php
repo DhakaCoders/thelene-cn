@@ -15,7 +15,7 @@ if(!defined('ABSPATH')){
 			<span class="xoo-cp-preloader xoo-cp-icon-spinner"></span>
 		</div>
 		<span class="xoo-cp-close xoo-cp-icon-cross"></span>
-		<h5>Toegevoegd aan winkelmandje</h5>
+		<h5><?php _e('Bijna van jou','added-to-cart-popup-woocommerce'); ?></h5>
 		<div class="xoo-cp-content"></div>
 		<!-- here was button -->
 	</div>
