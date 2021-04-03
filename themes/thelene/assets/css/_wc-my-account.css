@@ -501,8 +501,9 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-l
 	width: 50%;
 }
 body.woocommerce-account .woocommerce form .form-row-first,
-body.woocommerce-account .woocommerce-page form .form-row-first,
-body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-first{
+body.woocommerce-account .woocommerce-page form .form-row-first
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-first,
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper #billing_company_field{
 	padding-right: 13px
 }
 
@@ -669,11 +670,27 @@ body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyA
     width:100%;
     padding-left:120px;
 }
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button{
+    margin-bottom: 10px;
+}
 body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button + a{
-    display: inline-block;
+    
 }
 body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button + a img{
     width: 150px;
+}
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li > span{
+    margin-top:8px;
+    display: inline-block;
+}
+ .woocommerce-account-grds-cntlr{
+    align-items: flex-start;
+}
+body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a:not(:last-child){
+    margin-right: 20px;
+}
+body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons {
+    display: flex;
 }
 /* ------------------ woocommerce-cart ----------------------*/
 
@@ -785,7 +802,7 @@ body.woocommerce-checkout .woocommerce-billing-fields h3{
 }*/
 body.woocommerce-checkout #customer_details .col-2{
     width: 31%;
-    padding-left: 145px;
+    padding-left: 110px;
     padding-right: 0;
 }
 body.woocommerce-checkout .custom-checkout-order-review table.shop_table tfoot .order-total{
@@ -854,6 +871,35 @@ body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper .form-ro
 }
 .body.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper label{
     color:#525A61;
+}
+body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a {
+    width: 154px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    font-size: 12px!important;
+}
+
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl .woocommerce-mini-cart + p{
+    margin-bottom:25px;
+}
+body .woocommerce-checkout .woocommerce-form__label .checkbox-custom{
+    display: none!important;
+}
+body .woocommerce-checkout .woocommerce-form__label{
+    display:inline-flex!important;
+    padding-left: 28px;
+    position: relative;
+}
+body .woocommerce-checkout .woocommerce-form__label input{
+    width:18px!important;
+    height: 18px!important;
+    position:absolute;
+    left: 0;
+    top:0;
+    margin-top:1px!important;
 }
 /*body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
