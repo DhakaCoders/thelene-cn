@@ -251,6 +251,9 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 .pro-item-desc  .pro-item-descWrap .product-price {
     margin-bottom: 7px;
 }
+.woocommerce-price-suffix{
+	margin-left: 3px;
+}
 @media(max-width:1199px){
 	.xoo-cp-container {
 	    max-width: 750px;

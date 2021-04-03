@@ -48,8 +48,11 @@
 
 .fl-products-cntlr .fl-product-grd{
 	padding: 15px 15px 28px;
+	position: relative;
 }
-
+.fl-product-grd{
+	position: relative;
+}
 .fl-product-grd-2 .fl-trnsprnt-btn{
 	font-size: 14px;
 	padding: 8px 19px;
