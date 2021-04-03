@@ -43,6 +43,7 @@
 	width: 100%;
 	justify-content: center;
 	align-items: center;
+	padding: 10px;
 }
 .thumbnails-cntlr .thumb-bg img{
 	max-height: 135px;
@@ -416,6 +417,19 @@ body.single-product .bootstrap-select .dropdown-toggle .filter-option-inner-inne
 	}
 	.long-desc {
 	    padding: 40px 25px 30px 40px;
+	}
+	.custom-info-crtl ul li{
+		padding-left: 60px;
+	}
+	.thumbnails-cntlr .thumb-bg {
+	    padding: 0 10px;
+	}
+	.thumbnails-cntlr .thumbnails{
+		margin-left: -10px!important;
+		margin-right: -10px!important;
+	}
+	.thumbnails-cntlr .thumb-bg > div{
+		height: 120px;
 	}
 }
 
