@@ -372,7 +372,6 @@ add_filter( 'woocommerce_catalog_orderby', 'wc_customize_product_sorting' );
 
 function wc_customize_product_sorting($sorting_options){
     $sorting_options = array(
-        'menu_order' => __( 'Default', 'woocommerce' ),
         'title'      => __( 'A-Z', 'woocommerce' ),
         'title-desc' => __( 'Z-A', 'woocommerce' ),
         'popularity' => __( 'popularity', 'woocommerce' ),
