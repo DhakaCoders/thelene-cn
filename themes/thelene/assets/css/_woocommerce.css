@@ -281,9 +281,9 @@ input.select2-search__field{
 .single-product.woocommerce div.product p.price{
     color:#5a5a5a;
 }
-.woocommerce-Price-currencySymbol{
+/*.woocommerce-Price-currencySymbol{
     margin-right: 5px;
-}
+}*/
 /*.pro-overview-single-des-link{
 	display: flex;
 	align-items: center;
