@@ -26,6 +26,7 @@ get_template_part('templates/breadcrumbs');
                   </form>
                 </div>
             </div>
+            
             <div class="fl-select-cntlr">
               <span>Sorteren Op:</span>
               <div class="fl-select">
