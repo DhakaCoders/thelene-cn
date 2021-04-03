@@ -327,6 +327,9 @@ body.single-product  div.product form.cart .button{
 	border-top: 1px solid #F1E8E1;
 	margin-top: 40px;
 }
+.single-product span.onsale{
+	
+}
 
 @media (max-width: 1699px){
 	
