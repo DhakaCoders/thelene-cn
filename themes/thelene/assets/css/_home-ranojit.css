@@ -60,7 +60,7 @@
 .fl-product-grd .fl-pro-grd-title:hover a{
 	color: #EC5387;
 }
-.fl-pro-absolute-text{
+.fl-pro-absolute-text,.fl-product-grd .seller-flash{
 	position: absolute;
 	width: 129px;
 	height: 30px;
