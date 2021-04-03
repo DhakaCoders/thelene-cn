@@ -142,7 +142,7 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
   // Return the number of products you wanna show per page.
-  $cols = 4;
+  $cols = 12;
   return $cols;
 }
 
@@ -353,13 +353,27 @@ function product_max_qty($product_id = '', $_product = array()){
     }
     return $get_max_purchase_qty;
 }
-//add_filter('woocommerce_catalog_orderby', 'wc_customize_product_sorting');
+
+add_filter('woocommerce_get_catalog_ordering_args', 'custom_woocommerce_get_catalog_ordering_args');
+
+function custom_woocommerce_get_catalog_ordering_args( $args ) {
+    $orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+    if ( 'title' == $orderby_value ) {
+        $args['orderby'] = 'title';
+        $args['order'] = 'asc';
+    }elseif('title-desc' == $orderby_value){
+        $args['orderby'] = 'title';
+        $args['order'] = 'desc';
+    }
+    return $args;
+}
+add_filter( 'woocommerce_default_catalog_orderby_options', 'wc_customize_product_sorting' );
+add_filter( 'woocommerce_catalog_orderby', 'wc_customize_product_sorting' );
 
 function wc_customize_product_sorting($sorting_options){
     $sorting_options = array(
-        'asc' => __( 'A-Z', 'woocommerce' ),
-        'desc' => __( 'Z-A', 'woocommerce' ),
-        'menu_order' => __( 'sort by', 'woocommerce' ),
+        'title'      => __( 'A-Z', 'woocommerce' ),
+        'title-desc' => __( 'Z-A', 'woocommerce' ),
         'popularity' => __( 'popularity', 'woocommerce' ),
         'rating'     => __( 'average rating', 'woocommerce' ),
         'date'       => __( 'newness', 'woocommerce' ),
@@ -370,7 +384,7 @@ function wc_customize_product_sorting($sorting_options){
     return $sorting_options;
 }
 // custom cbv_catalog hook
-add_action('cbv_catalog', 'cbv_catalog_ordering');
+add_action('cbv_catalog', 'woocommerce_catalog_ordering');
 
 function cbv_catalog_ordering() {
     global $wp_query;
@@ -382,8 +396,8 @@ function cbv_catalog_ordering() {
     $orderby                 = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
     $show_default_orderby    = 'menu_order' === apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
     $catalog_orderby_options = apply_filters( 'woocommerce_catalog_orderby', array(
-        'asc' => __( 'A-Z', 'woocommerce' ),
-        'desc' => __( 'Z-A', 'woocommerce' ),
+        'title-asc' => __( 'A-Z', 'woocommerce' ),
+        'title-desc' => __( 'Z-A', 'woocommerce' ),
         'menu_order' => __( 'Default sorting', 'woocommerce' ),
         'popularity' => __( 'popularity', 'woocommerce' ),
         'rating'     => __( 'average rating', 'woocommerce' ),
