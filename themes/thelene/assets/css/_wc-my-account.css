@@ -705,8 +705,8 @@ body.woocommerce-checkout .innerpage-con-wrap{
     width: 100%;
 }
 body.woocommerce-checkout .col2-set {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    float: left;
 }
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .select2-container{
     padding-left: 0px;
@@ -717,12 +717,8 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .select2-co
     padding-left:0;
     margin-right: 0px;
 }
-body.woocommerce-checkout .innerpage-con-wrap .woocommerce{
-    display: flex;
-}
-
 body.woocommerce-checkout .innerpage-con-wrap form.checkout{
-    max-width: 66.38%;
+    max-width: 100%;
     width: 100%;
 }
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl{
@@ -744,6 +740,11 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr.order-
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr.order-total td {
     padding-top: 35px!important;
 }
+body.woocommerce-checkout #customer_details .col-1 {
+    width: 69%;
+    padding: 0;
+}
+
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr.order-total td strong{
     font-weight:700;
 }
@@ -753,9 +754,10 @@ body.woocommerce-checkout .checkout-page-title h1{
 body.woocommerce-checkout .woocommerce-billing-fields {
     padding-top: 78px;
 }
-body.woocommerce-checkout #customer_details .col-1,
 body.woocommerce-checkout #customer_details .col-2{
-    width: 100%;
+    width: 31%;
+    padding-left: 145px;
+    padding-right: 0;
 }
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table tfoot .order-total{
 
@@ -780,6 +782,23 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr td{
 }
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr td.product-name{
     text-align:left;
+}
+
+#billing_order_type_field span label,
+#billing_salutation_field span label{
+    margin-left: 10px;
+    margin-right: 30px;
+    display: inline-block;
+}
+#ship-to-different-address label input {
+    vertical-align: middle;
+    margin-top: -6px;
+}
+#accept_condition ~ .checkbox-custom{
+    display: none;
+}
+#customer_details .shipping-methods{
+    display: none;
 }
 
 /*body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}

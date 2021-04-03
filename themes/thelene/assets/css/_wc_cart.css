@@ -21,7 +21,7 @@ body.woocommerce-cart .cart_totals{
 	padding-left: 140px;
 }
 .cart-crtl .cart-table-crtl table tr th{
-	padding-bottom: 25px;
+	padding-bottom: 22px;
 }
 .cart-crtl .cart-table-crtl table tr th:first-child,
 .cart-crtl .cart-table-crtl table tr td:first-child{
@@ -239,6 +239,84 @@ body.woocommerce-cart .add-more-product a:after{
 }
 body.woocommerce-cart.woocommerce-page table.shop_table th{
 	font-weight: 400;
+}
+body.woocommerce-cart.woocommerce-page .woocommerce-Price-currencySymbol{
+	margin-right: 0;
+}
+body.woocommerce-cart.woocommerce-page .product-price del *{
+	font-size: 14px;
+	font-weight: 400;
+}
+body.woocommerce-cart.woocommerce-page .product-price ins *{
+	font-size: 16px;
+	font-weight: 500;
+}
+body.woocommerce-cart.woocommerce-page .product-name a{
+	font-size: 18px;
+	font-weight: 400;
+}
+body.woocommerce-cart.woocommerce-page table.shop_table th.product-name strong,
+body.woocommerce-cart.woocommerce-page .woocommerce .cart_totals > h2{
+	font-size: 26px;
+	font-weight: 700;
+	color: #202020;
+}
+body.woocommerce-cart.woocommerce-page .cart-total-crtl .cart_totals table.shop_table_responsive th{
+	width: 50%;
+}
+
+/**
+Empty cart
+*/
+.cart-is-emtpy{
+	padding-top: 70px;
+}
+.cart-is-emtpy,
+.cart-is-emtpy + .return-to-shop{
+	text-align: center;
+}
+.cart-is-emtpy strong{
+	display: block;
+	text-align: center;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 30px;
+	color: #202020;
+	margin-top: 48px;
+	margin-bottom: 24px;
+}
+.cart-is-emtpy p{
+	color: #525A61;
+}
+.cart-is-emtpy + .return-to-shop a {
+    display: inline-block;
+    height: 50px;
+    text-align: center;
+    margin: 0;
+    line-height: 47px;
+    padding: 0 30px;
+    width: 342px;
+}
+.empty-cart .page-title{
+	display: none;
+}
+
+/**
+Cart gift cart
+*/
+/*body.woocommerce-cart.woocommerce-page .cart-total-crtl .cart_totals table.shop_table_responsive {
+    border-bottom: 1px solid #ECE9E9!important;
+    border-radius: 0!important;
+}*/
+body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-container{
+	margin: 0;
+}
+body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
+	padding-bottom: 37px;
+	margin-bottom: 34px;
+    border-bottom: 1px solid #ECE9E9!important;
+    border-radius: 0!important;
 }
 
 /*responsive */

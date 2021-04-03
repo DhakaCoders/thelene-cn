@@ -36,9 +36,15 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="col2-set" id="customer_details">
+<div class="checkout-page-title">
+	<div><a class="backshop-cart" href="">Terug naar winkelmandje</a></div>
+	<h1><?php the_title(); ?></h1>
+</div>
 			<div class="col-1">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+				
+				<h3>3. Betaalmethode</h3>
 				<div class="shipping-methods">
 						<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
 

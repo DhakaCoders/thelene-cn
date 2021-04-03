@@ -251,8 +251,10 @@ $('.main-img-crtl').slick({
    slidesToShow: 3,
    slidesToScroll: 1,
    asNavFor: '.main-img-crtl',
-   dots: true,
-   focusOnSelect: true
+   dots: false,
+   focusOnSelect: true,
+   prevArrow: '.fl-singgle-pro-prev',
+   nextArrow: '.fl-singgle-pro-next',
  });
 
 $('.fl-product .price-quentity-ctrl form .variations tbody tr td select').addClass('selectpicker');
@@ -446,6 +448,11 @@ var html = '';
   $("#extra_fields").empty(html);
 })
     new WOW().init();
+
+jQuery('body').on('wc_cart_emptied', function(){
+  location.reload();
+  //console.log('wc_cart_emptied triggered');
+});
 
 })(jQuery);
 
