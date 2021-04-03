@@ -357,6 +357,8 @@ function product_max_qty($product_id = '', $_product = array()){
 
 function wc_customize_product_sorting($sorting_options){
     $sorting_options = array(
+        'asc' => __( 'A-Z', 'woocommerce' ),
+        'desc' => __( 'Z-A', 'woocommerce' ),
         'menu_order' => __( 'sort by', 'woocommerce' ),
         'popularity' => __( 'popularity', 'woocommerce' ),
         'rating'     => __( 'average rating', 'woocommerce' ),
@@ -380,12 +382,14 @@ function cbv_catalog_ordering() {
     $orderby                 = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
     $show_default_orderby    = 'menu_order' === apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
     $catalog_orderby_options = apply_filters( 'woocommerce_catalog_orderby', array(
+        'asc' => __( 'A-Z', 'woocommerce' ),
+        'desc' => __( 'Z-A', 'woocommerce' ),
         'menu_order' => __( 'Default sorting', 'woocommerce' ),
-        'popularity' => __( 'Sort by popularity', 'woocommerce' ),
-        'rating'     => __( 'Sort by average rating', 'woocommerce' ),
-        'date'       => __( 'Sort by newness', 'woocommerce' ),
-        'price'      => __( 'Sort by price: low to high', 'woocommerce' ),
-        'price-desc' => __( 'Sort by price: high to low', 'woocommerce' )
+        'popularity' => __( 'popularity', 'woocommerce' ),
+        'rating'     => __( 'average rating', 'woocommerce' ),
+        'date'       => __( 'newness', 'woocommerce' ),
+        'price'      => __( 'price: low to high', 'woocommerce' ),
+        'price-desc' => __( 'price: high to low', 'woocommerce' )
     ) );
 
     if ( ! $show_default_orderby ) {

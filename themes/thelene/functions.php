@@ -177,6 +177,8 @@ function custom_post_type_query($query) {
             $query->set( 'order', $order );
         }
 
+    }elseif($query->is_main_query() && !is_admin()){
+        $query->set( 'order', 'asc' );
     }
     return $query;
 }
