@@ -34,8 +34,15 @@
 	margin-bottom: 40px!important;
 }
 .thumbnails-cntlr .thumb-bg{
-	height: 135px;
 	padding: 0 12px;
+}
+.thumbnails-cntlr .thumb-bg > div{
+	height: 135px;
+	background: #fff;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
 }
 .thumbnails-cntlr .thumb-bg img{
 	max-height: 135px;
