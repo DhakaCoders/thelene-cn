@@ -3,7 +3,8 @@ All Transitions
 */
 a,input,img,textarea,button,svg,i,.dft-transition,
 .bgi-img,
-.blog-grd-img:hover .bgi-img{
+.blog-grd-img:hover .bgi-img,
+.thumbnails-cntlr span{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
