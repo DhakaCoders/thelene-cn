@@ -498,17 +498,27 @@ class cbv_wc_attribute_widget extends WC_Widget {
 
 			if ( ! empty( $current_filter ) ) {
 				asort( $current_filter );
-				$link = add_query_arg( $filter_name, implode( ',', $current_filter ), $link );
+				if($filter_name == 'filter_cafeine'){
+					if( isset( $_GET[ $filter_name ] ) ){
+						if( in_array($_GET[ $filter_name ], $current_filter) ){
 
+						}
+
+					}
+					var_dump($current_filter);
+				}
+				$link = add_query_arg( $filter_name, implode( ',', $current_filter ), $link );
 				// Add Query type Arg to URL.
 				if ( 'or' === $query_type && ! ( 1 === count( $current_filter ) && $option_is_set ) ) {
 					$link = add_query_arg( 'query_type_' . wc_attribute_taxonomy_slug( $taxonomy ), 'or', $link );
 				}
 				$link = str_replace( '%2C', ',', $link );
+
 			}
 
 			if ( $count >= 0 || $option_is_set ) { // here's been changed $count > 0
 				$link      = apply_filters( 'woocommerce_layered_nav_link', $link, $term, $taxonomy );
+
 				$term_html = '<a rel="nofollow" href="' . esc_url( $link ) . '">' . esc_html( $term->name ) . '</a>';
 			} else {
 				$link      = false;

@@ -284,6 +284,15 @@ body.woocommerce-cart.woocommerce-page .product-price del bdi span{
 body.woocommerce-cart.woocommerce-page .product-price .woocommerce-price-suffix{
 	font-size: 10px!important;
 }
+body.woocommerce-cart.woocommerce-page .product-price > del,
+body.woocommerce-cart.woocommerce-page .product-price > ins{
+	position: relative;
+	top: 2px;
+}
+body.woocommerce-cart.woocommerce-page .product-price > small{
+	position: relative;
+	top: 2px;
+} 
 /**
 Empty cart
 */

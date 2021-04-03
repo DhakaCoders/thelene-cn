@@ -69,6 +69,7 @@ if ( woocommerce_product_loop() ) {
 
 			wc_get_template_part( 'content', 'product' );
 		}
+		wc_get_template_part('blog', 'content'); // blog grid
 	}
 
 	woocommerce_product_loop_end();
