@@ -820,6 +820,24 @@ body.woocommerce-checkout .custom-checkout-order-review  button.button.alt{
     padding: 15px 10px;
     margin-left: 0;
 }
+body.woocommerce-checkout .payment-method-crtl .custom-checkout-btn button[type=submit]{
+    background: #8CCC0C!important;
+    border-color: #8CCC0B!important;
+    width: 340px;
+    height: 50px;
+}
+body.woocommerce-checkout .payment-method-crtl .custom-checkout-btn{
+    text-align:right;
+}
+body.woocommerce-checkout .innerpage-con-wrap{
+    padding-bottom:80px;
+}
+body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper .form-row{
+    margin-bottom:45px
+}
+.body.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper label{
+    color:#525A61;
+}
 /*body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
