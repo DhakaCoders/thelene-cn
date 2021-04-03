@@ -28,6 +28,7 @@ body {
     font-family: 'Bitter', serif;
     /*font-family: 'Open Sans', sans-serif;*/
     /*font-family: 'Work Sans', sans-serif;*/
+    /*font-family: 'Source Sans Pro', sans-serif;*/
 }
 p{
 	line-height: 1.6;
@@ -230,20 +231,23 @@ ul.products li:before,
 
 
 .sidebar-widget ul,
-ul.dropdown-menu{
+ul.dropdown-menu,
+.moove-gdpr-modal-left-content ul{
 	margin: 0!important;
 	padding: 0!important;
 	list-style: none!important;
 }
 .sidebar-widget ul li,
-ul.dropdown-menu li{
+ul.dropdown-menu li,
+.moove-gdpr-modal-left-content ul li{
 	padding: 0!important;
 	margin: 0!important;
 	list-style: none!important;
 	margin: 0!important;
 }
 .sidebar-widget ul li:before,
-ul.dropdown-menu li:before{
+ul.dropdown-menu li:before,
+.moove-gdpr-modal-left-content ul li:before{
 	content: none!important;
 }
 
