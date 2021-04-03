@@ -204,12 +204,14 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
     margin-top: 18px;
 }
 .product-price ins span,
-.xoo-cp-pprice ins span,
-.product-price span bdi{
+.xoo-cp-pprice ins span{
     color: #31304F;
     font-size: 14px;
     font-weight: 500;
-    margin-right: 0;
+    margin-right: 0!important;
+}
+.product-price span bdi span{
+	margin-right: 0!important;
 }
 .product-price del span,
 .xoo-cp-pprice del span,
