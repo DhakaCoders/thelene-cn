@@ -346,6 +346,10 @@ body.single-product  div.product form.cart .button{
     border-radius: 0;
 }
 
+body.single-product .added_to_cart.wc-forward,
+body.single-product .xoo-cp-icon-check.xoo-cp-added{
+	display: none;
+}
 @media (max-width: 1699px){
 	
 }

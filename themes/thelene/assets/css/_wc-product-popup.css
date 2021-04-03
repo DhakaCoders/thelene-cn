@@ -123,9 +123,24 @@
 .pro-item-cntlr{
     border: 1px solid #F5F6F7;
     padding-top: 25px;
-    padding-bottom: 26px;
-    margin-bottom: 28px;
+    padding-bottom: 0;
+   /* margin-bottom: 28px;*/
+    height: 100%;
 }
+.spotlight-popup .flex-fill .pro-item-cntlr{
+	margin-top: 28px
+}
+.pro-item-cntlr .pro-item{
+	height: 100%;
+	padding-bottom: 26px;
+}
+.spotlight-popup .flex-fill{
+	flex: initial!important;
+}
+
+/*.spotlight-popup .flex-fill{
+	height: 100%;
+}*/
 .pro-item-img-cntlr{
 	position: relative;
 }
