@@ -32,18 +32,24 @@ echo '<div class="thumbnails">';
 if ( $product->get_image_id() ) {
 	$imgtag = wp_get_attachment_image( $product->get_image_id(), 'thumbnail' );
       echo '<div class="thumb-bg">';
-      echo $imgtag;
+      echo '<div>';
+      		echo $imgtag;
+      echo '</div>';
       echo '</div>';
 } else {
 	echo '<div class="thumb-bg">';
+	echo '<div>';
 	echo sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+	echo '</div>';
 	echo '</div>';
 }
 
 	foreach ( $attachment_ids as $attachment_id ) {
 		$imgtag = wp_get_attachment_image( $attachment_id, 'thumbnail' );
 		echo '<div class="thumb-bg">';
+		echo '<div>';
       		echo $imgtag;
+      	echo '</div>';
       	echo '</div>';
 	}
 
