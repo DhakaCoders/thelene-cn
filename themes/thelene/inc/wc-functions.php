@@ -586,10 +586,14 @@ function custom_pre_get_posts_query( $q ) {
     remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
 
 }
+
+/**
+    myaccount body class
+*/
 add_filter( 'body_class', 'cbv_wc_custom_class' );
 function cbv_wc_custom_class( $classes ) {
     if( strpos($_SERVER['REQUEST_URI'], "winkelmandje") !== false && is_account_page() && is_user_logged_in()){
-
+        $classes[] = 'loggedin-winkelmandje-crtl';
     }else{
         if( is_account_page() && is_user_logged_in() && (!is_wc_endpoint_url( 'orders' ) ||  is_wc_endpoint_url( 'edit-account' ))) {
             $classes[] = 'loggedin-deshboard-crtl';
@@ -598,8 +602,10 @@ function cbv_wc_custom_class( $classes ) {
     return $classes;
 }
 
+/**
+    tabel price display
+*/
 add_filter( 'woocommerce_cart_item_price', 'cbv__change_cart_table_price_display', 30, 3 );
-
 function cbv__change_cart_table_price_display( $price, $values, $cart_item_key ) {
     $slashed_price = $values['data']->get_price_html();
     $is_on_sale = $values['data']->is_on_sale();
@@ -624,7 +630,9 @@ function add_custom_surcharge( $cart ) {
 }
 
 
-
+/**
+    empty cart items
+*/
 add_action( 'init', 'woocommerce_clear_cart_url' );
 function woocommerce_clear_cart_url() {
     if ( isset( $_GET['clear-cart'] ) && esc_html($_GET['clear-cart']) == 'yes' ) {
