@@ -328,7 +328,22 @@ body.single-product  div.product form.cart .button{
 	margin-top: 40px;
 }
 .single-product span.onsale{
-	
+	position: absolute;
+    width: 129px;
+    height: 30px;
+    background: #EC5387;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    border-radius: 0;
 }
 
 @media (max-width: 1699px){
