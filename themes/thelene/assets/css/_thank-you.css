@@ -66,24 +66,23 @@
 }
 .thnkY-social-link ul li i{
     display: inline-block;
-    color: #40405c;
-    font-size: 23px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
 }
 .thnkY-social-link ul{
     display: flex;
     justify-content: center;
 }
-.thnkY-social-link ul li {
+.thnkY-social-link ul li{
     padding: 0 14px;
 }
 .thnkY-social-link ul li a{
     display: inline-block;
     vertical-align: baseline;
 }
-
+.thnkY-social-link ul li a i:hover {
+    color: #8ccc0c;
+}
 @media(max-width:1199px){
 
 }

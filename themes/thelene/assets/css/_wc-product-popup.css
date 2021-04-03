@@ -227,8 +227,7 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
     margin-top: 18px;
 }
 .product-price ins span,
-.xoo-cp-pprice ins span,
-.product-price > span:nth-child(2){
+.xoo-cp-pprice ins span{
     color: #31304F;
     font-size: 14px;
     font-weight: 500;
@@ -238,12 +237,17 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 	margin-right: 0!important;
 }
 .product-price del span,
-.xoo-cp-pprice del span,
-.product-price > span:first-child bdi{
+.xoo-cp-pprice del span{
     color: #525A61;
     font-size: 12px;
     text-decoration-line: line-through;
     margin-right: 0;
+}
+.product-price > span:first-child bdi,
+.product-price > span:nth-child(2){
+	font-size:14px;
+	color: #525A61;
+	margin-right: 0;
 }
 .product-quantity .product-order-btn button[type="submit"],
 .product-quantity .product-order-btn a:hover,

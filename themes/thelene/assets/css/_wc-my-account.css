@@ -657,7 +657,24 @@ body.woocommerce-account .register-btn button[type="submit"]{
     padding-top: 23px;
 }
 
-
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li:before{
+    content: none;
+}
+body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-navigation{
+    max-width:34%;
+    width: 100%;
+}
+body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+    max-width:66%;
+    width:100%;
+    padding-left:120px;
+}
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button + a{
+    display: inline-block;
+}
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button + a img{
+    width: 150px;
+}
 /* ------------------ woocommerce-cart ----------------------*/
 
 /*.woocommerce-cart .innerpage-con-wrap{
