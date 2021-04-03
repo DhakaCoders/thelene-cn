@@ -497,17 +497,21 @@ class cbv_wc_attribute_widget extends WC_Widget {
 			}
 
 			if ( ! empty( $current_filter ) ) {
-				asort( $current_filter );
+				$addClass = '';
 				if($filter_name == 'filter_cafeine'){
-					if( isset( $_GET[ $filter_name ] ) ){
-						if( in_array($_GET[ $filter_name ], $current_filter) ){
-
+					foreach( $current_filter as $cafs ){
+						if( $cafs != $_GET[ $filter_name ] ){
+							$current_filter = $cafs;
 						}
-
 					}
-					var_dump($current_filter);
+					$filterimp = $current_filter;
+					$addClass = 'radio-btn ';
+				}else{
+					asort( $current_filter );
+					$filterimp = implode( ',', $current_filter );
 				}
-				$link = add_query_arg( $filter_name, implode( ',', $current_filter ), $link );
+				
+				$link = add_query_arg( $filter_name, $filterimp, $link );
 				// Add Query type Arg to URL.
 				if ( 'or' === $query_type && ! ( 1 === count( $current_filter ) && $option_is_set ) ) {
 					$link = add_query_arg( 'query_type_' . wc_attribute_taxonomy_slug( $taxonomy ), 'or', $link );
@@ -527,7 +531,7 @@ class cbv_wc_attribute_widget extends WC_Widget {
 
 			//$term_html .= ' ' . apply_filters( 'woocommerce_layered_nav_count', '<span class="count">(' . absint( $count ) . ')</span>', $count, $term );
 
-			echo '<li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term ' . ( $option_is_set ? 'woocommerce-widget-layered-nav-list__item--chosen chosen' : '' ) . '">';
+			echo '<li class="'.$addClass.'woocommerce-widget-layered-nav-list__item wc-layered-nav-term ' . ( $option_is_set ? 'woocommerce-widget-layered-nav-list__item--chosen chosen' : '' ) . '">';
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo apply_filters( 'woocommerce_layered_nav_term_html', $term_html, $term, $link, $count );
 			echo '</li>';
