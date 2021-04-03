@@ -269,13 +269,13 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 .hdr-cart a:hover{
 	background: #EC5387;
 }
-.hdr-cart a span{
-	font-size: 12px;
-	font-weight: 700;
-	font-family: 'Open Sans', sans-serif;
-	color: #fff;
-	line-height: 1;
-	margin-top: 4px;
+.hdr-cart a span {
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    line-height: 1;
+    margin-top: 2px;
 }
 .hdr-cart a i{
 	display: inline-block;
