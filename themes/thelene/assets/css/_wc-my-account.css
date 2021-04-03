@@ -736,7 +736,8 @@ body.woocommerce-checkout .custom-checkout-order-review table td strong{
  body.woocommerce-checkout .custom-checkout-order-review table td strong{
     display: none;
  }
-body.woocommerce-checkout .custom-checkout-order-review table td{
+body.woocommerce-checkout .custom-checkout-order-review table td,
+body.woocommerce-checkout .custom-checkout-order-review table th{
     padding: 12px 0px;
 }
 body.woocommerce-checkout .custom-checkout-order-review table tr.order-total th, 
@@ -748,6 +749,7 @@ body.woocommerce-checkout #customer_details .col-1 {
     padding: 0;
 }
 
+body.woocommerce-checkout .custom-checkout-order-review table tr.order-total th,
 body.woocommerce-checkout .custom-checkout-order-review table tr.order-total td strong{
     font-weight:700;
 }
