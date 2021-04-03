@@ -726,18 +726,21 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl{
     width: 100%;
     padding-left: 146px;
 }
- body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table,
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table tfoot th,
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table tfoot td,
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table td strong{
+ body.woocommerce-checkout .custom-checkout-order-review table.shop_table,
+body.woocommerce-checkout .custom-checkout-order-review table.shop_table  th,
+body.woocommerce-checkout .custom-checkout-order-review table.shop_table  td,
+body.woocommerce-checkout .custom-checkout-order-review table td strong{
     border:none!important;
     font-weight:400;
  }
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table td{
-    padding: 12px 12px;
+ body.woocommerce-checkout .custom-checkout-order-review table td strong{
+    display: none;
+ }
+body.woocommerce-checkout .custom-checkout-order-review table td{
+    padding: 12px 0px;
 }
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr.order-total th, 
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr.order-total td {
+body.woocommerce-checkout .custom-checkout-order-review table tr.order-total th, 
+body.woocommerce-checkout .custom-checkout-order-review table tr.order-total td {
     padding-top: 35px!important;
 }
 body.woocommerce-checkout #customer_details .col-1 {
@@ -745,21 +748,28 @@ body.woocommerce-checkout #customer_details .col-1 {
     padding: 0;
 }
 
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr.order-total td strong{
+body.woocommerce-checkout .custom-checkout-order-review table tr.order-total td strong{
     font-weight:700;
 }
 body.woocommerce-checkout .checkout-page-title h1{
     padding-bottom:43px;
 }
-body.woocommerce-checkout .woocommerce-billing-fields {
-    padding-top: 78px;
+body.woocommerce-checkout .checkout-page-title{
+    margin-bottom: 78px;
 }
+body.woocommerce-checkout .woocommerce-billing-fields h3{
+     border-bottom: 1px solid #F1E8E1;
+     padding-bottom:18px;
+}
+/*body.woocommerce-checkout .woocommerce-billing-fields {
+    padding-top: 78px;
+}*/
 body.woocommerce-checkout #customer_details .col-2{
     width: 31%;
     padding-left: 145px;
     padding-right: 0;
 }
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table tfoot .order-total{
+body.woocommerce-checkout .custom-checkout-order-review table.shop_table tfoot .order-total{
 
 }
 body.woocommerce-checkout .woocommerce-additional-fields h3{
@@ -771,16 +781,16 @@ body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper .woocomm
 }
 
 
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tbody,
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tfoot,
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tbody tr{
+body.woocommerce-checkout .custom-checkout-order-review table tbody,
+body.woocommerce-checkout .custom-checkout-order-review table tfoot,
+body.woocommerce-checkout .custom-checkout-order-review table tbody tr{
     width: 100%;
 }
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr td{
+body.woocommerce-checkout .custom-checkout-order-review table tr td{
     width: 50%;
     text-align: right;
 }
-body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table tr td.product-name{
+body.woocommerce-checkout .custom-checkout-order-review table tr td.product-name{
     text-align:left;
 }
 
