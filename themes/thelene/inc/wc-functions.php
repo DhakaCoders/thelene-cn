@@ -370,8 +370,8 @@ function custom_woocommerce_get_catalog_ordering_args( $args ) {
     }
     return $args;
 }
-add_filter( 'woocommerce_default_catalog_orderby_options', 'wc_customize_product_sorting' );
-add_filter( 'woocommerce_catalog_orderby', 'wc_customize_product_sorting' );
+//add_filter( 'woocommerce_default_catalog_orderby_options', 'wc_customize_product_sorting' );
+//add_filter( 'woocommerce_catalog_orderby', 'wc_customize_product_sorting' );
 
 function wc_customize_product_sorting($sorting_options){
     $sorting_options = array(
@@ -387,7 +387,7 @@ function wc_customize_product_sorting($sorting_options){
     return $sorting_options;
 }
 // custom cbv_catalog hook
-add_action('cbv_catalog', 'woocommerce_catalog_ordering');
+add_action('cbv_catalog', 'cbv_catalog_ordering');
 
 function cbv_catalog_ordering() {
     global $wp_query;
@@ -399,9 +399,8 @@ function cbv_catalog_ordering() {
     $orderby                 = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
     $show_default_orderby    = 'menu_order' === apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
     $catalog_orderby_options = apply_filters( 'woocommerce_catalog_orderby', array(
-        'title-asc' => __( 'A-Z', 'woocommerce' ),
+        'title' => __( 'A-Z', 'woocommerce' ),
         'title-desc' => __( 'Z-A', 'woocommerce' ),
-        'menu_order' => __( 'Default sorting', 'woocommerce' ),
         'popularity' => __( 'popularity', 'woocommerce' ),
         'rating'     => __( 'average rating', 'woocommerce' ),
         'date'       => __( 'newness', 'woocommerce' ),
@@ -523,13 +522,6 @@ function bbloomer_display_coupon_form_below_proceed_checkout() {
    <?php
 }
 
-// Remove the payment options form from default location
-//remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
-
-// Add the payment options form under the "order notes" section
-// Important you will have to also add the following custom CSS to your site:
-// body .woocommerce-checkout-payment { float: none; width: 100%; }
-//add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 20 );
 add_filter('gettext', 'x_translated_text' );
 function x_translated_text($translated) {
 $your_translation = 'Insert your translation here';
@@ -567,26 +559,28 @@ function assign_gift_card_cat(){
         return false;
 }
 
-add_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
+/**
+ * Exclude products from a particular category on the shop page
+ */
 function custom_pre_get_posts_query( $q ) {
-
     if ( ! $q->is_main_query() ) return;
     if ( ! $q->is_post_type_archive() ) return;
 
-    if ( ! is_admin() && is_shop() && assign_gift_card_cat() ) {
+    if ( ! is_admin() && !is_shop() && assign_gift_card_cat() ) {
+        $tax_query = (array) $q->get( 'tax_query' );
 
-        $q->set( 'tax_query', array(array(
-            'taxonomy' => 'product_cat',
-            'field' => 'slug',
-            'terms' => assign_gift_card_cat(), // Don't display products in the knives category on the shop page
-            'operator' => 'NOT IN'
-        )));
+        $tax_query[] = array(
+               'taxonomy' => 'product_cat',
+               'field' => 'slug',
+               'terms' => assign_gift_card_cat(), // Don't display products in the clothing category on the shop page.
+               'operator' => 'NOT IN'
+        );
 
+
+        $q->set( 'tax_query', $tax_query );
     }
-
-    remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
-
 }
+add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );  
 
 /**
     Myaccount body class
