@@ -1,11 +1,11 @@
 <?php 
 get_header(); 
 get_template_part('templates/breadcrumbs');
-$thisID = get_option( 'page_for_posts' )
+$thisID = get_option( 'page_for_posts' );
 $titel = get_field('titel', $thisID);
 $subtitel = get_field('subtitel', $thisID);
 $beschrijving = get_field('beschrijving', $thisID); 
-$titel = !empty($titel)? $titel:get_the_title($thisID);
+$titel = !empty($titel)? $titel : get_the_title($thisID);
 ?>
 <section class="blg-page-hdr">
   <div class="container">
@@ -24,7 +24,47 @@ $titel = !empty($titel)? $titel:get_the_title($thisID);
     </div>    
   </div>  
 </section>
+<?php 
+ if( isset($_GET['orderby']) && !empty($_GET['orderby']) ){
+      $order = $_GET['orderby'];
+  }
+?>
+<section class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="">
+          
+          <div class="secrh-select-cntlr">
+            <div class="fl-secrh-cntlr">
+              <div class="fl-secrh">
+                  <form action="<?php echo get_permalink($thisID); ?>" method="get">
+                    <input type="text" placeholder="Naar welke thee ben jij opzoek?" name="s" value="<?php echo get_search_query(); ?>">
+                    <button type="submit">
+                      <i><svg class="search-icon" width="21" height="21" viewBox="0 0 21 21" fill="#31304F">
+                        <use xlink:href="#search-icon"></use> </svg></i>
+                      </button>
+                  </form>
+                </div>
+            </div>
+            <div class="fl-select-cntlr">
+              <span>Sorteren Op:</span>
+              <div class="fl-select">
+                <form method="get" action="<?php echo get_permalink($thisID); ?>">
+                <select class="selectpicker" name="orderby" id="" onchange="this.form.submit()">
+                  <option value="asc" <?php echo ($order == 'asc')?'selected':'';?>>A-Z</option>
+                  <option value="desc" <?php echo ($order == 'desc')?'selected':'';?>>Z-A</option>
+                </select>
+              </form>
+              </div>
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="blog-page-sec">
   <div class="container">

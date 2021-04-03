@@ -161,16 +161,30 @@ if( !function_exists('cbv_custom_both_breadcrump')){
     }
 }
 
-function faqcat_pagination($query) {
-    if (is_tax('faq_cat') && $query->is_main_query() && !is_admin() ) {
-        $query->set('post_type',array('faqs'));
+function custom_post_type_query($query) {
+    if (isset($_GET['orderby']) && $query->is_main_query() && !is_admin() ) {
+        /*$query->set('post_type',array('faqs'));
         $query->set( 'posts_per_page', 2 );
-        $query->set( 'orderby', 'modified' );
+        $query->set( 'orderby', 'modified' );*/
+        $post_type = 'post';
+        $order = '';
+
+        if( isset($_GET['orderby']) && !empty($_GET['orderby']) ){
+            $order = $_GET['orderby'];
+        }
+        if( !empty( $order ) ){
+            $query->set('post_type', $post_type);
+            $query->set( 'order', $order );
+        }
+
+    }elseif(is_archive()) && $query->is_main_query()){
+        $query->set('post_type', $post_type);
+        $query->set( 'order', 'asc' );
     }
-return $query;
+    return $query;
 }
  
-add_filter('pre_get_posts','faqcat_pagination');
+add_filter('pre_get_posts','custom_post_type_query');
 /**
 Debug->>
 */

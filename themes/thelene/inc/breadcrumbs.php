@@ -69,7 +69,7 @@ function cbv_breadcrumbs() {
         if ($show_current) echo $sep . $before . sprintf($text['category'], single_cat_title('', false)) . $after;
       }
 
-    } elseif ( is_search() ) {
+    } elseif ( is_search() or isset($_GET['s']) ) {
       if (have_posts()) {
         if ($show_home_link && $show_current) echo $sep;
         if ($show_current) echo $before . sprintf($text['search'], get_search_query()) . $after;
