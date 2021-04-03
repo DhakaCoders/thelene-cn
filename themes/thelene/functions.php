@@ -177,7 +177,7 @@ function custom_post_type_query($query) {
             $query->set( 'order', $order );
         }
 
-    }elseif(is_archive()) && $query->is_main_query()){
+    }elseif(is_archive() && $query->is_main_query()){
         $query->set('post_type', $post_type);
         $query->set( 'order', 'asc' );
     }
