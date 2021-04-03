@@ -495,17 +495,19 @@ class cbv_wc_attribute_widget extends WC_Widget {
 					unset( $current_filter[ $key ] );
 				}
 			}
-
+			$addClass = '';
+			if( $filter_name == 'filter_cafeine' ){
+				$addClass = 'radio-btn ';
+			}
 			if ( ! empty( $current_filter ) ) {
-				$addClass = '';
-				if($filter_name == 'filter_cafeine'){
+				
+				if( $filter_name == 'filter_cafeine' ){
 					foreach( $current_filter as $cafs ){
-						if( $cafs != $_GET[ $filter_name ] ){
+						if( $cafs != @$_GET[ $filter_name ] ){
 							$current_filter = $cafs;
 						}
 					}
 					$filterimp = $current_filter;
-					$addClass = 'radio-btn ';
 				}else{
 					asort( $current_filter );
 					$filterimp = implode( ',', $current_filter );
