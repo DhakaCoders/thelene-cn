@@ -159,7 +159,7 @@ body.woocommerce-orders .account-page-title h1{
 
 
 
-/* ------------------------- woocommerce-orders -----------------------*/
+/* -------------------------body woocommerce-orders -----------------------*/
 body.woocommerce-orders .innerpage-con-wrap{
 	max-width: 100%;
 }
@@ -595,8 +595,8 @@ body.woocommerce-account .woocommerce-input-wrapper .bootstrap-select{
 .woocommerce-form .form-row .woocommerce-form__label-for-checkbox input:checked ~ .checkbox-custom{
 	background: #8AA4E4;
 }
- .login-info p > input:checked ~ .checkbox-custom:after,
- .same-as-shipping-address input:checked ~ .checkbox-custom:after,
+.login-info p > input:checked ~ .checkbox-custom:after,
+.same-as-shipping-address input:checked ~ .checkbox-custom:after,
 .woocommerce-form .form-row .woocommerce-form__label-for-checkbox input:checked ~ .checkbox-custom:after{
 	content: "";
 }
@@ -912,7 +912,7 @@ body.woocommerce-checkout .innerpage-con-wrap{
 body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper .form-row{
     margin-bottom:45px
 }
-.body.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper label{
+body.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper label{
     color:#525A61;
 }
 body .woocommerce-checkout .woocommerce-form__label .checkbox-custom{
@@ -933,7 +933,8 @@ body .woocommerce-checkout .woocommerce-form__label input{
 }
 
 @media(max-width: 1499px){
-    .woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+    body.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content,
+    body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
         padding-left:70px;
     }
     body.woocommerce-account .page-title {
@@ -970,14 +971,14 @@ body .woocommerce-checkout .woocommerce-form__label input{
         margin-left: auto;
         margin-right: auto;
 	}
-    .loggedin-winkelmandje-crtl .innerpage-con-wrap{
+    body.loggedin-winkelmandje-crtl .innerpage-con-wrap{
         max-width: 100%;
     }
 	.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a{
 		padding:12px 20px;
 		font-size:15px;
 	}
-    .woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+    body.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
         padding-left: 40px;
     }
 /* -------------------- loggedin-winkelmandje-crtl -------------------------*/
@@ -999,13 +1000,14 @@ body .woocommerce-checkout .woocommerce-form__label input{
 		font-size:38px;
 	}
 	/* ----------------- account order -------------------*/
-	.woocommerce-orders .myac-pro-grds .myac-pro-grd-item {
+	body.woocommerce-orders .myac-pro-grds .myac-pro-grd-item {
 	    max-width: 100%;
 	}
-	.woocommerce-orders .myac-pro-grds{
+	body.woocommerce-orders .myac-pro-grds{
 		flex-wrap: wrap;
 	}
-	.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation {
+	body.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation,
+    body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 	    padding-right:0px;
 	}
 	/* ------------------------ accound deshboard ----------------------*/
@@ -1047,6 +1049,16 @@ body .woocommerce-checkout .woocommerce-form__label input{
 	body.woocommerce-account .woocommerce textarea{
 		height:48px;
 	}
+    
+    body.woocommerce-edit-account .woocommerce input[type="text"], 
+    body.woocommerce-edit-account .woocommerce input[type="email"], 
+    body.woocommerce-edit-account .woocommerce input[type="tel"], 
+    body.woocommerce-edit-account .woocommerce input[type="password"], 
+    body.woocommerce-edit-account .woocommerce textarea{
+        height:45px;
+    }
+
+
 	body.woocommerce-account .woocommerce form .show-password-input, 
 	body.woocommerce-account .woocommerce-page form .show-password-input{
 		top:50%!important;
@@ -1078,7 +1090,7 @@ body .woocommerce-checkout .woocommerce-form__label input{
 
 
 	/*  ----------------------------- my account reg page ------------------------- */
-	.woocommerce-account .register-title h3, .login-info h3 {
+	body.woocommerce-account .register-title h3, .login-info h3 {
 	    font-size: 19px;
 	}
 	.woocommerce-input-wrapper span {
@@ -1140,26 +1152,26 @@ body .woocommerce-checkout .woocommerce-form__label input{
 
 	/* ------------------ account order -------------------*/
 
-	.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+	body.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 		display: none;
 	}
-	.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+	body.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
 		margin-left:auto;
 		margin-right: auto;
 	}
-	.woocommerce-orders .myac-pro-grd-item .myac-pro-grd-item-inr{
+	body.woocommerce-orders .myac-pro-grd-item .myac-pro-grd-item-inr{
 		padding-top:15px;
 	}
-	.woocommerce-orders .myac-pro-grd-item-inr .myac-pro-grd-img{
+	body.woocommerce-orders .myac-pro-grd-item-inr .myac-pro-grd-img{
 		max-width:75px;
 	}
-	.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc span{
+	body.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc span{
 		font-size:14px;
 	}
-	.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc .product-price bdi{
+	body.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc .product-price bdi{
 		font-size: 14px;
 	}
-	.woocommerce-account-grds-cntlr{
+	body.woocommerce-account .woocommerce-account-grds-cntlr{
 	    margin-bottom: 40px;
 	}
 	.back-to-dashboard-btn-cntlr{
@@ -1182,14 +1194,14 @@ body .woocommerce-checkout .woocommerce-form__label input{
 		border-bottom:none!important;
 		padding-bottom:0!important;
 	}
-	.woocommerce-orders .orders-crtl .contact-info a.order-contact-btn{
+	body.woocommerce-orders .orders-crtl .contact-info a.order-contact-btn{
 		margin-bottom:0;
 	}
-	.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+	body.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
 		max-width: 500px;
 		padding-left: 0px;
 	}
-	.woocommerce-orders .orders-crtl .code-text{
+	body.woocommerce-orders .orders-crtl .code-text{
 		font-size:18px;
 	}
 
@@ -1200,48 +1212,49 @@ body .woocommerce-checkout .woocommerce-form__label input{
 
 	/* ---------------------woocommerce-edit-account------------------------*/
 
-	.woocommerce-edit-account .innerpage-con-wrap .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+	body.woocommerce-edit-account .innerpage-con-wrap .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 		display: none;
 	}
 	body.woocommerce-edit-account .account-page-title h1{
 		display: none;
 	}
-	.woocommerce-edit-account .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+	body.woocommerce-edit-account .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
 		max-width:500px;
 		margin-left: auto;
 		margin-right: auto;
+        text-align: left;
 	}
-	.woocommerce-account .woocommerce-EditAccountForm legend{
+	body.woocommerce-account .woocommerce-EditAccountForm legend{
 		font-size: 20px;
 		margin-bottom:23px;
 	}
-	.woocommerce-edit-account .account-page-title div:first-child a{
+	body.woocommerce-edit-account .account-page-title div:first-child a{
 		margin-bottom:0;
 	}
 
 
 	/* ---------------------- woocommerce-MyAccount-content --------------------------*/
-	.loggedin-deshboard-crtl .woocommerce-MyAccount-content{
+	body.loggedin-deshboard-crtl .woocommerce-MyAccount-content{
 		display: none;
 	}
-    .woocommerce-edit-account .woocommerce-MyAccount-content{
+    body.woocommerce-edit-account .woocommerce-MyAccount-content{
         display:block;
     }
-	.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+	body.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 		max-width:100%;
 		text-align:left;
 	}
-	.loggedin-deshboard-crtl .account-page-title{
+	body.loggedin-deshboard-crtl .account-page-title{
 		text-align: center;
 		max-width: 500px;
-
 		margin-left: auto;
 		margin-right:auto;
 	}
-	.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr{
+	body.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr,
+    body.woocommerce-edit-account .woocommerce-account-grds-cntlr{
 		padding-top:10px;
 	}
-	.woocommerce-account .woocommerce-MyAccount-navigation{
+	body.woocommerce-account .woocommerce-MyAccount-navigation{
 		margin-bottom: 6px;
 	}
     body.loggedin-winkelmandje-crtl .woocommerce-MyAccount-navigation{
@@ -1262,7 +1275,7 @@ body .woocommerce-checkout .woocommerce-form__label input{
     body.loggedin-winkelmandje-crtl .myaccount-cart-crtl .woocommerce-mini-cart + p {
         margin-bottom: 18px;
     }
-    .loggedin-winkelmandje-crtl .account-page-title .woocommerce-account-grds-cntlr{
+    body.loggedin-winkelmandje-crtl .account-page-title .woocommerce-account-grds-cntlr{
         padding-top:15px;
     }
 }
@@ -1315,7 +1328,7 @@ body .woocommerce-checkout .woocommerce-form__label input{
     }
 	/*  ----------------------------- my account reg page ------------------------- */
 
-	.woocommerce-account .register-title h3, .login-info h3 {
+	body.woocommerce-account .register-title h3, .login-info h3 {
 	    font-size: 16px;
 	}
 	.same-as-shipping-address, 
@@ -1339,14 +1352,14 @@ body .woocommerce-checkout .woocommerce-form__label input{
 	/* --------------- order -----------------------*/
 	
 	/* --------------woocommerce-edit-account---------------*/
-	.woocommerce-account .woocommerce-EditAccountForm legend{
+	body.woocommerce-account .woocommerce-EditAccountForm legend{
 		font-size: 20px;
 	}
 	/* --------------- account deshboard ----------------*/
-	.loggedin-deshboard-crtl .account-page-title .loggedin-text{
+	body.loggedin-deshboard-crtl .account-page-title .loggedin-text{
 		font-size: 12px
 	}
-	.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a {
+	.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a{
 	    font-size: 12px;
 	}
 }
@@ -1359,15 +1372,15 @@ body .woocommerce-checkout .woocommerce-form__label input{
 		font-size:26px;
 	}
 	
-	.woocommerce-orders .faq-accordion-wrp ul li .orders-crtl .my-ac-time{
+	body.woocommerce-orders .faq-accordion-wrp ul li .orders-crtl .my-ac-time{
 		font-size: 12px;
 	}
-	.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc span{
+	body.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc span{
 		font-size:10px;
 	}
 
 	/* --------------woocommerce-edit-account---------------*/
-	.woocommerce-account .woocommerce-EditAccountForm legend{
+	body.woocommerce-account .woocommerce-EditAccountForm legend{
 		font-size: 16px;
 	}
 }
