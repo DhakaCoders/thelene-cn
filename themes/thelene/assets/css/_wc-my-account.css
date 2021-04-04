@@ -506,7 +506,10 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-f
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper #billing_company_field{
 	padding-right: 13px
 }
-
+body.woocommerce-checkout .checkout-terms{
+    border-top: 1px solid #ECE9E9;
+    padding-top: 13px;
+}
 body.woocommerce-account .woocommerce form .form-row-last, 
 body.woocommerce-account .woocommerce-page form .form-row-last,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-last{
