@@ -989,7 +989,13 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_tabl
 	/*  --------------------- account-deshbord -------------------------*/
 	.innerpage-con-wrap {
 	    max-width: 890px;
+        margin-left: auto;
+        margin-right: auto;
 	}
+
+    .loggedin-winkelmandje-crtl .innerpage-con-wrap{
+        max-width: 100%;
+    }
 	.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a{
 		padding:12px 20px;
 		font-size:15px;
@@ -998,11 +1004,17 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_tabl
 
 
 
-.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
-    padding-left: 40px;
-}
+    .woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+        padding-left: 40px;
+    }
 
-
+/* -------------------- loggedin-winkelmandje-crtl -------------------------*/
+    body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+        padding-left: 50px;
+    }
+    body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a{
+        width:130px;
+    }
 
 
 
@@ -1258,6 +1270,9 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_tabl
 	.loggedin-deshboard-crtl .woocommerce-MyAccount-content{
 		display: none;
 	}
+    .woocommerce-edit-account .woocommerce-MyAccount-content{
+        display:block;
+    }
 	.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 		max-width:100%;
 		text-align:left;
@@ -1275,6 +1290,27 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_tabl
 	.woocommerce-account .woocommerce-MyAccount-navigation{
 		margin-bottom: 6px;
 	}
+    body.loggedin-winkelmandje-crtl .woocommerce-MyAccount-navigation{
+        display: none;
+    }
+    body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+        max-width:100%;
+    }
+    body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+        padding-left:0px;
+    }
+    body.loggedin-winkelmandje-crtl .deshboard-inner .myaccount-cart-crtl {
+        padding: 0 30px;
+    }
+    body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button + a img{
+        width: 100px;
+    }
+    body.loggedin-winkelmandje-crtl .myaccount-cart-crtl .woocommerce-mini-cart + p {
+        margin-bottom: 18px;
+    }
+    .loggedin-winkelmandje-crtl .account-page-title .woocommerce-account-grds-cntlr{
+        padding-top:15px;
+    }
 }
 
 @media(max-width: 659px){
@@ -1316,6 +1352,13 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_tabl
 	body.woocommerce-account .register-field-error .contact-er-msg span{
 		display: flex;
 	}
+    body.loggedin-winkelmandje-crtl .deshboard-inner .myaccount-cart-crtl {
+        padding: 0 0px;
+    }
+    body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a {
+        width: 115px;
+        height:35px;
+    }
 	/*  ----------------------------- my account reg page ------------------------- */
 
 	.woocommerce-account .register-title h3, .login-info h3 {
