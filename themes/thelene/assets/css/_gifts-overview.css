@@ -95,8 +95,12 @@
 	line-height: 1;
 	background: #FFFFFF;
 	border-radius: 6px;
-	border: 2px solid transparent;
+	border: 1px solid #fff!important;
 	padding: 13.5px 48px 13.5px 18px;
+}
+.fl-secrh form input:focus{
+	border-color: #31304F!important;
+	border-width: 1px!important;
 }
 .fl-secrh form input::placeholder {
 	font-size: 14px;
@@ -130,6 +134,7 @@
 	padding: 0;
 	cursor: pointer;
 	z-index: 5;
+	margin-top: -2px;
 }
 .fl-secrh form button:hover i svg{
 	fill: #EC5387;

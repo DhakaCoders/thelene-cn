@@ -159,6 +159,7 @@
 	border-color: #31304F!important;
 	border-radius: 6px!important;
 	margin-top: 25px!important;
+	height: 50px;
 }
 .sidebar-widget .ui-slider .ui-slider-handle{
 	background: #FFFFFF!important;
@@ -172,7 +173,9 @@
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 }
-
+.sidebar-widget .ui-widget-header{
+	background: #8AA4E4!important;
+}
 .sidebar-widget .ui-widget.ui-widget-content{
 	background: #F1E8E1!important;
 	box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1)!important;
