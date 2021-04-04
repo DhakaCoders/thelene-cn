@@ -356,7 +356,14 @@ body.single-product div.product form.cart .button:before{
 	border-top: 1px solid #F1E8E1;
 	margin-top: 40px;
 }
-
+.summary-ctrl .qty-price-wrap > del,
+.summary-ctrl .qty-price-wrap > ins,
+.summary-ctrl .qty-price-wrap > span.woocommerce-Price-amount{
+	font-weight: 600;
+	color: #31304F;
+	font-size: 24px;
+	color: #31304F;
+}
 span.onsale{
 	position: absolute;
     width: 100px!important;
@@ -371,17 +378,20 @@ span.onsale{
     line-height: 1!important;
     font-weight: 700!important;
     z-index: 11;
-    right: 0!important;
     left: auto!important;
-    top: 0;
+    top: 15px!important;
+    right: 15px!important;
     border-radius: 0!important;
     padding-top: 5px!important;
     margin: 0!important;
+    min-height: auto!important;
+
 }
 body.single-product .main-img-crtl{
 	position: relative;
 }
-body.single-product .fl-product span.onsale{
+body.single-product .fl-product span.onsale,
+body.single-product .fl-product span.seller-flash{
 	width: 129px!important;
 	right: auto!important;
 	top: 20px!important;

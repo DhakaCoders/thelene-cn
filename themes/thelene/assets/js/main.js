@@ -259,6 +259,14 @@ $('.main-img-crtl').slick({
 
 $('.fl-product .price-quentity-ctrl form .variations tbody tr td select').addClass('selectpicker');
 
+$('.xs-filter-btn').click(function(e){
+   $('.product-page-sidebar').fadeIn(300);
+ });
+$('.sidebar-close-btn').click(function(e){
+   $('.product-page-sidebar').fadeOut(300);
+ });
+
+
 //products counter
 if( $('.qty').length ){
   $('.qty').each(function() {

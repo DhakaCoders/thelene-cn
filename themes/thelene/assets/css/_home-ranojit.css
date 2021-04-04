@@ -60,7 +60,10 @@
 .fl-product-grd .fl-pro-grd-title:hover a{
 	color: #EC5387;
 }
-.fl-pro-absolute-text,.fl-product-grd .seller-flash{
+.fl-pro-absolute-text,
+.fl-product-grd .seller-flash,
+.pro-item .seller-flash,
+.seller-flash {
 	position: absolute;
 	width: 129px;
 	height: 30px;
@@ -74,8 +77,8 @@
 	line-height: 1;
 	font-weight: 700;
 	z-index: 11;
-	left: 0;
-	top: 0;
+	left: 15px;
+	top: 15px;
 }
 .hm-all-products-btn{
 	padding-top: 40px;
@@ -111,6 +114,10 @@
 	.hm-products-section{
 		padding-top: 90px;
 		margin-top: -90px;
+	}
+	.fl-pro-grd-img-cntlr img{
+		max-height: 167px;
+		width: auto;
 	}
 }
 
