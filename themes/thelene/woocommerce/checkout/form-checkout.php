@@ -31,13 +31,16 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
-	<?php if ( $checkout->get_checkout_fields() ) : ?>
+	<?php 
+	if ( $checkout->get_checkout_fields() ) : 
+	$cURL = wc_get_cart_url();
+	?>
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="col2-set" id="customer_details">
 <div class="checkout-page-title">
-	<div><a class="backshop-cart" href="">Terug naar winkelmandje</a></div>
+	<div class="back-to-dashboard-btn-cntlr"><a class="backshop-cart" href="<?php echo $cURL; ?>">Terug naar winkelmandje</a></div>
 	<h1><?php the_title(); ?></h1>
 </div>
 			<div class="col-1">
