@@ -274,7 +274,8 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 small.woocommerce-price-suffix,
 .xoo-cp-pprice del,
 .product-price del,
-.product-price ins{
+.product-price ins,
+.fl-pro-grd-price > span.woocommerce-Price-amount{
 	margin-right: 2px!important;
 	margin-left: 2px!important;
 }
