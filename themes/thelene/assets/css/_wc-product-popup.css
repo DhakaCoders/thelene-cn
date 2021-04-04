@@ -228,17 +228,24 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
     margin-top: 18px;
 }
 .product-price ins span,
-.xoo-cp-pprice ins span{
+.xoo-cp-pprice ins span,
+.fl-pro-grd-price ins span{
     color: #31304F;
     font-size: 14px;
     font-weight: 500;
     margin-right: 0!important;
 }
+.product-price del > span,
+.xoo-cp-pprice del > span,
+.fl-pro-grd-price del > span{
+	margin-right: 5px!important;
+}
 .product-price span bdi span{
 	margin-right: 0!important;
 }
 .product-price del span,
-.xoo-cp-pprice del span{
+.xoo-cp-pprice del span,
+.fl-pro-grd-price del span{
     color: #525A61;
     font-size: 12px;
     text-decoration-line: line-through;

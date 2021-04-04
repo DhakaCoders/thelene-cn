@@ -266,7 +266,7 @@ body.woocommerce-order-received h2.woocommerce-column__title {
     line-height: 50px;
 }
 .woocommerce-account .woocommerce-EditAccountForm legend {
-    padding-top: 20px;
+    padding-top: 10px;
     font-weight: 700;
     color: #202020;
     font-size: 24px;
