@@ -43,4 +43,6 @@
         <?php do_action('cbv_catalog'); ?>
       </div>
     </div>
+
+    
 </div>
