@@ -247,6 +247,11 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
     text-decoration-line: line-through;
     margin-right: 0;
 }
+.qty-price-wrap del span{
+	font-size:20px;
+	text-decoration-line: line-through;
+
+}
 .product-price > span:first-child bdi,
 .product-price > span:nth-child(2){
 	font-size:14px;
