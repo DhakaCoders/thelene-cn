@@ -275,7 +275,9 @@ small.woocommerce-price-suffix,
 .xoo-cp-pprice del,
 .product-price del,
 .product-price ins,
-.fl-pro-grd-price > span.woocommerce-Price-amount{
+.fl-pro-grd-price > span.woocommerce-Price-amount,
+.qty-price-wrap > del,
+.qty-price-wrap ins{
 	margin-right: 2px!important;
 	margin-left: 2px!important;
 }

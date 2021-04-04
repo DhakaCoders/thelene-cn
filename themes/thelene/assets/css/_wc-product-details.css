@@ -356,7 +356,11 @@ body.single-product div.product form.cart .button:before{
 	border-top: 1px solid #F1E8E1;
 	margin-top: 40px;
 }
-
+.summary-ctrl .qty-price-wrap > del,
+.summary-ctrl .qty-price-wrap > ins{
+	font-weight: 600;
+	color: #31304F;
+}
 span.onsale{
 	position: absolute;
     width: 100px!important;
