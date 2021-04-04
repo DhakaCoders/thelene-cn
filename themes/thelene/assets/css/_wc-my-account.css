@@ -13,8 +13,11 @@ body.woocommerce-account .account-page-title h1{
 .woocommerce-account-grds-cntlr {
     padding-top: 43px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 75px;
+}
+.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr{
+  align-items: center;  
 }
 .woocommerce-account-grds-cntlr .woocommerce-notices-wrapper{
 	display: none;
@@ -689,7 +692,7 @@ body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li > span{
     margin-top:8px;
     display: inline-block;
 }
- .woocommerce-account-grds-cntlr{
+body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr{
     align-items: flex-start;
 }
 body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a:not(:last-child){
