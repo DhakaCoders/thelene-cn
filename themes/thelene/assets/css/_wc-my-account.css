@@ -96,6 +96,7 @@ body.woocommerce-account .account-page-title h1{
 .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.is-active a{
 	background: #31304F;
 	color:#fff;
+    border-radius:4px;
 }
 
 
