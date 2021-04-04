@@ -160,48 +160,48 @@ body.woocommerce-orders .account-page-title h1{
 
 
 /* ------------------------- woocommerce-orders -----------------------*/
-.woocommerce-orders .innerpage-con-wrap{
+body.woocommerce-orders .innerpage-con-wrap{
 	max-width: 100%;
 }
-.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+body.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 	max-width: 33.95%;
 
 }
-.woocommerce-orders .myac-pro-grd-item-inr .myac-pro-grd-img{
+body.woocommerce-orders .myac-pro-grd-item-inr .myac-pro-grd-img{
 	max-width:90px;
 	height: auto;
 	margin-right: 30px;
 }
-.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+body.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
 	max-width:66.05%;
 	padding-left:120px;
 }
-.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc h5{
+body.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc h5{
 	font-size:18px;
 	color: #31304F;
 	font-weight: normal;
 	margin-bottom:7px;
 	line-height:1.2;
 }
-.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc span{
+body.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc span{
 	color: #78797B;
     font-size:14px;
 }
-.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc .product-price bdi{
+body.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc .product-price bdi{
 	color: #31304F;
 	/*font-weight:500;*/
 }
-.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc h5 strong{
+body.woocommerce-orders .myac-pro-grd-item-inr .order-items-desc h5 strong{
 	display: none
 }
-.woocommerce-orders .myac-pro-grds .myac-pro-grd-item{
+body.woocommerce-orders .myac-pro-grds .myac-pro-grd-item{
 	max-width: 50%;
 	width: 100%;
 }
-.woocommerce-orders .myac-pro-grd-item .myac-pro-grd-item-inr{
+body.woocommerce-orders .myac-pro-grd-item .myac-pro-grd-item-inr{
  padding-right: 30px;
 }
-.woocommerce-orders .orders-crtl .code-text{
+body.woocommerce-orders .orders-crtl .code-text{
 	font-size:24px;
 	letter-spacing: -0.02em;
 	font-weight:700;
@@ -211,15 +211,15 @@ body.woocommerce-orders .account-page-title h1{
 	font-family: 'Open Sans';
 	margin-top:5px;
 }
-.woocommerce-orders .orders-crtl .my-ac-timea{
+body.woocommerce-orders .orders-crtl .my-ac-timea{
 	margin-bottom:5px;
 }
-.woocommerce-orders  .myac-pro-grd-item .myac-pro-grd-item-inr{
+body.woocommerce-orders  .myac-pro-grd-item .myac-pro-grd-item-inr{
     align-items: center;
     padding-top: 40px;
     padding-bottom: 12px;
 }
-.woocommerce-orders  .order-details .color-green{
+body.woocommerce-orders  .order-details .color-green{
 	color: #8CCC0C;
 	font-weight:500;
 	font-family: 'Work Sans', sans-serif;
@@ -227,7 +227,7 @@ body.woocommerce-orders .account-page-title h1{
 	margin-top: 20px;
 	position: relative;
 }
-.woocommerce-orders .order-details .order-status:after {
+body.woocommerce-orders .order-details .order-status:after {
     content: "";
     background-image: url(../images/woordr-conifo-icon.svg);
     width: 25px;
@@ -243,7 +243,7 @@ body.woocommerce-orders .account-page-title h1{
     top: 50%;
     margin-top:-4px;
 }
-.woocommerce-orders  .orders-crtl .contact-info a.order-contact-btn{
+body.woocommerce-orders  .orders-crtl .contact-info a.order-contact-btn{
 	display: inline-block;
     padding: 7px 48px;
     font-size: 12px!important;
@@ -251,21 +251,21 @@ body.woocommerce-orders .account-page-title h1{
     margin-bottom:0px;
     font-weight:700;
 }
-.woocommerce-orders .orders-crtl .contact-info a.order-contact-btn:after{
+body.woocommerce-orders .orders-crtl .contact-info a.order-contact-btn:after{
 	content: none;
 }
-.woocommerce-orders .faq-accordion-wrp ul li .orders-crtl {
+body.woocommerce-orders .faq-accordion-wrp ul li .orders-crtl {
     padding-top: 25px;
     padding-bottom: 27px;
 }
 body.woocommerce-orders .faq-accordion-wrp .orders-crtl time{
     color: #9EA5AB;
 }
-.woocommerce-orders .faq-accordion-wrp ul li{
+body.woocommerce-orders .faq-accordion-wrp ul li{
 	border-radius:6px;
     border: 1px solid #F2EDE9;
 }
-.woocommerce-orders .orders-crtl .contact-info i{
+body.woocommerce-orders .orders-crtl .contact-info i{
 	background: url(../images/woordr-conifo-icon.svg);
 	width:25px;
 	height: 25px;
@@ -277,14 +277,13 @@ body.woocommerce-orders .faq-accordion-wrp .orders-crtl time{
 	display: none;
 }
 
-.woocommerce-orders .woocommerce-account-grds-cntlr{
+body.woocommerce-orders .woocommerce-account-grds-cntlr{
 	padding-top:72px;
 }
-
-.woocommerce-orders .order-details .myac-pro-grds{
+body.woocommerce-orders .order-details .myac-pro-grds{
 	border-bottom: 1px solid #ddd;
 }
-.woocommerce-orders .order-details{
+body.woocommerce-orders .order-details{
 	border:none;
 }
 
