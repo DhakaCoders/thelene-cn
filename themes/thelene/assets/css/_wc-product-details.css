@@ -371,12 +371,14 @@ span.onsale{
     line-height: 1!important;
     font-weight: 700!important;
     z-index: 11;
-    right: 0!important;
     left: auto!important;
-    top: 0;
+    top: 15px!important;
+    right: 15px!important;
     border-radius: 0!important;
     padding-top: 5px!important;
     margin: 0!important;
+    min-height: auto!important;
+
 }
 body.single-product .main-img-crtl{
 	position: relative;
