@@ -510,6 +510,9 @@ body.woocommerce-checkout .checkout-terms{
     border-top: 1px solid #ECE9E9;
     padding-top: 13px;
 }
+body.woocommerce-checkout  .payment-method-crtl .woocommerce-additional-fields.extra-info{
+    padding-top: 50px;
+}
 body.woocommerce-account .woocommerce form .form-row-last, 
 body.woocommerce-account .woocommerce-page form .form-row-last,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-last{
