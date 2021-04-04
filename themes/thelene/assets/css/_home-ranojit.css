@@ -112,6 +112,10 @@
 		padding-top: 90px;
 		margin-top: -90px;
 	}
+	.fl-pro-grd-img-cntlr img{
+		max-height: 167px;
+		width: auto;
+	}
 }
 
 @media(max-width: 1399px){

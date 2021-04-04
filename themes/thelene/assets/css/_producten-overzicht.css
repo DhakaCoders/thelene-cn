@@ -66,6 +66,8 @@
 	align-items: center;
 	justify-content: center;
 	color: #fff;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .fl-product-grd-2 .fl-product-grd-inr{
@@ -74,6 +76,11 @@
 
 .fl-product-grd-2 .fl-h4{
 	color: #fff;
+}
+
+.fl-product-grd .fl-trnsprnt-btn{
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /* Product attribute filter */
