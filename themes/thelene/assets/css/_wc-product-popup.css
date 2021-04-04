@@ -235,11 +235,7 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
     font-weight: 500;
     margin-right: 0!important;
 }
-.product-price del > span,
-.xoo-cp-pprice del > span,
-.fl-pro-grd-price del > span{
-	margin-right: 5px!important;
-}
+
 .product-price span bdi span{
 	margin-right: 0!important;
 }
@@ -273,9 +269,25 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 .pro-item-desc  .pro-item-descWrap .product-price {
     margin-bottom: 7px;
 }
-.woocommerce-price-suffix{
-	margin-left: 3px;
+.fl-pro-grd-price > del,
+.fl-pro-grd-price > ins,
+small.woocommerce-price-suffix,
+.xoo-cp-pprice del,
+.product-price del,
+.product-price ins,
+.fl-pro-grd-price > span.woocommerce-Price-amount{
+	margin-right: 2px!important;
+	margin-left: 2px!important;
 }
+
+/*.product-price del > span,
+.xoo-cp-pprice del > span,
+.fl-pro-grd-price del > span{
+	margin-right: 5px!important;
+}*/
+/*.woocommerce-price-suffix{
+	margin-left: 3px;
+}*/
 @media(max-width:1199px){
 	.xoo-cp-container {
 	    max-width: 750px;
