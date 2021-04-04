@@ -33,6 +33,10 @@
         </form>
       </div>
     </div>
+    <div class="xs-filter-btn show-md">
+      <i><img src="<?php echo THEME_URI;?>/assets/images/funnel-icon.svg"></i>
+      <strong>FILTER</strong>
+    </div>
     <div class="fl-select-cntlr">
       <span>Sorteren Op:</span>
       <div class="fl-select">

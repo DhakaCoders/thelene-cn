@@ -235,7 +235,12 @@
 	.product-page-col-rgt {
 	    width: 100%;
 	}
-	
+	.product-page-sidebar{
+		display: none;
+	}
+	body.archive.post-type-archive .page-entry-header{
+		border: none;
+	}
 	
 }
 
