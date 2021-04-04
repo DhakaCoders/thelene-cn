@@ -456,7 +456,7 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 	padding-left:0;
 }
 
-/*  ----------------------------- my account reg page ------------------------- */
+/*  ----------------------------- my new account page ------------------------- */
 .woocommerce-account .register-title h3{
 	font-size:24px;
 	border-bottom: 1px solid #F1E8E1;
@@ -465,7 +465,6 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 .register-top-title h1{
 	border-bottom:none!important;
 }
-
  .woocommerce-input-wrapper span input
 /*.woocommerce-input-wrapper input*/{
  	opacity: 0;
@@ -578,8 +577,8 @@ body.woocommerce-account .woocommerce-input-wrapper .bootstrap-select{
 }
 
 .checkbox-custom:after{
-    left: 6px;
-    top: 2px;
+    left: 5px;
+    top: 1px;
     width: 6px;
     height: 11px;
     border: solid white;
@@ -587,7 +586,6 @@ body.woocommerce-account .woocommerce-input-wrapper .bootstrap-select{
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    
     position: absolute;
     border-radius: 3px;
     
