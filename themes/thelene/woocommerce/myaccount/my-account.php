@@ -29,10 +29,10 @@ defined( 'ABSPATH' ) || exit;
 			<div class="back-to-dashboard-btn-cntlr"><a href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
 			<h1>Bestellingen</h1>
 		<?php }elseif( strpos($_SERVER['REQUEST_URI'], "winkelmandje") !== false ){ ?>
-			<div><a class="back-to-dashboard-btn-cntlr" href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
+			<div class="back-to-dashboard-btn-cntlr"><a class="backshop-cart" href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
 			<h1>Winkelmandje</h1>
 		<?php }elseif( is_wc_endpoint_url( 'edit-account' ) ){ ?>
-			<div><a href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
+			<div class="back-to-dashboard-btn-cntlr"><a href="<?php echo esc_url( get_permalink(get_option( 'woocommerce_myaccount_page_id' )) );?>">Terug naar dashboard</a></div>
 			<h1>Account Info</h1>
 		<?php }else{ 
 		    $current_user = wp_get_current_user();
