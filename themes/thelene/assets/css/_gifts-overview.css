@@ -294,18 +294,18 @@
 	.geschenken-overzitch-grd-ctlr ul li{
 		padding-bottom: 55px;
 	}
-}
-@media(max-width: 767px){
-	.breadcrumb-sec{
-		display: none!important;
-	}
+
 	.secrh-select-cntlr{
 		margin: 0 -15px;
 		margin-bottom: 15px;
 		border-bottom: 0;
 	}
-	.fl-secrh{
-		max-width: 100%;
+	.fl-secrh {
+	    max-width: 100%;
+	    max-width: 442px;
+	    width: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
 	}
 	.fl-secrh-cntlr{
 		padding: 14px 15px;
@@ -318,10 +318,33 @@
 		padding: 9.5px 48px 9.5px 18px;
 	}
 	.fl-select-cntlr{
-		width: 100%;
 		justify-content: flex-end;
 		padding: 0 15px;
 	}
+	.breadcrumb-cntlr ul li a.fl-home-icon:after, .breadcrumb-cntlr ul li:first-child a:after{
+		margin-top: -1px;
+	}
+	.xs-filter-btn{
+		margin-left: 15px;
+	}
+	.xs-filter-btn i{
+		margin-right: 10px;
+	}
+	.xs-filter-btn strong{
+		display: inline-block;
+		vertical-align: baseline;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1;
+		color: #31304F;
+	}
+}
+@media(max-width: 767px){
+	.breadcrumb-sec{
+		display: none!important;
+	}
+	
 	.two-grid-module-cntlr{
 		padding: 45px 0;
 	}
