@@ -186,10 +186,11 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 }
 .woocommerce-orders .myac-pro-grd-item-inr .order-items-desc span{
 	color: #78797B;
+    font-size:14px;
 }
 .woocommerce-orders .myac-pro-grd-item-inr .order-items-desc .product-price bdi{
 	color: #31304F;
-	font-weight:500;
+	/*font-weight:500;*/
 }
 .woocommerce-orders .myac-pro-grd-item-inr .order-items-desc h5 strong{
 	display: none
@@ -197,6 +198,9 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
 .woocommerce-orders .myac-pro-grds .myac-pro-grd-item{
 	max-width: 50%;
 	width: 100%;
+}
+.woocommerce-orders .myac-pro-grd-item .myac-pro-grd-item-inr{
+ padding-right: 30px;
 }
 .woocommerce-orders .orders-crtl .code-text{
 	font-size:24px;
@@ -246,6 +250,7 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
     font-size: 12px!important;
     font-family: 'Open Sans'!important;
     margin-bottom:0px;
+    font-weight:700;
 }
 .woocommerce-orders .orders-crtl .contact-info a.order-contact-btn:after{
 	content: none;
@@ -254,8 +259,12 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="subm
     padding-top: 25px;
     padding-bottom: 27px;
 }
+body.woocommerce-orders .faq-accordion-wrp .orders-crtl time{
+    color: #9EA5AB;
+}
 .woocommerce-orders .faq-accordion-wrp ul li{
 	border-radius:6px;
+    border: 1px solid #F2EDE9;
 }
 .woocommerce-orders .orders-crtl .contact-info i{
 	background: url(../images/woordr-conifo-icon.svg);
@@ -963,7 +972,11 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_tabl
 
 
 
-
+@media(max-width: 1499px){
+    .woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+        padding-left:70px;
+    }
+}
 
 @media(max-width:1199px){
 	body.woocommerce-account .woocommerce input[type="text"],
