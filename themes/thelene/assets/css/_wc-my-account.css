@@ -157,17 +157,7 @@ body.woocommerce-orders .account-page-title h1{
 }
 
 
-body.woocommerce-edit-account.woocommerce-account .woocommerce-EditAccountForm legend{
-    border-bottom: 1px solid #ece9e9;
-    margin-bottom: 32px;
-}
-body.woocommerce-edit-account .woocommerce-EditAccountForm > p {
-    text-align: right;
-}
-body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="submit"]{
-	padding-left: 133px!important;
-	padding-right: 133px!important;
-}
+
 
 /* ------------------------- woocommerce-orders -----------------------*/
 .woocommerce-orders .innerpage-con-wrap{
@@ -286,9 +276,7 @@ body.woocommerce-orders .faq-accordion-wrp .orders-crtl time{
 	margin-bottom:25px;
 	display: none;
 }
-/*.woocommerce-orders .orders-crtl .contact-info {
-    padding-top: 13px;
-}*/
+
 .woocommerce-orders .woocommerce-account-grds-cntlr{
 	padding-top:72px;
 }
@@ -307,7 +295,17 @@ body.woocommerce-edit-account .innerpage-con-wrap{
 body.woocommerce-edit-account .woocommerce-account-grds-cntlr{
     margin-bottom:110px;
 }
-
+body.woocommerce-edit-account.woocommerce-account .woocommerce-EditAccountForm legend{
+    border-bottom: 1px solid #ece9e9;
+    margin-bottom: 32px;
+}
+body.woocommerce-edit-account .woocommerce-EditAccountForm > p {
+    text-align: right;
+}
+body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="submit"]{
+    padding-left: 133px!important;
+    padding-right: 133px!important;
+}
 
 
 
