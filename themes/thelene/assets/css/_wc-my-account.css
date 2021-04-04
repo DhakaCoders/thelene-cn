@@ -1,52 +1,46 @@
 
 /* ------------------- my account  deshboard-----------------------*/
-/*body.woocommerce-account .innerpage-con-wrap {
-    margin-bottom: 75px;*/
-.account-page-title {
+body.woocommerce-account .account-page-title{
     padding-top: 40px;
 }
+
 body.woocommerce-account .account-page-title h1{
 	border-bottom:none!important;
 	margin-bottom: 18px!important;
 	padding-bottom: 0!important;
 }
-.woocommerce-account-grds-cntlr {
+body.woocommerce-account .woocommerce-account-grds-cntlr{
     padding-top: 43px;
     display: flex;
     align-items: flex-start;
     margin-bottom: 75px;
 }
-.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr{
+body.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr{
   align-items: center;  
 }
-.woocommerce-account-grds-cntlr .woocommerce-notices-wrapper{
+body.woocommerce-account .woocommerce-account-grds-cntlr .woocommerce-notices-wrapper{
 	display: none;
 }
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li{
     border: 1px solid #31304F;
     border-radius: 6px;
     padding:0;
     position:relative;
     cursor: pointer;
 }
-
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li:not(:last-child){
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li:not(:last-child){
     margin-bottom: 19px;
 }
-
-
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
     max-width: 51.2%;
     width: 100%;
     padding-right: 24px;
 }
-
-.woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+body.woocommerce-account .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
     max-width: 48.80%;
     width: 100%;
 }
-
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a:after{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a:after{
     content: "";
     position: absolute;
     background: url(../images/my-ac-login-icon-01.svg);
@@ -61,31 +55,31 @@ body.woocommerce-account .account-page-title h1{
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.is-active a:after{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.is-active a:after{
     background: url(../images/my-ac-login-icon-active-01.svg);
 
 }
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:after{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:after{
     background: url(../images/my-ac-login-icon-02.svg);
     width:17px;
     height: 21px;
 }
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account.is-active a:after{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account.is-active a:after{
     background: url(../images/my-ac-login-icon-active-02.svg);
 }
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:after{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:after{
     background: url(../images/my-ac-login-icon-03.svg);
     height: 19px;
     width: 16px;
 }
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout{
 	border-color:#D17181;
 	
 }
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a{
 	color:#D17181!important;
 }
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li a{
     display: block;
     padding: 14px 20px;
     letter-spacing: 0.04em;
@@ -93,7 +87,7 @@ body.woocommerce-account .account-page-title h1{
     text-transform: uppercase;
     border-radius:6px;
 }
-.woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.is-active a{
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.is-active a{
 	background: #31304F;
 	color:#fff;
     border-radius:4px;
@@ -101,24 +95,26 @@ body.woocommerce-account .account-page-title h1{
 
 
 
+
+
 /*------------------innerpage-con-wrap--------------------*/
-.woocommerce-edit-account .innerpage-con-wrap .woocommerce-account-grds-cntlr,
-.woocommerce-orders .innerpage-con-wrap .woocommerce-account-grds-cntlr{
+body.woocommerce-edit-account .innerpage-con-wrap .woocommerce-account-grds-cntlr,
+body.woocommerce-orders .innerpage-con-wrap .woocommerce-account-grds-cntlr{
 	align-items: flex-start;
 }
-.woocommerce-edit-account .innerpage-con-wrap .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+body.woocommerce-edit-account .innerpage-con-wrap .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 	padding-top:20px;
 }
-.woocommerce-edit-account .innerpage-con-wrap,
-.woocommerce-orders .innerpage-con-wrap{
+body.woocommerce-edit-account .innerpage-con-wrap,
+body.woocommerce-orders .innerpage-con-wrap{
 	max-width:100%;
 	width: 100%;
 }
-.woocommerce-edit-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+body.woocommerce-edit-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 	max-width:34.02%;
 }
 
-.woocommerce-edit-account .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+body.woocommerce-edit-account .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
 	max-width:65.98%;
 }
 body.woocommerce-edit-account .account-page-title h1,
@@ -131,8 +127,14 @@ body.woocommerce-orders .account-page-title h1{
     position: relative;
     padding-left: 20px;
     display: inline-block;
-    vertical-align: baseline;
-    
+    vertical-align: baseline;    
+}
+.back-to-dashboard-btn-cntlr a:hover{
+    color: #8dcc0c;
+}
+.back-to-dashboard-btn-cntlr a:hover:after{
+    color: #8dcc0c;
+    left: -3px;
 }
 .back-to-dashboard-btn-cntlr{
 	margin-bottom:32px;
@@ -147,6 +149,9 @@ body.woocommerce-orders .account-page-title h1{
     transform: translateY(-50%);
     color: #76797A;
     margin-top: -1px;
+    transition:all .5s;
+    -ms-transition:all .5s;
+    -webkit-transition:all .5s;
 }
 .woocommerce-edit-account.woocommerce-account .woocommerce-EditAccountForm legend{
     border-bottom: 1px solid #ece9e9;
@@ -380,6 +385,9 @@ body.woocommerce-account .login-register-wrap a{
 	color:#8AA4E4;
 	text-decoration: underline;
 }
+body.woocommerce-account .login-register-wrap a:hover {
+    color: #8dcc0c;
+}
 body.woocommerce-account .woocommerce form .form-row label,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row label{
 	color:#000;
@@ -597,7 +605,7 @@ body.woocommerce-account .woocommerce-input-wrapper .bootstrap-select{
 .login-info p:first-child,
 .woocommerce-form .form-row .woocommerce-form__label-for-checkbox{
     position: relative;
-    padding-left: 30px;
+    padding-left: 25px;
 }
 .same-as-shipping-address input,
 .login-info p > input,
@@ -714,6 +722,24 @@ body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a:not(:l
 }
 body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons {
     display: flex;
+}
+body.loggedin-winkelmandje-crtl .woocommerce-mini-cart .woocommerce-mini-cart-item{
+    border: 1px solid #ECE9E9;
+    border-radius: 6px;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+}
+body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a {
+    width: 154px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    font-size: 12px!important;
+}
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl .woocommerce-mini-cart + p{
+    margin-bottom:25px;
 }
 /* ------------------ woocommerce-cart ----------------------*/
 
@@ -895,19 +921,9 @@ body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper .form-ro
 .body.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper label{
     color:#525A61;
 }
-body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a {
-    width: 154px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-    font-size: 12px!important;
-}
 
-body.loggedin-winkelmandje-crtl .myaccount-cart-crtl .woocommerce-mini-cart + p{
-    margin-bottom:25px;
-}
+
+
 body .woocommerce-checkout .woocommerce-form__label .checkbox-custom{
     display: none!important;
 }
@@ -924,6 +940,7 @@ body .woocommerce-checkout .woocommerce-form__label input{
     top:0;
     margin-top:1px!important;
 }
+
 /*body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
 body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_table td{}
@@ -979,6 +996,9 @@ body.woocommerce-checkout .innerpage-con-wrap .orcer-review-crtl table.shop_tabl
 @media(max-width: 1499px){
     .woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
         padding-left:70px;
+    }
+    body.woocommerce-account .page-title {
+        margin-top: 50px;
     }
 }
 

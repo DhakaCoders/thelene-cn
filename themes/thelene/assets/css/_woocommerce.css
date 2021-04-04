@@ -48,7 +48,8 @@ ul.select2-results__options li{
 .woocommerce #respond input#submit:hover, 
 .woocommerce a.button:hover, 
 .woocommerce button.button:hover, 
-.woocommerce input.button:hover{
+.woocommerce input.button:hover,
+body.woocommerce-account .register-btn button[type="submit"]:hover{
 	background: #EC5387!important;
 	color: #fff!important;
 	border-color:#EC5387!important;
@@ -161,7 +162,7 @@ body.woocommerce-account #customer_login .u-column2.col-2 > h2{
 	border: 2px solid #F2EDE9;
 	box-sizing: border-box;
 	padding: 5px 18px 5px;
-	color: #ACABAB;
+	color: #525A61;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 16px;
