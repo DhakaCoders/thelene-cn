@@ -1,3 +1,6 @@
+<div class="sidebar-close-btn back-to-dashboard-btn-cntlr show-md">
+	<span>Terug naar overzicht</span>
+</div>
 <div class="sidebar-title">
   <h4 class="fl-h4">Filter producten</h4>
   <div class="sidebar-content">
