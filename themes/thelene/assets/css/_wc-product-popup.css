@@ -229,7 +229,8 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 }
 .product-price ins span,
 .xoo-cp-pprice ins span,
-.fl-pro-grd-price ins span{
+.fl-pro-grd-price ins span,
+.qty-price-wrap ins span{
     color: #31304F;
     font-size: 14px;
     font-weight: 500;
@@ -241,7 +242,8 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 }
 .product-price del span,
 .xoo-cp-pprice del span,
-.fl-pro-grd-price del span{
+.fl-pro-grd-price del span,
+.qty-price-wrap del span{
     color: #525A61;
     font-size: 12px;
     text-decoration-line: line-through;
