@@ -652,5 +652,10 @@ function tristup_body_classes( $classes ){
 }
 add_filter( 'body_class', 'tristup_body_classes' );
 
+add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
+function custom_shipping_package_name( $name ) {
+    return '';
+}
+
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
