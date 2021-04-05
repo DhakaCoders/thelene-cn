@@ -1505,6 +1505,8 @@ body.woocommerce-checkout .payment-method-crtl .shipping-methods{
     body.woocommerce-checkout .default-page-con{
         padding-top:20px;
     }
+
+
 }
 
 @media(max-width: 659px){
