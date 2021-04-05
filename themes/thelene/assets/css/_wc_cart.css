@@ -443,6 +443,9 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
 	body.woocommerce-cart table.shop_table_responsive tr:nth-child(2n) td{
 		background: transparent!important;
 	}
+	body.woocommerce-cart .add-more-product {
+	    margin-bottom: 40px;
+	}
 
 }
 @media(max-width: 575px){
