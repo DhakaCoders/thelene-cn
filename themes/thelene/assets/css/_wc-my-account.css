@@ -156,8 +156,9 @@ body.woocommerce-orders .account-page-title h1{
     -ms-transition:all .5s;
     -webkit-transition:all .5s;
 }
-
-
+body.woocommerce-account .breadcrumb-sec{
+    display:none;
+}
 
 
 /* -------------------------body woocommerce-orders -----------------------*/
@@ -317,6 +318,9 @@ body.woocommerce-account #customer_login .u-column1.col-1 > h2,
 body.woocommerce-account #customer_login .u-column2.col-2 > h2{
     margin-bottom:25px;
 }
+body.hide-account-title .billing-address-wrap h3{
+    margin-bottom:10px;
+}
 body.woocommerce-account .default-page-con h1,
 body.woocommerce-checkout .checkout-page-title h1{
     border-bottom: 1px solid #F1E8E1;
@@ -468,6 +472,13 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 }
 
 /*  ----------------------------- my new account page ------------------------- */
+body.hide-account-title #billing_last_name_field label{
+    opacity: 0;
+    visibility: visible;
+}
+body.hide-account-title .register-title h3{
+    border-bottom-color:#ECE9E9;
+}
 .woocommerce-account .register-title h3{
 	font-size:24px;
 	border-bottom: 1px solid #F1E8E1;
@@ -971,6 +982,10 @@ body .woocommerce-checkout .woocommerce-form__label input{
 	body.woocommerce-account .register-btn button[type="submit"]{
 		padding: 15px 106px!important;
 	}
+    .loggedin-deshboard-crtl .innerpage-con-wrap, 
+    .hide-account-title .innerpage-con-wrap{
+        max-width:800px;
+    }
 
 	/* ------------------- woocommerce-cart -------------------*/
 	.woocommerce-cart .woocommerce .cart-is-emtpy strong{
@@ -1104,6 +1119,33 @@ body .woocommerce-checkout .woocommerce-form__label input{
 
 
 	/*  ----------------------------- my account reg page ------------------------- */
+    .woocommerce input[type="text"], .woocommerce input[type="email"],
+    .woocommerce input[type="tel"], 
+    .woocommerce input[type="password"], 
+    .woocommerce textarea{
+        padding-left: 15px;
+    }
+    body.hide-account-title .register-pay-logo-wrap{
+        padding-bottom: 35px;
+    }
+    body.hide-account-title .register-pay-logo-wrap{
+        border-top:none;
+    }
+    body.hide-account-title .reg-btn-crtl{
+        margin-bottom:0px;
+    }
+    body.hide-account-title .form-row.html-text{
+        margin-bottom: 0px!important;
+    }
+    body.hide-account-title .register-btn button[type="submit"]{
+        margin-top:15px;
+    }
+    body.hide-account-title .contact-er-msg {
+        padding: 21px 18px;
+    }
+    body.hide-account-title #billing_last_name_field label{
+        display: none;
+    }
 	body.woocommerce-account .register-title h3, .login-info h3 {
 	    font-size: 19px;
 	}
