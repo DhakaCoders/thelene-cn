@@ -38,7 +38,7 @@ $wrapper_classes   = apply_filters(
 $attachment_ids = $product->get_gallery_image_ids();
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
+	<figure class="woocommerce-product-gallery-wrap">
 		<div class="main-img-crtl">
 		<?php
 		if ( $product->get_image_id() ) {
