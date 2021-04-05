@@ -103,7 +103,8 @@ body.woocommerce-orders .innerpage-con-wrap .woocommerce-account-grds-cntlr{
 	align-items: flex-start;
 }
 body.woocommerce-edit-account .innerpage-con-wrap .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
-	padding-top:20px;
+	padding-top:13px;
+    padding-right:20px;
 }
 body.woocommerce-edit-account .innerpage-con-wrap,
 body.woocommerce-orders .innerpage-con-wrap{
@@ -162,6 +163,12 @@ body.woocommerce-account .breadcrumb-sec{
 
 
 /* -------------------------body woocommerce-orders -----------------------*/
+body.woocommerce-orders .customer-order-details .faq-accordion-wrp ul li:last-child{
+    margin-bottom:0px!important;
+}
+body.woocommerce-orders .customer-order-details .faq-accordion-wrp ul{
+    padding-bottom:0px;
+}
 body.woocommerce-orders .innerpage-con-wrap{
 	max-width: 100%;
 }
@@ -802,9 +809,16 @@ body.loggedin-winkelmandje-crtl .myaccount-cart-crtl .woocommerce-mini-cart + p{
 }
 */
 /* ---------------------------- checkout page ----------------------------------*/
+body.woocommerce-checkout .breadcrumb-sec{
+    display: none;
+}
 body.woocommerce-checkout .innerpage-con-wrap{
     max-width: 100%;
     width: 100%;
+}
+body.woocommerce-checkout #billing_last_name_field label{
+    opacity:0;
+    visibility: hidden;
 }
 body.woocommerce-checkout .col2-set {
     width: 100%;
@@ -1118,7 +1132,7 @@ body .woocommerce-checkout .woocommerce-form__label input{
 	}
 
 
-	/*  ----------------------------- my account reg page ------------------------- */
+	/*  ----------------------------- my  new account  page ------------------------- */
     .woocommerce input[type="text"], .woocommerce input[type="email"],
     .woocommerce input[type="tel"], 
     .woocommerce input[type="password"], 
@@ -1207,6 +1221,9 @@ body .woocommerce-checkout .woocommerce-form__label input{
 
 
 	/* ------------------ account order -------------------*/
+    body.woocommerce-orders .woocommerce-account-grds-cntlr{
+        padding-top:0px;
+    }
 
 	body.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 		display: none;
@@ -1382,7 +1399,7 @@ body .woocommerce-checkout .woocommerce-form__label input{
         width: 115px;
         height:35px;
     }
-	/*  ----------------------------- my account reg page ------------------------- */
+	/*  ----------------------------- my account new page ------------------------- */
 
 	body.woocommerce-account .register-title h3, .login-info h3 {
 	    font-size: 16px;
