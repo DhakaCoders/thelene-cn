@@ -574,6 +574,7 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-l
 }
 body.woocommerce-account .woocommerce form .form-row select, 
 body.woocommerce-account  .woocommerce-page form .form-row select,
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .selection .select2-selection,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .selection .select2-selection{
 	width: 100%;
     height: 48px!important;
@@ -849,7 +850,7 @@ body.woocommerce-checkout .custom-checkout-order-review table td strong{
     border:none!important;
     font-weight:400;
  }
-body.woocommerce-checkout .custom-checkout-order-review table td strong{
+body.woocommerce-checkout .custom-checkout-order-review table td.product-name strong{
     display: none;
  }
 body.woocommerce-checkout .custom-checkout-order-review table td,
