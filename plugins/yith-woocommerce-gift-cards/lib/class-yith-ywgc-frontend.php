@@ -42,10 +42,10 @@ if ( ! class_exists( 'YITH_YWGC_Frontend' ) ) {
 		 */
 		protected function __construct() {
 
-            add_action( 'init', array(
+            /*add_action( 'init', array(
                 $this,
                 'frontend_init'
-            ) );
+            ) );*/
 
 			/**
 			 * Enqueue frontend scripts

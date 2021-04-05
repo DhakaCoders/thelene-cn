@@ -85,7 +85,10 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 				
 				<div class="custom-checkout-order-review">
 					<h3 class="order-review-title"><?php esc_html_e( 'Overzicht', 'woocommerce' ); ?></h3>
-					<?php wc_get_template_part('checkout/review-order');?>
+					<?php 
+						wc_get_template_part('checkout/review-order');
+						do_action('woocommerce_giftcard_form');
+					?>
 					<div class="checkout-terms">
 						<?php wc_get_template_part( 'checkout/terms' ); ?>
 							<p class="form-row validate-required">

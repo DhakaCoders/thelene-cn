@@ -145,3 +145,110 @@ if( is_array($logoObj) ){
       </div>
   </div>
 </header>
+
+<!-- xs mobile menu -->
+<div class="xs-mobile-menu">
+
+  <div class="xs-menu-hdr">
+    <div class="user-cart-cntlr">
+      <div class="hambergar-cross-cntlr show-sm">
+        <div class="hambergar-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <strong class="hambergar-title">MENU</strong>
+        <strong class="cross-title">SLUIT</strong>
+      </div>
+      <div class="hdr-user">
+        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><i><svg class="user-icon" width="20" height="24" viewBox="0 0 20 24" fill="#31304F">
+          <use xlink:href="#user-icon"></use> </svg></i>
+        </a>
+        <strong class="hdr-user-title show-sm">ACCOUNT</strong>
+      </div>
+    </div>
+    <div class="hdr-lft">
+      <?php if( !empty($logo_tag) ): ?>
+      <div class="logo">
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+          <?php echo $logo_tag; ?>
+        </a>
+      </div>
+      <?php endif; ?>
+    </div>
+  </div>
+
+  <div class="xs-menu-cntlr">
+    <div class="xs-menu">
+      <nav class="main-nav">
+        <?php 
+          $catmenuOptions = array( 
+              'theme_location' => 'cbv_main_mbmenu', 
+              'menu_class' => 'clearfix reset-list',
+              'container' => '',
+              'container_class' => ''
+            );
+          wp_nav_menu( $catmenuOptions ); 
+        ?>
+
+      </nav>
+    </div>
+  </div>
+  <?php 
+$smedias = get_field('social_media', 'options');
+  ?>
+
+  <div class="xs-menu-ftr">
+    <?php if(!empty($smedias)):  ?>
+    <div class="ftr-social-media">
+      <ul class="reset-list">
+      <?php foreach($smedias as $smedia): ?>
+        <li>
+          <a target="_blank" href="<?php echo $smedia['url']; ?>">
+              <?php echo $smedia['icon']; ?>
+          </a>
+        </li>
+      <?php endforeach; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
+    <div class="hdr-cart">
+      <a href="<?php echo wc_get_cart_url(); ?>">
+        <?php 
+        if( WC()->cart->get_cart_contents_count() > 0 ){
+          echo sprintf ( '<span>%d</span>', WC()->cart->get_cart_contents_count() );
+        }else{
+          echo sprintf ( '<span>%d</span>', 0 );
+        }  
+        ?>
+        <i><svg class="cart-icon" width="30" height="30" viewBox="0 0 30 30" fill="#fff">
+          <use xlink:href="#cart-icon"></use> </svg>
+        </i>
+      </a>
+    </div>
+ </div> 
+</div>
+
+<section class="hm-search-sec show-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="secrh-select-cntlr">
+          <div class="fl-secrh-cntlr">
+            <div class="fl-secrh">
+              <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <input type="text" placeholder="Naar welke thee ben jij opzoek?" name="s" value="<?php echo get_search_query(); ?>">
+                <button>
+                  <i><svg class="search-icon" width="21" height="21" viewBox="0 0 21 21" fill="#31304F">
+                    <use xlink:href="#search-icon"></use> </svg>
+                  </i>
+                </button>
+                <input type="hidden" name="post_type" value="product" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

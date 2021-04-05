@@ -657,5 +657,10 @@ function custom_shipping_package_name( $name ) {
     return '';
 }
 
+add_action('woocommerce_giftcard_form', 'cbv_wc_giftcard_form');
+
+function cbv_wc_giftcard_form(){
+    wc_get_template_part('templates/giftcard-form');
+}
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
