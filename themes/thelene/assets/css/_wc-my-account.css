@@ -923,9 +923,9 @@ body.woocommerce-checkout .custom-checkout-order-review table tr td.product-name
 #accept_condition ~ .checkbox-custom{
     display: none;
 }
-#customer_details .shipping-methods{
+/*#customer_details .shipping-methods{
     display: none;
-}
+}*/
 
 body.woocommerce-checkout .custom-checkout-order-review  button.button.alt{
     width: 100%;
