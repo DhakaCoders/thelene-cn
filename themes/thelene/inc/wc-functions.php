@@ -433,7 +433,8 @@ function projectnamespace_woocommerce_text( $translated, $text, $domain ) {
                 'Place order',
                 'Additional information',
                 'Subtotal',
-                'Total'
+                'Total',
+                'Gift card number'
             ),
             array( 
                 'ik ga bestellen', 
@@ -443,7 +444,8 @@ function projectnamespace_woocommerce_text( $translated, $text, $domain ) {
                 'Afrekenen',
                 '4. Extra Info',
                 'Subtotaal',
-                'Totaal'
+                'Totaal',
+                'Heb je een kortingscode?'
             ),
             $translated
         );
