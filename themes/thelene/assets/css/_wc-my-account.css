@@ -997,9 +997,26 @@ body.woocommerce-checkout .default-page-con h3{
 body.woocommerce-checkout .payment-method-crtl .shipping-methods{
     margin-bottom:28px;
 }
+body.woocommerce-checkout .checkout-terms .woocommerce-privacy-policy-text{
+    display: none;
+}
+body.woocommerce-checkout .custom-checkout-order-review .ywgc_enter_code .form-row-first {
+    width: 100%!important;
+    margin-bottom:15px;
+}
 
-
-
+body.woocommerce-checkout .custom-checkout-order-review .ywgc_enter_code .form-row-last {
+    width: 100%!important;
+    text-align:right;
+    margin-bottom:28px;
+}
+body.woocommerce-checkout .custom-checkout-order-review .ywgc_enter_code .form-row-last button[type=submit] {
+    background: transparent!important;
+    color: #31304F!important;
+    font-size: 12px!important;
+    padding: 12px 55px;
+    border-width:1px!important;
+}
 
 
 
@@ -1039,6 +1056,12 @@ body.woocommerce-checkout .payment-method-crtl .shipping-methods{
     body.woocommerce-account .page-title {
         margin-top: 50px;
     }
+    body.woocommerce-checkout #customer_details .col-2 {
+        padding-left: 50px;
+
+    }
+
+
 }
 
 @media(max-width:1199px){
