@@ -16,7 +16,7 @@ function ajax_wc_user_signup_init(){
 add_action('wp_ajax_nopriv_ajax_register_save', 'ajax_register_save');
 //add_action('wp_ajax_ajax_register_save', 'ajax_register_save');*/
 function ajax_register_save(){
-    $data_reg = array();
+    global $data_reg;
     if (isset( $_POST["billing_email_2"] ) && wp_verify_nonce($_POST['user_register_nonce'], 'user-register-nonce')) {
 
         if( isset($_POST['billing_email']) && !empty($_POST['billing_email'])){
@@ -106,6 +106,17 @@ function ajax_register_save(){
                 if( isset($_POST['billing_phone']) && !empty($_POST['billing_phone'])){
                     update_user_meta( $customerId, "billing_phone", $_POST['billing_phone'] );
                 }
+                if(isset($_POST['is_shipping_address']) && $_POST['is_shipping_address'] == '1'){
+                    if( isset($_POST['billing_address_2']) && !empty($_POST['billing_address_2']) ){
+                        update_user_meta( $customerId, "shipping_address_2", $_POST['billing_address_2'] );
+                    }
+                    if( isset($_POST['billing_gsm_number']) && !empty($_POST['billing_gsm_number'])){
+                        update_user_meta( $customerId, "shipping_gsm_number", $_POST['billing_gsm_number'] );
+                    }
+                    if( isset($_POST['billing_phone']) && !empty($_POST['billing_phone'])){
+                        update_user_meta( $customerId, "shipping_phone", $_POST['billing_phone'] );
+                    }
+                }
                 $user = get_user_by( 'id', $customerId );
                 if($user){
                     wp_clear_auth_cookie();
@@ -117,7 +128,7 @@ function ajax_register_save(){
                     //do_action( 'wp_login', $user->user_login );
                     if ( is_user_logged_in() ){
                         $data_reg['user_name'] = $user->user_login;
-                        echo '<script>window.location.href = "'.home_url('my-account').'"</script>';
+                        echo '<script>window.location.href ="'.home_url('my-account').'";</script>';
                         wp_die();
                     }
                 }

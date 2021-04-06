@@ -464,8 +464,24 @@ jQuery('body').on('wc_cart_emptied', function(){
 
 // form validation
 
+
+$("#re_password").bind('blur keyup change', function(){
+  $("#register_action_btn").attr('disabled','disabled');
+  var pass = $('#re_password').val();
+  //check the strings
+  if(pass.length >= 8){
+    $('.error-rel_password').text('');
+    $(this).css({"border": "2px solid #F3F3F3", "color": "#9EA5AB"});
+  }else{
+    $('.error-rel_password').text('Wachtwoord zou moeten minimaal 8 karakters');
+    $(this).css({"border": "2px solid #D17181", "color": "#D17181"});
+    $("#register_action_btn").attr('disabled','disabled');
+  }
+});
+
+
 $("#confirm_password").bind('blur keyup change click', function(){
-    $("#register_action_btn").prop("disabled",false);
+  $("#register_action_btn").prop("disabled",false);
     var pass = $('#re_password').val();
     var confpass = $(this).val();
     //check the strings
@@ -476,7 +492,7 @@ $("#confirm_password").bind('blur keyup change click', function(){
     $("#register_action_btn").prop("disabled",false);
     }else{
     //if not matching show error and not allow to submit
-    $('.error-confirm_password').text('Password not matching');
+    $('.error-confirm_password').text('Wachtwoord komt niet overeen');
     $(this).css({"border": "2px solid #D17181", "color": "#D17181"});
     $("#register_action_btn").prop("disabled",true);
     }

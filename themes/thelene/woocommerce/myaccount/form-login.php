@@ -21,8 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 do_action( 'woocommerce_before_customer_login_form' ); ?>
 <?php 
-if( isset($_GET['action']) && $_GET['action']=='registration'): 
-	global $woocommerce, $data_reg;
+if( isset($_GET['action']) && $_GET['action']=='registration'):
+	global $woocommerce; global $data_reg;
+	$setedEmail = isset( $_POST["reg_email"])? $_POST["reg_email"]:'';
     $countries_obj   = new WC_Countries();
     $countries   = $countries_obj->__get('countries');
 ?>
@@ -120,12 +121,12 @@ if( isset($_GET['action']) && $_GET['action']=='registration'):
 			<div class="billing-address-wrap">
 				<h3>Factuuradres</h3>
 				<p class="same-as-shipping-address">
-					<input type="checkbox" name="is_shipping_address" value="0">&nbsp;Hetzelfde als bezorgadres
+					<input type="checkbox" name="is_shipping_address" value="1">&nbsp;Hetzelfde als bezorgadres
 				</p>
 				<p class="form-row form-row-wide" id="billing_email_2_field">
 					<label for="billing_email_2" class="">E-mailadres</label>
 					<span class="woocommerce-input-wrapper">
-						<input type="email" class="input-text " name="billing_email_2" id="billing_email_2" placeholder="" value="<?php echo isset($_POST['billing_email_2'])? $_POST['billing_email_2']:'';?>" required>
+						<input type="email" class="input-text " name="billing_email_2" id="billing_email_2" placeholder="" value="<?php echo isset($_POST['billing_email_2'])? $_POST['billing_email_2']:$setedEmail;?>" required>
 					</span>
 				</p>
 				<p class="form-row form-row-first billing_gsm_number" id="billing_address_1_field">
@@ -152,13 +153,14 @@ if( isset($_GET['action']) && $_GET['action']=='registration'):
 						<input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="Bijv. jan@domein.be" value="<?php echo isset($_POST['billing_email'])? $_POST['billing_email']:'';?>" autocomplete="email username" required>
 					</span>
 					
-					<?php if( isset($data_reg) && array_key_exists('error', $data_reg) ){printf('<span class="error-valid error-confirm_password">%s</span>', $data_reg['exists_email'] );}?>
+					<?php if( isset($data_reg) && array_key_exists('exists_email', $data_reg) ){printf('<span class="error-valid error-confirm_password">%s</span>', $data_reg['exists_email'] );}?>
 				</p>
 				<p class="form-row form-row-first password" id="password_field">
 					<label for="re_password" class="">Wachtwoord</label>
 					<span class="woocommerce-input-wrapper">
 						<input type="password" class="input-text " name="password" id="re_password" placeholder="Minimaal 8 karakters"  autocomplete="password" required>
 					</span>
+					<span class="error-valid error-rel_password"></span>
 				</p>
 				<p class="form-row form-row-last confirm_password" id="confirm_password_field">
 					<label for="confirm_password" class="">Wachtwoord bevestigen</label>
@@ -248,7 +250,7 @@ if( isset($_GET['action']) && $_GET['action']=='registration'):
 			<form method="post" action="?action=registration" class="woocommerce-form woocommerce-form-register register" id="mail_checker">
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 					<label for="reg_email"><?php esc_html_e( 'E-mailadres', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-					<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" placeholder="Bijv. jan@domein.be" required/>
+					<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="reg_email" id="reg_email" autocomplete="email" placeholder="Bijv. jan@domein.be" required/>
 				</p>
 				<p class="woocommerce-form-row form-row">
 					<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" id="register_next" name="register" value="<?php esc_attr_e( 'doorgaan', 'woocommerce' ); ?>"><?php esc_html_e( 'doorgaan', 'woocommerce' ); ?></button>
