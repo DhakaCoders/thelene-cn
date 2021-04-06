@@ -245,7 +245,7 @@ $('.main-img-crtl').slick({
    slidesToScroll: 1,
    arrows: false,
    fade: true,
-   asNavFor: '.thumbnails'
+   asNavFor: '.thumbnails',
  });
  $('.thumbnails').slick({
    slidesToShow: 3,
@@ -255,6 +255,17 @@ $('.main-img-crtl').slick({
    focusOnSelect: true,
    prevArrow: '.fl-singgle-pro-prev',
    nextArrow: '.fl-singgle-pro-next',
+   responsive: [
+        {
+          breakpoint:479,
+          settings: {
+            dots: true,
+          }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
  });
 
 $('.fl-product .price-quentity-ctrl form .variations tbody tr td select').addClass('selectpicker');
