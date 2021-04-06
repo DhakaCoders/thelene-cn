@@ -95,17 +95,17 @@ defined( 'ABSPATH' ) || exit;
 		<?php 
 		do_action( 'woocommerce_cart_totals_before_order_total' ); 		
 		?>
-		<tr>
+		<tr class="giftcard">
 			<td>
 				<?php do_action( 'woocommerce_giftcard_form' ); ?>
 			</td>
 		</tr>
-		<tr class="order-total">
+		<tr class="order-totald cart-total-crtl">
 			<th><?php esc_html_e( 'Totaal', 'woocommerce' ); ?></th>
 			<td data-title="<?php esc_attr_e( 'Totaal', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
-
-		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+			<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+		
 
 	</table>
 

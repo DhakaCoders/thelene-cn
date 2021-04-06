@@ -127,7 +127,7 @@ function cbv_table( $table, $title =''){
     $i = 1;
     foreach ( $table['body'] as $tr ) {
       echo '<tr>';
-      echo '<td><span class="mHc">'.$i.'.</span></td>';
+      echo '<td><span class="mHc">'.$i.'</span></td>';
       foreach ( $tr as $td ) {
         echo '<td>';
         if(!empty($td['c'])){
