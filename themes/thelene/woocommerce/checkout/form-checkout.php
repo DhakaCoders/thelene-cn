@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 $cURL = wc_get_cart_url();
 ?>
+
 <div class="checkout-page-title clearfix">
 	<div class="checkoutpt-left">
 		<div class="back-to-dashboard-btn-cntlr"><a class="backshop-cart" href="<?php echo $cURL; ?>">Terug naar winkelmandje</a></div>
