@@ -228,7 +228,7 @@ $smedias = get_field('social_media', 'options');
     </div>
  </div> 
 </div>
-
+<?php if( is_front_page() ): ?>
 <section class="hm-search-sec show-sm">
   <div class="container">
     <div class="row">
@@ -252,3 +252,4 @@ $smedias = get_field('social_media', 'options');
     </div>
   </div>
 </section>
+<?php endif; ?>
