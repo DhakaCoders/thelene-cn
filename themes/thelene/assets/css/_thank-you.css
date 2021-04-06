@@ -1,7 +1,10 @@
 
 .thank-you-section{
 	padding-top:84px;
-	padding-bottom:75px;
+	padding-bottom:0;
+}
+body.woocommerce-page.woocommerce-order-received .default-page-con{
+	padding-bottom:0;
 }
 .thnk-you-des p br{
 	display: none

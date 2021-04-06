@@ -509,6 +509,51 @@ $("#confirm_password").bind('blur keyup change click', function(){
     }
 });
 
+/**
+Cart quantity updates
+*/
+//$(".ywgc_enter_code").appendTo("#giftcard-here");
+/*jQuery('div.woocommerce').on('change', '.qty', function(){
+    jQuery("[name='update_cart']").prop("disabled", false);
+    jQuery("[name='update_cart']").trigger("click"); 
+});*/
+jQuery('body').on('click', '.qty1 .minus', function(){
+    var spinner = $(this),
+      input = spinner.next().find('input[type="number"]'),
+      min = 1,
+      max = input.attr('max');
+
+      var oldValue = parseFloat(input.val());
+      if (oldValue <= min) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue - 1;
+      }
+      spinner.next().find("input").val(newVal);
+      spinner.next().find("input").trigger("change");
+
+    jQuery("[name='update_cart']").prop("disabled", false);
+    jQuery("[name='update_cart']").trigger("click"); 
+});
+jQuery('body').on('click', '.qty1 .plus', function(){
+    var spinner = $(this),
+      input = spinner.prev().find('input[type="number"]'),
+      min = 1,
+      max = input.attr('max');
+
+      var oldValue = parseFloat(input.val());
+      if (oldValue <= max) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue + 1;
+      }
+      spinner.prev().find("input").val(newVal);
+      spinner.prev().find("input").trigger("change");
+
+    jQuery("[name='update_cart']").prop("disabled", false);
+    jQuery("[name='update_cart']").trigger("click"); 
+});
+
 })(jQuery);
 
 function isValidEmailAddress(emailAddress) {

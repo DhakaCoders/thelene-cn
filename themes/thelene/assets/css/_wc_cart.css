@@ -57,7 +57,7 @@ body.woocommerce-cart .product-quantity .quantity{
 	align-items: center;
 }
 body.woocommerce-cart .product-quantity .quantity.qty span,
-body.woocommerce-cart .product-quantity .quantity.qty span{
+body.woocommerce-cart .product-quantity .quantity.qty1 span{
 	height: 16px;
 	width: 20px;
 	color: #fff;
@@ -395,8 +395,57 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
     border-bottom: 1px solid #ECE9E9!important;
     border-radius: 0!important;
 }
-body.woocommerce-cart.woocommerce-page .yith-giftcard{
+
+/**
+Cart checkout normal giftcart
+*/
+body.woocommerce-page .yith-giftcard{
 	display: block;
+}
+body.woocommerce-page .woocommerce-error{
+	margin-bottom: 30px;
+}
+body.woocommerce-page .ywgc_have_code{
+	margin-bottom: 20px;
+}
+body.woocommerce-page .ywgc_have_code + .ywgc_enter_code {
+    margin: 0 0 20px;
+    padding-top: 0;
+    background: transparent;
+}
+body.woocommerce-page .ywgc_have_code + .ywgc_enter_code input {
+    border-radius: 0;
+    margin-bottom: 5px;
+}
+body.woocommerce-page .ywgc_have_code + .ywgc_enter_code p{
+	margin-bottom: 10px;
+}
+body.woocommerce-page .ywgc_have_code + .ywgc_enter_code .form-row{
+	width: 100%;
+	display: block;
+}
+body.woocommerce-page .ywgc_have_code + .ywgc_enter_code .form-row button{
+	margin-left: 0;
+}
+body.woocommerce-page .ywgc_have_code + .ywgc_enter_code > div {
+    max-width: 450px;
+}
+body.woocommerce-page.woocommerce-checkout .ywgc_have_code{
+	display: none;
+}
+body.woocommerce-page.woocommerce-checkout .ywgc_enter_code{
+	background: transparent;
+	padding: 0;
+	margin: 0;
+}
+body.woocommerce-page.woocommerce-checkout .ywgc_enter_code > div{
+	margin: 0;
+}
+body.woocommerce-cart.woocommerce-page .woocommerce-notices-wrapper + .ywgc_have_code{
+	margin: 0;
+}
+body.woocommerce-page.woocommerce-checkout .woocommerce-NoticeGroup-checkout .woocommerce-error{
+	margin-top: -30px;
 }
 /*responsive */
 @media(max-width: 1599px){
@@ -514,7 +563,9 @@ body.woocommerce-cart.woocommerce-page .yith-giftcard{
 	    float: left;
 	    font-size: 14px;
 	}
-
+	body.woocommerce-page.woocommerce-checkout  .default-page-con{
+		padding-top: 0;
+	}
 }
 @media(max-width: 575px){
 	body.woocommerce-cart.woocommerce-page .product-name a{
