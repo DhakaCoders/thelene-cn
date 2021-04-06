@@ -1049,14 +1049,24 @@ body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment .pl
     background:#31304F;
     border-bottom:none!important;
 }
+body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul{
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment .place-order{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
 body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul li,
 body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment .place-order{
     color:#fff;
 }
-
+body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul li{
+    padding-left: 0px;
+}
 body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul li .payment_box{
     background:#8CCC0C!important;
-    color:#fff;
+    color:#fff!important;
     font-weight:500;
 }
 body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul li .payment_box:before{
@@ -1065,11 +1075,28 @@ body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul 
         border-left-color: transparent!important;
         border-top-color: transparent!important;
 }
+body.woocommerce-checkout .place-order #pwgc-redeem-form input[type="submit"]{
+    width: 210px;
+    height: 40px;
+    border-radius: 6px;
+    background: #8ccc0c;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 30px!important;
+}
+body.woocommerce-checkout #pwgc-redeem-gift-card-form #pwgc-redeem-form label{
+    margin-bottom:20px!important;
+}
+ul#shipping_method li:before{
+    content:none;
+}
 
-
-
-
-
+body.woocommerce-checkout ul#shipping_method li label > span{
+    margin-left:5px;
+}
+body.woocommerce-checkout ul#shipping_method li{
+    padding-left: 0px;
+}
 
 
 
@@ -1103,6 +1130,9 @@ body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul 
     }
     .back-to-dashboard-btn-cntlr a:after{
         margin-top:0;
+    }
+    body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper .woocommerce-input-wrapper textarea {
+        min-height: 200px;
     }
 
 
