@@ -108,7 +108,8 @@ defined( 'ABSPATH' ) || exit;
 		
 
 	</table>
-<?php do_action( 'woocommerce_giftcard_form' ); ?>
+<?php //do_action( 'woocommerce_giftcard_form' ); ?>
+	<div id="giftcard-here"></div>
 	<div class="wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>

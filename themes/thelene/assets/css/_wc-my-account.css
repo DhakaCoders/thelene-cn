@@ -300,6 +300,7 @@ body.woocommerce-orders .woocommerce-account-grds-cntlr{
 }
 body.woocommerce-orders .order-details .myac-pro-grds{
 	border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
 }
 body.woocommerce-orders .order-details{
 	border:none;
