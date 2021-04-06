@@ -1,6 +1,7 @@
 <?php 
 get_header(); 
 $thisID = get_the_ID(); 
+if( !is_cart() )
 get_template_part('templates/breadcrumbs');
 ?>
 <section class="innerpage-con-wrap">
