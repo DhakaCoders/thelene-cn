@@ -51,7 +51,10 @@ body.woocommerce-checkout .custom-checkout-order-review .ywgc_enter_code .form-r
 .woocommerce button.button:hover, 
 .woocommerce input.button:hover,
 body.woocommerce-account .register-btn button[type="submit"]:hover,
-.woocommerce-orders .orders-crtl .contact-info a.order-contact-btn:hover{
+body.woocommerce-orders .orders-crtl .contact-info a.order-contact-btn:hover,
+body.woocommerce-checkout .custom-checkout-order-review button.button.alt:hover,
+body.woocommerce-checkout .payment-method-crtl .custom-checkout-btn button[type=submit]:hover,
+body.woocommerce-checkout .custom-checkout-order-review .ywgc_enter_code .form-row-last button[type=submit]:hover{
 	background: #EC5387!important;
 	color: #fff!important;
 	border-color:#EC5387!important;
