@@ -65,6 +65,7 @@ ul li::before {
 	width: 12px;
 	height: 4px;
 	background: #8CCC0C;
+	margin-top: -1px;
 }
 ul li.refGridItem:before{
 	display: none;
