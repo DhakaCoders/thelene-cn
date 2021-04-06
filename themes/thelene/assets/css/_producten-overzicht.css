@@ -314,7 +314,11 @@
 	    width: 50%!important;
 	}
 }
-
+@media(max-width:639px){
+	.fl-products-cntlr ul.products > li {
+	    width: 50%!important;
+	}
+}
 @media(max-width: 575px){
 	.product-page-col-rgt .fl-pro-grd-price > span {
 	    width: initial;
@@ -331,5 +335,7 @@
 }
 
 @media(max-width: 359px){
-
+	.fl-products-cntlr ul.products > li{
+	    width: 100%!important;
+	}
 }

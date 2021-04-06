@@ -249,6 +249,7 @@ global $woocommerce;
 					<span class="woocommerce-input-wrapper">
 						<input type="password" class="input-text " name="confirm_password" id="confirm_password" autocomplete="confirm-password">
 					</span>
+					<span class="error-confirm_password"></span>
 				</p>
 			</div>
 			<div class="register-btn">
