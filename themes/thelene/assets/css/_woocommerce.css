@@ -50,7 +50,8 @@ body.woocommerce-checkout .custom-checkout-order-review .ywgc_enter_code .form-r
 .woocommerce a.button:hover, 
 .woocommerce button.button:hover, 
 .woocommerce input.button:hover,
-body.woocommerce-account .register-btn button[type="submit"]:hover{
+body.woocommerce-account .register-btn button[type="submit"]:hover,
+.woocommerce-orders .orders-crtl .contact-info a.order-contact-btn:hover{
 	background: #EC5387!important;
 	color: #fff!important;
 	border-color:#EC5387!important;

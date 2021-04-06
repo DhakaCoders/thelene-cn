@@ -250,7 +250,7 @@ body.woocommerce-orders .order-details .order-status:after {
     position: absolute;
     left: 0;
     top: 50%;
-    margin-top:-4px;
+    margin-top:-5px;
 }
 body.woocommerce-orders  .orders-crtl .contact-info a.order-contact-btn{
 	display: inline-block;
@@ -1056,7 +1056,7 @@ body.woocommerce-checkout .woocommerce-shipping-fields .selection .select2-selec
 @media(max-width: 1499px){
     body.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content,
     body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
-        padding-left:70px;
+        padding-left:50px;
     }
     body.woocommerce-account .page-title {
         margin-top: 50px;
