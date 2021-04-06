@@ -566,6 +566,14 @@ body.woocommerce-page.woocommerce-checkout .woocommerce-NoticeGroup-checkout .wo
 	body.woocommerce-page.woocommerce-checkout  .default-page-con{
 		padding-top: 0;
 	}
+	.checkout-page-title .checkoutpt-left{
+	    float: left;
+	    width: 100%;
+	}
+	.checkout-page-title .checkoutpt-right{
+	    float: right;
+	    width: 100%;
+	}
 }
 @media(max-width: 575px){
 	body.woocommerce-cart.woocommerce-page .product-name a{

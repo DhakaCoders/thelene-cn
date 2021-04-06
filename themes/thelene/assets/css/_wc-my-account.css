@@ -343,11 +343,17 @@ body.woocommerce-account #customer_login .u-column2.col-2 > h2{
 body.hide-account-title .billing-address-wrap h3{
     margin-bottom:10px;
 }
-body.woocommerce-account .default-page-con h1,
-body.woocommerce-checkout .checkout-page-title h1{
+body.woocommerce-account .default-page-con h1{
     border-bottom: 1px solid #F1E8E1;
     padding-bottom: 28px;
     margin-bottom:0;
+}
+body.woocommerce-checkout .checkout-page-title{
+    border-bottom: 1px solid #F1E8E1;
+}
+body.woocommerce-checkout .checkout-page-title h1{
+    padding-bottom: 28px;
+    margin-bottom:0;    
 }
 body.woocommerce-account .register-field-error{
 	margin-bottom:33px;
@@ -1134,17 +1140,6 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width: 1499px){
     body.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content,
     body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
@@ -1586,8 +1581,10 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
     body.woocommerce-checkout #customer_details .col-2{
         width: 100%;
     }
-    body.woocommerce-checkout .checkout-page-title{
+    body.woocommerce-checkout .checkout-page-title {
         margin-bottom: 0px;
+        padding-bottom: 35px;
+        border-bottom: 0;
     }
     body.woocommerce-checkout .default-page-con h3{
         font-size: 20px;

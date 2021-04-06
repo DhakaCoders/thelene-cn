@@ -86,3 +86,23 @@
 .chckout-prgrs-col.active .chckout-prgrs-number{
 	color: #8CCC0C;
 }
+.checkout-page-title .checkoutpt-left{
+    float: left;
+}
+.checkout-page-title .checkoutpt-right{
+    float: right;
+}
+.checkout-page-title .progressbar-crtl{
+   width: 427px;
+   padding-top: 40px;
+}
+@media(max-width: 768px){
+	.checkout-page-title .progressbar-crtl{
+		padding-top: 0;
+		width: auto;
+	}
+	.checkout-progress-cntlr{
+		margin-left: 0;
+		max-width: 100%;
+	}
+}
