@@ -101,7 +101,7 @@ defined( 'ABSPATH' ) || exit;
 		</tr>
 <!-- 		<tr class="giftcard">
 			<td>
-				<?php do_action( 'woocommerce_giftcard_form' ); ?>
+				<?php //do_action( 'woocommerce_giftcard_form' ); ?>
 			</td>
 		</tr> -->
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
