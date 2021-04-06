@@ -13,6 +13,13 @@ body.woocommerce-cart .page-title h1{
 .cart-crtl .cart-total-crtl{
 	width: 33.68%;
 }
+.cart-crtl .cart-total-crtl .shop_table tr:not(.giftcard) td *{
+	color: #525A61!important;
+}
+.cart-crtl .cart-total-crtl .shop_table tr.cart-total-crtl td *{
+	font-weight: 700;
+	color: #31304F!important;
+}
 body.woocommerce-cart .woocommerce table.shop_table{
 	border: none;
 }
@@ -429,7 +436,7 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
 	body.woocommerce-cart .cart-table-crtl table.shop_table tbody tr{
 		display: flex!important;
 		flex-wrap: wrap!important;
-		padding-left: 201px;
+		padding-left: 105px;
 		position: relative;
 		padding-top: 10px;
 		padding-bottom: 10px;
@@ -441,6 +448,7 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
 		width: 100%;
 		padding-top: 3px!important;
 		padding-bottom: 3px!important;
+		padding-right: 0!important;
 		text-align: left!important;
 	}
 	body.woocommerce-cart .cart-table-crtl .product-thumbnail:before,
@@ -451,16 +459,20 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
 	body.woocommerce-cart .cart-table-crtl .product-thumbnail > a{
 		position: absolute;
 		top: 10px;
-		left: 100px;
+		left: 0;
 	}
-	body.woocommerce-cart .product-thumbnail .product-name{
-		padding-left: 14px!important;
+	body.woocommerce-cart .product-thumbnail .product-name,
+	body.woocommerce-cart .cart-table-crtl table.shop_table tbody tr td{
+		padding-left: 0!important;
 	}
-	body.woocommerce-cart .cart-table-crtl table.shop_table tbody tr td.product-remove > a{
-		position: absolute;
-		bottom: 27px;
-		left: 300px;
-		z-index: 10px!important;
+	body.woocommerce-cart .cart-table-crtl table.shop_table tbody tr td.product-remove > a {
+	    position: absolute;
+	    bottom: 22px;
+	    left: auto;
+	    right: 0;
+	    z-index: 10!important;
+	    height: 14px!important;
+	    width: 12px!important;
 	}
 	body.woocommerce-cart .cart-table-crtl table.shop_table{
 		padding-bottom: 0;
@@ -471,9 +483,9 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
 		padding-bottom: 17px;
 		border-bottom: 1px solid #F1E8E1!important;
 	}
-	.cart-crtl .cart-total-crtl{
+	.cart-crtl div.cart-total-crtl{
+		padding: 0;
 		padding-top: 23px;
-		padding: 0 0 0 100px;
 	}
 	body.woocommerce-cart .cart_totals h2{
 		display: none!important;
@@ -488,20 +500,23 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
 	body.woocommerce-cart .add-more-product {
 	    margin-bottom: 40px;
 	}
+	.cart-crtl{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	body.woocommerce-cart .cart-collaterals .giftcard td:before{
+		display: none;
+	}
+	.cart-crtl .cart-total-crtl .shop_table tr:not(.giftcard) td:before {
+	    font-weight: 400;
+	    float: left;
+	    font-size: 14px;
+	}
 
 }
 @media(max-width: 575px){
-	body.woocommerce-cart .cart-table-crtl table.shop_table tbody tr{
-		padding-left: 100px;
-	}
-	body.woocommerce-cart .cart-table-crtl .product-thumbnail > a{
-		left: 0;
-	}
-	body.woocommerce-cart .cart-table-crtl table.shop_table tbody tr td.product-remove > a{
-		left: 200px;
-	}
-	.cart-crtl .cart-total-crtl{
-		padding-left: 0;
+	body.woocommerce-cart.woocommerce-page .product-name a{
+		font-size: 16px;
 	}
 }
 @media(max-width: 479px){
