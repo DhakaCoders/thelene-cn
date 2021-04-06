@@ -92,14 +92,14 @@ if ( $customer_orders ) :
                   <div class="order-items-desc">
                   <h5>
                   	<?php
-						$exp_title = explode('-', $item->get_name());
-						if(!empty($exp_title)){
-							$cart_title = $exp_title[0];
-							$cart_attributes = $exp_title[1];
-						}else{
-							$cart_title = $item->get_name();
-							$cart_attributes = '';
-						}
+            						$exp_title = explode('-', $item->get_name());
+            						if(!empty($exp_title)){
+            							$cart_title = $exp_title[0];
+            							$cart_attributes = isset($exp_title[1])?$exp_title[1]:'';
+            						}else{
+            							$cart_title = $item->get_name();
+            							$cart_attributes = '';
+            						}
                   	    echo $cart_title; ?><strong class="product-quantity">&times;&nbsp;<?php echo $qty_display; 
                   	?></strong>
                     </h5>
