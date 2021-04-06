@@ -13,7 +13,7 @@ get_template_part('templates/breadcrumbs');
     $afbeelding = get_sub_field('afbeelding');
     ?>
     <div class="block-955">
-    <div class="dft-promo-module clearfix">
+    <div class="dfp-promo-module clearfix">
       <?php 
         if( !empty($title) ) printf('<div class="pgTitleBlock"><h1 class="dfp-promo-module-title fl-h1">%s</h1></div>', $title); 
         if( !empty($afbeelding) ){
@@ -233,6 +233,19 @@ get_template_part('templates/breadcrumbs');
           printf('<div class="dfp-btn-int"><a class="fl-trnsprnt-btn" href="%s" target="%s">%s</a></div>', $witte_knop['url'], $witte_knop['target'], $witte_knop['title']); 
         }
         ?>
+      </div>
+    </div>
+    <?php }elseif( get_row_layout() == 'notify_bar' ){
+    $fc_titel = get_sub_field('fc_titel');
+    ?>
+    <div class="block-955">
+      <div class="dfp-con-bar-module">
+        <div class="pn-con-bar">
+          <?php if( !empty($fc_titel) ): ?>
+            <i><img src="<?php echo THEME_URI; ?>/assets/images/pn-con-bar-icon.svg"></i>
+            <strong><?php echo $fc_titel; ?></strong>
+          <?php endif; ?>
+        </div>
       </div>
     </div>
     <?php }elseif( get_row_layout() == 'gap' ){
