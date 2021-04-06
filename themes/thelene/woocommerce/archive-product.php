@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
-
+$cat = get_queried_object();
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -59,6 +59,7 @@ if ( woocommerce_product_loop() ) {
 	woocommerce_product_loop_start();
 
 	if ( wc_get_loop_prop( 'total' ) ) {
+		$i =1;
 		while ( have_posts() ) {
 			the_post();
 
@@ -68,6 +69,12 @@ if ( woocommerce_product_loop() ) {
 			do_action( 'woocommerce_shop_loop' );
 
 			wc_get_template_part( 'content', 'product' );
+			if( is_product_category() ){
+				if(($i == 2) &&  in_array($cat->slug, assign_gift_card_cat()) ){
+					wc_get_template_part('shop', 'cta'); // blog grid
+				}
+				$i++;
+			}
 		}
 		wc_get_template_part('blog', 'content'); // blog grid
 	}

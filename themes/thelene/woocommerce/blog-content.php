@@ -2,7 +2,7 @@
 	$blogshop = get_field('blogfor_shop', 'options');
 	if( $blogshop ):
 ?>
-<li class="fl-product-grd-2">
+<li class="fl-product-grd-2 hide-sm">
 	<div class="fl-product-grd mHc" style="">
 	  <div class="fl-product-grd-inr">
 	  	<?php 
