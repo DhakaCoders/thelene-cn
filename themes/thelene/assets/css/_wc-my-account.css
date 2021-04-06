@@ -27,6 +27,12 @@ body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccou
     padding:0;
     position:relative;
     cursor: pointer;
+    transition:all .5s;
+    -ms-transition:all .5s;
+    -webkit-transition:all .5s;
+}
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li.is-active:hover{
+    opacity: 1;
 }
 body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li:hover{
     opacity: .8;
@@ -313,9 +319,10 @@ body.woocommerce-edit-account.woocommerce-account .woocommerce-EditAccountForm l
 body.woocommerce-edit-account .woocommerce-EditAccountForm > p {
     text-align: right;
 }
-body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="submit"]{
-    padding-left: 133px!important;
-    padding-right: 133px!important;
+body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="submit"] {
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+    width: 350px;
 }
 
 
@@ -417,9 +424,13 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row l
 }
 body.woocommerce-account .woocommerce button[type=submit],
 body.woocommerce-account .woocommerce button[type=button]{
-	margin-left:0px!important;
-	padding: 15px 80px!important;
-	line-height: 1;
+    margin-left: 0px!important;
+    padding: 15px 15px!important;
+    line-height: 1;
+    width: 210px;
+}
+body.woocommerce-account .woocommerce button[type=button]{
+    width:260px;
 }
 body.woocommerce-account .woocommerce form .form-row label,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row label,
@@ -589,7 +600,7 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .selection 
 body.woocommerce-checkout .woocommerce-shipping-fields .selection .select2-selection{
 	width: 100%;
     height: 48px!important;
-    border: 2px solid #F2EDE9!important;
+    border: 1px solid #F2EDE9!important;
     border-radius: 6px!important;
     color: #9EA5AB;
     padding: 5px 18px 5px;
@@ -627,7 +638,7 @@ body.woocommerce-account .woocommerce-input-wrapper .bootstrap-select{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     position: absolute;
-    border-radius: 3px;
+    border-bottom-right-radius: 3px;
     
 }
 .same-as-shipping-address input:checked ~ .checkbox-custom,
@@ -668,11 +679,12 @@ body.woocommerce-account .woocommerce-input-wrapper .bootstrap-select{
 	margin-top:65px;
 }
 body.woocommerce-account .register-btn button[type="submit"]{
-	background:#8CCC0C!important;
-	border: 2px solid #8CCC0C!important;
-	padding:15px 106px!important;
-	margin-top: 23px;
-	cursor: pointer;
+	background: #8CCC0C!important;
+    border: 2px solid #8CCC0C!important;
+    padding: 15px 15px!important;
+    margin-top: 23px;
+    cursor: pointer;
+    width: 311px;
 }
 .register-btn{
 	text-align: right;
