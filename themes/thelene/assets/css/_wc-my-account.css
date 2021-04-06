@@ -1044,6 +1044,9 @@ body.woocommerce-checkout .custom-checkout-order-review .ywgc_enter_code .form-r
     padding: 12px 55px;
     border-width:1px!important;
 }
+.ywgc_enter_code{
+    background:initial;
+}
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .selection .select2-selection .select2-selection__rendered,
 body.woocommerce-checkout .woocommerce-shipping-fields .selection .select2-selection .select2-selection__rendered{
     padding-left: 0;
@@ -1063,6 +1066,7 @@ body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul{
 body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment .place-order{
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    margin-top:-2px;
 }
 body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul li,
 body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment .place-order{
