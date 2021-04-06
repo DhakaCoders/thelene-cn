@@ -7,7 +7,7 @@
 .checkout-progress-cntlr{
 	margin: 0 -10px;
 	margin-left: auto;
-	max-width: 427px;
+	max-width: 437px;
 	width: 100%;
 }	
 
@@ -57,10 +57,10 @@
 	padding: 0 10px;
 	text-align: left;
 }
-.chckout-prgrs-col.chckout-prgrs-col-2nd{
+.chckout-prgrs-col.chckout-prgrs-col-3{
 	text-align: center;
 }
-.chckout-prgrs-col.chckout-prgrs-col-3rd{
+.chckout-prgrs-col.chckout-prgrs-col-3{
 	text-align: right;
 }
 .chckout-prgrs-number{
@@ -70,11 +70,19 @@
 	line-height: 1;
 	color: #D4D3D4;
 	margin-bottom: 14px;
-	display: inline-block;
+	display: block;
 }
 .chckout-prgrs-title{
+	font-family: 'Bitter', serif;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.5;
-	color: #525A61;
+	color: #535A61;
 	margin-bottom: 0;
+}
+.chckout-prgrs-col-2{
+	text-align: center;
+}
+.chckout-prgrs-col.active .chckout-prgrs-number{
+	color: #8CCC0C;
 }
