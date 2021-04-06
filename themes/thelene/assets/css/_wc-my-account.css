@@ -729,7 +729,7 @@ body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li:before{
     content: none;
 }
 body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-navigation{
-    max-width:34%;
+    max-width:34%!important;
     width: 100%;
 }
 body.loggedin-winkelmandje-crtl .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
