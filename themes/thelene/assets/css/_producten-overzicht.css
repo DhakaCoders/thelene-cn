@@ -335,5 +335,7 @@
 }
 
 @media(max-width: 359px){
-
+	.fl-products-cntlr ul.products > li{
+	    width: 100%!important;
+	}
 }
