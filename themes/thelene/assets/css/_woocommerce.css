@@ -194,6 +194,7 @@ body.woocommerce-account #customer_login .u-column2.col-2 > h2{
 	transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
+	margin-right:0px;
 }
 input.select2-search__field{
 	height: 30px!important;
