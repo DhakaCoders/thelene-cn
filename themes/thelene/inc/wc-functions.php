@@ -195,7 +195,7 @@ if (!function_exists('add_custom_box_product_summary')) {
 
             echo '<div class="summary-ctrl">';
             echo '<div class="summary-hdr">';
-            echo '<h1 class="product_title entry-title">'.$product->get_title().'</h1>';
+            echo '<h1 class="product_title entry-title hide-xs">'.$product->get_title().'</h1>';
             if( !empty($sh_desc) ){
                 echo '<div class="short-desc">';
                 echo wpautop( $sh_desc, true );
@@ -256,14 +256,29 @@ function bryce_id_add_to_cart_text( $default ) {
 }
 
 add_action('woocommerce_product_thumbnails', 'cbv_add_custom_info', 20);
-
 function cbv_add_custom_info(){
     global $product;
     $quantity = get_field('quantity', $product->get_id());
     $water_temp = get_field('water_temp', $product->get_id());
     $brewing_time = get_field('brewing_time', $product->get_id());
     if( !empty($quantity) ||  !empty($water_temp) ||  !empty($brewing_time)):
-        echo '<div class="custom-info-crtl">';
+        echo '<div class="custom-info-crtl hide-xs">';
+        echo '<ul>';
+        if( !empty($quantity) ) printf('<li class="qnty"><span>Hoeveelheid:</span>%s gr/Liter</li>', $quantity);
+        if( !empty($water_temp) ) printf('<li class="water-temp"><span>Water temperatuur::</span>%s c°</li>', $water_temp);
+        if( !empty($brewing_time) ) printf('<li class="into-time"><span>Trektijd:</span>%s</li>', $brewing_time);
+        echo '</ul>';
+        echo '</div>';
+    endif;
+}
+add_action('woocommerce_after_single_product_summary', 'cbv_add_custom_info_for_xs', 5);
+function cbv_add_custom_info_for_xs(){
+    global $product;
+    $quantity = get_field('quantity', $product->get_id());
+    $water_temp = get_field('water_temp', $product->get_id());
+    $brewing_time = get_field('brewing_time', $product->get_id());
+    if( !empty($quantity) ||  !empty($water_temp) ||  !empty($brewing_time)):
+        echo '<div class="custom-info-crtl custom-info-xs show-xs">';
         echo '<ul>';
         if( !empty($quantity) ) printf('<li class="qnty"><span>Hoeveelheid:</span>%s gr/Liter</li>', $quantity);
         if( !empty($water_temp) ) printf('<li class="water-temp"><span>Water temperatuur::</span>%s c°</li>', $water_temp);
