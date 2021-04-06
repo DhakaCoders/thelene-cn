@@ -395,7 +395,9 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
     border-bottom: 1px solid #ECE9E9!important;
     border-radius: 0!important;
 }
-
+body.woocommerce-cart.woocommerce-page .yith-giftcard{
+	display: block;
+}
 /*responsive */
 @media(max-width: 1599px){
 	body.woocommerce-cart .cart_totals{

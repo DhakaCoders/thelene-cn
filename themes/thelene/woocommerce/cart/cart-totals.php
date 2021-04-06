@@ -99,16 +99,16 @@ defined( 'ABSPATH' ) || exit;
 			<th><?php esc_html_e( 'Totaal', 'woocommerce' ); ?></th>
 			<td data-title="<?php esc_attr_e( 'Totaal', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
-		<tr class="giftcard">
+<!-- 		<tr class="giftcard">
 			<td>
-				<?php do_action( 'woocommerce_giftcard_form' ); ?>
+				<?php //do_action( 'woocommerce_giftcard_form' ); ?>
 			</td>
-		</tr>
+		</tr> -->
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 		
 
 	</table>
-
+<?php do_action( 'woocommerce_giftcard_form' ); ?>
 	<div class="wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>
