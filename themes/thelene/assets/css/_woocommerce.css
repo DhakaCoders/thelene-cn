@@ -176,6 +176,13 @@ body.woocommerce-account #customer_login .u-column2.col-2 > h2{
 	-webkit-transition: all 0.5s;
 	border-radius: 6px;
 }
+.woocommerce input[type="text"]:focus,
+.woocommerce input[type="email"]:focus,
+.woocommerce input[type="tel"]:focus,
+.woocommerce input[type="password"]:focus,
+.woocommerce textarea:focus{
+	border-color:#d0d0d0!important;
+}
 .woocommerce textarea{
 	min-height: 200px;
 }

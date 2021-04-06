@@ -1077,12 +1077,13 @@ body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul 
 }
 body.woocommerce-checkout .place-order #pwgc-redeem-form input[type="submit"]{
     width: 210px;
-    height: 40px;
+    height: 50px;
     border-radius: 6px;
     background: #8ccc0c;
     color: #fff;
     font-weight: 700;
     margin-top: 30px!important;
+    cursor: pointer;
 }
 body.woocommerce-checkout #pwgc-redeem-gift-card-form #pwgc-redeem-form label{
     margin-bottom:20px!important;
@@ -1098,11 +1099,27 @@ body.woocommerce-checkout ul#shipping_method li{
     padding-left: 0px;
 }
 
+body.woocommerce-checkout .form-row > span{
+    display:inline-block;
+    width:100%;
+}
+body.woocommerce-checkout #pwgc-redeem-gift-card-form #pwgc-redeem-form  input[type=text]:focus{
+    background: #fcf8f8;
+    border-color:#fcf8f8;
+}
+body.woocommerce-checkout .place-order #pwgc-redeem-form input[type="submit"]:hover {
+    background: #EC5387!important;
+}
+body.woocommerce-checkout .checkout-terms > .validate-required {
+    margin-bottom: 17px!important;
+}
 
-
-
-
-
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .select2-container--open .select2-selection{
+    border-color:#d0d0d0!important;
+}
+body.woocommerce-checkout .select2-container--default .select2-search--dropdown .select2-search__field{
+    border:none;
+}
 
 
 
