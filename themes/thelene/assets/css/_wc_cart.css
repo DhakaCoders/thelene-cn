@@ -392,7 +392,7 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
 	body.woocommerce-cart .cart-table-crtl table.shop_table tbody tr{
 		display: flex!important;
 		flex-wrap: wrap!important;
-		padding-left: 201px;
+		padding-left: 105px;
 		position: relative;
 		padding-top: 10px;
 		padding-bottom: 10px;
@@ -414,10 +414,11 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
 	body.woocommerce-cart .cart-table-crtl .product-thumbnail > a{
 		position: absolute;
 		top: 10px;
-		left: 100px;
+		left: 0;
 	}
-	body.woocommerce-cart .product-thumbnail .product-name{
-		padding-left: 14px!important;
+	body.woocommerce-cart .product-thumbnail .product-name,
+	body.woocommerce-cart .cart-table-crtl table.shop_table tbody tr td{
+		padding-left: 0!important;
 	}
 	body.woocommerce-cart .cart-table-crtl table.shop_table tbody tr td.product-remove > a{
 		position: absolute;
@@ -450,6 +451,10 @@ body.woocommerce-cart.woocommerce-page #pwgc-redeem-gift-card-form{
 	}
 	body.woocommerce-cart .add-more-product {
 	    margin-bottom: 40px;
+	}
+	.cart-crtl{
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 }
