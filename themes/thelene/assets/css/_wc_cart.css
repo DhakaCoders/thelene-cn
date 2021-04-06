@@ -331,6 +331,10 @@ Empty cart
 	display: none;
 }
 
+
+body.woocommerce-cart.woocommerce-page .woocommerce-shipping-totals.shipping{
+	display: none;
+}
 /**
 Cart gift cart
 */
