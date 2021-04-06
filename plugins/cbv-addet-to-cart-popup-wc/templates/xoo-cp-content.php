@@ -181,9 +181,18 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
             echo '</div>';
             echo '</div>';
             echo '</div>';
+
+            $catSlug = $catName = '';
+            $cats  = get_the_terms($product->get_id(), 'product_cat');//$post->ID
+            foreach($cats as $cd){
+              $catSlug = $cd->slug;
+              $catName = $cd->name;
+            }    
           ?>
         </div>
-        <div><a class="backto-product-cat" href="#"><?php _e('Bekijk alle “Categorie”','added-to-cart-popup-woocommerce'); ?></a></div>
+        <?php if( !empty($catSlug) ): ?>
+        <div><a class="backto-product-cat" href="<?php echo get_term_link($catSlug, 'product_cat'); ?>"><?php _e('Bekijk alle '.$catName,'added-to-cart-popup-woocommerce'); ?></a></div>
+        <?php endif; ?>
       </div>
       <?php endwhile; ?>
     </div>
