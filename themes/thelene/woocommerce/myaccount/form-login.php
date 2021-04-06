@@ -70,7 +70,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			<div class="signup-notification">
 				<p>Vul hier je e-mailadres in als je nog niet beschikt over een account. Indien gewenst, kan je in de volgende stap een account aanmaken.</p>
 			</div>
-			<form method="post" class="woocommerce-form woocommerce-form-register register" id="mail_checker">
+			<form method="post" action="" class="woocommerce-form woocommerce-form-register register" id="mail_checker">
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 					<label for="reg_email"><?php esc_html_e( 'E-mailadres', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 					<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" placeholder="Bijv. jan@domein.be" required/>
@@ -129,7 +129,7 @@ global $woocommerce;
 	<div class="register-title">
 		<h3>Persoonlijke gegevens</h3>
 	</div>
-	<form id="regiter_action_form">
+	<form id="regiter_action_form" action="" method="post">
 		<input type="hidden" name="action" value="ajax_register_save">
 		<div class="type-order-format">
 			<p class="form-row form-row-wide" id="billing_order_type_field">
@@ -155,12 +155,14 @@ global $woocommerce;
 				<span class="woocommerce-input-wrapper">
 					<input type="text" class="input-text " name="billing_first_name" id="billing_first_name" placeholder="Voornaam"autocomplete="given-name">
 				</span>
+				<span class="error-valid error-first_name"></span>
 			</p>
 			<p class="form-row form-row-last" id="billing_last_name_field">
 				<label for="billing_first_name" class="">&nbsp;</label>
 				<span class="woocommerce-input-wrapper">
 					<input type="text" class="input-text " name="billing_last_name" id="billing_last_name" placeholder="Naam" autocomplete="family-name">
 				</span>
+				<span class="error-valid error-last_name"></span>
 			</p>
 			<?php 
 				woocommerce_form_field('billing_country', array(
@@ -249,13 +251,13 @@ global $woocommerce;
 					<span class="woocommerce-input-wrapper">
 						<input type="password" class="input-text " name="confirm_password" id="confirm_password" autocomplete="confirm-password">
 					</span>
-					<span class="error-confirm_password"></span>
+					<span class="error-valid error-confirm_password"></span>
 				</p>
 			</div>
 			<div class="register-btn">
 				<div class="reg-btn-crtl">
 					<p>
-						<button type="submit" name="user-register" id="register_action_btn" value="<?php esc_attr_e( 'doorgaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Doorgaan', 'woocommerce' ); ?></button>
+						<button type="button" name="user-register" id="register_action_btn" value="<?php esc_attr_e( 'doorgaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Doorgaan', 'woocommerce' ); ?></button>
 						<input type="hidden" name="user_register_nonce" value="<?php echo wp_create_nonce('user-register-nonce'); ?>"/>
 					</p>
 					<p class="form-row html-text">

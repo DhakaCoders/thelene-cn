@@ -1,8 +1,9 @@
 (function($) {
-	$("#register_action_btn").click(function(e){
-		e.preventDefault();
-		var serialized = $( '#regiter_action_form' ).serialize();
-	    $.ajax({
+	jQuery("#register_action_btn").click(function(e){
+		//e.preventDefault();
+		var serialized = jQuery( '#regiter_action_form' ).serialize();
+		console.log(serialized);
+	    jQuery.ajax({
 	        type: 'POST',
 	        dataType: 'JSON',
 	        url: ajax_user_register_signup_object.ajaxurl,
@@ -11,7 +12,7 @@
 	            console.log(data);
 	            if(typeof(data['status']) != "undefined" &&  data['status'].length != 0 && data['status'] == 'success'){
                   var successMsg = data['login_success'];
-                  $('#regiter_action_form').html('<div class="success-msg"><p>'+successMsg+'</p></div>');
+                  jQuery('#regiter_action_form').html('<div class="success-msg"><p>'+successMsg+'</p></div>');
                   function redirect_page(){
                     location.reload();
                   }

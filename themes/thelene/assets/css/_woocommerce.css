@@ -324,7 +324,7 @@ input.select2-search__field{
 .form-row{
 	position: relative;
 }
-.error-confirm_password {
+.error-valid {
     position: absolute;
     top: 0;
     right: 2px;

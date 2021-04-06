@@ -20,7 +20,7 @@ if ( ! apply_filters( 'yith_gift_cards_show_field', true ) ) {
     <?php
     $direct_display = get_option ( 'ywgc_display_form', 'ywgc_display_form_hidden' ) == 'ywgc_display_form_visible' ? 'yes' : 'no';
 
-    if ( $direct_display == 'yes' ):
+    if ( $direct_display != 'yes' ):
 
         ?>
         <div class="ywgc_have_code">
@@ -40,7 +40,7 @@ if ( ! apply_filters( 'yith_gift_cards_show_field', true ) ) {
 
     ?>
 
-    <div class="ywgc_enter_code" method="post" style="<?php echo ( $direct_display == 'yes' ? 'display:none' : '' ); ?>">
+    <div class="ywgc_enter_code" method="post" style="<?php echo ( $direct_display != 'yes' ? 'display:none' : '' ); ?>">
 
         <?php
 

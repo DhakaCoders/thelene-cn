@@ -462,6 +462,8 @@ jQuery('body').on('wc_cart_emptied', function(){
   //console.log('wc_cart_emptied triggered');
 });
 
+// form validation
+
 $("#confirm_password").bind('blur keyup change click', function(){
     $("#register_action_btn").prop("disabled",false);
     var pass = $('#re_password').val();
@@ -479,8 +481,6 @@ $("#confirm_password").bind('blur keyup change click', function(){
     $("#register_action_btn").prop("disabled",true);
     }
 });
-
-
 
 })(jQuery);
 
