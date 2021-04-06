@@ -28,6 +28,9 @@ body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccou
     position:relative;
     cursor: pointer;
 }
+body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li:hover{
+    opacity: .8;
+}
 body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation ul li:not(:last-child){
     margin-bottom: 19px;
 }
