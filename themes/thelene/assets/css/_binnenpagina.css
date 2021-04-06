@@ -31,6 +31,9 @@
 	margin-bottom: 20px;
 	line-height: 1.1;
 }
+.pgTitleBlock h1{
+	margin-bottom: 30px;
+}
 .dfp-promo-module-title{
 	color: #202020;
 	font-family: 'Open Sans', sans-serif;

@@ -151,7 +151,7 @@
               ?>
             </div>
             <div class="ftr-designby">
-              <a href="#">Website laten maken door<strong> Conversal</strong></a>
+              <a target="_blank" href="https://www.conversal.be/">Website laten maken door<strong> Conversal</strong></a>
             </div>
         </div>
       </div>

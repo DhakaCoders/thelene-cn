@@ -15,7 +15,7 @@ get_template_part('templates/breadcrumbs');
     <div class="block-955">
     <div class="dft-promo-module clearfix">
       <?php 
-        if( !empty($title) ) printf('<div><strong class="dfp-promo-module-title fl-h1">%s</strong></div>', $title); 
+        if( !empty($title) ) printf('<div class="pgTitleBlock"><h1 class="dfp-promo-module-title fl-h1">%s</h1></div>', $title); 
         if( !empty($afbeelding) ){
           echo '<div class="dfp-plate-one-img-bx">'. cbv_get_image_tag($afbeelding).'</div>';
         }
