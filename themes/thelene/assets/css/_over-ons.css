@@ -109,7 +109,9 @@
     width: 100%;
     height: 100%;
 }
-
+.page-template-page-overons .ftr-top-inr{
+	border-top: 0;
+}
 
 @media(max-width:1499px){
 	/* --------------------------- over-ons-intro-section -------------------------- */
