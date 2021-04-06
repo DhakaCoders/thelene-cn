@@ -462,6 +462,26 @@ jQuery('body').on('wc_cart_emptied', function(){
   //console.log('wc_cart_emptied triggered');
 });
 
+$("#confirm_password").bind('blur keyup change click', function(){
+    $("#register_action_btn").prop("disabled",false);
+    var pass = $('#re_password').val();
+    var confpass = $(this).val();
+    //check the strings
+    if(pass == confpass){
+    //if both are same remove the error and allow to submit
+    $('.error-confirm_password').text('');
+    $(this).css({"border": "2px solid #F3F3F3", "color": "#9EA5AB"});
+    $("#register_action_btn").prop("disabled",false);
+    }else{
+    //if not matching show error and not allow to submit
+    $('.error-confirm_password').text('Password not matching');
+    $(this).css({"border": "2px solid #D17181", "color": "#D17181"});
+    $("#register_action_btn").prop("disabled",true);
+    }
+});
+
+
+
 })(jQuery);
 
 function isValidEmailAddress(emailAddress) {

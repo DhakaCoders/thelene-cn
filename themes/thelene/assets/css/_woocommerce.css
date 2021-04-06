@@ -309,6 +309,16 @@ input.select2-search__field{
 .register-nextstep.register-form-hide.show-next-form{
 	display: block;
 }
+.form-row{
+	position: relative;
+}
+.error-confirm_password {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    color: #D17181;
+    font-size: 12px;
+}
 @media(max-width: 991px){
 	.woocommerce #customer_details .col-1,
 	.woocommerce #customer_details .col-2 {
