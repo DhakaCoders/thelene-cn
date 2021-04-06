@@ -551,6 +551,13 @@ body.hide-account-title .register-title h3{
     -webkit-transform: translateY(-50%);
     margin-top: -1px;
 }
+.woocommerce .woocommerce-widget-layered-nav-list .radio-btn.woocommerce-widget-layered-nav-list__item--chosen a::after,
+/*.woocommerce .woocommerce-widget-layered-nav-list .radio-btn  a::before,
+.woocommerce .woocommerce-widget-layered-nav-list .radio-btn.woocommerce-widget-layered-nav-list__item--chosen a::before*/{
+    display: none;
+}
+
+
 /*.container input:checked ~ .radio-custom{
 	background:#8aa4e4!important
 }*/
@@ -1731,6 +1738,7 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 /* Orders */
 .myac-pro-grds {
     display: flex;
+    flex-wrap:wrap;
 }
 .myac-pro-grd-item-inr {
     display: flex;
