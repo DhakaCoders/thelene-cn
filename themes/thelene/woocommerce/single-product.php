@@ -27,7 +27,7 @@ get_template_part('templates/breadcrumbs');
     <div class="row">
       <div class="col-md-12">
         <div class="fl-product clearfix">
-        <div class="wc-product-title show-xs">
+        <div class="wc-product-title show-sm">
         	<h1><?php echo get_the_title(); ?></h1>
         </div>
 	<?php

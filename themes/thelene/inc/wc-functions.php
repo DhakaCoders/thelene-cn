@@ -195,7 +195,7 @@ if (!function_exists('add_custom_box_product_summary')) {
 
             echo '<div class="summary-ctrl">';
             echo '<div class="summary-hdr">';
-            echo '<h1 class="product_title entry-title hide-xs">'.$product->get_title().'</h1>';
+            echo '<h1 class="product_title entry-title hide-sm">'.$product->get_title().'</h1>';
             if( !empty($sh_desc) ){
                 echo '<div class="short-desc">';
                 echo wpautop( $sh_desc, true );
@@ -262,7 +262,7 @@ function cbv_add_custom_info(){
     $water_temp = get_field('water_temp', $product->get_id());
     $brewing_time = get_field('brewing_time', $product->get_id());
     if( !empty($quantity) ||  !empty($water_temp) ||  !empty($brewing_time)):
-        echo '<div class="custom-info-crtl hide-xs">';
+        echo '<div class="custom-info-crtl hide-sm">';
         echo '<ul>';
         if( !empty($quantity) ) printf('<li class="qnty"><span>Hoeveelheid:</span>%s gr/Liter</li>', $quantity);
         if( !empty($water_temp) ) printf('<li class="water-temp"><span>Water temperatuur::</span>%s c°</li>', $water_temp);
@@ -278,7 +278,7 @@ function cbv_add_custom_info_for_xs(){
     $water_temp = get_field('water_temp', $product->get_id());
     $brewing_time = get_field('brewing_time', $product->get_id());
     if( !empty($quantity) ||  !empty($water_temp) ||  !empty($brewing_time)):
-        echo '<div class="custom-info-crtl custom-info-xs show-xs">';
+        echo '<div class="custom-info-crtl custom-info-xs show-sm">';
         echo '<ul>';
         if( !empty($quantity) ) printf('<li class="qnty"><span>Hoeveelheid:</span>%s gr/Liter</li>', $quantity);
         if( !empty($water_temp) ) printf('<li class="water-temp"><span>Water temperatuur::</span>%s c°</li>', $water_temp);
@@ -604,12 +604,19 @@ add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );
 */
 add_filter( 'body_class', 'cbv_wc_custom_class' );
 function cbv_wc_custom_class( $classes ) {
+    global $woocommerce;
     if( strpos($_SERVER['REQUEST_URI'], "winkelmandje") !== false && is_account_page() && is_user_logged_in()){
         $classes[] = 'loggedin-winkelmandje-crtl';
     }else{
         if( is_account_page() && is_user_logged_in() && (!is_wc_endpoint_url( 'orders' ) ||  is_wc_endpoint_url( 'edit-account' ))) {
             $classes[] = 'loggedin-deshboard-crtl';
         }
+    }
+    if( is_cart() && WC()->cart->cart_contents_count == 0){
+        $classes[]='empty-cart';
+    }
+    if( isset($_GET['action']) && $_GET['action']=='registration'){
+        $classes[]='hide-account-title';
     }
     return $classes;
 }
@@ -658,14 +665,14 @@ function woocommerce_clear_cart_url() {
 /**
 Add a body class when cart is empty
 */
-function tristup_body_classes( $classes ){
+/*function tristup_body_classes( $classes ){
     global $woocommerce;
     if( is_cart() && WC()->cart->cart_contents_count == 0){
         $classes[]='empty-cart';
     }
     return $classes;
 }
-add_filter( 'body_class', 'tristup_body_classes' );
+add_filter( 'body_class', 'tristup_body_classes' );*/
 
 add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
 function custom_shipping_package_name( $name ) {

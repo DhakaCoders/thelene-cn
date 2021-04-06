@@ -416,7 +416,7 @@ $("#reg_email").bind('blur keyup change click', function(){
     $("#register_next").prop("disabled",true);
   }
 })
-$("#register_next").on('click', function(){
+/*$("#register_next").on('click', function(){
   if( $.trim($('form#mail_checker #reg_email').val()) != ''){
     var email = $('form#mail_checker #reg_email').val();
     $("#form_next").addClass('show-next-form');
@@ -424,7 +424,7 @@ $("#register_next").on('click', function(){
     $("#billing_email_2").val(email);
     $('body').addClass('hide-account-title');
   }
-});
+});*/
 
 
 $("#for_business").on('change', function(){
@@ -438,13 +438,13 @@ var html = '<p class="form-row form-row-first" id="billing_company_field">' +
       '<p class="form-row form-row-last" id="billing_btw_nummer_field">' +
         '<label for="billing_btw_nummer" class="">BTW-nummer</label>' +
         '<span class="woocommerce-input-wrapper">' +
-          '<input type="text" class="input-text " name="billing_btw_nummer" id="billing_btw_nummer" placeholder="BTW-nummer">' +
+          '<input type="text" class="input-text " name="billing_btw_nummer" id="billing_btw_nummer" placeholder="BTW-nummer" required>' +
         '</span>' +
       '</p>'+
       '<p class="form-row form-row-wide" id="billing_btw_nummer_field">' +
         '<label for="billing_reference" class="">Referentie</label>' +
         '<span class="woocommerce-input-wrapper">' +
-          '<input type="text" class="input-text " name="billing_reference" id="billing_reference" placeholder="Referentie" autocomplete="reference">' +
+          '<input type="text" class="input-text " name="billing_reference" id="billing_reference" placeholder="Referentie" required>' +
         '</span>' +
       '</p>';
 
