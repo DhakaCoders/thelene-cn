@@ -638,7 +638,7 @@ body.woocommerce-account .woocommerce-input-wrapper .bootstrap-select{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     position: absolute;
-    border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 1px;
     
 }
 .same-as-shipping-address input:checked ~ .checkbox-custom,
@@ -685,6 +685,7 @@ body.woocommerce-account .register-btn button[type="submit"]{
     margin-top: 23px;
     cursor: pointer;
     width: 311px;
+    font-weight: 700;
 }
 .register-btn{
 	text-align: right;
