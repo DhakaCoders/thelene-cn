@@ -1044,11 +1044,27 @@ body.woocommerce-checkout .woocommerce-shipping-fields .selection .select2-selec
 .select2-container--default .select2-search--dropdown .select2-search__field{
     border-right:3px;
 }
+body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul,
+body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment .place-order{
+    background:#31304F;
+    border-bottom:none!important;
+}
+body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul li,
+body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment .place-order{
+    color:#fff;
+}
 
-
-
-
-
+body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul li .payment_box{
+    background:#8CCC0C!important;
+    color:#fff;
+    font-weight:500;
+}
+body.woocommerce-checkout .payment-method-crtl .woocommerce-checkout-payment ul li .payment_box:before{
+        border: 1em solid #8ccc0c!important;
+        border-right-color: transparent!important;
+        border-left-color: transparent!important;
+        border-top-color: transparent!important;
+}
 
 
 
