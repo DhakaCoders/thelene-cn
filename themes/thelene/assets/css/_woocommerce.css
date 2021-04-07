@@ -335,6 +335,16 @@ input.select2-search__field{
 .cart_totals small.includes_tax{
     display: none;
 }
+.woocommerce-checkout #billing_company_field,
+.woocommerce-checkout #vat_number_field,
+.woocommerce-checkout #billing_reference_field{
+	display: none !important;
+}
+.woocommerce-checkout .show-vat_number#vat_number_field,
+.woocommerce-checkout .show-company#billing_company_field,
+.woocommerce-checkout .show-reference#billing_reference_field{
+	display: block !important;
+}
 @media(max-width: 991px){
 	.woocommerce #customer_details .col-1,
 	.woocommerce #customer_details .col-2 {
