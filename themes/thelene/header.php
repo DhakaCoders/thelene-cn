@@ -181,6 +181,12 @@ if( is_array($logoObj) ){
 
   <div class="xs-menu-cntlr">
     <div class="xs-menu">
+      <div class="submenu-header">
+        <div class="back-to-main-menu">
+          <a href="#">Terug</a>
+        </div>
+        <div class="menuTitle"><strong>Thee & Infusies</strong></div>
+      </div>
       <nav class="main-nav">
         <?php 
           $catmenuOptions = array( 
