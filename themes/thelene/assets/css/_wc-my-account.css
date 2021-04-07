@@ -225,8 +225,8 @@ body.woocommerce-orders .orders-crtl .code-text{
 	font-weight:700;
 	color: #202020;
 	padding-bottom:23px;
-	border-bottom: 1px solid #F2EDE9;
-	font-family: 'Open Sans';
+/*	border-bottom: 1px solid #F2EDE9;
+*/	font-family: 'Open Sans';
 	margin-top:5px;
 }
 body.woocommerce-orders .orders-crtl .my-ac-timea{
@@ -244,6 +244,7 @@ body.woocommerce-orders  .order-details .color-green{
 	padding-left:36px;
 	margin-top: 20px;
 	position: relative;
+    border-top: 1px solid #F2EDE9;
 }
 body.woocommerce-orders .order-details .order-status:after {
     content: "";
@@ -299,11 +300,12 @@ body.woocommerce-orders .woocommerce-account-grds-cntlr{
 	padding-top:72px;
 }
 body.woocommerce-orders .order-details .myac-pro-grds{
-	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #F2EDE9;
     padding-bottom: 15px;
 }
 body.woocommerce-orders .order-details{
 	border:none;
+
 }
 
 /* ------------------------- woocommerce-edit-account --------------------------*/
