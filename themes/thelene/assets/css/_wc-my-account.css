@@ -1546,7 +1546,9 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 	body.woocommerce-orders .orders-crtl .code-text{
 		font-size:18px;
 	}
-
+    .back-to-dashboard-btn-cntlr a:after{
+        margin-top: -1px;
+    }
 
 
 
@@ -1754,7 +1756,9 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 		height: auto;
 	}
 	/* --------------- order -----------------------*/
-	
+	   body.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
+        max-width:100%;
+       }
 	/* --------------woocommerce-edit-account---------------*/
 	body.woocommerce-account .woocommerce-EditAccountForm legend{
 		font-size: 20px;
