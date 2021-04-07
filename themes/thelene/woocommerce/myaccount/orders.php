@@ -48,7 +48,7 @@ apply_filters(
 ?>
 <div class="customer-order-details">
 <?php
-if ( $customer_orders ) :
+if ( !$customer_orders ) :
 ?>
 <div class="faq-accordion-wrp cbvmyaccount">
     <ul class="clearfix reset-list orders-list">
@@ -162,5 +162,7 @@ if ( $customer_orders ) :
     }
 ?>
 </div>
+<?php else: ?>
+  <div class="no-results"><p>Geen bestellingen.</p></div>
 <?php endif; ?>
 </div>
