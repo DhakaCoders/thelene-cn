@@ -242,7 +242,7 @@ body.woocommerce-orders  .order-details .color-green{
 	font-weight:500;
 	font-family: 'Work Sans', sans-serif;
 	padding-left:36px;
-	margin-top: 20px;
+	padding-top: 20px;
 	position: relative;
     border-top: 1px solid #F2EDE9;
 }
@@ -260,7 +260,7 @@ body.woocommerce-orders .order-details .order-status:after {
     position: absolute;
     left: 0;
     top: 50%;
-    margin-top:-5px;
+    margin-top:5px;
 }
 body.woocommerce-orders  .orders-crtl .contact-info a.order-contact-btn{
 	display: inline-block;
