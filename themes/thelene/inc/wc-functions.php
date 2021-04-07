@@ -570,7 +570,7 @@ function misha_remove_my_account_links( $menu_links ){
     Set gift card category
 */
 function assign_gift_card_cat(){
-    $gift_cat = array('geschenken' );
+    $gift_cat = array('geschenken');
     if( !empty($gift_cat) )
         return $gift_cat;
     else
@@ -584,7 +584,7 @@ function custom_pre_get_posts_query( $q ) {
     if ( ! $q->is_main_query() ) return;
     if ( ! $q->is_post_type_archive() ) return;
 
-    if ( ! is_admin() && !is_shop() && assign_gift_card_cat() ) {
+    if ( ! is_admin() && is_shop() && assign_gift_card_cat() ) {
         $tax_query = (array) $q->get( 'tax_query' );
 
         $tax_query[] = array(
@@ -674,6 +674,23 @@ Add a body class when cart is empty
     return $classes;
 }
 add_filter( 'body_class', 'tristup_body_classes' );*/
+
+/**
+ * Process the checkout
+ **/
+
+add_action('woocommerce_checkout_process', 'cw_custom_process_checkbox');
+function cw_custom_process_checkbox() {
+    global $woocommerce;
+    if (!$_POST['accept_condition'])
+        wc_add_notice( __( 'Please accept conditions to proceed with your order' ), 'error' );
+}
+
+
+add_action('woocommerce_checkout_update_order_meta', 'cw_checkout_order_meta');
+function cw_checkout_order_meta( $order_id ) {
+    if ($_POST['accept_condition']) update_post_meta( $order_id, 'Accept Condition', esc_attr($_POST['accept_condition']));
+}
 
 add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
 function custom_shipping_package_name( $name ) {

@@ -4,7 +4,8 @@
 	padding-bottom: 53px;
 }
 
-.product-page-col-cntlr .fl-pagi-cntlr{
+.product-page-col-cntlr .fl-pagi-cntlr,
+.customer-order-details .faq-pagi-ctlr{
 	padding-bottom: 0;
 }
 .sidebar-title .fl-h4{

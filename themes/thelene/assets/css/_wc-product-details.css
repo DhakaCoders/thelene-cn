@@ -418,6 +418,48 @@ body.archive.tax-product_cat .fl-pro-grd-img-cntlr img{
 body.single-product .bootstrap-select .dropdown-toggle .filter-option-inner-inner{
 	font-weight: 400;
 }
+.product-type-gift-card .gift-cards-list + h3{
+	display: none;
+}
+.product-type-gift-card .gift-card-content-editor.step-content h5 {
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    float: left;
+}
+.ywgc-sender-name, .ywgc-message{
+	width: 100%;
+	float: left;
+}
+.ywgc-sender-name label, .ywgc-message label {
+    display: block!important;
+}
+.ywgc-sender-name input, .ywgc-message textarea {
+    width: 100%!important;
+}
+.ywgc-message textarea{
+	padding: 15px!important;
+}
+.gift_card_template_button {
+    margin-top: 30px!important;
+}
+.gift_card_template_button .cartbtn-wrap{
+	padding-bottom: 43px!important;
+	border-bottom: 1px solid #F1E8E1;
+	margin-bottom: 35px;
+}
+.gift_card_template_button .qty-price-wrap{
+	margin-bottom: 32px!important;
+}
+.gift_card_template_button .qty-price-wrap span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.gift_card_template_button .qty-price-wrap span bdi{
+	font-weight: 600;
+	font-size: 24px;
+	color: #31304F;	
+}
 @media (max-width: 1699px){
 	
 }
