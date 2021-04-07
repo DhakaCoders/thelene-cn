@@ -418,6 +418,12 @@ body.archive.tax-product_cat .fl-pro-grd-img-cntlr img{
 body.single-product .bootstrap-select .dropdown-toggle .filter-option-inner-inner{
 	font-weight: 400;
 }
+.product-type-gift-card .gift-cards-list + h3{
+	display: none;
+}
+.product-type-gift-card .gift-card-content-editor.step-content h5{
+	
+}
 @media (max-width: 1699px){
 	
 }
