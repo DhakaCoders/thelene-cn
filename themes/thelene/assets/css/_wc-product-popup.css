@@ -245,7 +245,8 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 .product-price del span,
 .xoo-cp-pprice del span,
 .fl-pro-grd-price del span,
-.loggedin-winkelmandje-crtl .woocommerce-mini-cart-item .quantity del span{
+.loggedin-winkelmandje-crtl .woocommerce-mini-cart-item .quantity del span,
+.loggedin-winkelmandje-crtl .woocommerce-mini-cart-item .quantity del span bdi{
     color: #525A61;
     font-size: 12px;
     text-decoration-line: line-through;
