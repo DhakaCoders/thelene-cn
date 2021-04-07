@@ -197,8 +197,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
   }, false);
 })();
 
-
-  /*Start of Ranojit*/
 if( $('.hmProdctGrdsSlider').length ){
     $('.hmProdctGrdsSlider').slick({
       dots: false,
@@ -313,7 +311,6 @@ if( $('.qty').length ){
   });
 
 }
-/*Start of Noyon*/
 
 if( $('.hambergar-cross-cntlr').length ){
   $('.hambergar-cross-cntlr').click(function(){
@@ -334,7 +331,6 @@ $('.back-to-main-menu a').on('click', function(){
    $('li.menu-item-has-children').removeClass('this-sub-menu-active');  
 });
 
-/*Start of Milon*/
 
 /*
 -----------------------
@@ -346,9 +342,6 @@ $('.wpforms-error').on('click', function(){
   $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
 });
 
-
-
-/*Start of Shariful*/
 
   if( $('.dfpSlider').length ){
     $('.dfpSlider').slick({
@@ -373,7 +366,6 @@ $('.wpforms-error').on('click', function(){
   }
 
 
-/*Start of Niaz*/
 if (windowWidth <= 767) {
 if( $('.loginInfoSlider').length ){
     $('.loginInfoSlider').slick({
@@ -395,7 +387,6 @@ $(".billing-address-wrap .same-as-shipping-address,.login-info p:first-child,.fo
         $(this).append('<div class="checkbox-custom"></div>')
   });
 // $('.woocommerce-input-wrapper select').addClass('selectpicker');
-/*Start of Sabbir*/
 
 if (windowWidth <= 767) {
   if( $('.BlogGridSlider').length ){
