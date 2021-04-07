@@ -345,6 +345,10 @@ input.select2-search__field{
 .woocommerce-checkout .show-reference#billing_reference_field{
 	display: block !important;
 }
+.no-results {
+    text-align: center;
+    color: #D17181;
+}
 @media(max-width: 991px){
 	.woocommerce #customer_details .col-1,
 	.woocommerce #customer_details .col-2 {
