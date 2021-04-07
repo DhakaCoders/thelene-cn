@@ -65,10 +65,12 @@ if ( $customer_orders ) :
       </div>
           <span></span>
           <div class="order-details">
+            <?php 
+              $order_items = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
+              if( $order_items ):
+            ?>
             <div class="myac-pro-grds">
                 <?php 
-                $order_items = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
-                if( $order_items ):
                 foreach ( $order_items as $item_id => $item ) {
                 $product = $item->get_product();
                 $itemImgID = get_post_thumbnail_id($product->get_id());
@@ -111,8 +113,8 @@ if ( $customer_orders ) :
                 </div>
               </div>
               <?php } ?>
-              <?php endif; ?>
             </div>
+            <?php endif; ?>
 			<?php 
 			echo "<div class='order-status color-green'>";
 			echo "<label>Status:</label> ";
