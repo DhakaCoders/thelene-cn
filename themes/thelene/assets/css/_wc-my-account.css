@@ -1418,8 +1418,15 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 	body.woocommerce-account .loginInfoItem {
 	    padding-bottom: 10px;
 	}
-
-
+    .login-info-inr .loginInfoSlideItem{
+        display: none;
+    }
+    .login-info-inr .loginInfoSlideItem:first-child{
+        display: block;
+    }
+    .login-info-inr.slick-initialized .loginInfoSlideItem{
+        display:block;
+    }
 	/*  ----------------------------- my  new account  page ------------------------- */
     .woocommerce input[type="text"], .woocommerce input[type="email"],
     .woocommerce input[type="tel"], 
