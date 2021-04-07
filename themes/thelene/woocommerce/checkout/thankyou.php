@@ -37,9 +37,11 @@ defined( 'ABSPATH' ) || exit;
 			</p>
 
 		<?php else : ?>
-		<div class="checkout-page-title thankyou-page">
-			<div class="checkout-page-bar-crtl">
+		<div class="checkout-page-title thankyou-page clearfix">
+			<div class="checkoutpt-left">
 				<h1><?php the_title(); ?></h1>
+			</div>
+			<div class="checkoutpt-right">
 				<div class="progressbar-crtl">
 			        <div class="n-checkout-progress-wrap">
 			          <div class="checkout-progress-cntlr">
