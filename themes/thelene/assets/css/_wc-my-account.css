@@ -782,7 +782,18 @@ body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_bu
     margin-bottom: 10px;
 }
 body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button + a{
-    
+    font-weight: 700;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;  
+}
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button + a img {
+    order: 2;
+}
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button + a span {
+    order: 1;
 }
 body.loggedin-winkelmandje-crtl .myaccount-cart-crtl ul li a.remove_from_cart_button + a img{
     width: 150px;
@@ -1593,7 +1604,11 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 	body.woocommerce-edit-account .account-page-title div:first-child a{
 		margin-bottom:0;
 	}
-
+    body.woocommerce-edit-account .woocommerce-EditAccountForm > p button[type="submit"]{
+        display: table;
+        margin-left:auto!important;
+        margin-right:auto!important;
+    }
 
 	/* ---------------------- woocommerce-MyAccount-content --------------------------*/
 	body.loggedin-deshboard-crtl .woocommerce-MyAccount-content{
