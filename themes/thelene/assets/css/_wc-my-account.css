@@ -1253,7 +1253,7 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 		flex-wrap: wrap;
 	}
 	body.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation,
-    body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+/*    body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation*/{
 	    padding-right:0px;
 	}
 	/* ------------------------ accound deshboard ----------------------*/
@@ -1291,6 +1291,9 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 }
 
 @media(max-width: 768px){
+    body.woocommerce-account .account-page-title{
+        padding-top: 0px;
+    }
 	body.woocommerce-account .woocommerce .u-columns{
 		display: flex!important;
 		flex-direction:column;
@@ -1570,6 +1573,7 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 	body.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 		max-width:100%;
 		text-align:left;
+        padding-right: 0px;
 	}
 	body.loggedin-deshboard-crtl .account-page-title{
 		text-align: center;
