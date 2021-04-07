@@ -157,11 +157,14 @@ pagination
 	border: 1px solid transparent;
 	border-radius: 5px;
 }
-.faq-pagi-ctlr ul li:nth-child(1) span,
+/*.faq-pagi-ctlr ul li:nth-child(1) span,
 .faq-pagi-ctlr ul li:last-child span,
 .faq-pagi-ctlr ul li .prev,
 .faq-pagi-ctlr ul li .next{
 	text-indent:-99999999px;
+}*/
+.faq-pagi-ctlr {
+    margin-top: 65px;
 }
 .fl-pagi-cntlr ul li a:hover{
 	border: 1px solid #31304F;

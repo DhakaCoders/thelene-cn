@@ -445,7 +445,6 @@ $("#reg_email").bind('blur keyup change click', function(){
 
 
 $("#for_business").on('change', function(){
-
 var html = '<p class="form-row form-row-first" id="billing_company_field">' +
         '<label for="billing_company" class="">Bedrijfsnaam</label>' +
         '<span class="woocommerce-input-wrapper">' +
@@ -472,16 +471,13 @@ $("#private").on('change', function(){
 var html = '';
   $("#extra_fields").empty(html);
 })
-    new WOW().init();
 
 jQuery('body').on('wc_cart_emptied', function(){
   location.reload();
   //console.log('wc_cart_emptied triggered');
 });
 
-// form validation
-
-
+// Registration form validation
 $("#re_password").bind('blur keyup change', function(){
   $("#register_action_btn").attr('disabled','disabled');
   var pass = $('#re_password').val();
@@ -515,6 +511,26 @@ $("#confirm_password").bind('blur keyup change click', function(){
     }
 });
 
+/* Checkout field show/hide */
+if ($("#billing_order_type_Zakelijk").is(":checked")) {
+    $('#billing_company_field').addClass('show-company');
+    $('#vat_number_field').addClass('show-vat_number');
+    $('#billing_reference_field').addClass('show-reference');
+}
+$("#billing_order_type_Zakelijk").on('change', function(){
+    if ($(this).is(":checked")) {
+        $('#billing_company_field').addClass('show-company');
+        $('#vat_number_field').addClass('show-vat_number');
+        $('#billing_reference_field').addClass('show-reference');
+    }
+});
+$("#billing_order_type_Particulier").on('change', function(){
+    if ($(this).is(":checked")) {
+        $('#billing_company_field').removeClass('show-company');
+        $('#vat_number_field').removeClass('show-vat_number');
+        $('#billing_reference_field').removeClass('show-reference');
+    }
+});
 /**
 Cart quantity updates
 */
@@ -559,7 +575,7 @@ jQuery('body').on('click', '.qty1 .plus', function(){
     jQuery("[name='update_cart']").prop("disabled", false);
     jQuery("[name='update_cart']").trigger("click"); 
 });
-
+new WOW().init();
 })(jQuery);
 
 function isValidEmailAddress(emailAddress) {

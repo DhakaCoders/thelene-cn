@@ -53,10 +53,10 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 					);
 					?>
 					<?php if ( empty( $product_permalink ) ) : ?>
-						<?php echo $thumbnail . $product_name; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php echo $thumbnail . '<span class="cart-product-name">'.$product_name.'</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 					<?php else : ?>
 						<a href="<?php echo esc_url( $product_permalink ); ?>">
-							<?php echo $thumbnail . $product_name; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo $thumbnail . '<span class="cart-product-name">'.$product_name.'</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</a>
 					<?php endif; ?>
 					<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
