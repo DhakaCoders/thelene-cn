@@ -570,7 +570,7 @@ function misha_remove_my_account_links( $menu_links ){
     Set gift card category
 */
 function assign_gift_card_cat(){
-    $gift_cat = array('geschenken' );
+    $gift_cat = array('geschenken');
     if( !empty($gift_cat) )
         return $gift_cat;
     else
