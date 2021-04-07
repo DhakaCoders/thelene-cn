@@ -197,8 +197,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
   }, false);
 })();
 
-
-  /*Start of Ranojit*/
 if( $('.hmProdctGrdsSlider').length ){
     $('.hmProdctGrdsSlider').slick({
       dots: false,
@@ -313,22 +311,26 @@ if( $('.qty').length ){
   });
 
 }
-/*Start of Noyon*/
 
-if( $('.hambergar-icon').length ){
-  $('.hambergar-icon').click(function(){
+if( $('.hambergar-cross-cntlr').length ){
+  $('.hambergar-cross-cntlr').click(function(){
     $('body').toggleClass('allWork');
   });
 }
 if( $('li.menu-item-has-children a').length ){
   $('li.menu-item-has-children a').click(function(e){
    event.preventDefault();
-   $(this).next().slideToggle(300);
-   $(this).parent().toggleClass('sub-menu-arrow');
+   $(this).parents('.xs-mobile-menu').toggleClass('sub-menu-active');
+   $(this).parent().toggleClass('this-sub-menu-active');
  });
 }
 
-/*Start of Milon*/
+$('.back-to-main-menu a').on('click', function(){
+   event.preventDefault();
+   $('.xs-mobile-menu').removeClass('sub-menu-active');
+   $('li.menu-item-has-children').removeClass('this-sub-menu-active');  
+});
+
 
 /*
 -----------------------
@@ -340,9 +342,6 @@ $('.wpforms-error').on('click', function(){
   $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
 });
 
-
-
-/*Start of Shariful*/
 
   if( $('.dfpSlider').length ){
     $('.dfpSlider').slick({
@@ -368,7 +367,6 @@ $('.wpforms-error').on('click', function(){
   }
 
 
-/*Start of Niaz*/
 if (windowWidth <= 767) {
 if( $('.loginInfoSlider').length ){
     $('.loginInfoSlider').slick({
@@ -390,7 +388,6 @@ $(".billing-address-wrap .same-as-shipping-address,.login-info p:first-child,.fo
         $(this).append('<div class="checkbox-custom"></div>')
   });
 // $('.woocommerce-input-wrapper select').addClass('selectpicker');
-/*Start of Sabbir*/
 
 if (windowWidth <= 767) {
   if( $('.BlogGridSlider').length ){
@@ -440,7 +437,6 @@ $("#reg_email").bind('blur keyup change click', function(){
 
 
 $("#for_business").on('change', function(){
-
 var html = '<p class="form-row form-row-first" id="billing_company_field">' +
         '<label for="billing_company" class="">Bedrijfsnaam</label>' +
         '<span class="woocommerce-input-wrapper">' +
@@ -467,16 +463,13 @@ $("#private").on('change', function(){
 var html = '';
   $("#extra_fields").empty(html);
 })
-    new WOW().init();
 
 jQuery('body').on('wc_cart_emptied', function(){
   location.reload();
   //console.log('wc_cart_emptied triggered');
 });
 
-// form validation
-
-
+// Registration form validation
 $("#re_password").bind('blur keyup change', function(){
   $("#register_action_btn").attr('disabled','disabled');
   var pass = $('#re_password').val();
@@ -510,6 +503,26 @@ $("#confirm_password").bind('blur keyup change click', function(){
     }
 });
 
+/* Checkout field show/hide */
+if ($("#billing_order_type_Zakelijk").is(":checked")) {
+    $('#billing_company_field').addClass('show-company');
+    $('#vat_number_field').addClass('show-vat_number');
+    $('#billing_reference_field').addClass('show-reference');
+}
+$("#billing_order_type_Zakelijk").on('change', function(){
+    if ($(this).is(":checked")) {
+        $('#billing_company_field').addClass('show-company');
+        $('#vat_number_field').addClass('show-vat_number');
+        $('#billing_reference_field').addClass('show-reference');
+    }
+});
+$("#billing_order_type_Particulier").on('change', function(){
+    if ($(this).is(":checked")) {
+        $('#billing_company_field').removeClass('show-company');
+        $('#vat_number_field').removeClass('show-vat_number');
+        $('#billing_reference_field').removeClass('show-reference');
+    }
+});
 /**
 Cart quantity updates
 */
@@ -554,7 +567,7 @@ jQuery('body').on('click', '.qty1 .plus', function(){
     jQuery("[name='update_cart']").prop("disabled", false);
     jQuery("[name='update_cart']").trigger("click"); 
 });
-
+new WOW().init();
 })(jQuery);
 
 function isValidEmailAddress(emailAddress) {

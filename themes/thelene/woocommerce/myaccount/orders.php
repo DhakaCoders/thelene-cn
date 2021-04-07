@@ -65,10 +65,12 @@ if ( $customer_orders ) :
       </div>
           <span></span>
           <div class="order-details">
+            <?php 
+              $order_items = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
+              if( $order_items ):
+            ?>
             <div class="myac-pro-grds">
                 <?php 
-                $order_items = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
-                if( $order_items ):
                 foreach ( $order_items as $item_id => $item ) {
                 $product = $item->get_product();
                 $itemImgID = get_post_thumbnail_id($product->get_id());
@@ -111,8 +113,8 @@ if ( $customer_orders ) :
                 </div>
               </div>
               <?php } ?>
-              <?php endif; ?>
             </div>
+            <?php endif; ?>
 			<?php 
 			echo "<div class='order-status color-green'>";
 			echo "<label>Status:</label> ";
@@ -131,7 +133,7 @@ if ( $customer_orders ) :
       <?php endforeach; ?>
     </ul>
   </div>
-<div class="faq-pagi-ctlr">
+<div class="fl-pagi-cntlr order-pagi-crtl">
 <?php
     //we need to display some pagination if there are more total posts than the posts displayed per page
     if($order_count > $posts_per_page ){
@@ -139,9 +141,9 @@ if ( $customer_orders ) :
         echo '<ul class="reset-list page-numbers">';
 
         if($paged > 1){
-            echo '<li><a class="prev page-numbers" href="?pageno=1">Vorige</a></li>';
+            echo '<li><a class="prev page-numbers" href="?pageno=1">←</a></li>';
         }else{
-            echo '<li><span>Vorige</span></li>';
+            echo '<li><span>←</span></li>';
         }
 
         for($p = 1; $p <= $num_pages; $p++){
@@ -153,14 +155,16 @@ if ( $customer_orders ) :
         }
 
         if($paged < $num_pages){
-            echo '<li><a class="next page-numbers" href="?pageno='.$num_pages.'">Volgende</a></li>';
+            echo '<li><a class="next page-numbers" href="?pageno='.$num_pages.'">→</a></li>';
         }else{
-            echo '<li><span>Volgende</span></li>';
+            echo '<li><span>→</span></li>';
         }
 
         echo '</ul>';
     }
 ?>
 </div>
+<?php else: ?>
+  <div class="no-results"><p>Geen bestellingen.</p></div>
 <?php endif; ?>
 </div>
