@@ -6,6 +6,9 @@
 body.woocommerce-page.woocommerce-order-received .default-page-con{
 	padding-bottom:0;
 }
+body.woocommerce-checkout.woocommerce-order-received .checkout-page-title .checkoutpt-right{
+	padding-top:0;
+}
 .thnk-you-des p br{
 	display: none
 }
