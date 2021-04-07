@@ -94,7 +94,7 @@
 }
 .checkout-page-title .progressbar-crtl{
    width: 427px;
-   padding-top: 40px;
+   padding-top:0px;
 }
 @media(max-width: 768px){
 	.checkout-page-title .progressbar-crtl{

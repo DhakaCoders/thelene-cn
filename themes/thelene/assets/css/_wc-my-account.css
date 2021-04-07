@@ -149,7 +149,7 @@ body.woocommerce-orders .account-page-title h1{
     left: -3px;
 }
 .back-to-dashboard-btn-cntlr{
-	margin-bottom:32px;
+	margin-bottom:38px;
 
 }
 .back-to-dashboard-btn-cntlr a:after{
@@ -854,6 +854,16 @@ body.loggedin-winkelmandje-crtl .myaccount-cart-crtl .woocommerce-mini-cart + p{
 body.woocommerce-checkout .breadcrumb-sec{
     display: none;
 }
+body.woocommerce-checkout .default-page-con{
+    padding-bottom:0px;
+}
+body.woocommerce-checkout .woocommerce-notices-wrapper {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+body.woocommerce-checkout .checkout-page-title .checkoutpt-right{
+    padding-top:60px;
+}
 body.woocommerce-checkout .innerpage-con-wrap{
     max-width: 100%;
     width: 100%;
@@ -919,7 +929,7 @@ body.woocommerce-checkout .checkout-page-title h1{
     padding-bottom:43px;
 }
 body.woocommerce-checkout .checkout-page-title{
-    margin-bottom: 78px;
+    margin-bottom: 48px;
 }
 body.woocommerce-checkout .default-page-con h3{
      border-bottom: 1px solid #F1E8E1;

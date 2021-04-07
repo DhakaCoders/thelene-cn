@@ -15,7 +15,7 @@ body.woocommerce-page.woocommerce-order-received .default-page-con{
 }
 .thnk-you-des{
 	text-align: center;
-	padding-bottom: 40px;
+	padding-bottom: 25px;
 }
 .thnk-you-des i img{
 	max-width:99px;
@@ -85,6 +85,12 @@ body.woocommerce-page.woocommerce-order-received .default-page-con{
 }
 .thnkY-social-link ul li a i:hover {
     color: #8ccc0c;
+}
+.woocommerce-order-received .innerpage-con-wrap {
+    padding-top: 75px;
+}
+body.woocommerce-order-received .checkout-page-title{
+	margin-bottom:15px;
 }
 @media(max-width:1199px){
 
