@@ -331,6 +331,10 @@ input.select2-search__field{
     color: #D17181;
     font-size: 12px;
 }
+.custom-checkout-order-review small.includes_tax,
+.cart_totals small.includes_tax{
+    display: none;
+}
 @media(max-width: 991px){
 	.woocommerce #customer_details .col-1,
 	.woocommerce #customer_details .col-2 {

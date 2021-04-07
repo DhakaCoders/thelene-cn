@@ -1,7 +1,13 @@
 
 .thank-you-section{
 	padding-top:84px;
-	padding-bottom:75px;
+	padding-bottom:0;
+}
+body.woocommerce-page.woocommerce-order-received .default-page-con{
+	padding-bottom:0;
+}
+body.woocommerce-order-received .checkout-page-title .checkoutpt-right{
+	padding-top:0;
 }
 .thnk-you-des p br{
 	display: none
@@ -12,7 +18,7 @@
 }
 .thnk-you-des{
 	text-align: center;
-	padding-bottom: 40px;
+	padding-bottom: 25px;
 }
 .thnk-you-des i img{
 	max-width:99px;
@@ -83,6 +89,12 @@
 .thnkY-social-link ul li a i:hover {
     color: #8ccc0c;
 }
+.woocommerce-order-received .innerpage-con-wrap {
+    padding-top: 75px;
+}
+body.woocommerce-order-received .checkout-page-title{
+	margin-bottom:15px;
+}
 @media(max-width:1199px){
 
 }
@@ -110,6 +122,16 @@
 	}
 	.thnk-you-social-des-cntlr {
 	    padding: 0px 60px;
+	}
+	body.woocommerce-order-received .checkout-page-title h1{
+		display: none;
+	}
+	body.woocommerce-order-received .thank-you-section{
+	    padding-top: 30px;
+	    padding-bottom: 0;
+	}
+	.woocommerce-order-received .innerpage-con-wrap{
+	    padding-top: 38px;
 	}
 }
 @media(max-width:575px){

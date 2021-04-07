@@ -145,7 +145,7 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
   // Return the number of products you wanna show per page.
-  $cols = 4;
+  $cols = 7;
   return $cols;
 }
 
@@ -548,6 +548,7 @@ return $translated;
 add_filter ( 'woocommerce_account_menu_items', 'misha_remove_my_account_links' );
 function misha_remove_my_account_links( $menu_links ){
  // we will hook "anyuniquetext123" later
+    unset( $menu_links['gift-cards'] ); // Addresses
     unset( $menu_links['edit-address'] ); // Addresses
     unset( $menu_links['dashboard'] ); // Remove Dashboard
     unset( $menu_links['payment-methods'] ); // Remove Payment Methods
@@ -569,7 +570,7 @@ function misha_remove_my_account_links( $menu_links ){
     Set gift card category
 */
 function assign_gift_card_cat(){
-    $gift_cat = array( 'geschenken' );
+    $gift_cat = array('geschenken' );
     if( !empty($gift_cat) )
         return $gift_cat;
     else
