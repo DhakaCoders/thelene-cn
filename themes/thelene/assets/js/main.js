@@ -353,6 +353,7 @@ $('.wpforms-error').on('click', function(){
       speed: 700,
       slidesToShow: 1,
       slidesToScroll: 1,
+      adapterHeight: true,
     });
   }
 

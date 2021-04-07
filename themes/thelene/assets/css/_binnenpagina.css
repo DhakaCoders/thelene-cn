@@ -515,6 +515,7 @@ Gallery design
 }
 .dfp-slider-grd-img{
 	padding-bottom: 0;
+	height: 530px;
 }
 .dfp-slider-ctlr .slick-slider ul.slick-dots{
 	position: relative;
