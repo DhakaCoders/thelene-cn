@@ -798,6 +798,7 @@ body.loggedin-winkelmandje-crtl .woocommerce-mini-cart .woocommerce-mini-cart-it
     border-radius: 6px;
     padding: 20px 20px;
     margin-bottom: 20px;
+    background: #fff;
 }
 body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a {
     width: 154px;
