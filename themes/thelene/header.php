@@ -15,6 +15,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<div class="bdoverlay"></div>
   <svg style="display: none;">
     <!-- <svg class="id-name" width="16" height="16" viewBox="0 0 16 16" fill="#FF5C26">
       <use xlink:href="#id-name"></use> </svg> -->
