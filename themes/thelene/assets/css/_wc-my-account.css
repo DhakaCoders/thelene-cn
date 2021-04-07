@@ -188,7 +188,7 @@ body.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccoun
 body.woocommerce-orders .myac-pro-grd-item-inr .myac-pro-grd-img{
 	max-width:90px;
 	height: auto;
-	margin-right: 30px;
+	margin-right: 29px;
 }
 body.woocommerce-orders .woocommerce-account-grds-cntlr .woocommerce-MyAccount-content{
 	max-width:66.05%;
@@ -312,7 +312,9 @@ body.woocommerce-orders .order-details{
 	border:none;
 
 }
-
+body.woocommerce-orders .customer-order-details .fl-pagi-cntlr {
+    margin-top: 56px;
+}
 /* ------------------------- woocommerce-edit-account --------------------------*/
 body.woocommerce-edit-account .innerpage-con-wrap{
     max-width:100%;

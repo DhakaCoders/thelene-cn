@@ -128,21 +128,17 @@ pagination
 .fl-pagi-cntlr{
 	padding-bottom: 56px;
 }
-.fl-pagi-cntlr ul,
-.faq-pagi-ctlr ul{
+.fl-pagi-cntlr ul{
 	display: flex;
 	margin: 0 -28px;
 	justify-content: flex-end;
 	align-items: center;
 }
-.fl-pagi-cntlr ul li,
-.faq-pagi-ctlr ul li{
+.fl-pagi-cntlr ul li{
 	padding: 0 17px;
 }
 .fl-pagi-cntlr ul li a, 
-.fl-pagi-cntlr ul li span,
-.faq-pagi-ctlr ul li a,
-.faq-pagi-ctlr ul li span{
+.fl-pagi-cntlr ul li span{
 	width: 30px;
 	height: 30px;
 	font-family: 'Open Sans', sans-serif;
@@ -163,14 +159,11 @@ pagination
 .faq-pagi-ctlr ul li .next{
 	text-indent:-99999999px;
 }*/
-.faq-pagi-ctlr {
-    margin-top: 65px;
-}
+
 .fl-pagi-cntlr ul li a:hover{
 	border: 1px solid #31304F;
 }
-.fl-pagi-cntlr ul li span.current,
-.faq-pagi-ctlr ul li span.current{
+.fl-pagi-cntlr ul li span.current{
 	border: 1px solid #31304F;
 /*     float: left;
     height: 50px;
