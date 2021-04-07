@@ -289,6 +289,7 @@
 .related.products ul{
 	display: flex;
 	margin: 0 -12px;
+	flex-wrap: wrap;
 }
 
 .related.products ul li{
@@ -422,7 +423,7 @@ body.single-product .bootstrap-select .dropdown-toggle .filter-option-inner-inne
 }
 
 
-@media (max-width: 1499px) {
+@media (max-width: 1499px){
 	.woocommerce div.product div.summary {
 	    width: 51%!important;
 	    padding-left: 80px;
@@ -443,8 +444,10 @@ body.single-product .bootstrap-select .dropdown-toggle .filter-option-inner-inne
 	.thumbnails-cntlr .thumb-bg > div{
 		height: 120px;
 	}
+	.related.products ul li{
+		width:33.3333%!important;
+	}
 }
-
 @media(max-width: 1399px){
 
 }
