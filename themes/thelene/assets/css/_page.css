@@ -128,16 +128,21 @@ pagination
 .fl-pagi-cntlr{
 	padding-bottom: 56px;
 }
-.fl-pagi-cntlr ul{
+.fl-pagi-cntlr ul,
+.faq-pagi-ctlr ul{
 	display: flex;
 	margin: 0 -28px;
 	justify-content: flex-end;
 	align-items: center;
 }
-.fl-pagi-cntlr ul li{
+.fl-pagi-cntlr ul li,
+.faq-pagi-ctlr ul li{
 	padding: 0 17px;
 }
-.fl-pagi-cntlr ul li a, .fl-pagi-cntlr ul li span{
+.fl-pagi-cntlr ul li a, 
+.fl-pagi-cntlr ul li span,
+.faq-pagi-ctlr ul li a,
+.faq-pagi-ctlr ul li span{
 	width: 30px;
 	height: 30px;
 	font-family: 'Open Sans', sans-serif;
@@ -152,10 +157,17 @@ pagination
 	border: 1px solid transparent;
 	border-radius: 5px;
 }
+.faq-pagi-ctlr ul li:nth-child(1) span,
+.faq-pagi-ctlr ul li:last-child span,
+.faq-pagi-ctlr ul li .prev,
+.faq-pagi-ctlr ul li .next{
+	text-indent:-99999999px;
+}
 .fl-pagi-cntlr ul li a:hover{
 	border: 1px solid #31304F;
 }
-.fl-pagi-cntlr ul li span.current{
+.fl-pagi-cntlr ul li span.current,
+.faq-pagi-ctlr ul li span.current{
 	border: 1px solid #31304F;
 /*     float: left;
     height: 50px;
