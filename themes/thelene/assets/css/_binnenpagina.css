@@ -516,6 +516,13 @@ Gallery design
 .dfp-slider-grd-img{
 	padding-bottom: 25px;
 }
+.dfp-slider-ctlr .slick-slider ul.slick-dots{
+	position: relative;
+	bottom: 40px;
+}
+.dfp-slider-ctlr .slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
 .cta-btn{
 	padding-top: 25px;
 }
