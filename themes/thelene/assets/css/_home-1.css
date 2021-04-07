@@ -198,9 +198,13 @@
 	    bottom: -215px;
 	    max-width: 484px;
 	}
-	.fl-pro-grd-price > span{
+	/*.fl-pro-grd-price > span{
+		width: 100%;
+	}*/
+	.fl-pro-grd-price .woocommerce-price-suffix{
 		width: 100%;
 	}
+	
 	.fl-pro-grd-price{
 		flex-wrap: wrap;
 	}
