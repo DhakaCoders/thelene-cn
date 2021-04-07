@@ -232,8 +232,10 @@
 }
 
 
-@media (max-width: 1699px){
-	
+@media (max-width: 1599px){
+	.fl-products-cntlr ul.products > li{
+		width: 33.3333%!important;
+	}
 }
 
 
@@ -241,9 +243,7 @@
 	.product-page-sidebar{
 		padding-right: 40px;
 	}
-	.fl-products-cntlr ul.products > li{
-		width: 33.3333%!important;
-	}
+	
 }
 
 @media(max-width: 1399px){

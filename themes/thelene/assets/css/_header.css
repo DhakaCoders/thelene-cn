@@ -434,8 +434,7 @@ body.allWork {
 	padding-top: 131px;
 	height: 100%;
 	width: 100%;
-	padding-bottom: 50px;
-	margin-bottom: 35px;
+	padding-bottom: 77px;
 }
 .xs-menu-hdr{
 	padding: 0 20px 0 30px;
@@ -475,7 +474,7 @@ body.allWork {
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 0;
+	bottom: 26px;
 }
 .hdr-cart{
 	margin-left: auto;

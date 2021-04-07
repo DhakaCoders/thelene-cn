@@ -1253,7 +1253,7 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 		flex-wrap: wrap;
 	}
 	body.woocommerce-orders .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation,
-    body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
+/*    body.woocommerce-account .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation*/{
 	    padding-right:0px;
 	}
 	/* ------------------------ accound deshboard ----------------------*/
@@ -1291,6 +1291,9 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 }
 
 @media(max-width: 768px){
+    body.woocommerce-account .account-page-title{
+        padding-top: 0px;
+    }
 	body.woocommerce-account .woocommerce .u-columns{
 		display: flex!important;
 		flex-direction:column;
@@ -1501,6 +1504,12 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 	body.woocommerce-account .woocommerce-account-grds-cntlr{
 	    margin-bottom: 40px;
 	}
+    body.woocommerce-account.loggedin-deshboard-crtl .default-page-con p{
+        margin-bottom:10px;
+    }
+    body.woocommerce-account.loggedin-deshboard-crtl  .account-page-title h1{
+        margin-bottom:25px!important;
+    }
 	.back-to-dashboard-btn-cntlr{
 		background: #fff;
 		margin-left: -15px;
@@ -1570,6 +1579,7 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 	body.loggedin-deshboard-crtl .woocommerce-account-grds-cntlr nav.woocommerce-MyAccount-navigation{
 		max-width:100%;
 		text-align:left;
+        padding-right: 0px;
 	}
 	body.loggedin-deshboard-crtl .account-page-title{
 		text-align: center;
@@ -1683,7 +1693,7 @@ body.woocommerce-checkout .select2-container--default .select2-search--dropdown 
 		font-size:26px;
 	}
 	body.woocommerce-account .default-page-con{
-		padding-top:0px;
+		padding-top:20px;
 	}
 	body.woocommerce-account .woocommerce form .form-row label{
 		font-size:14px;

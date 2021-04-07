@@ -232,14 +232,16 @@ ul.products li:before,
 
 .sidebar-widget ul,
 ul.dropdown-menu,
-.moove-gdpr-modal-left-content ul{
+.moove-gdpr-modal-left-content ul,
+.woocommerce-MyAccount-navigation ul{
 	margin: 0!important;
 	padding: 0!important;
 	list-style: none!important;
 }
 .sidebar-widget ul li,
 ul.dropdown-menu li,
-.moove-gdpr-modal-left-content ul li{
+.moove-gdpr-modal-left-content ul li,
+.woocommerce-MyAccount-navigation ul{
 	padding: 0!important;
 	margin: 0!important;
 	list-style: none!important;
@@ -247,7 +249,8 @@ ul.dropdown-menu li,
 }
 .sidebar-widget ul li:before,
 ul.dropdown-menu li:before,
-.moove-gdpr-modal-left-content ul li:before{
+.moove-gdpr-modal-left-content ul li:before,
+.woocommerce-MyAccount-navigation ul:before{
 	content: none!important;
 }
 

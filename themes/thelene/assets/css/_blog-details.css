@@ -1,0 +1,108 @@
+#blog-details .dfp-date-social-media-module{
+	display: flex;
+	align-items: center;
+	padding-bottom: 14px;
+}
+#blog-details .dfp-social-media{
+	margin-left: auto;
+}
+#blog-details .dfp-social-media span{
+	display: inline-block;
+	vertical-align: baseline;
+	color: #525A61;
+	font-weight: 400;
+	margin-right: 6px;
+}
+#blog-details .dfp-social-media ul{
+	display: inline-block;
+	vertical-align: baseline;
+	margin-left: -2px;
+	margin-right: -2px;
+}
+#blog-details .dfp-social-media ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#blog-details .dfp-social-media ul li a{
+	display: inline-block;
+	vertical-align: baseline;
+	color: #31304F;
+}
+#blog-details .dfp-social-media ul li a:hover{
+	color: #EC5387;
+}
+#blog-details .dfp-date{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	background: #EC5387;
+	padding: 2px 8px;
+}
+#blog-details .dfp-promo-module h1, 
+#blog-details .dfp-promo-module-title{
+	margin-bottom: 10px;
+}
+
+
+
+.block-details-ctlr .blog-sec-cntrl{
+	padding-top: 90px;
+	border-top: 1px solid #F1E8E1;
+}
+.block-details-ctlr .sec-entry-hdr .entry-sec-title{
+	margin-bottom: 25px;
+}
+.block-details-ctlr .blog-sec-cntrl {
+    padding-bottom: 82px;
+}
+
+
+
+
+@media(max-width: 767px){
+	#blog-details .dfp-promo-module h1, 
+	#blog-details .dfp-promo-module-title{
+		border-bottom: none;
+		padding-bottom: 0;
+		margin-bottom: 5px;
+	}
+	#blog-details .dfp-date-social-media-module{
+		padding-bottom: 5;
+	}
+	.block-details-ctlr .blog-sec-cntrl {
+	    padding-top: 75px;
+	}
+	.block-details-ctlr .blog-sec-cntrl {
+	    padding-bottom: 70px;
+	}
+	.block-details-ctlr .sec-entry-hdr .entry-sec-title {
+	    margin-bottom: 20px;
+	}
+}
+@media(max-width: 575px){
+	.block-details-ctlr .blog-sec-cntrl {
+	    padding-top: 60px;
+	}
+	.block-details-ctlr .blog-sec-cntrl {
+	    padding-bottom: 60px;
+	}
+	.block-details-ctlr .sec-entry-hdr .entry-sec-title {
+	    margin-bottom: 10px;
+	}
+}
+@media(max-width: 479px){
+	#blog-details.default-page-con {
+	    padding-bottom: 30px;
+	}
+	.block-details-ctlr .sec-entry-hdr .entry-sec-title {
+	    margin-bottom: 5px;
+	}
+}
