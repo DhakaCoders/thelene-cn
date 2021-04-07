@@ -413,6 +413,17 @@ placeholder
 	height: 740px;
 }
 
+.wpforms-field-description p a{
+	text-decoration: underline!important;
+	color: #78797B;
+}
+.wpforms-field-description p a:hover{
+	color: #8CCC0C!important;
+}
+.wpforms-field-textarea textarea{
+
+}
+
 /*
 ----------------
  Responsive Css
