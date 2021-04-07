@@ -315,18 +315,24 @@ if( $('.qty').length ){
 }
 /*Start of Noyon*/
 
-if( $('.hambergar-icon').length ){
-  $('.hambergar-icon').click(function(){
+if( $('.hambergar-cross-cntlr').length ){
+  $('.hambergar-cross-cntlr').click(function(){
     $('body').toggleClass('allWork');
   });
 }
 if( $('li.menu-item-has-children a').length ){
   $('li.menu-item-has-children a').click(function(e){
    event.preventDefault();
-   $(this).next().slideToggle(300);
-   $(this).parent().toggleClass('sub-menu-arrow');
+   $(this).parents('.xs-mobile-menu').toggleClass('sub-menu-active');
+   $(this).parent().toggleClass('this-sub-menu-active');
  });
 }
+
+$('.back-to-main-menu a').on('click', function(){
+   event.preventDefault();
+   $('.xs-mobile-menu').removeClass('sub-menu-active');
+   $('li.menu-item-has-children').removeClass('this-sub-menu-active');  
+});
 
 /*Start of Milon*/
 

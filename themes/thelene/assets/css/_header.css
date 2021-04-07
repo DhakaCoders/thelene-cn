@@ -412,7 +412,7 @@ body.allWork {
 
 /*xs mobile menu*/
 .allWork .xs-mobile-menu{
-    right: 0;
+    left: 0;
     opacity: 1;
     z-index: 99999;
     width: 100%;
@@ -421,10 +421,10 @@ body.allWork {
 .xs-mobile-menu{
 	position: fixed;
 	top: 0;
-	right: -375px;
+	right: 0;
+	left: 100%;
 	bottom: 0;
 	background: #fcf8f8;
-	max-width: 375px;
 	width: 0;
 	z-index: 99999;
 	opacity: 0;
@@ -465,6 +465,7 @@ body.allWork {
 	height: 100%;
 	width: 100%;
 	overflow-y: scroll;
+	overflow-x: hidden;
 	padding: 32px 0 25px 0;
 }
 .xs-menu-ftr{
@@ -488,6 +489,43 @@ body.allWork {
 }
 .xs-menu-ftr .ftr-social-media ul{
 	margin: 0 -15px;
+}
+.submenu-header {
+    position: fixed;
+    z-index: 99;
+    top: 131px;
+    left: 0;
+    padding-left: 15px;
+    right: 15px;
+    padding-right: 15px;
+    background: #fcf8f8;
+    opacity: 1;
+    visibility: visible;
+    padding-top: 13px;
+    left: 100%;
+    transition: all 0.5s;
+}
+.sub-menu-active .submenu-header{
+	left: 0;	
+}
+.submenu-header .back-to-main-menu{
+	padding-bottom: 23px;
+}
+.submenu-header .back-to-main-menu a{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: #78797B;
+}
+.submenu-header .menuTitle strong{
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	color: #31304F;
+	padding-bottom: 25px;
 }
 /*responsive*/
 @media(max-width: 1299px){
@@ -631,6 +669,7 @@ body.allWork {
 	/*xs mobile*/
 	nav.main-nav{
 		padding: 0;
+		position: relative;
 	}
 	nav.main-nav > ul{
 		padding: 0;
@@ -639,6 +678,7 @@ body.allWork {
 	}
 	nav.main-nav > ul > li{
 		padding: 9px 0;
+		position: static!important;
 
 	}
 	nav.main-nav > ul > li.current-menu-item > a:after{
@@ -672,8 +712,6 @@ body.allWork {
 	}
 
 	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu {
-		position: initial;
-		background: transparent;
 		width: 100%;
 		margin-top: 25px;
 		padding: 0 44px 0 44px;
@@ -690,6 +728,28 @@ body.allWork {
 		box-shadow: initial;
 		-ms-box-shadow: initial;
 		-webkit-box-shadow: initial;
+		position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    background: #fcf8f8;
+	    margin-top: 0;
+	    padding-top: 90px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
+		display: block;
+		opacity: 1;
+		z-index: 9;
+		visibility: visible;
+		transition: all 0.5s;
+		left: 100%;
+	}
+	nav.main-nav > ul > li.menu-item-has-children.this-sub-menu-active > ul.sub-menu{
+		opacity: 1;
+		z-index: 9;
+		visibility: visible;
+		left: 0;
 	}
 	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li{
 		border-bottom: none;
