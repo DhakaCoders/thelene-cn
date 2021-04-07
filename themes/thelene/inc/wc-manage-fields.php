@@ -57,7 +57,7 @@ function ajax_register_save(){
                             update_user_meta( $customerId, "billing_company", $_POST['billing_company'] );
                         }
                         if( isset($_POST['billing_btw_nummer']) && !empty($_POST['billing_btw_nummer'])){
-                            update_user_meta( $user, "billing_btw_nummer", $_POST['billing_btw_nummer'] );
+                            update_user_meta( $user, "vat_number", $_POST['billing_btw_nummer'] );
                         }
                         if( isset($_POST['billing_reference']) && !empty($_POST['billing_reference'])){
                             update_user_meta( $customerId, "billing_reference", $_POST['billing_reference'] );
