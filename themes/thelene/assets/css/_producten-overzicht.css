@@ -233,7 +233,7 @@
 
 
 @media (max-width: 1599px){
-	.fl-products-cntlr ul.products > li{
+	body.post-type-archive-product .fl-products-cntlr ul.products > li{
 		width: 33.3333%!important;
 	}
 }
