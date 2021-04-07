@@ -814,6 +814,9 @@ body.loggedin-winkelmandje-crtl .woocommerce-mini-cart__buttons.buttons a {
 body.loggedin-winkelmandje-crtl .myaccount-cart-crtl .woocommerce-mini-cart + p{
     margin-bottom:25px;
 }
+body.loggedin-winkelmandje-crtl .myaccount-cart-crtl .woocommerce-mini-cart + p > strong {
+    padding-right: 5px;
+}
 /* ------------------ woocommerce-cart ----------------------*/
 
 /*.woocommerce-cart .innerpage-con-wrap{

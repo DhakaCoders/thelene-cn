@@ -163,6 +163,9 @@ pagination
 .faq-pagi-ctlr ul li .next{
 	text-indent:-99999999px;
 }
+.faq-pagi-ctlr {
+    margin-top: 65px;
+}
 .fl-pagi-cntlr ul li a:hover{
 	border: 1px solid #31304F;
 }
