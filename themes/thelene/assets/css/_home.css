@@ -244,10 +244,10 @@
 	height: 100%;
 	position: relative;
 }
-.has-vido .hm-bnr-bg-img{
+.has-video .hm-bnr-bg-img{
 	display: none;
 }
-.has-vido .hm-bnr-bg-video{
+.has-video .hm-bnr-bg-video{
 	display: block;
 }
 .hm-bnr-bg-video{
