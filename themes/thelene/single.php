@@ -1,10 +1,30 @@
 <?php 
 get_header(); 
 get_template_part('templates/breadcrumbs');
+$permalink = get_the_permalink();
 ?>
 <section class="innerpage-con-wrap">
+  <article class="default-page-con" id="blog-details">
+    <div class="block-955">
+        <div class="dfp-promo-module clearfix">
+          <div>
+            <strong class="dfp-promo-module-title fl-h1"><?php the_title(); ?></strong>
+          </div>
+          <div class="dfp-date-social-media-module">
+            <div class="dfp-date">
+              <strong><?php echo get_the_date('d F Y'); ?></strong>
+            </div>
+            <div class="dfp-social-media">
+              <span>Delen Op:</span>
+              <ul class="reset-list">
+                <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink; ?>"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $permalink; ?>"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>  
     <?php if(have_rows('inhoud')){  ?>
-    <article class="default-page-con">
     <?php while ( have_rows('inhoud') ) : the_row();  ?>
     <?php 
     if( get_row_layout() == 'introductietekst' ){ 
@@ -259,7 +279,77 @@ get_template_part('templates/breadcrumbs');
     </div>
     <?php } ?>
     <?php endwhile; ?>
-    </article>
     <?php } ?>
+    </article>
+    
 </section>
+<?php 
+  $terms = get_the_terms( get_the_ID(), 'category' );
+  if( !empty($terms) ){
+    $term_ids = array();
+    foreach( $terms as $term ){
+      $term_ids[] = $term->term_id;
+    }
+    $query = new WP_Query(array( 
+        'post_type'=> 'post',
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+        'orderby' => 'rand',
+        'tax_query' => array(
+             array(
+                'taxonomy' => 'category',
+                'field' => 'term_id',
+                'terms' => $term_ids
+            )
+        ) 
+      ) 
+    );
+  if($query->have_posts()){
+?>
+<div class="block-details-ctlr">
+  <section class="blog-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="blog-sec-cntrl">
+            <div class="sec-entry-hdr blog-sec-hdr">
+              <h2 class="fl-h2 entry-sec-title blog-sec-title"><?php esc_html_e( 'Gerelateerde Artikelen', THEME_NAME ); ?></h2>
+            </div>        
+            <div class="blog-grids-cntrl">
+              <div class="blg-grds-item">
+                <div class="blg-grd-items BlogGridSlider">
+              <?php 
+              while ( $query->have_posts() ) { $query->the_post(); 
+                $blogimgID = get_post_thumbnail_id(get_the_ID());
+                $blog_imgsrc = !empty($blogimgID)? cbv_get_image_src($blogimgID, 'blog_grid'): THEME_URI.'/assets/images/blog-img-teapot.jpg';
+              ?>
+                  <div class="BlogGridSlide">
+                    <div class="blog-grd-itm">
+                      <div class="blog-grd-img">
+                        <a href="<?php echo get_permalink(); ?>" class="overlay-link"></a>
+                        <div class="bgi-img inline-bg" style="background-image: url('<?php echo $blog_imgsrc; ?>');">                  
+                        </div>
+                      </div>  
+                      <div class="blog-grd-des mHc">
+                        <h5 class="fl-h5 bgi-title mHc1"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h5>
+                        <span class="post-date"><?php echo get_the_date('d F Y'); ?></span>
+                        <div class="bgi-des mHc2">
+                          <?php the_excerpt(); ?>
+                        </div>  
+                        <a href="<?php echo get_permalink(); ?>" class="fl-trnsprnt-btn"><?php esc_html_e( 'LEES MEER', THEME_NAME ); ?></a>
+                      </div>  
+                    </div>
+                  </div>  
+                  <?php } ?>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </section>
+</div>
+<?php } wp_reset_postdata();?>
+<?php } ?>
 <?php get_footer(); ?>

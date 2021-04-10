@@ -285,7 +285,7 @@
                       <div class="bgi-des mHc2">
                         <?php the_excerpt(); ?>
                       </div>  
-                      <a href="<?php the_permalink(); ?>" class="fl-trnsprnt-btn">LEES MEER</a>
+                      <a href="<?php the_permalink(); ?>" class="fl-trnsprnt-btn"><?php esc_html_e( 'LEES MEER', THEME_NAME ); ?></a>
                     </div>  
                   </div>
                 </div>  
