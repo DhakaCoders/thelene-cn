@@ -52,18 +52,18 @@ defined( 'ABSPATH' ) || exit;
 			                <span class="ckour-pro-bar-active ckour-pro-bar-3 active"></span>
 			              </div>
 			              <div class="chckout-prgrs-col chckout-prgrs-col-1 ">
-			                <strong class="chckout-prgrs-number">1</strong> 
+			                <strong class="chckout-prgrs-number"></strong> 
 			                <h6 class="chckout-prgrs-title">Winkelmandje</h6>
 			              </div>
 
 			              <div class="chckout-prgrs-col chckout-prgrs-col-2">
-			                <strong class="chckout-prgrs-number">2</strong> 
+			                <strong class="chckout-prgrs-number"></strong> 
 			                <h6 class="chckout-prgrs-title">Klantgegevens <br>
 			                en Betaling</h6>
 			              </div>
 
 			              <div class="chckout-prgrs-col chckout-prgrs-col-3 active">
-			                <strong class="chckout-prgrs-number">3</strong> 
+			                <strong class="chckout-prgrs-number"></strong> 
 			                <h6 class="chckout-prgrs-title">Bevestiging</h6>
 			              </div>
 
