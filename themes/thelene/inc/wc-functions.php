@@ -145,7 +145,7 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
   // Return the number of products you wanna show per page.
-  $cols = 7;
+  $cols = 8;
   return $cols;
 }
 
@@ -244,7 +244,9 @@ function cbv_get_single_price(){
     echo '</div></div>';
     echo '<div class="qty-price-wrap">';
     echo '<span class="price-pre-title">Totaal: </span>';
+    echo '<span class="single-price-total">';
     echo $product->get_price_html();
+    echo '</span>';
     echo '</div>';
 }
 
@@ -702,5 +704,32 @@ add_action('woocommerce_giftcard_form', 'cbv_wc_giftcard_form');
 function cbv_wc_giftcard_form(){
     wc_get_template_part('templates/giftcard-form');
 }
-include_once(THEME_DIR .'/inc/wc-manage-fields.php');
 
+add_action('woocommerce_before_add_to_cart_form', 'selected_variation_price_replace_variable_price_range');
+function selected_variation_price_replace_variable_price_range(){
+    global $product;
+
+    if( $product->is_type('variable') ):
+        echo '<span id="variable_price" style="display:none;">'.$product->get_price_html().'</span>';
+    ?><style> .woocommerce-variation-price {display:none;} </style>
+    <script>
+    jQuery(function($) {
+        var p = '.woocommerce-variation-price span.price'
+            q = $(p).html();
+            defprice = $("#variable_price").html();
+
+        $('form.cart').on('show_variation', function( event, data ) {
+
+            if ( data.price_html ) {
+                $(".single-price-total").html(data.price_html);
+            }
+        }).on('hide_variation', function( event ) {
+            $(".single-price-total").html(defprice);
+            $(p).html(q);
+        });
+    });
+    </script>
+    <?php
+    endif;
+}
+include_once(THEME_DIR .'/inc/wc-manage-fields.php');
