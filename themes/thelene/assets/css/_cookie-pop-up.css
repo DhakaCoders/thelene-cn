@@ -199,7 +199,6 @@
 .moove-gdpr-cookie-notice p{
     font-family: 'Work Sans', sans-serif;
 }
-
 .moove-gdpr-cookie-notice p:first-child{
     font-weight: 700!important;
     margin-bottom: 5px;
@@ -222,7 +221,7 @@
     border-radius: 3px;
 }*/
 #moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button{
-    text-decoration: none!important;
+    
 }
 #moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button:hover{
     color: #8CCC0C!important;
@@ -659,9 +658,7 @@ body.openReserveer div[id^=resengo-reservation-widget-]{
     opacity: .8;
     border-radius: 3px;
 }*/
-#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button{
-    text-decoration: none!important;
-}
+
 .tijd_notime .opened-time-title:after{
     display: none;
 }

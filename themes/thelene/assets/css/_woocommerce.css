@@ -331,6 +331,7 @@ input.select2-search__field{
     color: #D17181;
     font-size: 12px;
 }
+.woocommerce-checkout span.optional,
 .custom-checkout-order-review small.includes_tax,
 .cart_totals small.includes_tax{
     display: none;
@@ -347,6 +348,11 @@ input.select2-search__field{
 }
 .no-results {
     text-align: center;
+    color: #D17181;
+}
+.notfound {
+    text-align: center;
+    padding: 50px 0;
     color: #D17181;
 }
 @media(max-width: 991px){

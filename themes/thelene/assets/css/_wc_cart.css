@@ -223,12 +223,31 @@ body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-f
 	padding-bottom: 35px;
 	margin-bottom: 35px;
 	border-bottom: 1px solid #ECE9E9;
+	text-align: right;
 }
 body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-form .coupon #coupon_code{
 	border: 1px solid #f2ede9!important;
-	border-radius: 5px!important;
+	border-radius: 6px!important;
 	outline: 0!important;
 	height: 48px;
+	margin-bottom: 20px;
+}
+body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-form .coupon #coupon_code + button {
+    max-width: 141px;
+    margin-left: 0;
+    display: inline-block;
+    background: transparent!important;
+    border: 1px solid #31304F!important;
+    color: #31304F!important;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-form .coupon #coupon_code + button:hover{
+    background: #31304F!important;
+    color: #fff!important;
+    background: #EC5387!important;
+    color: #fff!important;
+    border-color: #EC5387!important;
 }
 body.woocommerce-cart .cart_totals .wc-proceed-to-checkout #pwgc-redeem-form #pwgc-redeem-gift-card-container input[type=text]{
 	width: 100%;
@@ -475,7 +494,7 @@ body.woocommerce-page.woocommerce-checkout .woocommerce-NoticeGroup-checkout .wo
 		padding-bottom: 45!important;
 	}
 	body.woocommerce-cart .page-title{
-		margin-top: 30px!important;
+		margin-top: 0!important;
 	}
 	body.woocommerce-cart .page-title h1 {
 		padding-bottom: 14px;
@@ -579,10 +598,27 @@ body.woocommerce-page.woocommerce-checkout .woocommerce-NoticeGroup-checkout .wo
 	body.woocommerce-cart.woocommerce-page .product-name a{
 		font-size: 16px;
 	}
+	body.woocommerce-cart .cart_totals .wc-proceed-to-checkout a.checkout-button{
+	    
+	}
 }
 @media(max-width: 479px){
 	body.woocommerce-cart .innerpage-con-wrap .default-page-con {
 		padding-top: 0!important;
 		padding-bottom: 40!important;
 	}
+	body.woocommerce-cart .cart_totals .wc-proceed-to-checkout a.checkout-button {
+        height: 40px;
+        padding: 6px 15px 5px!important;
+        display: flex;
+        font-size: 12px!important;
+        align-items: center;
+        justify-content: center;
+    }
+    body.woocommerce-cart .cart_totals .wc-proceed-to-checkout .woocommerce-coupon-form .coupon #coupon_code + button {
+        max-width: 150px;
+        margin-left: 0;
+        height: 32px;
+        font-size: 12px!important;
+    }
 }

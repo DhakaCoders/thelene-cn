@@ -242,6 +242,13 @@ span.xoo-cp-close.xoo-cp-icon-cross:before{
 .product-price span bdi span{
 	margin-right: 0!important;
 }
+.single-price-total > span{
+    color: #31304f!important;
+    font-size:24px!important;
+}
+.single-price-total .price del{
+    opacity: 1!important;
+}
 .product-price del span,
 .xoo-cp-pprice del span,
 .fl-pro-grd-price del span,
